@@ -1,0 +1,111 @@
+.community {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.88rem;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+            background-color: $color_card;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+        }
+
+        @media (max-width: 575px) {
+            padding-top: .71rem;
+            padding-bottom: .71rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @media (max-width: 767px) {
+            border: 1px solid $color_border;
+            padding: 2.5rem 1.8rem;
+        }
+
+        @media (max-width: 575px) {
+            padding: 3.5rem .71rem;
+        }
+    }
+
+    &__section-title {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        max-width: 90%;
+
+        @media (max-width: 1199px) and (min-width: 768px) {
+            font-size: 2rem;
+        }
+        
+        @media (max-width: 575px) {
+            font-size: 2.28rem;
+            margin-bottom: 1.8rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.12rem;
+        margin-bottom: 5rem;
+        max-width: 80%;
+
+        @media (max-width: 575px) {
+            font-size: 1rem;
+            max-width: 100%;
+            margin-bottom: 2.8rem;
+        }
+    }
+
+    &__pictures {
+        position: relative;
+        padding-top: 10vw;
+
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__picture-big {
+        display: flex;
+        width: 70%;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__picture-small {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 46%;
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__link {
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__modal {
+        width: 100%;
+        max-width: 52rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+}

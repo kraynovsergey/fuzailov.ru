@@ -1,0 +1,103 @@
+extends base
+
+block meta
+    - var seotitle = 'Изделие коллекции'
+    - var seodescription = 'Описание страницы изделия коллекции'
+    - var seokeywords = 'Ключевые слова страницы изделия коллекции'
+
+block main
+    //Интро
+    section.section.collection-product__intro._pt0
+        //Хлебные крошки
+        .intro__breadcrumbs
+            include pug/layout/_breadcrumbs
+
+        picture.collection-product__intro-picture
+            source(type="image/webp" srcset="@img/tmp/collection-product-intro@2x.webp 2x, @img/tmp/collection-product-intro.webp 1x")
+            img(srcset="@img/tmp/collection-product-intro@2x.jpg 2x, @img/tmp/collection-product-intro.jpg 1x" alt="" width="943" height="900" loading="lazy")
+        .collection-product__intro-content
+            .container.collection-product__intro-container
+                picture.collection-product__intro-product
+                    source(type="image/webp" srcset="@img/tmp/new-collection-product-1-2@2x.webp 2x, @img/tmp/new-collection-product-1-2.webp 1x")
+                    img(srcset="@img/tmp/new-collection-product-1-2@2x.jpg 2x, @img/tmp/new-collection-product-1-2.jpg 1x" alt="" width="413" height="475" loading="lazy")
+                h1.collection-product__intro-title "Зеленый взгляд"
+                p.collection-product__intro-text Символ вечной любви и преданности - это кольцо, которое будет с вами на протяжении всей жизни.
+                button.collection-product__intro-btn.btn._transparent-gray-border(type="button" data-fancybox data-src="#modal-feedback") Заказать
+
+    //Описание изделия
+    section.collection-product__products
+        article.collection-product__product.section
+            .container.collection-product__product-container
+                .collection-product__product-content
+                    h3.collection-product__product-title Основа кольца из белого золота
+                    .collection-product__product-text
+                        p Это основная часть кольца, выполненная из сплава золота с добавлением других металлов, таких как никель, палладий или серебро. 
+                        p Белое золото имеет серебристый оттенок и является популярным выбором для ювелирных изделий.
+                    picture.collection-product__product-picture-small._mobile
+                        source(type="image/webp" srcset="@img/tmp/collection-product-1-2@2x.webp 2x, @img/tmp/collection-product-1-2.webp 1x")
+                        img(srcset="@img/tmp/collection-product-1-2@2x.jpg 2x, @img/tmp/collection-product-1-2.jpg 1x" alt="" width="412" height="500" loading="lazy")
+
+                .collection-product__product-pictures
+                    picture.collection-product__product-picture-big
+                        source(type="image/webp" srcset="@img/tmp/collection-product-1-1@2x.webp 2x, @img/tmp/collection-product-1-1.webp 1x")
+                        img(srcset="@img/tmp/collection-product-1-1@2x.jpg 2x, @img/tmp/collection-product-1-1.jpg 1x" alt="" width="855" height="900" loading="lazy")
+
+                    picture.collection-product__product-picture-small
+                        source(type="image/webp" srcset="@img/tmp/collection-product-1-2@2x.webp 2x, @img/tmp/collection-product-1-2.webp 1x")
+                        img(srcset="@img/tmp/collection-product-1-2@2x.jpg 2x, @img/tmp/collection-product-1-2.jpg 1x" alt="" width="412" height="500" loading="lazy")
+
+        article.collection-product__product.section
+            .container.collection-product__product-container
+                .collection-product__product-content
+                    h3.collection-product__product-title Изумруд, установленный в основу кольца
+                    .collection-product__product-text
+                        p Это драгоценный камень зеленого цвета, который является одним из самых дорогих и редких камней на Земле. 
+                        p Изумруды часто используются в ювелирных изделиях благодаря своей красоте и уникальности.
+                    picture.collection-product__product-picture-small._mobile
+                        source(type="image/webp" srcset="@img/tmp/collection-product-2-2@2x.webp 2x, @img/tmp/collection-product-2-2.webp 1x")
+                        img(srcset="@img/tmp/collection-product-2-2@2x.jpg 2x, @img/tmp/collection-product-2-2.jpg 1x" alt="" width="412" height="500" loading="lazy")
+
+                .collection-product__product-pictures
+                    picture.collection-product__product-picture-big
+                        source(type="image/webp" srcset="@img/tmp/collection-product-2-1@2x.webp 2x, @img/tmp/collection-product-2-1.webp 1x")
+                        img(srcset="@img/tmp/collection-product-2-1@2x.jpg 2x, @img/tmp/collection-product-2-1.jpg 1x" alt="" width="855" height="900" loading="lazy")
+
+                    picture.collection-product__product-picture-small
+                        source(type="image/webp" srcset="@img/tmp/collection-product-2-2@2x.webp 2x, @img/tmp/collection-product-2-2.webp 1x")
+                        img(srcset="@img/tmp/collection-product-2-2@2x.jpg 2x, @img/tmp/collection-product-2-2.jpg 1x" alt="" width="412" height="500" loading="lazy")
+
+        article.collection-product__product.section
+            .container.collection-product__product-container
+                .collection-product__product-content
+                    h3.collection-product__product-title Крепление изумруда в основе кольца
+                    .collection-product__product-text
+                        p Это способ, которым изумруд закреплен в основе кольца. 
+                        p Обычно это делается с помощью зажимов или опор, которые обеспечивают надежное крепление камня и защищают его от выпадения.
+                    picture.collection-product__product-picture-small._mobile
+                        source(type="image/webp" srcset="@img/tmp/collection-product-3-2@2x.webp 2x, @img/tmp/collection-product-3-2.webp 1x")
+                        img(srcset="@img/tmp/collection-product-3-2@2x.jpg 2x, @img/tmp/collection-product-3-2.jpg 1x" alt="" width="412" height="500" loading="lazy")
+
+                .collection-product__product-pictures
+                    picture.collection-product__product-picture-big
+                        source(type="image/webp" srcset="@img/tmp/collection-product-3-1@2x.webp 2x, @img/tmp/collection-product-3-1.webp 1x")
+                        img(srcset="@img/tmp/collection-product-3-1@2x.jpg 2x, @img/tmp/collection-product-3-1.jpg 1x" alt="" width="855" height="900" loading="lazy")
+
+                    picture.collection-product__product-picture-small
+                        source(type="image/webp" srcset="@img/tmp/collection-product-3-2@2x.webp 2x, @img/tmp/collection-product-3-2.webp 1x")
+                        img(srcset="@img/tmp/collection-product-3-2@2x.jpg 2x, @img/tmp/collection-product-3-2.jpg 1x" alt="" width="412" height="500" loading="lazy")
+
+    //Баннер
+    section.section
+        .collection-product__banner
+            picture.collection-product__banner-picture
+                source(type="image/webp" srcset="@img/tmp/collection-product-banner@2x.webp 2x, @img/tmp/collection-product-banner.webp 1x")
+                img(srcset="@img/tmp/collection-product-banner@2x.jpg 2x, @img/tmp/collection-product-banner.jpg 1x" alt="" width="1920" height="910" loading="lazy")
+            .container.collection-product__banner-overlay
+                p.collection-product__banner-text Это кольцо из белого золота с изумрудным камнем – настоящий шедевр ювелирного искусства. Оно словно заставляет сердце замирать от его красоты и блеска.
+                button.collection-product__banner-btn.btn._white(type="button" data-fancybox data-src="#modal-feedback") Заказать
+        
+        
+
+                
+
+        

@@ -1,0 +1,215 @@
+.home-about {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 40rem 1fr;
+        align-items: start;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: 1fr 30rem 1fr;
+        }
+
+        @media (max-width: 1199px) {
+            grid-template-columns: 1fr 24rem 1fr;
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            gap: 5rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        @media (min-width: 768px) {
+            padding-top: 6vw;
+        }
+    }
+
+    &__section-subtitle {
+        margin-bottom: 1.6rem;
+    }
+
+    &__section-title {
+        margin-bottom: 2rem;
+        font-size: 3.4rem;
+
+        @media (max-width: 1440px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 1199px) {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 2.2rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.12rem;
+        width: 100%;
+        max-width: 25rem;
+        margin-bottom: 2.5rem;
+
+        @media (max-width: 991px) {
+            max-width: 15rem;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 80%;
+        }
+    }
+
+    &__left-pictures {
+        padding-top: 54vw;
+        position: relative;
+
+        @media (max-width: 767px) {
+            padding-top: 0;
+            grid-row: 3;
+            margin-left: -1.25rem;
+            display: flex;
+        }
+
+        @media (max-width: 575px) {
+            margin-left: -.71rem;
+            margin-right: -.71rem;
+        }
+    }
+
+    &__left-picture-big {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 34vw;
+
+        @media (max-width: 1199px) {
+            width: 30vw;
+        }
+
+        @media (max-width: 767px) {
+            width: 70%;
+            position: relative;
+        }
+
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__left-picture-small {
+        position: absolute;
+        bottom: 10vw;
+        left: 3vw;
+        width: 20vw;
+
+        @media (max-width: 767px) {
+            bottom: 0;
+            left: 60vw;
+            width: 25vw;            
+        }
+
+        @media (max-width: 575px) {
+            bottom: -10vw;
+            left: 10vw;
+            width: 40vw;            
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__right-pictures {
+        position: relative;
+        margin-right: -5.62rem;
+        
+        @media (max-width: 1680px) {
+            margin-right: -4.68rem;
+        }
+    
+        @media (max-width: 1440px) {
+            margin-right: -3.75rem;
+        }
+    
+        @media (max-width: 1280px) {
+            margin-right: -1.87rem;
+        }
+    
+        @media (max-width: 1024px) {
+            margin-right: -1.25rem;
+        }
+
+        @media (max-width: 767px) {
+            grid-row: -1;
+            margin-left: -1.25rem;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: 575px) {
+            margin-left: -.71rem;
+            margin-right: -.71rem;
+        }
+    }
+
+    &__right-picture-big {
+        position: absolute;
+        width: 25vw;
+        right: 0;
+
+        @media (max-width: 767px) {
+            width: 70%;
+            position: relative;
+        }
+
+        @media (max-width: 575px) {
+            width: 100%;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__right-picture-small {
+        position: absolute;
+        right: 14vw;
+        padding-top: 20vw;
+        width: 13vw;
+
+        @media (max-width: 767px) {
+            right: 65vw;
+            width: 20vw;
+            padding-top: 5vw;
+        }
+
+        @media (max-width: 575px) {
+            padding-top: 0;
+            bottom: -30vw;
+            width: 30vw;
+            right: 10vw;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}

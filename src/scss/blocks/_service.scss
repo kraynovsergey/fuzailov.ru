@@ -1,0 +1,116 @@
+.service {
+    background: $color_green;
+    padding: 6.25rem 0;
+
+    @media (max-width: 1440px) {
+        padding: 3.75rem 0;
+    }
+
+    @media (max-width: 767px) {
+        padding-top: 0;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.88rem;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;   
+        }
+
+        &._reverse {
+            @media (min-width: 991px) {
+                & .service__content {
+                    grid-column: 1;
+                }
+    
+                & .service__picture {
+                    grid-column: 2;
+                    grid-row: 1;
+                }
+            }
+        }
+    }
+
+    &__picture {
+        @media (max-width: 767px) {
+            margin-left: -1.25rem;
+            margin-right: -1.25rem;
+        }
+
+        @media (max-width: 575px) {
+            margin-left: -.71rem;
+            margin-right: -.71rem;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+
+            @media (max-width: 767px) {
+                height: 23rem;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $color_white;
+        text-align: center;
+    }
+
+    &__section-title {
+        color: currentColor;
+        font-size: 3.4rem;
+        max-width: 80%;
+        margin-bottom: 2rem;
+
+        @media (max-width: 1199px) {
+            font-size: 2.5rem;
+            max-width: 100%;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 2.3rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__text {
+        max-width: 70%;
+        color: $color_white;
+        font-size: 1.12rem;
+        line-height: 130%;
+
+        @media (max-width: 1199px) {
+            max-width: 100%;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 1rem;
+        }
+
+        &._bottom {
+            margin-top: .9rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__link {
+        margin-top: 4rem;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+
+        @media (max-width: 575px) {
+            margin-top: 2.2rem;
+        }
+    }
+}

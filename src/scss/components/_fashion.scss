@@ -1,0 +1,49 @@
+.fashion {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__picture {
+        display: flex;
+        width: 100%;
+
+        & img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+
+            @media (max-width: 960px) {
+                height: 58rem;
+            }
+
+            @media (max-width: 575px) {
+                height: 45rem;
+            }
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: 3.13rem;
+        bottom: 3.13rem;
+        color: $color_green;
+
+        &:hover {
+            background: $color_orange;
+            color: $color_white;
+        }
+
+        @media (max-width: 1440px) {
+            right: 2.5rem;
+            bottom: 2.5rem;
+        }
+
+        @media (max-width: 960px) {
+            right: unset;
+        }
+
+        @media (max-width: 575px) {
+            bottom: 1.4rem;
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.top-line {
+    background: $color_card;
+    color: $color_black;
+    transition: .5s ease;
+
+    &__container {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-between;
+        height: 3.12rem;
+
+        @media (max-width: 575px) {
+            height: 2.85rem;
+        }
+    }
+
+    &__phone {
+        color: inherit;
+        font-size: 1.12rem;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: .5s ease-in-out;
+
+        @media (max-width: 575px) {
+            font-size: .85rem;
+        }
+
+        &-icon {
+            margin-right: .94rem;
+            width: 1.75rem;
+            height: auto;
+
+            @media (max-width: 575px) {
+                width: 1.57rem;
+                margin-right: .5rem;
+            }
+        }
+
+        &:hover {
+            color: $color_light_gray;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            color: inherit;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                color: $color_light_gray;
+            }
+
+            &:not(:last-child) {
+                margin-right: 2rem;
+
+                @media (max-width: 991px) {
+                    margin-right: 1.56rem;
+                }
+
+                @media (max-width: 575px) {
+                    margin-right: 1rem;
+                }
+            }
+
+            & svg {
+                width: 2rem;
+                height: auto;
+
+                @media (max-width: 575px) {
+                    width: 1.57rem;
+                }
+            }
+        }
+    }
+}

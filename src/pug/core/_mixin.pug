@@ -1,0 +1,82 @@
+mixin fashion(img, width, height)
+    .fashion
+        picture.fashion__picture 
+            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+            img(srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+".jpg 1x" alt="" width=width height=height loading="lazy")
+        button.fashion__btn.btn-circle(type="button" data-fancybox data-src="#modal-fashion")
+            svg.fashion__btn-icon
+                use(xlink:href="@img/icons/icons.svg#cart")
+            | Посмотреть образ
+
+mixin product(title, price, img, width, height, label, favourites, item, swiper)
+    if item 
+        article.product(data-swiper-fashion-slide=item data-swiper-fashion-swiper=swiper)
+            button.product__favourites(class=favourites type="button")
+                svg(width="26" height="26")
+                    use(xlink:href="@img/icons/icons.svg#favourites")
+            .product__label=label
+            a.product__pictures(href="#" data-product-pictures)
+                picture.product__picture._active(data-item="1")
+                    source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+                    img(srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+".jpg 1x" alt="" width=width height=height loading="lazy")
+                picture.product__picture(data-item="2")
+                    source(type="image/webp" srcset="@img/tmp/product-8@2x.webp 2x, @img/tmp/product-8.webp 1x")
+                    img(srcset="@img/tmp/product-8@2x.jpg 2x, @img/tmp/product-8.jpg 1x" alt="" width=width height=height loading="lazy")
+                picture.product__picture(data-item="3")
+                    source(type="image/webp" srcset="@img/tmp/product-7@2x.webp 2x, @img/tmp/product-7.webp 1x")
+                    img(srcset="@img/tmp/product-7@2x.jpg 2x, @img/tmp/product-7.jpg 1x" alt="" width=width height=height loading="lazy")
+                picture.product__picture(data-item="4")
+                    source(type="image/webp" srcset="@img/tmp/product-6@2x.webp 2x, @img/tmp/product-6.webp 1x")
+                    img(srcset="@img/tmp/product-6@2x.jpg 2x, @img/tmp/product-6.jpg 1x" alt="" width=width height=height loading="lazy")
+            h3.product__title
+                a.product__link.link(href="#")=title
+            .product__price=price
+    else 
+        article.product
+            button.product__favourites(class=favourites type="button")
+                svg(width="26" height="26")
+                    use(xlink:href="@img/icons/icons.svg#favourites")
+            .product__label=label
+            a.product__pictures(href="#" data-product-pictures)
+                picture.product__picture._active(data-item="1")
+                    source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+                    img(srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+".jpg 1x" alt="" width=width height=height loading="lazy")
+                picture.product__picture(data-item="2")
+                    source(type="image/webp" srcset="@img/tmp/product-8@2x.webp 2x, @img/tmp/product-8.webp 1x")
+                    img(srcset="@img/tmp/product-8@2x.jpg 2x, @img/tmp/product-8.jpg 1x" alt="" width=width height=height loading="lazy")
+                picture.product__picture(data-item="3")
+                    source(type="image/webp" srcset="@img/tmp/product-7@2x.webp 2x, @img/tmp/product-7.webp 1x")
+                    img(srcset="@img/tmp/product-7@2x.jpg 2x, @img/tmp/product-7.jpg 1x" alt="" width=width height=height loading="lazy")
+                picture.product__picture(data-item="4")
+                    source(type="image/webp" srcset="@img/tmp/product-6@2x.webp 2x, @img/tmp/product-6.webp 1x")
+                    img(srcset="@img/tmp/product-6@2x.jpg 2x, @img/tmp/product-6.jpg 1x" alt="" width=width height=height loading="lazy")
+            h3.product__title
+                a.product__link.link(href="#")=title
+            .product__price=price
+
+mixin categories_item(title, img, star)
+    article.categories__item(role="article" data-categories-item)
+        .categories__item-content
+            h3.categories__item-title(data-categories-item-target)
+                a(href="#")=title
+            a.categories__item-link.link._italic(href="#") Перейти
+        picture.categories__item-picture(data-categories-item-picture)
+            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+            img(srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+".jpg 1x" alt="" width="278" height="258" loading="lazy")
+        if star 
+            svg.categories__item-star(width="30" height="30")
+                use(xlink:href="@img/icons/icons.svg#intro-star")
+
+mixin home_services_item(title, img, img_mobile)
+    article.home-services__item(data-categories-item)
+        picture.home-services__item-picture(data-categories-item-picture)
+            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x" media="(min-width: 768px)")
+            source(type="image/jpeg" srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+".jpg 1x" media="(min-width: 768px)")
+            source(type="image/webp" srcset="@img/tmp/"+img_mobile+"@2x.webp 2x, @img/tmp/"+img_mobile+".webp 1x" media="(max-width: 767px)")
+            source(type="image/jpeg" srcset="@img/tmp/"+img_mobile+"@2x.jpg 2x, @img/tmp/"+img_mobile+".jpg 1x" media="(max-width: 767px)")
+            img(srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+".jpg 1x" alt="" width="391" height="430" loading="lazy")
+        h3.home-services__item-title(data-categories-item-target)
+            a(href="#")=title
+        a.home-services__item-link.link._italic(href="#") Перейти
+        svg.home-services__item-star(width="30" height="30")
+            use(xlink:href="@img/icons/icons.svg#intro-star")

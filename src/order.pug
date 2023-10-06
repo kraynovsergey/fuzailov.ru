@@ -1,0 +1,103 @@
+extends base
+
+block meta
+    - var seotitle = 'Оформление заказа'
+    - var seodescription = 'Описание страницы оформления заказа'
+    - var seokeywords = 'Ключевые слова страницы оформления заказа'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.order
+        .container
+            h1.h1._center Оставьте свои данные
+            p.order__subtitle Мы свяжемся с вами и уточним все детали о заказе и проконсультируем.
+
+            form.order__grid(action="#" method="post")
+                .order__form
+                    .order__section
+                        p.order__section-title Контакты
+                        
+                        fieldset.form__fieldset
+                            label.form__label(for="order-receiver") Имя
+                                span.form__required *
+                            input.form__input._gray(type="text" name="receiver" id="order-receiver")
+
+                        fieldset.form__fieldset
+                            label.form__label(for="order-phone") Телефон
+                                span.form__required *
+                            input.form__input._gray._error(type="tel" name="phone" id="order-phone" data-tel)
+                            span.form__error Текст ошибки
+
+                    .order__section
+                        p.order__section-title Адрес доставки
+
+                        fieldset.form__fieldset
+                            label.form__label(for="order-country") Страна
+                            input.form__input._gray(type="text" name="country" id="order-country")
+
+                        fieldset.form__fieldset
+                            label.form__label(for="order-city") Город
+                            input.form__input._gray(type="text" name="city" id="order-city")
+
+                        fieldset.form__fieldset
+                            label.form__label(for="order-street") Улица
+                            input.form__input._gray(type="text" name="street" id="order-street")
+
+                        .form__cols._col3
+                            fieldset.form__fieldset
+                                label.form__label(for="order-building") Дом
+                                input.form__input._gray(type="text" name="building" id="order-building")
+
+                            fieldset.form__fieldset
+                                label.form__label(for="order-float") Этаж
+                                input.form__input._gray(type="text" name="float" id="order-float")
+
+                            fieldset.form__fieldset
+                                label.form__label(for="order-room") Квартира
+                                input.form__input._gray(type="text" name="room" id="order-room")
+
+                        .form__checkbox._gray
+                            input.form__checkbox-input(type="checkbox" name="dont_call" id="order-dont-call")
+                            label.form__checkbox-label(for="order-dont-call")
+                                span.form__checkbox-check
+                                    svg(width="14" height="11")
+                                        use(xlink:href="@img/icons/icons.svg#checkbox")
+                                span.form__checkbox-title Не звонить в дверь, спит ребёнок
+
+                .order__itogo
+                    .order__table
+                        .order__table-cols.order__table-header
+                            .order__table-col Наименование товара
+                            .order__table-col Кол-во
+                            .order__table-col Цена за шт.
+
+                        .order__table-cols.order__table-item
+                            .order__table-col
+                                .order__table-product
+                                    picture.order__table-picture
+                                        source(type="image/webp" srcset="@img/tmp/cart-product@2x.webp 2x, @img/tmp/cart-product.webp 1x")
+                                        img(srcset="@img/tmp/cart-product@2x.jpg 2x, @img/tmp/cart-product@2x.jpg 1x" alt="" width="127" height="127" loading="lazy")
+                                    a.order__table-title.link._full(href="#") Кольцо
+                                        span Солнечный луч
+                            .order__table-col 1
+                            .order__table-col 510 720 ₽
+
+                    .order__itogo-price
+                        .order__itogo-price-title ИТОГО:
+                        .order__itogo-price-title 510 720 ₽
+
+
+                .order__footer
+                    button.form__submit.order__submit.btn._green(type="submit") Отправить данные
+                    
+                    .form__checkbox.form__policy._gray
+                        input.form__checkbox-input(type="checkbox" name="policy" id="order-policy" checked data-policy)
+                        label.form__checkbox-label(for="order-policy")
+                            span.form__checkbox-check
+                                svg(width="14" height="11")
+                                    use(xlink:href="@img/icons/icons.svg#checkbox")
+                            span.form__checkbox-title Согласен с условиями конфиденциальности
+
+block footer

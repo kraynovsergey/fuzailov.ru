@@ -1,0 +1,201 @@
+.about-production {
+    &__container {
+        display: grid;
+        gap: 12rem;
+
+        @media (max-width: 991px) {
+            gap: 6rem;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: .36fr .49fr;
+        align-items: start;
+        justify-content: space-between;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        &:nth-child(2n) {
+            @media (min-width: 768px) {
+                grid-template-columns: .49fr .36fr;
+
+                & .about-production__picture {
+                    grid-column: 2;
+                }
+
+                & .about-production__content {
+                    grid-row: 1;
+                    grid-column: 1;
+                }
+            }
+
+            & .about-production__title {
+                &-icons {
+                    order: -1;
+                }
+            }
+
+            & .about-production__text {
+                margin-left: auto;
+            }
+
+            @media (max-width: 767px) {
+                & .about-production__second-picture {
+                    justify-content: flex-start !important;
+                }
+            }
+        }
+
+        @media (min-width: 768px) {
+            &:nth-child(2),
+            &:nth-child(2n + 6),
+            &:nth-child(3),
+            &:nth-child(2n + 7) {
+                & .about-production__second-picture {
+                    justify-content: center;
+                }
+            }
+    
+            &:nth-child(4),
+            &:nth-child(2n + 8) {
+                & .about-production__second-picture {
+                    justify-content: flex-start;
+                }
+            }
+        } 
+    }
+
+    &__picture {
+        display: flex;
+        width: 100%;
+
+        @media (max-width: 767px) {
+            margin: 0 -1.25rem;
+            width: unset;
+        }
+
+        @media (max-width: 575px) {
+            margin: 0 -.71rem;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+
+            @media (max-width: 767px) {
+                height: 25rem;
+                object-fit: cover;
+            }
+
+            @media (max-width: 575px) {
+                height: 19rem;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        padding-top: 1.5rem;
+        border-top: 1px solid $color_border;
+        font-size: 1.37rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        color: $color_black;
+
+        @media (max-width: 767px) {
+            padding-top: 0;
+            border-top: 0;
+        }
+
+        @media (max-width: 575px) {
+            text-align: center;
+        }
+
+        &-name {
+            width: 18rem;
+
+            @media (max-width: 575px) {
+                width: 100%;
+            }
+        }
+
+        &-icons {
+            display: flex;
+            align-items: center;
+
+            @media (max-width: 575px) {
+                display: none;
+            }
+            
+            & svg {
+                &:not(:last-child) {
+                    margin-right: 5px;
+                }
+            }
+        }
+
+        &-i {
+            font-family: 'Forum';
+            text-transform: uppercase;
+            color: $color_black;
+            font-size: 2rem;
+        }
+    }
+
+    &__text {
+        width: 18rem;
+        color: $color_gray;
+        margin-bottom: 7rem;
+
+        @media (max-width: 767px) {
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 575px) {
+            text-align: center;
+            width: 100%;
+        }
+
+        & p {
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+
+    &__second-picture {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @media (max-width: 767px) {
+            transform: none !important;
+        }
+
+        & picture {
+            display: flex;
+            width: 47%;
+
+            & img {
+                width: 100%;
+                height: auto;
+
+                @media (max-width: 575px) {
+                    height: 12rem;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

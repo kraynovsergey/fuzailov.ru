@@ -1,0 +1,101 @@
+extends base
+
+block meta
+    - var seotitle = 'Новая коллекция'
+    - var seodescription = 'Описание страницы новой коллекции'
+    - var seokeywords = 'Ключевые слова страницы новой коллекции'
+
+block main
+    //Интро
+    section.section._pt0
+        section.intro
+            //Хлебные крошки
+            .intro__breadcrumbs
+                include pug/layout/_breadcrumbs
+
+            picture.intro__picture
+                source(type="image/webp" srcset="@img/tmp/new-collection-img@2x.webp 2x, @img/tmp/new-collection-img.webp 1x")
+                img(srcset="@img/tmp/new-collection-img@2x.jpg 2x, @img/tmp/new-collection-img.jpg 1x" alt="" width="1920" height="910" loading="lazy")
+
+            .intro__overlay
+                .intro__content._no-gradient
+                    h1.intro__title Summer/Autumn 23’
+                    a.intro__link.btn._white._long(href="#") 
+                        span В каталог
+
+    //О коллекции
+    section.section.about-new-collection
+        .container
+            .about-new-collection__header
+                p.section__subtitle О коллекции
+                h2.section__title Наша летняя коллекция украшений - это настоящий калейдоскоп ярких красок и ярких оттенков
+            
+            .about-new-collection__grid
+                .about-new-collection__text
+                    p Наша цель - создать модные украшения, которые подчеркнут индивидуальность и статус наших клиентов. 
+
+                    picture.about-new-collection__small-picture-left(data-picture-parallax="0.2")
+                        source(type="image/webp" srcset="@img/tmp/about-new-collection-small-1@2x.webp 2x, @img/tmp/about-new-collection-small-1.webp 1x")
+                        img(srcset="@img/tmp/about-new-collection-small-1@2x.jpg 2x, @img/tmp/about-new-collection-small-1.jpg 1x" width="350" height="440" alt="" loading="lazy")
+
+                picture.about-new-collection__picture
+                    source(type="image/webp" srcset="@img/tmp/about-new-collection-big@2x.webp 2x, @img/tmp/about-new-collection-big.webp 1x")
+                    img(srcset="@img/tmp/about-new-collection-big@2x.jpg 2x, @img/tmp/about-new-collection-big.jpg 1x" width="855" height="1040" alt="" loading="lazy")
+
+                picture.about-new-collection__small-picture-right(data-picture-parallax="0.2")
+                    source(type="image/webp" srcset="@img/tmp/about-new-collection-small-2@2x.webp 2x, @img/tmp/about-new-collection-small-2.webp 1x")
+                    img(srcset="@img/tmp/about-new-collection-small-2@2x.jpg 2x, @img/tmp/about-new-collection-small-2.jpg 1x" width="412" height="500" alt="" loading="lazy")
+
+    //Элементы коллекции
+    section.new-collection-products
+        article.section.new-collection-products__item
+            .container
+                p.section__subtitle Кольцо
+                h2.section__title "Зеленый взгляд"
+
+                .new-collection-products__grid
+                    picture.new-collection-products__picture
+                        source(type="image/webp" srcset="@img/tmp/new-collection-product-1-1@2x.webp 2x, @img/tmp/new-collection-product-1-1.webp 1x")
+                        img(srcset="@img/tmp/new-collection-product-1-1@2x.jpg 2x, @img/tmp/new-collection-product-1-1.jpg 1x" width="1076" height="1079" alt="" loading="lazy")
+                    .new-collection-products__content
+                        .new-collection-products__text
+                            p Это кольцо, созданное из экологически чистых материалов и имеющее уникальный дизайн, который напоминает листья растений. 
+                            p Идея создания этого кольца заключается в том, чтобы подчеркнуть важность сохранения природы и окружающей среды.
+                        picture.new-collection-products__product
+                            source(type="image/webp" srcset="@img/tmp/new-collection-product-1-2@2x.webp 2x, @img/tmp/new-collection-product-1-2.webp 1x")
+                            img(srcset="@img/tmp/new-collection-product-1-2@2x.jpg 2x, @img/tmp/new-collection-product-1-2.jpg 1x" width="413" height="475" alt="" loading="lazy")
+                        a.new-collection-products__link.btn._transparent-gray-border(href="#") Перейти
+
+        article.section.new-collection-products__item
+            .container
+                p.section__subtitle Кольцо
+                h2.section__title "Солнечный луч"
+
+                .new-collection-products__grid
+                    picture.new-collection-products__picture
+                        source(type="image/webp" srcset="@img/tmp/new-collection-product-2-1@2x.webp 2x, @img/tmp/new-collection-product-2-1.webp 1x")
+                        img(srcset="@img/tmp/new-collection-product-2-1@2x.jpg 2x, @img/tmp/new-collection-product-2-1.jpg 1x" width="1076" height="1079" alt="" loading="lazy")
+                    .new-collection-products__content
+                        .new-collection-products__text
+                            p Это кольцо с желтыми и белыми бриллиантами, которое напоминает луч солнца, пробивающийся сквозь облака. 
+                            p Оно подчеркнет яркий и солнечный образ своей обладательницы, добавив ей энергии и оптимизма
+                        picture.new-collection-products__product
+                            source(type="image/webp" srcset="@img/tmp/new-collection-product-2-2@2x.webp 2x, @img/tmp/new-collection-product-2-2.webp 1x")
+                            img(srcset="@img/tmp/new-collection-product-2-2@2x.jpg 2x, @img/tmp/new-collection-product-2-2.jpg 1x" width="413" height="475" alt="" loading="lazy")
+                        a.new-collection-products__link.btn._transparent-gray-border(href="#") Перейти
+
+    //Товары
+    section.section
+        .container.products__wrap
+            .products._col4-line
+                +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0')
+                +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1')
+                +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2')
+                +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3')
+
+            a.link._italic._button-mobile.animation-link.products__more(href="#")
+                span._wrap 
+                    span._default Смотреть всю коллекцию
+                    span._hover Смотреть всю коллекцию
+
+

@@ -1,0 +1,252 @@
+extends base
+
+block meta
+    - var seotitle = 'Бриллианты'
+    - var seodescription = 'Описание страницы бриллиантов'
+    - var seokeywords = 'Ключевые слова страницы бриллиантов'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    //Фильтр
+    section.filter
+        .container
+            button.filter__mobile-btn.btn._transparent-gray-border(type="button" data-fancybox-no-swipe data-src="#modal-filter")
+                svg(width="40" height="40")
+                    use(xlink:href="@img/icons/icons.svg#filter")
+                | Фильтр
+
+            .filter__form-wrap(id="modal-filter")
+                .filter__header
+                    .filter__header-title Фильтр
+                    button.filter__header-close.btn-reset(type="button" data-fancybox-close) Закрыть
+                        span 
+
+                form.filter__form(action="#" method="get")
+                    fieldset.filter__item._small(data-filter-item)
+                        p.filter__title(data-filter-title) Огранка бриллианта
+                            span.filter__title-icon
+                                svg(width="13" height="16")
+                                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                        .filter__cuts.filter__content(data-filter-content)
+                            mixin filter_cut(icon)
+                                .filter__cut
+                                    input.filter__cut-input(type="checkbox" name="cut" id=icon)
+                                    label.filter__cut-label(for=icon)
+                                        svg.filter__cut-icon(width="35" height="35")
+                                            use(xlink:href="@img/icons/icons.svg#"+icon)
+                            +filter_cut('cut-1')
+                            +filter_cut('cut-2')
+                            +filter_cut('cut-3')
+                            +filter_cut('cut-4')
+                            +filter_cut('cut-5')
+                            +filter_cut('cut-6')
+                            +filter_cut('cut-7')
+                            +filter_cut('cut-8')
+                            +filter_cut('cut-9')
+                            +filter_cut('cut-10')
+                            +filter_cut('cut-11')
+                            +filter_cut('cut-12')
+
+                    mixin filter_checkbox(title, name, id, classnames)
+                        .filter__checkbox(class=classnames)
+                            input.filter__checkbox-input(type="checkbox" name=name id=id)
+                            label.filter__checkbox-label(for=id)=title
+
+                    fieldset.filter__item._small(data-filter-more-parent data-filter-item)
+                        p.filter__title(data-filter-title) Цвет бриллианта
+                            span.filter__title-icon
+                                svg(width="13" height="16")
+                                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                        .filter__checkboxes.filter__content._color(data-filter-content="flex")
+                            +filter_checkbox('D', 'color', 'color-1', '')
+                            +filter_checkbox('E', 'color', 'color-2', '')
+                            +filter_checkbox('F', 'color', 'color-3', '')
+                            +filter_checkbox('G', 'color', 'color-4', '')
+                            +filter_checkbox('H', 'color', 'color-5', '')
+                            +filter_checkbox('I', 'color', 'color-6', '')
+                            +filter_checkbox('J', 'color', 'color-7', '')
+                            +filter_checkbox('L', 'color', 'color-8', '')
+                            +filter_checkbox('N', 'color', 'color-9', '')
+                            +filter_checkbox('W-X', 'color', 'color-10', '')
+                            +filter_checkbox('Fancy Yellow', 'color', 'color-11', '_hidden')
+                            +filter_checkbox('Fancy Vivid Yellow', 'color', 'color-12', '_hidden')
+                            +filter_checkbox('Fancy Intense Yellow', 'color', 'color-13', '_hidden')
+                        button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more)
+                            span._wrap
+                                span._default Еще цвета 
+                                span._hover Еще цвета
+
+                    fieldset.filter__item._small._no-border(data-filter-item)
+                        p.filter__title(data-filter-title) Чистота бриллианта
+                            span.filter__title-icon
+                                svg(width="13" height="16")
+                                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                        .filter__checkboxes.filter__content._clean(data-filter-content)
+                            +filter_checkbox('VVS 1', 'clean', 'clean-1', '')
+                            +filter_checkbox('VVS 2', 'clean', 'clean-2', '')
+                            +filter_checkbox('VS 1', 'clean', 'clean-3', '')
+                            +filter_checkbox('VS 2', 'clean', 'clean-4', '')
+                            +filter_checkbox('SI 1', 'clean', 'clean-5', '')
+                            +filter_checkbox('I 1', 'clean', 'clean-6', '')
+                            +filter_checkbox('IF', 'clean', 'clean-7', '')
+
+                    fieldset.filter__item._full(data-filter-item)
+                        p.filter__title(data-filter-title) Вес бриллианта
+                            span.filter__title-icon
+                                svg(width="13" height="16")
+                                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                        .filter__range.filter__content(data-range-wrap data-filter-content)
+                            input(type="hidden" name="weight_from" value="0.5" data-range-input-from)
+                            input(type="hidden" name="weight_to" value="2" data-range-input-to)
+
+                            .filter__range-inputs
+                                .filter__range-title от
+                                .filter__range-fake-input
+                                    .filter__range-input(data-range-from) 0.5
+                                    | Карат
+                                .filter__range-title до
+                                .filter__range-fake-input
+                                    .filter__range-input(data-range-to) 2
+                                    | Карат
+                            .filter__range-init(data-range data-range-min="0" data-range-max="2.4" data-range-step="0.01" data-range-min-value="0.5" data-range-max-value="2")
+
+                    .filter__form-bottom
+                        .filter__selected-list
+                            button.filter__selected.btn-reset(type="button" data-filter-selected)
+                                span.filter__selected-icon
+                                | Сердце
+                            button.filter__selected.btn-reset(type="button" data-filter-selected)
+                                span.filter__selected-icon
+                                | G
+                            button.filter__selected.btn-reset(type="button" data-filter-selected)
+                                span.filter__selected-icon
+                                | VS 1
+                            button.filter__selected.btn-reset(type="button" data-filter-selected)
+                                span.filter__selected-icon
+                                | 1.05
+                        .filter__btns
+                            button.filter__submit.btn(type="submit") Применить
+                            button.filter__reset.btn._transparent-gray-border(type="reset") Очистить
+
+            .filter__selected-list
+                button.filter__selected.btn-reset(type="button" data-filter-selected)
+                    span.filter__selected-icon
+                    | Сердце
+                button.filter__selected.btn-reset(type="button" data-filter-selected)
+                    span.filter__selected-icon
+                    | G
+                button.filter__selected.btn-reset(type="button" data-filter-selected)
+                    span.filter__selected-icon
+                    | VS 1
+                button.filter__selected.btn-reset(type="button" data-filter-selected)
+                    span.filter__selected-icon
+                    | 1.05
+
+    //Бриллианты
+    mixin diamonds_item(icon)
+        a.diamonds__item.diamonds__cols(href="#")
+            span.diamonds__col._center
+                svg.diamonds__item-icon(width="35" height="35")
+                    use(xlink:href="@img/icons/icons.svg#"+icon)
+            span.diamonds__col 2225798290
+            span.diamonds__col 1.01 , 1.00
+            span.diamonds__col Fancy Yellow
+            span.diamonds__col VVS2
+            span.diamonds__col 1 326 600 ₽
+
+    section.section._pt0 
+        .container
+            .diamonds.scroll._hidden
+                .diamonds__cols
+                    button.diamonds__btn.diamonds__col.btn-reset._asc(type="button" data-diamonds-sorting) Форма
+                    button.diamonds__btn.diamonds__col.btn-reset._asc(type="button" data-diamonds-sorting) Артикул
+                    button.diamonds__btn.diamonds__col.btn-reset._asc(type="button" data-diamonds-sorting) Вес
+                    button.diamonds__btn.diamonds__col.btn-reset._asc(type="button" data-diamonds-sorting) Цвет
+                    button.diamonds__btn.diamonds__col.btn-reset._asc(type="button" data-diamonds-sorting) Чистота
+                    button.diamonds__btn.diamonds__col.btn-reset._asc(type="button" data-diamonds-sorting) Цена
+
+                +diamonds_item('cut-1')
+                +diamonds_item('cut-2')
+                +diamonds_item('cut-3')
+                +diamonds_item('cut-4')
+                +diamonds_item('cut-5')
+                +diamonds_item('cut-6')
+                +diamonds_item('cut-7')
+                +diamonds_item('cut-8')
+                +diamonds_item('cut-9')
+                +diamonds_item('cut-10')
+                +diamonds_item('cut-11')
+                +diamonds_item('cut-12')
+
+            //Пагинация
+            .pagination.section._pb0
+                button.pagination__more.btn-reset.link._italic.animation-link._button-mobile(type="button")
+                    span._wrap
+                        span._default Показать еще
+                        span._hover Показать еще
+
+                ul.pagination__list
+                    li.pagination__list-item 
+                        a.pagination__list-arrow._prev._disabled(href="#")
+                    li.pagination__list-item 
+                        a.pagination__list-link._active(href="#") 1
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 2
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 3
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 4
+                    li.pagination__list-item.pagination__list-divider . . .
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 9
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 10
+                    li.pagination__list-item 
+                        a.pagination__list-arrow._next(href="#")
+
+    //Информация
+    section.section.diamonds-info._pt0 
+        .container
+            .diamonds-info__container 
+                article.diamonds-info__item
+                    p.diamonds-info__title._mobile Документы
+                    svg.diamonds-info__icon(width="188" height="188")
+                        use(xlink:href="@img/icons/icons.svg#documents")
+                    .diamonds-info__content
+                        h3.diamonds-info__title Документы
+                        p.diamonds-info__text Наши документы: полный список официальных документов и сертификатов
+                        a.diamonds-info__link.link._italic.animation-link(href="#")
+                            span._wrap 
+                                span._default Читать подробнее
+                                span._hover Читать подробнее
+
+                article.diamonds-info__item
+                    p.diamonds-info__title._mobile Поставщики
+                    svg.diamonds-info__icon(width="188" height="188")
+                        use(xlink:href="@img/icons/icons.svg#suppliers")
+                    .diamonds-info__content
+                        h3.diamonds-info__title Поставщики
+                        p.diamonds-info__text Нашими поставщиками являются:
+                            span Ювелирные заводы
+                            span Ювелирные фабрики
+                        a.diamonds-info__link.link._italic.animation-link(href="#")
+                            span._wrap 
+                                span._default Читать подробнее
+                                span._hover Читать подробнее
+
+                article.diamonds-info__item
+                    p.diamonds-info__title._mobile Гарантии
+                    svg.diamonds-info__icon(width="188" height="188")
+                        use(xlink:href="@img/icons/icons.svg#guarantee")
+                    .diamonds-info__content
+                        h3.diamonds-info__title Гарантии
+                        p.diamonds-info__text На приобретенное Вами изделие мы даем гарантию сроком 12 (двенадцать) календарных месяцев.
+                        a.diamonds-info__link.link._italic.animation-link(href="#")
+                            span._wrap 
+                                span._default Читать подробнее
+                                span._hover Читать подробнее
+
+
+

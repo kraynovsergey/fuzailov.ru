@@ -1,0 +1,218 @@
+.footer {
+    border-top: 1px solid $color_black;
+    padding: 5rem 0 3rem;
+    color: $color_black;
+
+    @media (max-width: 1440px) {
+        padding: 4rem 0 2.5rem;
+    }
+
+    @media (max-width: 767px) {
+        padding: 2rem 0 2rem;
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        align-items: start;
+        justify-content: space-between;
+        gap: 1.5rem;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: repeat(4, auto);
+        }
+
+        @media (max-width: 767px) {
+            grid-template-columns: auto auto;
+            gap: 3rem 1.5rem;
+        }
+    }
+
+    &__first {
+        display: grid;
+        gap: 5rem;
+        max-width: 22rem;
+
+        @media (max-width: 1440px) {
+            gap: 4rem;
+            max-width: 18rem;
+        }
+
+        @media (max-width: 767px) {
+            grid-column: span 2;
+            max-width: 100%;
+        }
+
+        &-item {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        &-title {
+            font-size: 1.12rem;
+            font-weight: 500;
+            margin: 0;
+
+            @media (max-width: 1440px) {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    &__payments {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    &__title {
+        font-size: 1.12rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+
+        @media (max-width: 1440px) {
+            font-size: 1rem;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        max-width: 22rem;
+
+        @media (max-width: 1440px) {
+            max-width: 18rem;
+        }
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+        }
+
+        & li {
+            font-size: 1.12rem;
+
+            @media (max-width: 1440px) {
+                font-size: 1rem;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            & a {
+                color: currentColor;
+                text-decoration: none;
+                transition: .5s ease;
+
+                &:hover {
+                    color: $color_light_gray;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        margin: 0;
+
+        @media (max-width: 767px) {
+            grid-column: span 2;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 1440px) {
+            display: none;
+            margin-top: 3.5rem;
+        }
+
+        @media (max-width: 767px) {
+            margin-top: 2rem;
+        }
+
+        &._contacts {
+            display: none;
+
+            @media (max-width: 1440px) {
+                display: flex;
+            }
+        }
+
+        &-item {
+            color: $color_black;
+
+            &:hover {
+                color: $color_light_gray;
+            }
+
+            &:not(:last-child) {
+                margin-right: .9rem;
+            }
+
+            & svg {
+                transition: .5s ease-in-out;
+            }
+        }
+    }
+
+    &__copyright {
+        padding-top: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #A3A3A3;
+
+        @media (max-width: 1440px) {
+            padding-top: 3rem;
+        }
+
+        @media (max-width: 767px) {
+            padding-top: 2rem;
+            border-top: 1px solid #DCDBDB;
+            margin-top: 2rem;
+            flex-direction: column;
+        }
+
+        &-item {
+            font-weight: 500;
+
+            &:not(:last-child) {
+                margin-right: 1.6rem;
+
+                @media (max-width: 767px) {
+                    margin-right: 0;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        &-link {
+            color: currentColor;
+            text-decoration: none;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                color: $color_black;
+            }
+        }
+    }
+
+}

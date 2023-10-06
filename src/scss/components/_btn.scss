@@ -1,0 +1,109 @@
+.btn-reset {
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    font-weight: normal;
+}
+
+.btn {
+    height: 4.12rem;
+    padding: 0 3.87rem;
+    font-size: 1.37rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+
+    @media (max-width: 575px) {
+        height: 3.57rem;
+        font-size: 1.28rem;
+        padding: 0 2.5rem;
+    }
+
+    &._transparent-gray-border {
+        background: transparent;
+        border: 1px solid $color_light_gray;
+        color: $color_black;
+
+        &:hover {
+            background: $color_card;
+        }
+    }
+
+    &._transparent-white-border {
+        background: transparent;
+        border: 1px solid $color_white;
+        color: $color_white;
+
+        &:hover {
+            background: $color_card;
+            color: $color_black;
+        }
+    }
+
+    &._white {
+        background: $color_white;
+        color: $color_black !important;
+        border: 0;
+
+        &:hover {
+            background-color: $color_card;
+        }
+    }
+
+    &._green {
+        background: $color_green;
+        color: $color_white !important;
+        border: 0;
+
+        &:hover {
+            background-color: $color_gray;
+        }
+    }
+}
+
+.btn-circle {
+    height: 4.3rem;
+    padding: 0 2rem;
+    border-radius: 6.25rem;
+    background: $color_white;
+    color: $color_black;
+    border: 0;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    transition: .5s ease;
+
+    @media (max-width: 575px) {
+        height: 3.5rem;
+        padding: 0 2.3rem;
+        border-radius: 7.14rem;
+        font-size: .85rem;
+    }
+
+    &:hover {
+        background: $color_card;
+    }
+
+    & svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1.8rem;
+
+        @media (max-width: 575px) {
+            width: 1.7rem;
+            height: 1.7rem;
+            margin-right: 2.14rem;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/* VENDORS */
+@import "../../node_modules/swiper/swiper.css";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
+@import "../../node_modules/range-slider-input/dist/style.css";
+@import "../../node_modules/choices.js/public/assets/styles/choices.css";
+
+/* CORE */
+@import "core/variables";
+@import "core/fonts";
+@import "core/default";
+
+/* COMPONENTS */
+@import "components/btn";
+@import "components/link";
+@import "components/picture";
+@import "components/scroll";
+@import "components/product";
+@import "components/fashion";
+@import "components/form-line";
+@import "components/modal";
+@import "components/swiper";
+@import "components/form";
+@import "components/breadcrumbs";
+@import "components/pagination";
+@import "components/text";
+
+/* LAYOUT */
+@import "layout/grid";
+@import "layout/header";
+@import "layout/nav";
+@import "layout/main";
+@import "layout/footer";
+@import "layout/section";
+
+/* BLOCKS */
+@import "blocks/top-line";
+@import "blocks/intro";
+@import "blocks/home-logo";
+@import "blocks/new-collection";
+@import "blocks/products";
+@import "blocks/categories";
+@import "blocks/home-about";
+@import "blocks/new-products";
+@import "blocks/home-services";
+@import "blocks/service";
+@import "blocks/community";
+@import "blocks/contacts";
+@import "blocks/fitting";
+@import "blocks/fashion-modal";
+@import "blocks/filter";
+@import "blocks/diamonds";
+@import "blocks/diamonds-info";
+@import "blocks/about-production";
+@import "blocks/about-new-collection";
+@import "blocks/new-collection-products";
+@import "blocks/collection-product";
+@import "blocks/product-page";
+@import "blocks/pluses";
+@import "blocks/sale-diamonds";
+@import "blocks/collection-diamonds";
+@import "blocks/feedback-section";
+@import "blocks/about-intro";
+@import "blocks/about-pluses";
+@import "blocks/team";
+@import "blocks/blog";
+@import "blocks/cart";
+@import "blocks/order";
+@import "blocks/catalog-filter";
+@import "blocks/uniq";
+@import "blocks/delivery";
+@import "blocks/article";
+@import "blocks/page-404";
+@import "blocks/ring-selection";
+@import "blocks/custom-made";

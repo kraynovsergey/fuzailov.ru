@@ -1,0 +1,15 @@
+.new-products {
+    &__container {
+        display: grid;
+        gap: 4.5rem;
+        justify-items: center;
+    
+        @media (max-width: 767px) {
+            gap: 1.7rem;
+        }
+    }
+
+    &__section-title {
+        margin-bottom: 0 !important;
+    }
+}

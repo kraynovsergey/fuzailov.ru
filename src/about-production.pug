@@ -1,0 +1,116 @@
+extends base
+
+block meta
+    - var seotitle = 'О производстве'
+    - var seodescription = 'Описание страницы о производстве'
+    - var seokeywords = 'Ключевые слова страницы о производстве'
+
+block main
+    //Интро
+    section.intro
+        .intro__video-wrap
+            video.intro__video(autoplay muted loop playsinline poster="@img/tmp/about-production-intro.jpg" preload="none")
+                source(type="video/mp4" src="files/video.mp4")
+        
+        //picture.intro__picture
+            source(type="image/webp" srcset="@img/tmp/about-production-intro@2x.webp 2x, @img/tmp/about-production-intro.webp 1x")
+            img(srcset="@img/tmp/about-production-intro@2x.jpg 2x, @img/tmp/about-production-intro.jpg 1x" alt="" width="1920" height="1000" loading="lazy")
+
+        .intro__overlay
+            .intro__content._about-production
+                p.intro__text Производство
+                svg.intro__logo(width="785" height="120")
+                    use(xlink:href="@img/icons/icons.svg#logo")
+
+    //Хлебные крошки
+    - var breadcrumbs_classnames = '_intro'
+    include pug/layout/_breadcrumbs
+
+    //О производстве
+    section.section.about-production._pt0
+        .container.about-production__container
+            article.about-production__item
+                picture.about-production__picture
+                    source(type="image/webp" srcset="@img/tmp/about-production-1-1@2x.webp 2x, @img/tmp/about-production-1-1.webp 1x")
+                    img(srcset="@img/tmp/about-production-1-1@2x.jpg 2x, @img/tmp/about-production-1-1.jpg 1x" alt="" width="634" height="727" loading="lazy")
+
+                .about-production__content
+                    h2.about-production__title
+                        span.about-production__title-name Используем новейшие технологии
+                        span.about-production__title-i I
+
+                    .about-production__text 
+                        p Скандируем бриллиант и создаем 3д модели для идеальной посадки. 
+
+                    .about-production__second-picture(data-picture-parallax="0.2")
+                        picture
+                            source(type="image/webp" srcset="@img/tmp/about-production-1-2@2x.webp 2x, @img/tmp/about-production-1-2.webp 1x")
+                            img(srcset="@img/tmp/about-production-1-2@2x.jpg 2x, @img/tmp/about-production-1-2.jpg 1x" alt="" width="412" height="625" loading="lazy")
+
+            article.about-production__item
+                picture.about-production__picture
+                    source(type="image/webp" srcset="@img/tmp/about-production-2-1@2x.webp 2x, @img/tmp/about-production-2-1.webp 1x")
+                    img(srcset="@img/tmp/about-production-2-1@2x.jpg 2x, @img/tmp/about-production-2-1.jpg 1x" alt="" width="634" height="600" loading="lazy")
+
+                .about-production__content
+                    h2.about-production__title
+                        span.about-production__title-name Воплощаем даже самые смелые идеи
+                        span.about-production__title-i II
+
+                    .about-production__text 
+                        p Опыт наших специалистов позволяет создавать настоящие шедевры, которые становятся только ценнее с годами.
+
+                    .about-production__second-picture(data-picture-parallax="0.2")
+                        picture
+                            source(type="image/webp" srcset="@img/tmp/about-production-2-2@2x.webp 2x, @img/tmp/about-production-2-2.webp 1x")
+                            img(srcset="@img/tmp/about-production-2-2@2x.jpg 2x, @img/tmp/about-production-2-2.jpg 1x" alt="" width="412" height="625" loading="lazy")
+
+            article.about-production__item
+                picture.about-production__picture
+                    source(type="image/webp" srcset="@img/tmp/about-production-3-1@2x.webp 2x, @img/tmp/about-production-3-1.webp 1x")
+                    img(srcset="@img/tmp/about-production-3-1@2x.jpg 2x, @img/tmp/about-production-3-1.jpg 1x" alt="" width="634" height="600" loading="lazy")
+
+                .about-production__content
+                    h2.about-production__title
+                        span.about-production__title-name Используем собственные бриллианты
+                        span.about-production__title-i III
+
+                    .about-production__text 
+                        p Мы сами граним бриллианты и являемся поставщиками.
+                        p Предоставляем широкий ассортимент цветных драгоценных камней.
+
+                    .about-production__second-picture(data-picture-parallax="0.2")
+                        picture
+                            source(type="image/webp" srcset="@img/tmp/about-production-3-2@2x.webp 2x, @img/tmp/about-production-3-2.webp 1x")
+                            img(srcset="@img/tmp/about-production-3-2@2x.jpg 2x, @img/tmp/about-production-3-2.jpg 1x" alt="" width="412" height="625" loading="lazy")
+
+            article.about-production__item
+                picture.about-production__picture
+                    source(type="image/webp" srcset="@img/tmp/about-production-4-1@2x.webp 2x, @img/tmp/about-production-4-1.webp 1x")
+                    img(srcset="@img/tmp/about-production-4-1@2x.jpg 2x, @img/tmp/about-production-4-1.jpg 1x" alt="" width="634" height="600" loading="lazy")
+
+                .about-production__content
+                    h2.about-production__title
+                        span.about-production__title-name Чтим традиции ювелирного искусства
+                        span.about-production__title-i IV
+
+                    .about-production__text 
+                        p Все украшения создаются вручную.
+
+                    .about-production__second-picture(data-picture-parallax="0.2")
+                        picture
+                            source(type="image/webp" srcset="@img/tmp/about-production-4-2@2x.webp 2x, @img/tmp/about-production-4-2.webp 1x")
+                            img(srcset="@img/tmp/about-production-4-2@2x.jpg 2x, @img/tmp/about-production-4-2.jpg 1x" alt="" width="412" height="625" loading="lazy")
+
+    //Выбери свое произведение искусства
+    section.section
+        .service
+            .container.service__container 
+                picture.service__picture
+                    source(type="image/webp" srcset="@img/tmp/about-production-catalog@2x.webp 2x, @img/tmp/about-production-catalog.webp 1x")
+                    img(srcset="@img/tmp/about-production-catalog@2x.jpg 2x, @img/tmp/about-production-catalog.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+                .service__content
+                    p.section__subtitle.service__section-subtitle Украшения
+                    h2.section__title.service__section-title Выберите своё произведение искусства
+                    a.service__link.btn._transparent-white-border(href="#") В каталог
+

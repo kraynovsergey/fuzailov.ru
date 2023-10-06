@@ -1,0 +1,173 @@
+//Шапка
+header.header(data-header)
+    //Верхняя полоса с контактами
+    section.top-line
+        .container.top-line__container
+            a.top-line__phone(href="tel:+79175331452") 
+                svg.top-line__phone-icon(width="28" height="28")
+                    use(xlink:href="@img/icons/icons.svg#phone")
+                | +7 (917) 533-14-52
+
+            .top-line__socials
+                a.top-line__socials-item(href="tg://resolve?domain=telegram_nick" target="_blank")
+                    svg(width="28" height="28")
+                        use(xlink:href="@img/icons/icons.svg#telegram")
+                a.top-line__socials-item(href="https://api.whatsapp.com/send?phone=7925042935" target="_blank")
+                    svg(width="28" height="28")
+                        use(xlink:href="@img/icons/icons.svg#whatsapp")
+
+    .container.header__container
+        .header__left
+            .header__search
+                button.header__search-btn.btn-reset(type="button" data-search-show)
+                    svg(width="24" height="24")
+                        use(xlink:href="@img/icons/icons.svg#search")
+
+                .header__search-box(data-search)
+                    .header__search-header
+                        p.header__search-title Поиск
+                        button.header__search-close.btn-reset(type="buton" data-search-hide)
+                            svg(width="40" height="40")
+                                use(xlink:href="@img/icons/icons.svg#close")
+                    form.header__search-form.form-line(action="#" method="get")
+                        input.header__search-input.form-line__input(type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д")
+                        button.header__search-submit.btn-reset.form-line__submit(type="submit") Поиск
+                    .header__search-actual
+                        p.header__search-actual-title Актуальные запросы
+                        ul.header__search-actual-list
+                            li
+                                a(href="#") Кольцо Зелёный взгяд
+                            li
+                                a(href="#") Кольцо Солнечный луч
+
+            button.header__feedback.btn-reset(type="button" data-fancybox data-src="#modal-feedback") Связаться с нами
+
+        .header__logo
+            a.header__logo-link(href="#")
+                svg(width="143" height="23")
+                    use(xlink:href="@img/icons/icons.svg#logo")
+
+        .header__controls
+            a.header__control(href="#")
+                svg.header__control-icon._transparent(width="26" height="26")
+                    use(xlink:href="@img/icons/icons.svg#favourites")
+                span.header__control-count 4
+
+            a.header__control(href="#")
+                svg.header__control-icon(width="26" height="26")
+                    use(xlink:href="@img/icons/icons.svg#cart")
+                span.header__control-count 3
+
+            button.header__control.header__burger.btn-reset(type="button" data-fancybox data-src="#modal-nav")
+                svg(width="30" height="30")
+                    use(xlink:href="@img/icons/icons.svg#burger")
+
+    //Навигация
+    nav.nav(id="modal-nav")
+        .container.nav__container
+            .nav__header 
+                a.nav__logo(href="#")
+                    svg(width="143" height="22")
+                        use(xlink:href="@img/icons/icons.svg#logo")
+                button.nav__close.btn-reset(type="button" data-fancybox-close)
+                    svg(width="35" height="35")
+                        use(xlink:href="@img/icons/icons.svg#nav-close")
+
+            form.nav__search.form-line(action="#" method="get")
+                input.nav__search-input.form-line__input(type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д")
+                button.header__search-submit.btn-reset.form-line__submit(type="submit") Поиск
+
+            ul.nav__list
+                li.nav__list-item._megamenu(data-nav-parent)
+                    a.nav__list-link.animation-link(href="#") 
+                        span._wrap
+                            span._default Каталог
+                            span._hover Каталог
+                    svg.nav__list-item-arrow(width="24" height="24")
+                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    .nav__megamenu.scroll._hidden(data-nav-parent-target)
+                        .nav__megamenu-col
+                            .nav__megamenu-item
+                                p.nav__megamenu-title По категориям
+                                ul.nav__megamenu-list
+                                    li
+                                        a(href="#") Кольца
+                                    li
+                                        a(href="#") Серьги
+                                    li
+                                        a(href="#") Браслеты
+                                    li
+                                        a(href="#") Бриллианты
+                                    li
+                                        a(href="#") Цветные камни
+
+                            .nav__megamenu-item
+                                p.nav__megamenu-title По коллекции
+                                ul.nav__megamenu-list
+                                    li
+                                        a(href="#") Diamond Dreams Collection
+                                    li
+                                        a(href="#") Brilliantly Bold Collection
+                                    li
+                                        a(href="#") Radiant Reflections Collection
+
+                        .nav__megamenu-banner
+                            picture.nav__megamenu-picture
+                                source(type="image/webp" srcset="@img/tmp/megamenu@2x.webp 2x, @img/tmp/megamenu@2x.webp 1x")
+                                img(srcset="@img/tmp/megamenu@2x.jpg 2x, @img/tmp/megamenu@2x.jpg 1x" alt="" width="372" height="586" loading="lazy")
+                            .nav__megamenu-content
+                                p.nav__megamenu-label Новинка
+                                p.nav__megamenu-name "Зеленый взгляд"
+                                p.nav__megamenu-text Созданные опытными мастерами и сверкающие тончайшими бриллиантами, откройте для себя новейшие творения, только что поступившие из ателье
+                                a.nav__megamenu-link.btn._transparent-gray-border(href="#") Смотреть коллекцию
+
+                li.nav__list-item
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default О нас
+                            span._hover О нас
+                li.nav__list-item
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default Контакты
+                            span._hover Контакты
+                li.nav__list-item._parent(data-nav-parent)
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default Услуги
+                            span._hover Услуги
+                    svg.nav__list-item-arrow(width="24" height="24")
+                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    ul.nav__megamenu-list._popup(data-nav-parent-target)
+                        li
+                            a(href="#") Изготовление ювелирных украшений на заказ
+                        li
+                            a(href="#") Продажа украшений
+                        li
+                            a(href="#") Продажа бриллиантов
+                        li
+                            a(href="#") Кольца для особых случаев
+                        li
+                            a(href="#") Серьги для особых случаев
+
+                li.nav__list-item
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default О нашей продукции
+                            span._hover О нашей продукции
+                li.nav__list-item
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default Доставка и оплата
+                            span._hover Доставка и оплата
+                li.nav__list-item
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default Гарантия и возврат
+                            span._hover Гарантия и возврат
+
+            .nav__bottom
+                a.nav__shops(href="#")
+                    svg(width="22" height="25")
+                        use(xlink:href="@img/icons/icons.svg#map-marker")
+                    | Адреса бутиков

@@ -1,0 +1,27 @@
+extends base
+
+block meta
+    - var seotitle = 'Страница не найдена'
+    - var seodescription = 'Описание страницы не найдено'
+    - var seokeywords = 'Ключевые слова страницы не найдено'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.page-404
+        .container
+            .page-404__container 
+                .page-404__h1 4
+                    picture.page-404__picture
+                        source(type="image/webp" srcset="@img/404@2x.webp 2x, @img/404.webp 1x")
+                        img(srcset="@img/404@2x.png 2x, @img/404.png 1x" alt="" width="314" height="539")
+                    | 4
+                
+                p.page-404__text Запрашиваемая страница не найдена. Возможно страница была удалена или перемещена, либо была допущена ошибка в адресе.
+
+                a.page-404__link.link._italic.animation-link(href="#") 
+                    span._wrap
+                        span._default Вернуться на главную
+                        span._hover Вернуться на главную
+block footer

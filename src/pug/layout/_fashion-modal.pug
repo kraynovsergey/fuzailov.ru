@@ -1,0 +1,13 @@
+//Украшения из образа
+.fashion-modal(id="modal-fashion")
+    .fashion-modal__content
+        .fashion-modal__header
+            p.fashion-modal__title Украшения из образа
+            button.fashion-modal__close(type="button" data-fancybox-close)
+                svg(width="40" height="40")
+                    use(xlink:href="@img/icons/icons.svg#fashion-close")
+        .fashion-modal__products
+            .products._col2
+                +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active')
+                +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '',)
+        button.fashion-modal__btn.btn._transparent-gray-border(type="button") Добавить все товары в корзину

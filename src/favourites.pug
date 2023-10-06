@@ -1,0 +1,49 @@
+extends base
+
+block meta
+    - var seotitle = 'Избранное'
+    - var seodescription = 'Описание страницы избранного'
+    - var seokeywords = 'Ключевые слова страницы избранного'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.section._pt0
+        .container
+            h1.h1._center Вам понравилось
+
+            .products._col4
+                +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+                +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+                +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+
+            //Пагинация
+            .pagination.section._pb0
+                ul.pagination__list
+                    li.pagination__list-item 
+                        a.pagination__list-arrow._prev._disabled(href="#")
+                    li.pagination__list-item 
+                        a.pagination__list-link._active(href="#") 1
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 2
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 3
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 4
+                    li.pagination__list-item.pagination__list-divider . . .
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 9
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 10
+                    li.pagination__list-item 
+                        a.pagination__list-arrow._next(href="#")

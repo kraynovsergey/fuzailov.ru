@@ -1,0 +1,85 @@
+footer.footer
+    .container
+        .footer__content
+            .footer__first
+                .footer__first-item
+                    p.footer__first-title Подписывайтесь на новостную рассылку Fuzailov
+                    //Класс _error у input
+                    form.form-line
+                        .form-line__fieldset
+                            input.form-line__input(type="email" name="email" placeholder="E-mail")
+                            //span.form-line__error Текст ошибки
+                        button.form-line__submit(type="submit")
+                            svg(width="21" height="12")
+                                use(xlink:href="@img/icons/icons.svg#form-line-submit")
+
+                .footer__first-item
+                    p.footer__first-title Вы можете оплатить товар любым удобным вам способом.
+                    .footer__payments
+                        svg.footer__payments-item(width="48" height="48")
+                            use(xlink:href="@img/icons/icons.svg#footer-visa")
+                        svg.footer__payments-item(width="48" height="48")
+                            use(xlink:href="@img/icons/icons.svg#footer-mastercard")
+
+            nav.footer__nav
+                p.footer__title Украшения
+                ul.footer__list
+                    li
+                        a(href="#") Кольца
+                    li
+                        a(href="#") Серьги
+                    li
+                        a(href="#") Подвески
+                    li
+                        a(href="#") Браслеты
+
+            nav.footer__nav
+                p.footer__title Покупателям
+                ul.footer__list
+                    li
+                        a(href="#") О компании
+                    li
+                        a(href="#") Контакты
+                    li
+                        a(href="#") Доставка и оплата
+                    li
+                        a(href="#") Гарантия
+                    li
+                        a(href="#") Возврат
+
+            address.footer__contacts
+                p.footer__title Контакты
+                ul.footer__list
+                    li 
+                        a(href="tel:+79175331452") +7 (917) 533-14-52
+                    li 
+                        a(href="mailto:info@my-diamonds.ru") info@my-diamonds.ru
+                    li Москва, Краснопресненская набережная, д.12, Hotel Plaza Garden
+                    li Ежедневно: с 10:00 до 21:00
+
+                .footer__socials._contacts
+                    a.footer__socials-item(href="https://vk.com/" target="_blank")
+                        svg(width="30" height="30")
+                            use(xlink:href="@img/icons/icons.svg#vk")
+                    a.footer__socials-item(href="tg://resolve?domain=telegram_nick" target="_blank")
+                        svg(width="30" height="30")
+                            use(xlink:href="@img/icons/icons.svg#telegram")
+                    a.footer__socials-item(href="https://api.whatsapp.com/send?phone=7925042935" target="_blank")
+                        svg(width="30" height="30")
+                            use(xlink:href="@img/icons/icons.svg#whatsapp")
+
+            .footer__socials
+                a.footer__socials-item(href="https://vk.com/" target="_blank")
+                    svg(width="30" height="30")
+                        use(xlink:href="@img/icons/icons.svg#vk")
+                a.footer__socials-item(href="tg://resolve?domain=telegram_nick" target="_blank")
+                    svg(width="30" height="30")
+                        use(xlink:href="@img/icons/icons.svg#telegram")
+                a.footer__socials-item(href="https://api.whatsapp.com/send?phone=7925042935" target="_blank")
+                    svg(width="30" height="30")
+                        use(xlink:href="@img/icons/icons.svg#whatsapp")
+
+        .footer__copyright
+            .footer__copyright-item © 2023, Fuzailov
+            a.footer__copyright-item.footer__copyright-link(href="#") Политика приватности
+            a.footer__copyright-item.footer__copyright-link(href="#") Правила пользования сайтом

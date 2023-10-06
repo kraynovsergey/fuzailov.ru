@@ -1,0 +1,163 @@
+extends base
+
+block meta
+    - var seotitle = 'Статья'
+    - var seodescription = 'Описание страницы статьи'
+    - var seokeywords = 'Ключевые слова страницы статьи'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    //Тело статьи
+    article.section._pt0
+        picture.article__picture
+            source(type="image/webp" srcset="@img/tmp/article@2x.webp 2x, @img/tmp/article.webp 1x")
+            img(srcset="@img/tmp/article@2x.jpg 2x, @img/tmp/article.jpg 1x" alt="" width="1920" height="800")
+
+        .container
+            h1.section__title.article__title История ювелирных украшений: от древности до современности
+
+            .article__grid.text
+                aside.article__aside
+                    .article__aside-header
+                        .article__category блог
+                        time.article__date 21.03.2023
+
+                    .article__share
+                        .article__share-title Поделиться
+                        .article__share-items
+                            a.article__share-item(href="#" target="_blank")
+                                svg(width="30" height="30")
+                                    use(xlink:href="@img/icons/icons.svg#vk")
+                            a.article__share-item(href="#" target="_blank")
+                                svg(width="30" height="30")
+                                    use(xlink:href="@img/icons/icons.svg#telegram")
+                            a.article__share-item(href="#" target="_blank")
+                                svg(width="30" height="30")
+                                    use(xlink:href="@img/icons/icons.svg#whatsapp")
+
+                .article__content
+                    .article__medium
+                        p Ювелирные украшения считаются одними из самых дорогих и роскошных предметов в мире. Они были созданы еще в древние времена и до сегодняшнего дня остаются символом статуса и богатства. В этой статье мы рассмотрим историю ювелирных украшений, начиная с древности и заканчивая современностью.
+
+                    .article__item
+                        h2 Древний мир
+                        p Первые ювелирные украшения появились еще в древнем мире. Они были созданы из различных материалов, таких как кости, раковины, камни и металлы. В древней Греции ювелирные украшения были популярны среди женщин и использовались для выражения статуса и богатства. В Римской империи ювелирные украшения стали еще более роскошными, они были украшены драгоценными камнями и металлами.
+
+                    .article__item 
+                        h2 Средневековье
+                        p В Средневековье ювелирные украшения использовались как символ религиозной веры и социального статуса. Они были созданы из золота, серебра и драгоценных камней. В этот период также появились первые обручальные кольца, которые использовались для обмена клятвами любви и верности.
+
+                    .article__figures
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-img-1@2x.webp 2x, @img/tmp/article-img-1.webp 1x")
+                                img(srcset="@img/tmp/article-img-1@2x.jpg 2x, @img/tmp/article-img-1.jpg 1x" alt="" width="412" height="500" loading="lazy")
+                            figcaption Золотой головной убор с драгоценными камнями и эмалью и пара церемониальных серег, Марокко, около 1800 года
+
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-img-2@2x.webp 2x, @img/tmp/article-img-2.webp 1x")
+                                img(srcset="@img/tmp/article-img-2@2x.jpg 2x, @img/tmp/article-img-2.jpg 1x" alt="" width="412" height="400" loading="lazy")
+                            figcaption Итальянский Ренессанс, жемчужное ожерелье, ожерелье из четырехлистного клевера, Исторические украшения, винтажные украшения, ожерелье 16 века, Costanza II
+
+                    .article__item
+                        h2 Ренессанс
+                        p В Ренессансе ювелирные украшения стали еще более роскошными и детализированными. Они были созданы из золота, серебра, платины и украшены драгоценными камнями. В этот период появились новые техники создания украшений, такие как гравировка и эмалирование.
+
+                    .article__item 
+                        h2 Новое время
+                        p В Новое время ювелирные украшения стали доступными не только для королев и аристократов, но и для обычных людей. Они были созданы из различных материалов, таких как стекло, пластик и металлы. В этот период появились новые стили и направления в ювелирном искусстве, такие как арт-деко и модерн.
+
+                    .article__item 
+                        h2 Современность
+                        p В современности ювелирные украшения продолжают оставаться символом статуса и богатства. Они создаются из различных материалов, таких как золото, серебро, платина и драгоценные камни. В этот период появились новые технологии создания украшений, такие как компьютерное проектирование и 3D-печать.
+
+        .container
+            .article__swiper.swiper(data-article-swiper)
+                .swiper-wrapper
+                    .swiper-slide
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-slide-1@2x.webp 2x, @img/tmp/article-slide-1.webp 1x")
+                                img(srcset="@img/tmp/article-slide-1@2x.jpg 2x, @img/tmp/article-slide-1.jpg 1x" alt="" width="634" height="800" loading="lazy")
+                            figcaption Изготовитель футляра: Ипполит Тетержер Французский
+
+                    .swiper-slide
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-slide-1@2x.webp 2x, @img/tmp/article-slide-1.webp 1x")
+                                img(srcset="@img/tmp/article-slide-1@2x.jpg 2x, @img/tmp/article-slide-1.jpg 1x" alt="" width="634" height="800" loading="lazy")
+                            figcaption Изготовитель футляра: Ипполит Тетержер Французский
+
+                    .swiper-slide
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-slide-1@2x.webp 2x, @img/tmp/article-slide-1.webp 1x")
+                                img(srcset="@img/tmp/article-slide-1@2x.jpg 2x, @img/tmp/article-slide-1.jpg 1x" alt="" width="634" height="800" loading="lazy")
+                            figcaption Изготовитель футляра: Ипполит Тетержер Французский
+
+                    .swiper-slide
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-slide-1@2x.webp 2x, @img/tmp/article-slide-1.webp 1x")
+                                img(srcset="@img/tmp/article-slide-1@2x.jpg 2x, @img/tmp/article-slide-1.jpg 1x" alt="" width="634" height="800" loading="lazy")
+                            figcaption Изготовитель футляра: Ипполит Тетержер Французский
+
+                    .swiper-slide
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-slide-1@2x.webp 2x, @img/tmp/article-slide-1.webp 1x")
+                                img(srcset="@img/tmp/article-slide-1@2x.jpg 2x, @img/tmp/article-slide-1.jpg 1x" alt="" width="634" height="800" loading="lazy")
+                            figcaption Изготовитель футляра: Ипполит Тетержер Французский
+
+                    .swiper-slide
+                        fugure.article__figure
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/article-slide-1@2x.webp 2x, @img/tmp/article-slide-1.webp 1x")
+                                img(srcset="@img/tmp/article-slide-1@2x.jpg 2x, @img/tmp/article-slide-1.jpg 1x" alt="" width="634" height="800" loading="lazy")
+                            figcaption Изготовитель футляра: Ипполит Тетержер Французский
+
+                button.swiper__navigation._prev._small(type="button" data-swiper-prev)
+                    svg(width="40" height="40")
+                        use(xlink:href="@img/icons/icons.svg#swiper-nav-small")
+
+                button.swiper__navigation._next._small(type="button" data-swiper-next)
+                    svg(width="40" height="40")
+                        use(xlink:href="@img/icons/icons.svg#swiper-nav-small")
+
+        .container
+            .article__grid._virtual
+                .article__virtual
+                .article__content
+                    .article__medium
+                        p В заключение, ювелирные украшения являются одними из самых роскошных и дорогих предметов в мире. Они имеют длинную историю, начиная с древности и заканчивая современностью. Независимо от того, какой стиль вы предпочитаете, вы всегда найдете уникальное и качественное украшение в коллекции Fuzailov.
+
+    //Релевантные статьи
+    section.section
+        .container
+            h2.blog__title-section.section__title.article__together-title._small Релевантные статьи
+            
+            mixin blog_item(img, width, height, category, date, title)
+                .swiper-slide.blog__slide
+                    article.blog__item
+                        picture.blog__picture
+                            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+                            img(srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x" alt="" width=width height=height loading="lazy")
+                        .blog__controls
+                            .blog__category=category
+                            time.blog__date=date
+                        h3.blog__title
+                            a.blog__link.link._full(href="#")=title
+            .blog__content._active
+                .blog__swiper.swiper(data-blog-swiper)
+                    .swiper-wrapper.blog__items
+                        +blog_item('blog-1', 758, 510, 'Блог', '21.03.2023', 'История ювелирных украшений: от древности до современности.')
+                        +blog_item('blog-2', 364, 330, 'Блог', '18.02.2023', 'Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.')
+                        +blog_item('blog-3', 562, 420, 'Блог', '18.02.2023', 'Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.')
+
+                a.link._italic.animation-link.products__more(href="#")
+                    span._wrap
+                        span._default Показать еще
+                        span._hover Показать еще

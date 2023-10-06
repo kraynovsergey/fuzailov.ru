@@ -1,0 +1,123 @@
+.diamonds {
+    display: flex;
+    flex-direction: column;
+    overflow-x: auto;
+    padding: 1px 0 0 1px;
+    font-size: 1.37rem;
+    color: $color_black;
+
+    @media (max-width: 1366px) {
+        font-size: 1.12rem;
+    }
+
+    @media (max-width: 1024px) {
+        margin: 0 -1.25rem;
+        padding: 0 1.25rem;
+    }
+
+    @media (max-width: 575px) {
+        margin: 0 -.71rem;
+        padding: 0 .71rem;
+    }
+
+    &__cols {
+        display: flex;
+
+        &:nth-child(2n) {
+            & .diamonds__col {
+                background: $color_card;
+            }
+        }
+    }
+
+    &__col {
+        width: 16.66%;
+        min-width: 11rem;
+        border: 1px solid $color_border;
+        padding: 1.37rem 1.88rem;
+        margin: -1px 0 0 -1px;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        justify-content: flex-start;
+        transition: .5s ease-in-out;
+
+        @media (max-width: 1366px) {
+            padding: 1rem 1.88rem;
+        }
+
+        &:nth-child(1) {
+            width: 10%;
+        }
+
+        &:nth-child(2) {
+            width: 21%;
+        }
+
+        &:nth-child(3) {
+            width: 15%;
+        }
+
+        &:nth-child(4) {
+            width: 18%;
+        }
+
+        &:nth-child(5) {
+            width: 18%;
+        }
+
+        &:nth-child(6) {
+            width: 18%;
+        }
+
+        &._center {
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        color: $color_black;
+        
+        &::after {
+            content: '';
+            width: .6rem;
+            height: .6rem;
+            border-left: 2px solid $color_black;
+            border-bottom: 2px solid $color_black;
+            margin-left: 1rem;
+            position: relative;
+            transition: .5s ease-in-out;
+        }
+
+        &._asc {
+            &::after {
+                top: .2rem;
+                transform: rotate(135deg);
+            }
+        }
+
+        &._desc {
+            &::after {
+                transform: rotate(-45deg);
+                top: -.1rem;
+            }
+        }
+    }
+
+    &__item {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            & .diamonds__col {
+                background: $color_green;
+                color: $color_white;
+            }
+        }
+
+        &-icon {
+            height: 2rem;
+            width: auto;
+        }
+    }
+}

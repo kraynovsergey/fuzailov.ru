@@ -1,0 +1,34 @@
+block html
+
+doctype html
+html(lang="ru" class=html_classnames)
+    head
+        //Мета
+        block meta
+            - var seotitle = ''
+            - var seodescription = ''
+            - var seokeywords = ''
+        
+        include pug/core/_meta
+    body
+        include pug/core/_mixin
+
+        include pug/layout/_header
+
+        //Контентная часть
+        main.main
+            block main
+
+        //Подвал
+        block footer
+            include pug/layout/_footer
+
+        //Модальное окно "Связаться с нами"
+        include pug/layout/_feedback
+
+        block modal
+
+        //Скрипты
+        block scripts
+
+        include pug/core/_scripts 

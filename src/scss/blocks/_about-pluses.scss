@@ -1,0 +1,176 @@
+.about-pluses {
+    background: $color_card;
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        transition: .5s ease-in-out;
+        position: relative;
+        display: flex;
+        z-index: 1;
+        border-bottom: 1px solid $color_white;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 100%;
+            background: $color_green;
+            pointer-events: none;
+            position: absolute;
+            z-index: 1;
+            transition: 1s ease-in-out;
+        }
+
+        &:hover {
+            @media (min-width: 992px) {
+                z-index: 2;
+
+                &::after {
+                    width: 100%;
+                }
+    
+                & .about-pluses__btn {
+                    border-color: transparent !important;
+                    color: $color_white;
+    
+                    &-arrow {
+                        background: $color_white;
+                        color: $color_green;
+                        
+                        & svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }            
+        }
+
+        &._active {
+            z-index: 2;
+
+            &::after {
+                width: 100%;
+            }
+
+            & .about-pluses__btn {
+                border-color: transparent !important;
+                color: $color_white;
+
+                &-arrow {
+                    background: $color_white;
+                    color: $color_green;
+                    
+                    & svg {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            & .about-pluses__btn {
+                border-top: 1px solid $color_border;
+            }
+        }
+    }
+    
+    &__container {
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    &__btn {
+        border-bottom: 1px solid $color_border;
+        padding: 1.88rem 0;
+        display: grid;
+        grid-template-columns: .51fr .49fr 3rem;
+        text-align: left;
+        align-items: center;
+        color: $color_black;
+        gap: 1.88rem;
+        transition: 1s ease-in-out;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr 2.5rem;
+        }
+
+        &-i {
+            font-family: 'Forum';
+            font-size: 2rem;
+
+            @media (max-width: 767px) {
+                display: none;
+            }
+        }
+
+        &-title {
+            font-size: 1.37rem;
+            line-height: 120%;
+            font-weight: 500;
+        }
+
+        &-arrow {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: $color_green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $color_white;
+            transition: 1s ease;
+
+            @media (max-width: 767px) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            & svg {
+                width: 45%;
+                height: auto;
+                transition: 1s ease;
+            }
+        }
+    }
+
+    &__content {
+        display: none;
+        opacity: 0;
+        grid-template-columns: .51fr .49fr 3rem;
+        align-items: start;
+        gap: 1.88rem;
+        color: $color_white;
+        padding-bottom: 2.5rem;
+
+        @media (max-width: 767px) {
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 1.8rem;
+        }
+
+        @media (max-width: 575px) {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+
+    &__picture {
+        display: flex;
+        justify-content: center;
+
+        & img {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        @media (min-width: 1281px) {
+            max-width: 22rem;
+        }
+    }
+}

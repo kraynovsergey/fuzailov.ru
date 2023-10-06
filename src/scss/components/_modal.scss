@@ -1,0 +1,132 @@
+.fancybox {
+    &__backdrop {
+        background: rgba(0,0,0,.7);
+    }
+
+    &__slide {
+        padding: 0 !important;
+    }
+}
+
+.modal {
+    width: calc(100% - 20rem);
+    position: relative;
+    background: $color_green;
+    padding: 3rem;
+    display: none;
+    margin-top: 5rem;
+
+    @media (max-width: 1440px) {
+        width: calc(100% - 12rem);
+    }
+
+    @media (max-width: 1280px) {
+        width: calc(100% - 7.5rem);
+    }
+
+    @media (max-width: 767px) {
+        padding: 3rem .75rem;
+    }
+
+    @media (max-width: 575px) {
+        width: calc(100% - 5.5rem);
+        margin-top: 3rem;
+    }
+
+    & .is-close-btn {
+        display: none;
+    }
+
+    &__close {
+        position: absolute;
+        right: -3.6rem;
+        top: -3.9rem;
+        background: none;
+        border: 0;
+        z-index: 2;
+        color: $color_white;
+        outline: none;
+
+        @media (max-width: 767px) {
+            right: -2.5rem;
+            top: -2.5rem;
+        }
+
+        & svg {
+            width: 3.5rem;
+            height: auto;
+
+            @media (max-width: 767px) {
+                width: 2.1rem;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 3.4rem;
+        font-family: 'Forum';
+        color: $color_white;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        line-height: 115%;
+
+        @media (max-width: 991px) {
+            font-size: 2.5rem;
+        }
+
+        @media (max-width: 767px) {
+            margin-bottom: 1.7rem;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 2.2rem;
+            line-height: 120%;
+        }
+    }
+
+    &__subtitle {
+        color: $color_white;
+        margin-bottom: 4rem;
+        max-width: 37rem;
+        width: 100%;
+    }   
+
+    &__btn {
+        height: 4rem;
+
+        @media (max-width: 767px) {
+            width: 100%;
+        }
+    }
+
+    &__rectangle-left {
+        position: absolute;
+        left: 0;
+        height: 100%;
+        top: 0;
+    }
+
+    &__rectangle {
+        position: absolute;
+        height: 100%;
+        width: 30%;
+        object-fit: cover;
+        top: 0;
+
+        @media (max-width: 1440px) {
+            width: 20%;
+        }
+
+        @media (max-width: 991px) {
+            display: none;
+        }
+
+        &._left {
+            left: 0;
+        }
+
+        &._right {
+            right: 0;
+        }
+    }
+}

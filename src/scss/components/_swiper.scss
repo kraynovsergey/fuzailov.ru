@@ -1,0 +1,67 @@
+.swiper {
+    position: relative;
+
+    &__navigation {
+        position: absolute;
+        top: calc(50% - 2.19rem);
+        color: $color_black;
+        z-index: 5;
+        background: none;
+        border: 0;
+        cursor: pointer;
+        appearance: none;
+        -webkit-appearance: none;
+        transition: .5s ease-in-out;
+
+        @media (max-width: 991px) {
+            top: calc(50% - 1.56rem);
+        }
+
+        & svg {
+            width: 4.38rem;
+            height: auto;
+
+            @media (max-width: 991px) {
+                width: 3.12rem;
+            }
+        }
+
+        &._prev {
+            left: 1.88rem;
+            transform: rotate(180deg);
+
+            @media (max-width: 991px) {
+                left: 1.25rem;
+            }
+        }
+
+        &._next {
+            right: 1.88rem;
+
+            @media (max-width: 991px) {
+                right: 1.25rem
+            }
+        }
+
+        &:disabled {
+            color: $color_light_gray;
+        }
+
+        &._small {
+            top: calc(50% - 1.25rem);
+
+            @media (max-width: 991px) {
+                display: none;
+            }
+
+            & svg {
+                width: 2.5rem;
+                height: auto;
+            }
+
+            &:disabled {
+                opacity: .2;
+            }
+        }
+    }
+}

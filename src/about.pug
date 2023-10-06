@@ -1,0 +1,225 @@
+extends base
+
+block meta
+    - var seotitle = 'О нас'
+    - var seodescription = 'Описание страницы о нас'
+    - var seokeywords = 'Ключевые слова страницы о нас'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    //Интро
+    section.section.about-intro._pt0
+        .container.about-intro__container
+            .about-intro__logo
+                svg(width="143" height="23")
+                    use(xlink:href="@img/icons/icons.svg#logo")
+
+            .about-intro__grid
+                p.about-intro__text Используем полувековой опыт семейной ювелирной, чтобы создавать для вас уникальные изделия
+
+                .about-intro__pictures
+                    picture.about-intro__picture-center
+                        source(type="image/webp" srcset="@img/tmp/about-intro-center@2x.webp 2x, @img/tmp/about-intro-center.webp 1x")
+                        img(srcset="@img/tmp/about-intro-center@2x.jpg 2x, @img/tmp/about-intro-center.jpg 1x" alt="" width="855" height="800" loading="lazy")
+
+                    picture.about-intro__picture-left(data-picture-parallax="0.1" data-picture-rotate-right)
+                        source(type="image/webp" srcset="@img/tmp/about-intro-left@2x.webp 2x, @img/tmp/about-intro-left.webp 1x")
+                        img(srcset="@img/tmp/about-intro-left@2x.jpg 2x, @img/tmp/about-intro-left.jpg 1x" alt="" width="347" height="348" loading="lazy")
+
+                    picture.about-intro__picture-right(data-picture-parallax="0.1" data-picture-rotate-left)
+                        source(type="image/webp" srcset="@img/tmp/about-intro-right@2x.webp 2x, @img/tmp/about-intro-right.webp 1x")
+                        img(srcset="@img/tmp/about-intro-right@2x.jpg 2x, @img/tmp/about-intro-right.jpg 1x" alt="" width="181" height="231" loading="lazy")
+
+                .about-intro__wrap-btn.btn-reset
+                    button.about-intro__btn(type="button")
+                        svg(width="21" height="24")
+                            use(xlink:href="@img/icons/icons.svg#arrow-down")
+
+    //Преимущества
+    section.section
+        section.section.about-pluses
+            .container
+                p.section__subtitle О нас
+                h2.section__title._small Уникальность нашей мастерской
+
+            .about-pluses__items
+                article.about-pluses__item(data-spoiler-parent)
+                    .container.about-pluses__container
+                        button.about-pluses__btn.btn-reset(data-spoiler="grid")
+                            span.about-pluses__btn-i I
+                            span.about-pluses__btn-title Искусство вне времени
+                            span.about-pluses__btn-arrow
+                                svg(width="21" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#arrow-down")
+
+                        .about-pluses__content(data-spoiler-content)
+                            picture.about-pluses__picture
+                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                            .about-pluses__text.text
+                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+
+                article.about-pluses__item(data-spoiler-parent)
+                    .container.about-pluses__container
+                        button.about-pluses__btn.btn-reset(data-spoiler="grid")
+                            span.about-pluses__btn-i II
+                            span.about-pluses__btn-title Уникальная огранка
+                            span.about-pluses__btn-arrow
+                                svg(width="21" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#arrow-down")
+
+                        .about-pluses__content(data-spoiler-content)
+                            picture.about-pluses__picture
+                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                            .about-pluses__text.text
+                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+
+                article.about-pluses__item(data-spoiler-parent)
+                    .container.about-pluses__container
+                        button.about-pluses__btn.btn-reset(data-spoiler="grid")
+                            span.about-pluses__btn-i III
+                            span.about-pluses__btn-title Неповторимость каждого изделия
+                            span.about-pluses__btn-arrow
+                                svg(width="21" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#arrow-down")
+
+                        .about-pluses__content(data-spoiler-content)
+                            picture.about-pluses__picture
+                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                            .about-pluses__text.text
+                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+
+                article.about-pluses__item(data-spoiler-parent)
+                    .container.about-pluses__container
+                        button.about-pluses__btn.btn-reset(data-spoiler="grid")
+                            span.about-pluses__btn-i IV
+                            span.about-pluses__btn-title Безупречное качество 
+                            span.about-pluses__btn-arrow
+                                svg(width="21" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#arrow-down")
+
+                        .about-pluses__content(data-spoiler-content)
+                            picture.about-pluses__picture
+                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                            .about-pluses__text.text
+                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+
+                article.about-pluses__item(data-spoiler-parent)
+                    .container.about-pluses__container
+                        button.about-pluses__btn.btn-reset(data-spoiler="grid")
+                            span.about-pluses__btn-i V
+                            span.about-pluses__btn-title Ваша лучшая инвестиция
+                            span.about-pluses__btn-arrow
+                                svg(width="21" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#arrow-down")
+
+                        .about-pluses__content(data-spoiler-content)
+                            picture.about-pluses__picture
+                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                            .about-pluses__text.text
+                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+
+                article.about-pluses__item(data-spoiler-parent)
+                    .container.about-pluses__container
+                        button.about-pluses__btn.btn-reset(data-spoiler="grid")
+                            span.about-pluses__btn-i VI
+                            span.about-pluses__btn-title Бессрочная гарантия
+                            span.about-pluses__btn-arrow
+                                svg(width="21" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#arrow-down")
+
+                        .about-pluses__content(data-spoiler-content)
+                            picture.about-pluses__picture
+                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                            .about-pluses__text.text
+                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+
+    //Команда
+    section.section.team
+        .container
+            p.team__subtitle.section__subtitle Наша команда
+            h2.team__title.section__title._small Люди, которые создают искусство для вас
+
+            mixin team_item(img)
+                .team__item-wrap.swiper-slide
+                    article.team__item
+                        .team__picture-wrap
+                            picture.team__picture 
+                                source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+                                img(srcset="@img/tmp/"+img+"@2x.jpg 2x, @img/tmp/"+img+".jpg 1x" alt="" width="308" height="310" loading="lazy")
+                            .team__overlay Поддерживает безупречное качество изделий
+                        h3.team__fullname Фузайлов Маркиэль
+                        p.team__position Ген. директор
+
+            .team__swiper.swiper(data-team-swiper)
+                .team__items.swiper-wrapper
+                    +team_item('team-1')
+                    +team_item('team-2')
+                    +team_item('team-3')
+                    +team_item('team-4')
+                    +team_item('team-4')
+                    +team_item('team-4')
+                    +team_item('team-4')
+                    +team_item('team-4')
+                    +team_item('team-4')
+
+    //Блог
+    section.section.blog(data-tab-parent)
+        .container
+            h2.blog__title-section.section__title._small Блог, истории клиентов
+            
+            mixin blog_item(img, width, height, category, date, title)
+                .swiper-slide.blog__slide
+                    article.blog__item
+                        picture.blog__picture
+                            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+                            img(srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x" alt="" width=width height=height loading="lazy")
+                        .blog__controls
+                            .blog__category=category
+                            time.blog__date=date
+                        h3.blog__title
+                            a.blog__link.link._full(href="#")=title
+
+            .blog__tabs
+                button.blog__tab.btn-reset._active(type="button" data-tab="1") Блог
+                button.blog__tab.btn-reset(type="button" data-tab="2") Истории клиентов
+
+            .blog__content._active(data-tab-content="1")
+                .blog__swiper.swiper(data-blog-swiper)
+                    .swiper-wrapper.blog__items
+                        +blog_item('blog-1', 758, 510, 'Блог', '21.03.2023', 'История ювелирных украшений: от древности до современности.')
+                        +blog_item('blog-2', 364, 330, 'Блог', '18.02.2023', 'Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.')
+                        +blog_item('blog-3', 562, 420, 'Блог', '18.02.2023', 'Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.')
+                        +blog_item('blog-4', 562, 420, 'Блог', '04.03.2023', 'Истории успеха в мире ювелирного бизнеса: как создать свой бренд и стать успешным ювелиром.')
+                        +blog_item('blog-5', 364, 330, 'Блог', '11.03.2023', 'Как правильно ухаживать за ювелирными изделиями: советы по уходу и хранению.')
+                        +blog_item('blog-6', 758, 510, 'Блог', '04.01.2023', 'Редкие и эксклюзивные драгоценные камни: их особенности и ценность.')
+
+                a.link._italic.animation-link.products__more(href="#")
+                    span._wrap
+                        span._default Показать еще
+                        span._hover Показать еще
+
+            .blog__content(data-tab-content="2")
+                .blog__swiper.swiper(data-blog-swiper)
+                    .swiper-wrapper.blog__items
+                        +blog_item('blog-1', 562, 420, 'История', '04.03.2023', 'Истории успеха в мире ювелирного бизнеса: как создать свой бренд и стать успешным ювелиром.')
+                        +blog_item('blog-2', 364, 330, 'История', '11.03.2023', 'Как правильно ухаживать за ювелирными изделиями: советы по уходу и хранению.')
+                        +blog_item('blog-3', 758, 510, 'История', '04.01.2023', 'Редкие и эксклюзивные драгоценные камни: их особенности и ценность.')
+                        +blog_item('blog-4', 758, 510, 'История', '21.03.2023', 'История ювелирных украшений: от древности до современности.')
+                        +blog_item('blog-5', 364, 330, 'История', '18.02.2023', 'Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.')
+                        +blog_item('blog-6', 562, 420, 'История', '18.02.2023', 'Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.')
+
+                a.link._italic.animation-link.products__more(href="#")
+                    span._wrap
+                        span._default Показать еще
+                        span._hover Показать еще
+
+
+

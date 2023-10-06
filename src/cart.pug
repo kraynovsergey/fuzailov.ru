@@ -1,0 +1,64 @@
+extends base
+
+block meta
+    - var seotitle = 'Корзина'
+    - var seodescription = 'Описание страницы корзины'
+    - var seokeywords = 'Ключевые слова страницы корзины'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    //Корзина
+    section.cart
+        .container
+            h1.h1.cart__h1._center Корзина
+
+            .cart__table
+                .cart__cols.cart__header
+                    .cart__col Наименование товара
+                    .cart__col._model Модель
+                    .cart__col Кол-во
+                    .cart__col._price Цена за шт.
+                    .cart__col._all Всего
+                .cart__cols.cart__item
+                    .cart__col
+                        .cart__product
+                            picture.cart__picture 
+                                source(type="image/webp" srcset="@img/tmp/cart-product@2x.webp 2x, @img/tmp/cart-product.webp 1x")
+                                img(srcset="@img/tmp/cart-product@2x.jpg 2x, @img/tmp/cart-product@2x.jpg 1x" alt="" width="127" height="127" loading="lazy")
+                            a.cart__title.link._full(href="#") Кольцо
+                                span Солнечный луч / R16159WG
+                                span 510 720 ₽
+                    
+                    .cart__col._model Солнечный луч / R16159WG
+
+                    .cart__col
+                        .cart__count(data-count)
+                            button.cart__count-btn.btn-reset(type="button" data-count-btn data-count-minus)
+                                svg(width="24" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#minus")
+                            input.cart__count-input(type="text" name="count" value="1" data-count-input readonly)
+                            button.cart__count-btn.btn-reset(type="button" data-count-btn data-count-plus)
+                                svg(width="24" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#plus")
+
+                    .cart__col._price 510 720 ₽
+
+                    .cart__col
+                        .cart__itogo 
+                            span 510 720 ₽
+                            button.cart__remove.btn-reset(type="button")
+                                svg(width="24" height="24")
+                                    use(xlink:href="@img/icons/icons.svg#remove")
+
+            .cart__footer
+                .cart__result-box
+                    .cart__result
+                        .cart__result-title ИТОГО:
+                        .cart__result-title 510 720 ₽
+
+                .cart__submit-wrap
+                    button.cart__submit.btn._green(type="submit") Оформление заказа
+
+block footer

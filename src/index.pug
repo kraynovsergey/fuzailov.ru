@@ -1,0 +1,78 @@
+doctype html
+block html
+html(lang="ru")
+    head
+        block meta
+            - var seotitle = 'Список страниц'
+            - var seodescription = ''
+            - var seokeywords = ''
+
+        include pug/core/_meta
+
+    style(type="text/css").
+        .wrap {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .wrap__list {
+            font-size: 1.2rem;
+        }
+
+        .wrap__list li:not(:last-child) {
+            margin-bottom: .8rem;
+        }
+
+        .wrap__list a {
+            color: currentColor;
+            text-decoration: none;
+        }
+
+    body
+        .wrap
+            ol.wrap__list
+                li
+                    a(href="home.html" target="_blank") Главная страница
+                li
+                    a(href="diamonds.html" target="_blank") Бриллианты
+                li
+                    a(href="about-production.html" target="_blank") О производстве
+                li
+                    a(href="new-collection.html" target="_blank") Новая коллекция
+                li
+                    a(href="new-collection-product.html" target="_blank") Изделие коллекции
+                li
+                    a(href="product.html" target="_blank") Товар
+                li
+                    a(href="sale-diamonds.html" target="_blank") Продажа бриллиантов
+                li
+                    a(href="about.html" target="_blank") О нас
+                li
+                    a(href="cart.html" target="_blank") Корзина
+                li
+                    a(href="order.html" target="_blank") Оформление заказа
+                li
+                    a(href="catalog.html" target="_blank") Каталог
+                li
+                    a(href="earrings.html" target="_blank") Серьги
+                li
+                    a(href="delivery.html" target="_blank") Доставка
+                li
+                    a(href="guarantee.html" target="_blank") Гарантия
+                li
+                    a(href="article.html" target="_blank") Статья
+                li
+                    a(href="404.html" target="_blank") 404
+                li
+                    a(href="ring-selection.html" target="_blank") Подбор кольца
+                li
+                    a(href="custom-made.html" target="_blank") Изделия на заказ
+                li
+                    a(href="favourites.html" target="_blank") Избранное
+                li
+                    a(href="search-results.html" target="_blank") Результаты поиска
+

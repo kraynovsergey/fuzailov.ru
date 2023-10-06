@@ -1,0 +1,99 @@
+.pluses {
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.88rem;
+
+        @media (max-width: 991px) {
+            grid-template-columns: 1fr;
+            gap: 1.25rem
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        background: $color_card;
+        padding: 1.88rem;
+
+        @media (max-width: 1440px) {
+            grid-template-columns: .6fr 1fr;
+        }
+
+        @media (max-width: 991px) {
+            grid-template-columns: .4fr 1fr;
+            padding: 1.25rem;
+        }
+    }
+
+    &__title {
+        font-family: 'Forum';
+        padding-bottom: 1.88rem;
+        border-bottom: 1px solid $color_border;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 2rem;
+        line-height: 110%;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1.88rem;
+        grid-column: span 2;
+
+        @media (max-width: 991px) {
+            padding-bottom: 1.25rem;
+            margin-bottom: 1.25rem;
+        }
+
+        @media (max-width: 575px) {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.88rem;
+
+        @media (max-width: 991px) {
+            padding: 0 1.25rem;
+        }
+
+        @media (max-width: 575px) {
+            padding-left: 0;
+        }
+
+        & svg {
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            color: $color_light_gray;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-left: 1px solid $color_border;
+        padding-left: 1.88rem;
+
+        @media (max-width: 991px) {
+            padding-left: 1.25rem;
+        }
+    }
+
+    &__list {
+        font-size: 1.12rem;
+        list-style: none;
+        margin: .5rem 0 0;
+        padding: 0;
+        display: grid;
+        gap: .8rem;
+    }
+    
+    &__link {
+        margin-top: 2rem;
+    }
+}

@@ -1,0 +1,36 @@
+.home-logo {
+    display: grid;
+    justify-items: center;
+    gap: 1.88rem;
+
+    @media (max-width: 575px) {
+        gap: 2.19rem
+    }
+
+    &__logo {
+        max-width: 49rem;
+        width: 100%;
+        height: auto;
+        color: $color_light_gray;
+
+        @media (max-width: 767px) {
+            max-width: 24rem;
+        }
+
+        @media (max-width: 575px) {
+            max-width: 19rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.12rem;
+        margin: 0;
+        width: 100%;
+        max-width: 29rem;
+        text-align: center;
+
+        @media (max-width: 575px) {
+            font-size: 1rem;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+extends base
+
+block meta
+    - var seotitle = 'Серьги'
+    - var seodescription = 'Описание страницы серьги'
+    - var seokeywords = 'Ключевые слова страницы серьги'
+
+block main
+    //Интро
+    section.section._pt0
+        section.intro
+            //Хлебные крошки
+            .intro__breadcrumbs
+                include pug/layout/_breadcrumbs
+
+            picture.intro__picture
+                source(type="image/webp" srcset="@img/tmp/earrings-intro@2x.webp 2x, @img/tmp/earrings-intro.webp 1x")
+                img(srcset="@img/tmp/earrings-intro@2x.jpg 2x, @img/tmp/earrings-intro.jpg 1x" alt="" width="1920" height="1020" loading="lazy")
+
+            .intro__overlay
+                .intro__content._no-gradient
+                    p.intro__subtitle Ювелирная мастерская Fuzailov создает
+                    h1.intro__title Уникальные серьги в единственном экземпляре
+                    a.intro__link.btn._transparent-white-border._long(href="#") 
+                        span В каталог
+
+    //Уникальность
+    section.section 
+        .container 
+            p.section__subtitle Уникальность
+            h2.section__title.uniq__section-title._small Мы создаем уникальные серьги для особых случаев и дат 
+
+            .uniq__grid
+                .uniq__products
+                    article.uniq__product
+                        picture.uniq__product-picture
+                            source(type="image/webp" srcset="@img/tmp/uniq-product-1@2x.webp 2x, @img/tmp/uniq-product-1.webp 1x")
+                            img(srcset="@img/tmp/uniq-product-1@2x.jpg 2x, @img/tmp/uniq-product-1.jpg 1x" alt="" width="413" height="500" loading="lazy")
+
+                        h2.uniq__product-title Свадебные серьги
+                        p.uniq__product-text Краткое описание отличительных характеристик изделия
+                        a.uniq__product-link.link._italic.animation-link(href="#")
+                            span._wrap
+                                span._default Смотреть коллекцию
+                                span._hover Смотреть коллекцию
+
+                    article.uniq__product
+                        picture.uniq__product-picture
+                            source(type="image/webp" srcset="@img/tmp/uniq-product-2@2x.webp 2x, @img/tmp/uniq-product-2.webp 1x")
+                            img(srcset="@img/tmp/uniq-product-2@2x.jpg 2x, @img/tmp/uniq-product-2.jpg 1x" alt="" width="413" height="500" loading="lazy")
+
+                        h2.uniq__product-title Серьги под вечернее платье
+                        p.uniq__product-text Краткое описание отличительных характеристик изделия
+                        a.uniq__product-link.link._italic.animation-link(href="#")
+                            span._wrap
+                                span._default Смотреть коллекцию
+                                span._hover Смотреть коллекцию
+
+                pictire.uniq__picture
+                    source(type="image/webp" srcset="@img/tmp/uniq-picture@2x.webp 2x, @img/tmp/uniq-picture.webp 1x")
+                    img(srcset="@img/tmp/uniq-picture@2x.jpg 2x, @img/tmp/uniq-picture.jpg 1x" alt="" width="634" height="780" loading="lazy")
+
+    //Коллекция
+    section.section
+        .container
+            p.sale-diamonds__pluses-subtitle.section__subtitle Коллекция
+            h2.uniq__section-title.section__title._small Наши серьги со временем становятся только ценнее
+
+            .sale-diamonds__pluses-items(data-sale-diamonds-pluses)
+                .sale-diamonds__pluses-item._earrings(data-sale-diamonds-pluses-item)
+                    button.sale-diamonds__pluses-name.btn-reset._active(data-sale-diamonds-pluses-btn) Используем редкие камни (такие как)
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-1-1@2x.webp 2x, @img/tmp/earrings-collection-1-1.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-1-1@2x.jpg 2x, @img/tmp/earrings-collection-1-1.jpg 1x" alt="" width="413" height="470")
+
+                        picture.sale-diamonds__pluses-picture-product
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-1-2@2x.webp 2x, @img/tmp/earrings-collection-1-2.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-1-2@2x.jpg 2x, @img/tmp/earrings-collection-1-2.jpg 1x" alt="" width="413" height="470")
+
+                .sale-diamonds__pluses-item._earrings(data-sale-diamonds-pluses-item)
+                    button.sale-diamonds__pluses-name.btn-reset(data-sale-diamonds-pluses-btn) Создаем уникальные сложные формы изделий 
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                                
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-2-1@2x.webp 2x, @img/tmp/earrings-collection-2-1.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-2-1@2x.jpg 2x, @img/tmp/earrings-collection-2-1.jpg 1x" alt="" width="413" height="470")
+
+                        picture.sale-diamonds__pluses-picture-product
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-2-2@2x.webp 2x, @img/tmp/earrings-collection-2-2.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-2-2@2x.jpg 2x, @img/tmp/earrings-collection-2-2.jpg 1x" alt="" width="413" height="470")
+
+                .sale-diamonds__pluses-item._earrings(data-sale-diamonds-pluses-item)
+                    button.sale-diamonds__pluses-name.btn-reset(data-sale-diamonds-pluses-btn) Предаем бриллиантам уникальную огранку
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                                
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-3-1@2x.webp 2x, @img/tmp/earrings-collection-3-1.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-3-1@2x.jpg 2x, @img/tmp/earrings-collection-3-1.jpg 1x" alt="" width="413" height="470")
+
+                        picture.sale-diamonds__pluses-picture-product
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-3-2@2x.webp 2x, @img/tmp/earrings-collection-3-2.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-3-2@2x.jpg 2x, @img/tmp/earrings-collection-3-2.jpg 1x" alt="" width="413" height="470")
+
+                .sale-diamonds__pluses-item._earrings(data-sale-diamonds-pluses-item)
+                    button.sale-diamonds__pluses-name.btn-reset(data-sale-diamonds-pluses-btn) При необходимости предоставляем сертификацию
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                                
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-4-1@2x.webp 2x, @img/tmp/earrings-collection-4-1.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-4-1@2x.jpg 2x, @img/tmp/earrings-collection-4-1.jpg 1x" alt="" width="413" height="470")
+
+                        picture.sale-diamonds__pluses-picture-product
+                            source(type="image/webp" srcset="@img/tmp/earrings-collection-4-2@2x.webp 2x, @img/tmp/earrings-collection-4-2.webp 1x")
+                            img(srcset="@img/tmp/earrings-collection-4-2@2x.jpg 2x, @img/tmp/earrings-collection-4-2.jpg 1x" alt="" width="413" height="470")
+
+                a.sale-diamonds__pluses-btn.btn._transparent-gray-border(href="#") Смотреть коллекцию
+
+    //Как выбрать серьги
+    section.section
+        .service
+            .container.service__container
+                picture.service__picture
+                    source(type="image/webp" srcset="@img/tmp/earrings-choose@2x.webp 2x, @img/tmp/earrings-choose.webp 1x")
+                    img(srcset="@img/tmp/earrings-choose@2x.jpg 2x, @img/tmp/earrings-choose.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+                .service__content
+                    p.section__subtitle.service__section-subtitle Помощь
+                    h2.section__title.service__section-title Как выбрать серьги
+                    p.service__text Читайте наш чеклист о том, как выбрать украшение, которое максимально вам подходит
+                    a.service__link.btn._transparent-white-border(href="#") Подробнее
+
+
+
+
+                    

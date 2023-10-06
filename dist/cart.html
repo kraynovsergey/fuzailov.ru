@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!--Мета-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>Корзина</title>
+    <meta name="description" content="Описание страницы корзины">
+    <meta name="keywords" content="Ключевые слова страницы корзины">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231006195614">
+  </head>
+  <body>
+    <!--Шапка-->
+    <header class="header" data-header>
+      <!--Верхняя полоса с контактами-->
+      <section class="top-line">
+        <div class="container top-line__container"><a class="top-line__phone" href="tel:+79175331452"> 
+            <svg class="top-line__phone-icon" width="28" height="28">
+              <use xlink:href="img/icons/icons.svg#phone"></use>
+            </svg>+7 (917) 533-14-52</a>
+          <div class="top-line__socials"><a class="top-line__socials-item" href="tg://resolve?domain=telegram_nick" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a><a class="top-line__socials-item" href="https://api.whatsapp.com/send?phone=7925042935" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg></a></div>
+        </div>
+      </section>
+      <div class="container header__container">
+        <div class="header__left">
+          <div class="header__search">
+            <button class="header__search-btn btn-reset" type="button" data-search-show>
+              <svg width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#search"></use>
+              </svg>
+            </button>
+            <div class="header__search-box" data-search>
+              <div class="header__search-header">
+                <p class="header__search-title">Поиск</p>
+                <button class="header__search-close btn-reset" type="buton" data-search-hide>
+                  <svg width="40" height="40">
+                    <use xlink:href="img/icons/icons.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <form class="header__search-form form-line" action="#" method="get">
+                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д">
+                <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
+              </form>
+              <div class="header__search-actual">
+                <p class="header__search-actual-title">Актуальные запросы</p>
+                <ul class="header__search-actual-list">
+                  <li><a href="#">Кольцо Зелёный взгяд</a></li>
+                  <li><a href="#">Кольцо Солнечный луч</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="header__feedback btn-reset" type="button" data-fancybox data-src="#modal-feedback">Связаться с нами</button>
+        </div>
+        <div class="header__logo"><a class="header__logo-link" href="#">
+            <svg width="143" height="23">
+              <use xlink:href="img/icons/icons.svg#logo"></use>
+            </svg></a></div>
+        <div class="header__controls"><a class="header__control" href="#">
+            <svg class="header__control-icon _transparent" width="26" height="26">
+              <use xlink:href="img/icons/icons.svg#favourites"></use>
+            </svg><span class="header__control-count">4</span></a><a class="header__control" href="#">
+            <svg class="header__control-icon" width="26" height="26">
+              <use xlink:href="img/icons/icons.svg#cart"></use>
+            </svg><span class="header__control-count">3</span></a>
+          <button class="header__control header__burger btn-reset" type="button" data-fancybox data-src="#modal-nav">
+            <svg width="30" height="30">
+              <use xlink:href="img/icons/icons.svg#burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!--Навигация-->
+      <nav class="nav" id="modal-nav">
+        <div class="container nav__container">
+          <div class="nav__header"> <a class="nav__logo" href="#">
+              <svg width="143" height="22">
+                <use xlink:href="img/icons/icons.svg#logo"></use>
+              </svg></a>
+            <button class="nav__close btn-reset" type="button" data-fancybox-close>
+              <svg width="35" height="35">
+                <use xlink:href="img/icons/icons.svg#nav-close"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="nav__search form-line" action="#" method="get">
+            <input class="nav__search-input form-line__input" type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д">
+            <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
+          </form>
+          <ul class="nav__list">
+            <li class="nav__list-item _megamenu" data-nav-parent><a class="nav__list-link animation-link" href="#"> <span class="_wrap"><span class="_default">Каталог</span><span class="_hover">Каталог</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <div class="nav__megamenu scroll _hidden" data-nav-parent-target>
+                <div class="nav__megamenu-col">
+                  <div class="nav__megamenu-item">
+                    <p class="nav__megamenu-title">По категориям</p>
+                    <ul class="nav__megamenu-list">
+                      <li><a href="#">Кольца</a></li>
+                      <li><a href="#">Серьги</a></li>
+                      <li><a href="#">Браслеты</a></li>
+                      <li><a href="#">Бриллианты</a></li>
+                      <li><a href="#">Цветные камни</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav__megamenu-item">
+                    <p class="nav__megamenu-title">По коллекции</p>
+                    <ul class="nav__megamenu-list">
+                      <li><a href="#">Diamond Dreams Collection</a></li>
+                      <li><a href="#">Brilliantly Bold Collection</a></li>
+                      <li><a href="#">Radiant Reflections Collection</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="nav__megamenu-banner">
+                  <picture class="nav__megamenu-picture">
+                    <source type="image/webp" srcset="img/tmp/megamenu@2x.webp 2x, img/tmp/megamenu@2x.webp 1x"><img srcset="img/tmp/megamenu@2x.jpg 2x, img/tmp/megamenu@2x.jpg 1x" alt="" width="372" height="586" loading="lazy">
+                  </picture>
+                  <div class="nav__megamenu-content">
+                    <p class="nav__megamenu-label">Новинка</p>
+                    <p class="nav__megamenu-name">"Зеленый взгляд"</p>
+                    <p class="nav__megamenu-text">Созданные опытными мастерами и сверкающие тончайшими бриллиантами, откройте для себя новейшие творения, только что поступившие из ателье</p><a class="nav__megamenu-link btn _transparent-gray-border" href="#">Смотреть коллекцию</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нас</span><span class="_hover">О нас</span></span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Контакты</span><span class="_hover">Контакты</span></span></a></li>
+            <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Услуги</span><span class="_hover">Услуги</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <ul class="nav__megamenu-list _popup" data-nav-parent-target>
+                <li><a href="#">Изготовление ювелирных украшений на заказ</a></li>
+                <li><a href="#">Продажа украшений</a></li>
+                <li><a href="#">Продажа бриллиантов</a></li>
+                <li><a href="#">Кольца для особых случаев</a></li>
+                <li><a href="#">Серьги для особых случаев</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нашей продукции</span><span class="_hover">О нашей продукции</span></span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Доставка и оплата</span><span class="_hover">Доставка и оплата</span></span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Гарантия и возврат</span><span class="_hover">Гарантия и возврат</span></span></a></li>
+          </ul>
+          <div class="nav__bottom"><a class="nav__shops" href="#">
+              <svg width="22" height="25">
+                <use xlink:href="img/icons/icons.svg#map-marker"></use>
+              </svg>Адреса бутиков</a></div>
+        </div>
+      </nav>
+    </header>
+    <!--Контентная часть-->
+    <main class="main">
+      <!--Хлебные крошки-->
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="#">Главная</a></li>
+            <li class="breadcrumbs__list-item">Бриллианты</li>
+          </ul>
+        </div>
+      </section>
+      <!--Корзина-->
+      <section class="cart">
+        <div class="container">
+          <h1 class="h1 cart__h1 _center">Корзина</h1>
+          <div class="cart__table">
+            <div class="cart__cols cart__header">
+              <div class="cart__col">Наименование товара</div>
+              <div class="cart__col _model">Модель</div>
+              <div class="cart__col">Кол-во</div>
+              <div class="cart__col _price">Цена за шт.</div>
+              <div class="cart__col _all">Всего</div>
+            </div>
+            <div class="cart__cols cart__item">
+              <div class="cart__col">
+                <div class="cart__product">
+                  <picture class="cart__picture"> 
+                    <source type="image/webp" srcset="img/tmp/cart-product@2x.webp 2x, img/tmp/cart-product.webp 1x"><img srcset="img/tmp/cart-product@2x.jpg 2x, img/tmp/cart-product@2x.jpg 1x" alt="" width="127" height="127" loading="lazy">
+                  </picture><a class="cart__title link _full" href="#">Кольцо<span>Солнечный луч / R16159WG</span><span>510 720 ₽</span></a>
+                </div>
+              </div>
+              <div class="cart__col _model">Солнечный луч / R16159WG</div>
+              <div class="cart__col">
+                <div class="cart__count" data-count>
+                  <button class="cart__count-btn btn-reset" type="button" data-count-btn data-count-minus>
+                    <svg width="24" height="24">
+                      <use xlink:href="img/icons/icons.svg#minus"></use>
+                    </svg>
+                  </button>
+                  <input class="cart__count-input" type="text" name="count" value="1" data-count-input readonly>
+                  <button class="cart__count-btn btn-reset" type="button" data-count-btn data-count-plus>
+                    <svg width="24" height="24">
+                      <use xlink:href="img/icons/icons.svg#plus"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="cart__col _price">510 720 ₽</div>
+              <div class="cart__col">
+                <div class="cart__itogo"> <span>510 720 ₽</span>
+                  <button class="cart__remove btn-reset" type="button">
+                    <svg width="24" height="24">
+                      <use xlink:href="img/icons/icons.svg#remove"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cart__footer">
+            <div class="cart__result-box">
+              <div class="cart__result">
+                <div class="cart__result-title">ИТОГО:</div>
+                <div class="cart__result-title">510 720 ₽</div>
+              </div>
+            </div>
+            <div class="cart__submit-wrap">
+              <button class="cart__submit btn _green" type="submit">Оформление заказа</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--Подвал-->
+    <!--Модальное окно "Связаться с нами"-->
+    <div class="modal" id="modal-feedback">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/icons/icons.svg#modal-close"></use>
+        </svg>
+      </button>
+      <svg class="modal__rectangle _left" width="451" height="780">
+        <use xlink:href="img/icons/icons.svg#modal-rectangle-left"></use>
+      </svg>
+      <svg class="modal__rectangle _right" width="413" height="780">
+        <use xlink:href="img/icons/icons.svg#modal-rectangle-right"></use>
+      </svg>
+      <div class="fitting__form">
+        <p class="modal__title">Связаться с нами</p>
+        <p class="modal__subtitle">Мы свяжемся с вами в течение 15 минут</p>
+        <form class="form fitting__f">
+          <fieldset class="form__fieldset">
+            <label class="form__label _white" for="feedback-name">Ваше имя</label>
+            <input class="form__input _white" type="text" name="name" id="feedback-name">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <label class="form__label _white" for="feedback-phone">Ваш телефон</label>
+            <input class="form__input _white _error" type="tel" name="phone" id="feedback-phone" data-tel><span class="form__error">Текст ошибки</span>
+          </fieldset>
+          <button class="form__submit btn _transparent-white-border" type="submit">Отправить</button>
+          <div class="form__checkbox form__policy _white">
+            <input class="form__checkbox-input" type="checkbox" name="policy" id="feedback-policy" data-policy checked>
+            <label class="form__checkbox-label" for="feedback-policy"><span class="form__checkbox-check">
+                <svg width="14" height="11">
+                  <use xlink:href="img/icons/icons.svg#checkbox"></use>
+                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Скрипты-->
+    <script src="js/app.min.js?_v=20231006195614"></script>
+  </body>
+</html>

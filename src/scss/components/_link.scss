@@ -1,0 +1,107 @@
+.link {
+    &._full {
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &._italic {
+        color: $color_green;
+        text-decoration: none;
+        font-size: 1.37rem;
+        font-family: "New Computer Modern";
+        font-style: italic;
+
+        &:hover {
+            color: $color_orange;
+        }
+
+        &._button-mobile {
+            @media (max-width: 767px) {
+                font-family: "Montserrat";
+                border: 1px solid #ADADAD;
+                height: 4.12rem;
+                display: flex;
+                width: 100%;
+                font-style: normal;
+                padding: 0 1.5rem;
+                align-items: center;
+                justify-content: center;
+                color: $color_black;
+                
+                &::after {
+                    display: none;
+                }
+            }
+
+            @media (max-width: 575px) {
+                height: 3.57rem;
+                font-size: 1.28rem;
+            }
+        }
+    }
+}
+
+.animation-link {
+    position: relative;
+
+    &:hover {
+        @media (min-width: 992px) {
+            & ._default {
+                transform: translateY(-125%);
+            }
+    
+            & ._hover {
+                transform: none;
+            }
+    
+            &::after {
+                transform: scaleX(0%);
+            }
+        }
+    }
+
+    & ._wrap {
+        overflow: hidden;
+        position: relative;
+        display: block;
+    }
+
+    & ._default,
+    & ._hover {
+        display: block;
+        position: relative;
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transition-duration: .5s;
+    }
+
+    & ._hover {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: translateY(125%);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1px;
+        height: 1px;
+        background: currentColor;
+        will-change: transform;
+        transform-origin: 100% 100%;
+        transform: scaleX(100%);
+        pointer-events: none;
+        transition-property: transform;
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+        transition-duration: .5s;
+    }
+}

@@ -1,0 +1,20 @@
+.main {
+    padding-top: calc(3.12rem + 5.94rem + 5.38rem);
+    padding-bottom: 6.25rem;
+
+    @media (max-width: 991px) {
+        padding-top: calc(3.12rem + 4.69rem);
+    }
+
+    @media (max-width: 575) {
+        padding-top: calc(2.85rem + 5rem);
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 4.35rem;
+    }
+
+    @media (max-width: 575px) {
+        padding-bottom: 3.5rem;
+    }
+}

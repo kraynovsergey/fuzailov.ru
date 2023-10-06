@@ -1,0 +1,170 @@
+extends base
+
+block html
+    - var html_classnames = '_product-page'
+
+block meta
+    - var seotitle = 'Товар'
+    - var seodescription = 'Описание товара'
+    - var seokeywords = 'Ключевые слова товара'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    //Товар
+    section.section.product-page._pt0
+        //Галерея товара
+        .product-page__gallery
+            .swiper(data-product-swiper)
+                .swiper-wrapper 
+                    .swiper-slide
+                        picture.product-page__picture
+                            source(type="image/webp" srcset="@img/tmp/product-page-1@2x.webp 2x, @img/tmp/product-page-1.webp 1x")
+                            img(srcset="@img/tmp/product-page-1@2x.jpg 2x, @img/tmp/product-page-1.jpg 1x" alt="" width="945" height="1000" loading="lazy")
+                    .swiper-slide
+                        picture.product-page__picture
+                            source(type="image/webp" srcset="@img/tmp/product-page-2@2x.webp 2x, @img/tmp/product-page-2.webp 1x")
+                            img(srcset="@img/tmp/product-page-2@2x.jpg 2x, @img/tmp/product-page-2.jpg 1x" alt="" width="945" height="1000" loading="lazy")
+                    .swiper-slide
+                        picture.product-page__picture
+                            source(type="image/webp" srcset="@img/tmp/product-page-3@2x.webp 2x, @img/tmp/product-page-3.webp 1x")
+                            img(srcset="@img/tmp/product-page-3@2x.jpg 2x, @img/tmp/product-page-3.jpg 1x" alt="" width="945" height="1000" loading="lazy")
+                    .swiper-slide
+                        picture.product-page__picture
+                            source(type="image/webp" srcset="@img/tmp/product-page-4@2x.webp 2x, @img/tmp/product-page-4.webp 1x")
+                            img(srcset="@img/tmp/product-page-4@2x.jpg 2x, @img/tmp/product-page-4.jpg 1x" alt="" width="945" height="1000" loading="lazy")
+                
+                .product-page__gallery-controls
+                    button.product-page__gallery-navigation.btn-reset._prev(type="button" data-swiper-prev)
+                        svg(width="121" height="8")
+                            use(xlink:href="@img/icons/icons.svg#product-page-arrow")
+                    .product-page__gallery-count 
+                        span(data-swiper-current) 1
+                        | /
+                        span(data-swiper-count)
+                    button.product-page__gallery-navigation.btn-reset._next(type="button" data-swiper-next)
+                        svg(width="121" height="8")
+                            use(xlink:href="@img/icons/icons.svg#product-page-arrow")
+                
+        //Описание товара
+        .product-page__content-wrap.container
+            .product-page__content
+                p.product-page__article Артикул: R16159WG
+
+                .product-page__header 
+                    h1.product-page__title Солнечный луч
+                    .product-page__price 510 720 ₽
+
+                .product-page__text
+                    p Белое золото 750 пробы весом 4.44гр.<br>36 Бриллиантов огранки "круг" весом 0.27 ct 3/5<br>1 Бриллиант огранки "круг" весом 0.99 ct 9-1/6<br>Размер кольца 17
+
+                .product-page__spoilers
+                    .product-page__spoiler(data-spoiler-parent)
+                        button.product-page__spoiler-btn.btn-reset(type="button" data-spoiler)
+                            svg.product-page__spoiler-icon(width="36" height="36")
+                                use(xlink:href="@img/icons/icons.svg#product-page-size")
+                            span.product-page__spoiler-title Как определить размер
+                            svg.product-page__spoiler-arrow(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                        .product-page__spoiler-content.product-page__size-box(data-spoiler-content)
+                            p.product-page__size-box-text Чтобы подобрать подходящий размер для вашего следующего кольца, вы можете воспользоваться нашим сервисом
+                            a.product-page__size-box-link.btn._green(href="#") Перейти
+                            p.product-page__size-box-note Вы можете определить размер изделия самостоятельно, но для более точных измерений рекомендуем посетить один из наших бутиков и провести измерение на профессиональном оборудовании.
+                            a.product-page__size-box-note-link(href="#") смотреть адреса бутиков
+
+                    .product-page__spoiler(data-spoiler-parent)
+                        button.product-page__spoiler-btn.btn-reset(type="button" data-spoiler)
+                            svg.product-page__spoiler-icon(width="36" height="36")
+                                use(xlink:href="@img/icons/icons.svg#product-page-engraving")
+                            span.product-page__spoiler-title Добавить гравировку
+                            svg.product-page__spoiler-arrow(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                        .product-page__spoiler-content.product-page__engraving(data-spoiler-content)
+                            p.product-page__engraving-title Добавьте гравировку на свои украшение
+                            p.product-page__engraving-text Персонализируйте свое творение, выгравировав имя, дату или сообщение.
+
+                            form.product-page__engraving-form(action="#" method="post")
+                                p.product-page__engraving-form-title Выберите шрифт
+                                
+                                .product-page__engraving-form-radios
+                                    .product-page__engraving-form-radio
+                                        input(type="radio" name="font" id="engraving-font-1" checked)
+                                        label(for="engraving-font-1") Шрифт 1
+                                    .product-page__engraving-form-radio
+                                        input(type="radio" name="font" id="engraving-font-2")
+                                        label(for="engraving-font-2") Шрифт 2
+                                    .product-page__engraving-form-radio
+                                        input(type="radio" name="font" id="engraving-font-3")
+                                        label(for="engraving-font-3") Шрифт 3
+                                
+                                input.product-page__engraving-form-input.form-line__input(type="text" name="title" placeholder="1 строка, максимум 10 символов*" maxlength="10")
+
+                                .product-page__engraving-form-price Цена: 14500
+
+                                button.product-page__engraving-form-btn.btn._transparent-gray-border(type="submit") Добавить надпись
+
+                            p.product-page__engraving-note Теперь, после того, как вы добавите товар в корзину, наша система автоматически применит услугу гравировки. 
+                            p.product-page__engraving-note Наш менеджер свяжется с вами для уточнения деталей и мы сделаем все возможное, чтобы ваш заказ был выполнен максимально качественно и в срок.
+
+                .product-page__controls
+                    button.product-page__control.btn._green(type="button") В корзину
+
+                    //Класс _active для избранного
+                    button.product-page__control.product-page__favourites.btn._transparent-gray-border(type="button")
+                        svg(width="26" height="26")
+                            use(xlink:href="@img/icons/icons.svg#favourites")
+
+                    button.product-page__control._fitting.btn._transparent-gray-border(type="button" data-fancybox data-src="#modal-fitting") Записаться на примерку
+
+    - var pluses_classnames = '_pt0'
+    include pug/layout/_pluses
+
+    //Как выбрать размер
+    section.section
+        .service
+            .container.service__container._reverse
+                picture.service__picture
+                    source(type="image/webp" srcset="@img/tmp/choose-size@2x.webp 2x, @img/tmp/choose-size.webp 1x")
+                    img(srcset="@img/tmp/choose-size@2x.jpg 2x, @img/tmp/choose-size.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+                .service__content
+                    p.section__subtitle.service__section-subtitle Помощь
+                    h2.section__title.service__section-title Как выбрать размер
+                    .service__text
+                        p Измерительная лента или линейка - это простой и доступный инструмент, который можно использовать для измерения диаметра внутренней части кольца. 
+                        p Это позволит определить размер кольца по таблице размеров, которую можно найти в интернете.
+                    a.service__link.btn._transparent-white-border(href="#") Подробнее
+
+    //Вам может понравится
+    section.section
+        .container
+            h2.section__title._small Вам может понравиться
+            .products__wrap
+                .products._col4-line
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0')
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1')
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2')
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3')
+
+                a.link._italic._button-mobile.animation-link.products__more(href="#")
+                    span._wrap 
+                        span._default Перейти в каталог
+                        span._hover Перейти в каталог
+
+    //С этим товаром покупают
+    section.section
+        .container
+            h2.section__title._small с этим товаром покупают
+            .products._col4-line
+                +product('Серьги с бриллиантами 1,010ct из белого золота', '360 000 ₽', 'product-5', 413, 475, 'New', '_active', '0')
+                +product('Браслет с бриллиантами 5.420ct из белого золота', '1 580 760 ₽', 'product-8', 413, 475, '', '', '1')
+
+block modal
+    include pug/layout/_modal-fitting
+                    
+                    
+
+                            
+                    

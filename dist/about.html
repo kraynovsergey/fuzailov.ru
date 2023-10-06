@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!--Мета-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>О нас</title>
+    <meta name="description" content="Описание страницы о нас">
+    <meta name="keywords" content="Ключевые слова страницы о нас">
+    <link rel="stylesheet" href="css/style.min.css?_v=20231006195614">
+  </head>
+  <body>
+    <!--Шапка-->
+    <header class="header" data-header>
+      <!--Верхняя полоса с контактами-->
+      <section class="top-line">
+        <div class="container top-line__container"><a class="top-line__phone" href="tel:+79175331452"> 
+            <svg class="top-line__phone-icon" width="28" height="28">
+              <use xlink:href="img/icons/icons.svg#phone"></use>
+            </svg>+7 (917) 533-14-52</a>
+          <div class="top-line__socials"><a class="top-line__socials-item" href="tg://resolve?domain=telegram_nick" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a><a class="top-line__socials-item" href="https://api.whatsapp.com/send?phone=7925042935" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg></a></div>
+        </div>
+      </section>
+      <div class="container header__container">
+        <div class="header__left">
+          <div class="header__search">
+            <button class="header__search-btn btn-reset" type="button" data-search-show>
+              <svg width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#search"></use>
+              </svg>
+            </button>
+            <div class="header__search-box" data-search>
+              <div class="header__search-header">
+                <p class="header__search-title">Поиск</p>
+                <button class="header__search-close btn-reset" type="buton" data-search-hide>
+                  <svg width="40" height="40">
+                    <use xlink:href="img/icons/icons.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <form class="header__search-form form-line" action="#" method="get">
+                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д">
+                <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
+              </form>
+              <div class="header__search-actual">
+                <p class="header__search-actual-title">Актуальные запросы</p>
+                <ul class="header__search-actual-list">
+                  <li><a href="#">Кольцо Зелёный взгяд</a></li>
+                  <li><a href="#">Кольцо Солнечный луч</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button class="header__feedback btn-reset" type="button" data-fancybox data-src="#modal-feedback">Связаться с нами</button>
+        </div>
+        <div class="header__logo"><a class="header__logo-link" href="#">
+            <svg width="143" height="23">
+              <use xlink:href="img/icons/icons.svg#logo"></use>
+            </svg></a></div>
+        <div class="header__controls"><a class="header__control" href="#">
+            <svg class="header__control-icon _transparent" width="26" height="26">
+              <use xlink:href="img/icons/icons.svg#favourites"></use>
+            </svg><span class="header__control-count">4</span></a><a class="header__control" href="#">
+            <svg class="header__control-icon" width="26" height="26">
+              <use xlink:href="img/icons/icons.svg#cart"></use>
+            </svg><span class="header__control-count">3</span></a>
+          <button class="header__control header__burger btn-reset" type="button" data-fancybox data-src="#modal-nav">
+            <svg width="30" height="30">
+              <use xlink:href="img/icons/icons.svg#burger"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!--Навигация-->
+      <nav class="nav" id="modal-nav">
+        <div class="container nav__container">
+          <div class="nav__header"> <a class="nav__logo" href="#">
+              <svg width="143" height="22">
+                <use xlink:href="img/icons/icons.svg#logo"></use>
+              </svg></a>
+            <button class="nav__close btn-reset" type="button" data-fancybox-close>
+              <svg width="35" height="35">
+                <use xlink:href="img/icons/icons.svg#nav-close"></use>
+              </svg>
+            </button>
+          </div>
+          <form class="nav__search form-line" action="#" method="get">
+            <input class="nav__search-input form-line__input" type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д">
+            <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
+          </form>
+          <ul class="nav__list">
+            <li class="nav__list-item _megamenu" data-nav-parent><a class="nav__list-link animation-link" href="#"> <span class="_wrap"><span class="_default">Каталог</span><span class="_hover">Каталог</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <div class="nav__megamenu scroll _hidden" data-nav-parent-target>
+                <div class="nav__megamenu-col">
+                  <div class="nav__megamenu-item">
+                    <p class="nav__megamenu-title">По категориям</p>
+                    <ul class="nav__megamenu-list">
+                      <li><a href="#">Кольца</a></li>
+                      <li><a href="#">Серьги</a></li>
+                      <li><a href="#">Браслеты</a></li>
+                      <li><a href="#">Бриллианты</a></li>
+                      <li><a href="#">Цветные камни</a></li>
+                    </ul>
+                  </div>
+                  <div class="nav__megamenu-item">
+                    <p class="nav__megamenu-title">По коллекции</p>
+                    <ul class="nav__megamenu-list">
+                      <li><a href="#">Diamond Dreams Collection</a></li>
+                      <li><a href="#">Brilliantly Bold Collection</a></li>
+                      <li><a href="#">Radiant Reflections Collection</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="nav__megamenu-banner">
+                  <picture class="nav__megamenu-picture">
+                    <source type="image/webp" srcset="img/tmp/megamenu@2x.webp 2x, img/tmp/megamenu@2x.webp 1x"><img srcset="img/tmp/megamenu@2x.jpg 2x, img/tmp/megamenu@2x.jpg 1x" alt="" width="372" height="586" loading="lazy">
+                  </picture>
+                  <div class="nav__megamenu-content">
+                    <p class="nav__megamenu-label">Новинка</p>
+                    <p class="nav__megamenu-name">"Зеленый взгляд"</p>
+                    <p class="nav__megamenu-text">Созданные опытными мастерами и сверкающие тончайшими бриллиантами, откройте для себя новейшие творения, только что поступившие из ателье</p><a class="nav__megamenu-link btn _transparent-gray-border" href="#">Смотреть коллекцию</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нас</span><span class="_hover">О нас</span></span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Контакты</span><span class="_hover">Контакты</span></span></a></li>
+            <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Услуги</span><span class="_hover">Услуги</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <ul class="nav__megamenu-list _popup" data-nav-parent-target>
+                <li><a href="#">Изготовление ювелирных украшений на заказ</a></li>
+                <li><a href="#">Продажа украшений</a></li>
+                <li><a href="#">Продажа бриллиантов</a></li>
+                <li><a href="#">Кольца для особых случаев</a></li>
+                <li><a href="#">Серьги для особых случаев</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нашей продукции</span><span class="_hover">О нашей продукции</span></span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Доставка и оплата</span><span class="_hover">Доставка и оплата</span></span></a></li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Гарантия и возврат</span><span class="_hover">Гарантия и возврат</span></span></a></li>
+          </ul>
+          <div class="nav__bottom"><a class="nav__shops" href="#">
+              <svg width="22" height="25">
+                <use xlink:href="img/icons/icons.svg#map-marker"></use>
+              </svg>Адреса бутиков</a></div>
+        </div>
+      </nav>
+    </header>
+    <!--Контентная часть-->
+    <main class="main">
+      <!--Хлебные крошки-->
+      <section class="breadcrumbs">
+        <div class="container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="#">Главная</a></li>
+            <li class="breadcrumbs__list-item">Бриллианты</li>
+          </ul>
+        </div>
+      </section>
+      <!--Интро-->
+      <section class="section about-intro _pt0">
+        <div class="container about-intro__container">
+          <div class="about-intro__logo">
+            <svg width="143" height="23">
+              <use xlink:href="img/icons/icons.svg#logo"></use>
+            </svg>
+          </div>
+          <div class="about-intro__grid">
+            <p class="about-intro__text">Используем полувековой опыт семейной ювелирной, чтобы создавать для вас уникальные изделия</p>
+            <div class="about-intro__pictures">
+              <picture class="about-intro__picture-center">
+                <source type="image/webp" srcset="img/tmp/about-intro-center@2x.webp 2x, img/tmp/about-intro-center.webp 1x"><img srcset="img/tmp/about-intro-center@2x.jpg 2x, img/tmp/about-intro-center.jpg 1x" alt="" width="855" height="800" loading="lazy">
+              </picture>
+              <picture class="about-intro__picture-left" data-picture-parallax="0.1" data-picture-rotate-right>
+                <source type="image/webp" srcset="img/tmp/about-intro-left@2x.webp 2x, img/tmp/about-intro-left.webp 1x"><img srcset="img/tmp/about-intro-left@2x.jpg 2x, img/tmp/about-intro-left.jpg 1x" alt="" width="347" height="348" loading="lazy">
+              </picture>
+              <picture class="about-intro__picture-right" data-picture-parallax="0.1" data-picture-rotate-left>
+                <source type="image/webp" srcset="img/tmp/about-intro-right@2x.webp 2x, img/tmp/about-intro-right.webp 1x"><img srcset="img/tmp/about-intro-right@2x.jpg 2x, img/tmp/about-intro-right.jpg 1x" alt="" width="181" height="231" loading="lazy">
+              </picture>
+            </div>
+            <div class="about-intro__wrap-btn btn-reset">
+              <button class="about-intro__btn" type="button">
+                <svg width="21" height="24">
+                  <use xlink:href="img/icons/icons.svg#arrow-down"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Преимущества-->
+      <section class="section">
+        <section class="section about-pluses">
+          <div class="container">
+            <p class="section__subtitle">О нас</p>
+            <h2 class="section__title _small">Уникальность нашей мастерской</h2>
+          </div>
+          <div class="about-pluses__items">
+            <article class="about-pluses__item" data-spoiler-parent>
+              <div class="container about-pluses__container">
+                <button class="about-pluses__btn btn-reset" data-spoiler="grid"><span class="about-pluses__btn-i">I</span><span class="about-pluses__btn-title">Искусство вне времени</span><span class="about-pluses__btn-arrow">
+                    <svg width="21" height="24">
+                      <use xlink:href="img/icons/icons.svg#arrow-down"></use>
+                    </svg></span></button>
+                <div class="about-pluses__content" data-spoiler-content>
+                  <picture class="about-pluses__picture">
+                    <source type="image/webp" srcset="img/tmp/about-pluses@2x.webp 2x, img/tmp/about-pluses.webp 1x"><img srcset="img/tmp/about-pluses@2x.png 2x, img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy">
+                  </picture>
+                  <div class="about-pluses__text text">
+                    <p>Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="about-pluses__item" data-spoiler-parent>
+              <div class="container about-pluses__container">
+                <button class="about-pluses__btn btn-reset" data-spoiler="grid"><span class="about-pluses__btn-i">II</span><span class="about-pluses__btn-title">Уникальная огранка</span><span class="about-pluses__btn-arrow">
+                    <svg width="21" height="24">
+                      <use xlink:href="img/icons/icons.svg#arrow-down"></use>
+                    </svg></span></button>
+                <div class="about-pluses__content" data-spoiler-content>
+                  <picture class="about-pluses__picture">
+                    <source type="image/webp" srcset="img/tmp/about-pluses@2x.webp 2x, img/tmp/about-pluses.webp 1x"><img srcset="img/tmp/about-pluses@2x.png 2x, img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy">
+                  </picture>
+                  <div class="about-pluses__text text">
+                    <p>Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="about-pluses__item" data-spoiler-parent>
+              <div class="container about-pluses__container">
+                <button class="about-pluses__btn btn-reset" data-spoiler="grid"><span class="about-pluses__btn-i">III</span><span class="about-pluses__btn-title">Неповторимость каждого изделия</span><span class="about-pluses__btn-arrow">
+                    <svg width="21" height="24">
+                      <use xlink:href="img/icons/icons.svg#arrow-down"></use>
+                    </svg></span></button>
+                <div class="about-pluses__content" data-spoiler-content>
+                  <picture class="about-pluses__picture">
+                    <source type="image/webp" srcset="img/tmp/about-pluses@2x.webp 2x, img/tmp/about-pluses.webp 1x"><img srcset="img/tmp/about-pluses@2x.png 2x, img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy">
+                  </picture>
+                  <div class="about-pluses__text text">
+                    <p>Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="about-pluses__item" data-spoiler-parent>
+              <div class="container about-pluses__container">
+                <button class="about-pluses__btn btn-reset" data-spoiler="grid"><span class="about-pluses__btn-i">IV</span><span class="about-pluses__btn-title">Безупречное качество </span><span class="about-pluses__btn-arrow">
+                    <svg width="21" height="24">
+                      <use xlink:href="img/icons/icons.svg#arrow-down"></use>
+                    </svg></span></button>
+                <div class="about-pluses__content" data-spoiler-content>
+                  <picture class="about-pluses__picture">
+                    <source type="image/webp" srcset="img/tmp/about-pluses@2x.webp 2x, img/tmp/about-pluses.webp 1x"><img srcset="img/tmp/about-pluses@2x.png 2x, img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy">
+                  </picture>
+                  <div class="about-pluses__text text">
+                    <p>Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="about-pluses__item" data-spoiler-parent>
+              <div class="container about-pluses__container">
+                <button class="about-pluses__btn btn-reset" data-spoiler="grid"><span class="about-pluses__btn-i">V</span><span class="about-pluses__btn-title">Ваша лучшая инвестиция</span><span class="about-pluses__btn-arrow">
+                    <svg width="21" height="24">
+                      <use xlink:href="img/icons/icons.svg#arrow-down"></use>
+                    </svg></span></button>
+                <div class="about-pluses__content" data-spoiler-content>
+                  <picture class="about-pluses__picture">
+                    <source type="image/webp" srcset="img/tmp/about-pluses@2x.webp 2x, img/tmp/about-pluses.webp 1x"><img srcset="img/tmp/about-pluses@2x.png 2x, img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy">
+                  </picture>
+                  <div class="about-pluses__text text">
+                    <p>Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="about-pluses__item" data-spoiler-parent>
+              <div class="container about-pluses__container">
+                <button class="about-pluses__btn btn-reset" data-spoiler="grid"><span class="about-pluses__btn-i">VI</span><span class="about-pluses__btn-title">Бессрочная гарантия</span><span class="about-pluses__btn-arrow">
+                    <svg width="21" height="24">
+                      <use xlink:href="img/icons/icons.svg#arrow-down"></use>
+                    </svg></span></button>
+                <div class="about-pluses__content" data-spoiler-content>
+                  <picture class="about-pluses__picture">
+                    <source type="image/webp" srcset="img/tmp/about-pluses@2x.webp 2x, img/tmp/about-pluses.webp 1x"><img srcset="img/tmp/about-pluses@2x.png 2x, img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy">
+                  </picture>
+                  <div class="about-pluses__text text">
+                    <p>Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </section>
+      <!--Команда-->
+      <section class="section team">
+        <div class="container">
+          <p class="team__subtitle section__subtitle">Наша команда</p>
+          <h2 class="team__title section__title _small">Люди, которые создают искусство для вас</h2>
+          <div class="team__swiper swiper" data-team-swiper>
+            <div class="team__items swiper-wrapper">
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-1@2x.webp 2x, img/tmp/team-1.webp 1x"><img srcset="img/tmp/team-1@2x.jpg 2x, img/tmp/team-1.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-2@2x.webp 2x, img/tmp/team-2.webp 1x"><img srcset="img/tmp/team-2@2x.jpg 2x, img/tmp/team-2.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-3@2x.webp 2x, img/tmp/team-3.webp 1x"><img srcset="img/tmp/team-3@2x.jpg 2x, img/tmp/team-3.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-4@2x.webp 2x, img/tmp/team-4.webp 1x"><img srcset="img/tmp/team-4@2x.jpg 2x, img/tmp/team-4.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-4@2x.webp 2x, img/tmp/team-4.webp 1x"><img srcset="img/tmp/team-4@2x.jpg 2x, img/tmp/team-4.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-4@2x.webp 2x, img/tmp/team-4.webp 1x"><img srcset="img/tmp/team-4@2x.jpg 2x, img/tmp/team-4.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-4@2x.webp 2x, img/tmp/team-4.webp 1x"><img srcset="img/tmp/team-4@2x.jpg 2x, img/tmp/team-4.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-4@2x.webp 2x, img/tmp/team-4.webp 1x"><img srcset="img/tmp/team-4@2x.jpg 2x, img/tmp/team-4.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+                        <div class="team__item-wrap swiper-slide">
+                          <article class="team__item">
+                            <div class="team__picture-wrap">
+                              <picture class="team__picture"> 
+                                <source type="image/webp" srcset="img/tmp/team-4@2x.webp 2x, img/tmp/team-4.webp 1x"><img srcset="img/tmp/team-4@2x.jpg 2x, img/tmp/team-4.jpg 1x" alt="" width="308" height="310" loading="lazy">
+                              </picture>
+                              <div class="team__overlay">Поддерживает безупречное качество изделий</div>
+                            </div>
+                            <h3 class="team__fullname">Фузайлов Маркиэль</h3>
+                            <p class="team__position">Ген. директор</p>
+                          </article>
+                        </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Блог-->
+      <section class="section blog" data-tab-parent>
+        <div class="container">
+          <h2 class="blog__title-section section__title _small">Блог, истории клиентов</h2>
+          <div class="blog__tabs">
+            <button class="blog__tab btn-reset _active" type="button" data-tab="1">Блог</button>
+            <button class="blog__tab btn-reset" type="button" data-tab="2">Истории клиентов</button>
+          </div>
+          <div class="blog__content _active" data-tab-content="1">
+            <div class="blog__swiper swiper" data-blog-swiper>
+              <div class="swiper-wrapper blog__items">
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-1@2x.webp 2x, img/tmp/blog-1.webp 1x"><img srcset="img/tmp/blog-1@2x.webp 2x, img/tmp/blog-1.webp 1x" alt="" width="758" height="510" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">Блог</div>
+                                <time class="blog__date">21.03.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">История ювелирных украшений: от древности до современности.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-2@2x.webp 2x, img/tmp/blog-2.webp 1x"><img srcset="img/tmp/blog-2@2x.webp 2x, img/tmp/blog-2.webp 1x" alt="" width="364" height="330" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">Блог</div>
+                                <time class="blog__date">18.02.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-3@2x.webp 2x, img/tmp/blog-3.webp 1x"><img srcset="img/tmp/blog-3@2x.webp 2x, img/tmp/blog-3.webp 1x" alt="" width="562" height="420" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">Блог</div>
+                                <time class="blog__date">18.02.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-4@2x.webp 2x, img/tmp/blog-4.webp 1x"><img srcset="img/tmp/blog-4@2x.webp 2x, img/tmp/blog-4.webp 1x" alt="" width="562" height="420" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">Блог</div>
+                                <time class="blog__date">04.03.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Истории успеха в мире ювелирного бизнеса: как создать свой бренд и стать успешным ювелиром.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-5@2x.webp 2x, img/tmp/blog-5.webp 1x"><img srcset="img/tmp/blog-5@2x.webp 2x, img/tmp/blog-5.webp 1x" alt="" width="364" height="330" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">Блог</div>
+                                <time class="blog__date">11.03.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Как правильно ухаживать за ювелирными изделиями: советы по уходу и хранению.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-6@2x.webp 2x, img/tmp/blog-6.webp 1x"><img srcset="img/tmp/blog-6@2x.webp 2x, img/tmp/blog-6.webp 1x" alt="" width="758" height="510" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">Блог</div>
+                                <time class="blog__date">04.01.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Редкие и эксклюзивные драгоценные камни: их особенности и ценность.</a></h3>
+                            </article>
+                          </div>
+              </div>
+            </div><a class="link _italic animation-link products__more" href="#"><span class="_wrap"><span class="_default">Показать еще</span><span class="_hover">Показать еще</span></span></a>
+          </div>
+          <div class="blog__content" data-tab-content="2">
+            <div class="blog__swiper swiper" data-blog-swiper>
+              <div class="swiper-wrapper blog__items">
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-1@2x.webp 2x, img/tmp/blog-1.webp 1x"><img srcset="img/tmp/blog-1@2x.webp 2x, img/tmp/blog-1.webp 1x" alt="" width="562" height="420" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">История</div>
+                                <time class="blog__date">04.03.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Истории успеха в мире ювелирного бизнеса: как создать свой бренд и стать успешным ювелиром.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-2@2x.webp 2x, img/tmp/blog-2.webp 1x"><img srcset="img/tmp/blog-2@2x.webp 2x, img/tmp/blog-2.webp 1x" alt="" width="364" height="330" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">История</div>
+                                <time class="blog__date">11.03.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Как правильно ухаживать за ювелирными изделиями: советы по уходу и хранению.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-3@2x.webp 2x, img/tmp/blog-3.webp 1x"><img srcset="img/tmp/blog-3@2x.webp 2x, img/tmp/blog-3.webp 1x" alt="" width="758" height="510" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">История</div>
+                                <time class="blog__date">04.01.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Редкие и эксклюзивные драгоценные камни: их особенности и ценность.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-4@2x.webp 2x, img/tmp/blog-4.webp 1x"><img srcset="img/tmp/blog-4@2x.webp 2x, img/tmp/blog-4.webp 1x" alt="" width="758" height="510" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">История</div>
+                                <time class="blog__date">21.03.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">История ювелирных украшений: от древности до современности.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-5@2x.webp 2x, img/tmp/blog-5.webp 1x"><img srcset="img/tmp/blog-5@2x.webp 2x, img/tmp/blog-5.webp 1x" alt="" width="364" height="330" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">История</div>
+                                <time class="blog__date">18.02.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.</a></h3>
+                            </article>
+                          </div>
+                          <div class="swiper-slide blog__slide">
+                            <article class="blog__item">
+                              <picture class="blog__picture">
+                                <source type="image/webp" srcset="img/tmp/blog-6@2x.webp 2x, img/tmp/blog-6.webp 1x"><img srcset="img/tmp/blog-6@2x.webp 2x, img/tmp/blog-6.webp 1x" alt="" width="562" height="420" loading="lazy">
+                              </picture>
+                              <div class="blog__controls">
+                                <div class="blog__category">История</div>
+                                <time class="blog__date">18.02.2023</time>
+                              </div>
+                              <h3 class="blog__title"><a class="blog__link link _full" href="#">Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.</a></h3>
+                            </article>
+                          </div>
+              </div>
+            </div><a class="link _italic animation-link products__more" href="#"><span class="_wrap"><span class="_default">Показать еще</span><span class="_hover">Показать еще</span></span></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!--Подвал-->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__first">
+            <div class="footer__first-item">
+              <p class="footer__first-title">Подписывайтесь на новостную рассылку Fuzailov</p>
+              <!--Класс _error у input-->
+              <form class="form-line">
+                <div class="form-line__fieldset">
+                  <input class="form-line__input" type="email" name="email" placeholder="E-mail">
+                  <!--span.form-line__error Текст ошибки-->
+                </div>
+                <button class="form-line__submit" type="submit">
+                  <svg width="21" height="12">
+                    <use xlink:href="img/icons/icons.svg#form-line-submit"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+            <div class="footer__first-item">
+              <p class="footer__first-title">Вы можете оплатить товар любым удобным вам способом.</p>
+              <div class="footer__payments">
+                <svg class="footer__payments-item" width="48" height="48">
+                  <use xlink:href="img/icons/icons.svg#footer-visa"></use>
+                </svg>
+                <svg class="footer__payments-item" width="48" height="48">
+                  <use xlink:href="img/icons/icons.svg#footer-mastercard"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <nav class="footer__nav">
+            <p class="footer__title">Украшения</p>
+            <ul class="footer__list">
+              <li><a href="#">Кольца</a></li>
+              <li><a href="#">Серьги</a></li>
+              <li><a href="#">Подвески</a></li>
+              <li><a href="#">Браслеты</a></li>
+            </ul>
+          </nav>
+          <nav class="footer__nav">
+            <p class="footer__title">Покупателям</p>
+            <ul class="footer__list">
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+              <li><a href="#">Гарантия</a></li>
+              <li><a href="#">Возврат</a></li>
+            </ul>
+          </nav>
+          <address class="footer__contacts">
+            <p class="footer__title">Контакты</p>
+            <ul class="footer__list">
+              <li> <a href="tel:+79175331452">+7 (917) 533-14-52</a></li>
+              <li> <a href="mailto:info@my-diamonds.ru">info@my-diamonds.ru</a></li>
+              <li>Москва, Краснопресненская набережная, д.12, Hotel Plaza Garden</li>
+              <li>Ежедневно: с 10:00 до 21:00</li>
+            </ul>
+            <div class="footer__socials _contacts"><a class="footer__socials-item" href="https://vk.com/" target="_blank">
+                <svg width="30" height="30">
+                  <use xlink:href="img/icons/icons.svg#vk"></use>
+                </svg></a><a class="footer__socials-item" href="tg://resolve?domain=telegram_nick" target="_blank">
+                <svg width="30" height="30">
+                  <use xlink:href="img/icons/icons.svg#telegram"></use>
+                </svg></a><a class="footer__socials-item" href="https://api.whatsapp.com/send?phone=7925042935" target="_blank">
+                <svg width="30" height="30">
+                  <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+                </svg></a></div>
+          </address>
+          <div class="footer__socials"><a class="footer__socials-item" href="https://vk.com/" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg></a><a class="footer__socials-item" href="tg://resolve?domain=telegram_nick" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a><a class="footer__socials-item" href="https://api.whatsapp.com/send?phone=7925042935" target="_blank">
+              <svg width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg></a></div>
+        </div>
+        <div class="footer__copyright">
+          <div class="footer__copyright-item">© 2023, Fuzailov</div><a class="footer__copyright-item footer__copyright-link" href="#">Политика приватности</a><a class="footer__copyright-item footer__copyright-link" href="#">Правила пользования сайтом</a>
+        </div>
+      </div>
+    </footer>
+    <!--Модальное окно "Связаться с нами"-->
+    <div class="modal" id="modal-feedback">
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/icons/icons.svg#modal-close"></use>
+        </svg>
+      </button>
+      <svg class="modal__rectangle _left" width="451" height="780">
+        <use xlink:href="img/icons/icons.svg#modal-rectangle-left"></use>
+      </svg>
+      <svg class="modal__rectangle _right" width="413" height="780">
+        <use xlink:href="img/icons/icons.svg#modal-rectangle-right"></use>
+      </svg>
+      <div class="fitting__form">
+        <p class="modal__title">Связаться с нами</p>
+        <p class="modal__subtitle">Мы свяжемся с вами в течение 15 минут</p>
+        <form class="form fitting__f">
+          <fieldset class="form__fieldset">
+            <label class="form__label _white" for="feedback-name">Ваше имя</label>
+            <input class="form__input _white" type="text" name="name" id="feedback-name">
+          </fieldset>
+          <fieldset class="form__fieldset">
+            <label class="form__label _white" for="feedback-phone">Ваш телефон</label>
+            <input class="form__input _white _error" type="tel" name="phone" id="feedback-phone" data-tel><span class="form__error">Текст ошибки</span>
+          </fieldset>
+          <button class="form__submit btn _transparent-white-border" type="submit">Отправить</button>
+          <div class="form__checkbox form__policy _white">
+            <input class="form__checkbox-input" type="checkbox" name="policy" id="feedback-policy" data-policy checked>
+            <label class="form__checkbox-label" for="feedback-policy"><span class="form__checkbox-check">
+                <svg width="14" height="11">
+                  <use xlink:href="img/icons/icons.svg#checkbox"></use>
+                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!--Скрипты-->
+    <script src="js/app.min.js?_v=20231006195614"></script>
+  </body>
+</html>

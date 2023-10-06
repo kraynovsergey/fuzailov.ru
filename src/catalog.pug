@@ -1,0 +1,320 @@
+extends base
+
+block meta
+    - var seotitle = 'Каталог'
+    - var seodescription = 'Описание страницы каталога'
+    - var seokeywords = 'Ключевые слова страницы каталога'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.section._pt0
+        .container
+            //Фильтр
+            .catalog-filter
+                p.section__title.catalog-filter__categories-title._small Категории
+                .catalog-filter__categories.scroll._hidden
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Все" id="catalog-category-1" data-filter-category="1")
+                        label.catalog-filter__category-label(for="catalog-category-1") Все
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Кольца" id="catalog-category-2" data-filter-category="2")
+                        label.catalog-filter__category-label(for="catalog-category-2") Кольца
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Серьги" id="catalog-category-3" data-filter-category="3")
+                        label.catalog-filter__category-label(for="catalog-category-3") Серьги
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+                            
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Браслеты" id="catalog-category-4" data-filter-category="4")
+                        label.catalog-filter__category-label(for="catalog-category-4") Браслеты
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Бриллианты" id="catalog-category-5" data-filter-category="5")
+                        label.catalog-filter__category-label(for="catalog-category-5") Бриллианты
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Цветные камни" id="catalog-category-6" data-filter-category="6")
+                        label.catalog-filter__category-label(for="catalog-category-6") Цветные камни
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+                    
+
+                button.filter__mobile-btn.btn._transparent-gray-border(type="button" data-fancybox-no-swipe data-src="#modal-filter")
+                    svg(width="40" height="40")
+                        use(xlink:href="@img/icons/icons.svg#filter")
+                    | Фильтр
+
+                .catalog-filter__modal(id="modal-filter")
+                    .filter__header
+                        .filter__header-title Фильтр
+                        button.filter__header-close.btn-reset(type="button" data-fancybox-close) Закрыть
+                            span
+
+                    form.catalog-filter__box(action="#" method="post" id="filter-form" data-tab-parent)
+                        //Это скрытые поля категорий, они синхронизированы с аналогичными полями выше по коду, т.к. они вне формы
+                        input.catalog-filter__hidden-input(type="checkbox" name="category" value="Все" data-filter-category-target="1")
+                        input.catalog-filter__hidden-input(type="checkbox" name="category" value="Кольца" data-filter-category-target="2")
+                        input.catalog-filter__hidden-input(type="checkbox" name="category" value="Серьги" data-filter-category-target="3")
+                        input.catalog-filter__hidden-input(type="checkbox" name="category" value="Браслеты" data-filter-category-target="4")
+                        input.catalog-filter__hidden-input(type="checkbox" name="category" value="Бриллианты" data-filter-category-target="5")
+                        input.catalog-filter__hidden-input(type="checkbox" name="category" value="Цветные камни" data-filter-category-target="6")
+
+                        .catalog-filter__header
+                            .catalog-filter__header-params
+                                .catalog-filter__header-title
+                                    svg(width="50" height="50")
+                                        use(xlink:href="@img/icons/icons.svg#filter")
+                                    | Фильтры:
+
+                                button.catalog-filter__header-param.btn-reset(type="button" data-tab="1") Цвет
+                                    svg(width="24" height="24")
+                                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                                button.catalog-filter__header-param.btn-reset(type="button" data-tab="2") Форма
+                                    svg(width="24" height="24")
+                                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                                button.catalog-filter__header-param.btn-reset(type="button" data-tab="3") Драгоценный камень
+                                    svg(width="24" height="24")
+                                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                                button.catalog-filter__header-param.btn-reset(type="button" data-tab="4") Коллекция
+                                    svg(width="24" height="24")
+                                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                            .catalog-filter__header-sorting-wrap
+                                select.catalog-filter__header-select.style-select(name="sorting")
+                                    option(value="Дата создания товара" selected) Дата создания товара
+                                    option(value="Название товара") Название товара
+                                    option(value="Артикул") Артикул
+                                    option(value="Цена товара") Цена товара
+
+                                button.catalog-filter__header-sorting.btn-reset._asc(type="button" data-diamonds-sorting)
+                                    svg._asc(width="30" height="30")
+                                        use(xlink:href="@img/icons/icons.svg#sorting-asc")
+                                    svg._desc(width="30" height="30")
+                                        use(xlink:href="@img/icons/icons.svg#sorting-desc")
+
+                        .catalog-filter__content(data-tab-content="1" data-filter-item)
+                            p.filter__title(data-filter-title) Цвет
+                                span.filter__title-icon
+                                    svg(width="13" height="16")
+                                        use(xlink:href="@img/icons/icons.svg#filter-arrow")
+
+                            .catalog-filter__colors(data-filter-content)
+                                mixin color(i, icon, title)
+                                    .form__checkbox.catalog-filter__color
+                                        input.form__checkbox-input(type="checkbox" name="color" id="color-"+i)
+                                        label.form__checkbox-label(for="color-"+i)
+                                            span.form__checkbox-check
+                                                svg(width="14" height="11")
+                                                    use(xlink:href="@img/icons/icons.svg#checkbox")
+                                            span.form__checkbox-title 
+                                                svg(width="30" height="30")
+                                                    use(xlink:href="@img/icons/icons.svg#"+icon)
+                                                =title
+
+                                +color(1, 'color-white', 'Белое')
+                                +color(2, 'color-yellow', 'Желтое')
+                                +color(3, 'color-white-yellow', 'Белое / Жёлтое')
+                                +color(4, 'color-white-pink', 'Белое / Розовое')
+                                +color(4, 'color-red', 'Красное')
+
+                        .catalog-filter__content(data-tab-content="2" data-filter-item)
+                            p.filter__title(data-filter-title) Форма
+                                span.filter__title-icon
+                                    svg(width="13" height="16")
+                                        use(xlink:href="@img/icons/icons.svg#filter-arrow")
+
+                            .catalog-filter__cuts(data-filter-content)
+                                mixin cut(i)
+                                    .form__checkbox.catalog-filter__cut
+                                        input.form__checkbox-input(type="checkbox" name="cut" id="cut-"+i)
+                                        label.form__checkbox-label(for="cut-"+i)
+                                            span.form__checkbox-check
+                                                svg(width="14" height="11")
+                                                    use(xlink:href="@img/icons/icons.svg#checkbox")
+                                            span.form__checkbox-title 
+                                                svg(width="30" height="30")
+                                                    use(xlink:href="@img/icons/icons.svg#cut-"+i)
+
+                                +cut(1)
+                                +cut(2)
+                                +cut(3)
+                                +cut(4)
+                                +cut(5)
+                                +cut(6)
+                                +cut(7)
+                                +cut(8)
+                                +cut(9)
+                                +cut(10)
+                                +cut(11)
+                                +cut(12)
+
+                        .catalog-filter__content(data-tab-content="3" data-filter-item)
+                            p.filter__title(data-filter-title) Драгоценный камень
+                                span.filter__title-icon
+                                    svg(width="13" height="16")
+                                        use(xlink:href="@img/icons/icons.svg#filter-arrow")
+
+                            .catalog-filter__diamonds(data-filter-content)
+                                mixin diamond(i, title)
+                                    .form__checkbox.catalog-filter__diamond
+                                        input.form__checkbox-input(type="checkbox" name="diamond" id="diamond-"+i)
+                                        label.form__checkbox-label(for="diamond-"+i)
+                                            span.form__checkbox-check
+                                                svg(width="14" height="11")
+                                                    use(xlink:href="@img/icons/icons.svg#checkbox")
+                                            span.form__checkbox-title=title
+
+                                +diamond(1, 'Бриллиант')
+                                +diamond(2, 'Жёлтый бриллиант')
+                                +diamond(3, 'Изумруд')
+                                +diamond(4, 'Морганит')
+                                +diamond(5, 'Рубин')
+                                +diamond(6, 'Сапфир')
+
+                        .catalog-filter__content(data-tab-content="4" data-filter-item)
+                            p.filter__title(data-filter-title) Коллекция
+                                span.filter__title-icon
+                                    svg(width="13" height="16")
+                                        use(xlink:href="@img/icons/icons.svg#filter-arrow")
+
+                            .catalog-filter__collections(data-filter-content)
+                                mixin collection(i, title)
+                                    .form__checkbox.catalog-filter__collection
+                                        input.form__checkbox-input(type="checkbox" name="collection" id="collection-"+i)
+                                        label.form__checkbox-label(for="collection-"+i)
+                                            span.form__checkbox-check
+                                                svg(width="14" height="11")
+                                                    use(xlink:href="@img/icons/icons.svg#checkbox")
+                                            span.form__checkbox-title=title
+
+                                +collection(1, 'Diamond Dreams Collection')
+                                +collection(2, 'Brilliantly Bold Collection')
+                                +collection(3, 'Radiant Reflections Collection')
+
+                        .filter__form-bottom
+                            .filter__selected-list
+                                button.filter__selected.btn-reset(type="button" data-filter-selected)
+                                    span.filter__selected-icon
+                                    | Жёлтое
+                                button.filter__selected.btn-reset(type="button" data-filter-selected)
+                                    span.filter__selected-icon
+                                    | Название формы
+                            .filter__btns
+                                button.filter__submit.btn(type="submit") Применить
+                                button.filter__reset.btn._transparent-gray-border(type="reset") Очистить
+                        
+                .catalog-filter__footer
+                    .catalog-filter__selected-list.filter__selected-list
+                        button.filter__selected.btn-reset(type="button" data-filter-selected)
+                            span.filter__selected-icon
+                            | Жёлтое
+                        button.filter__selected.btn-reset(type="button" data-filter-selected)
+                            span.filter__selected-icon
+                            | Название формы
+
+                    button.filter__selected.btn-reset.catalog-filter__reset(type="button" data-form-reset="#filter-form")
+                        span.filter__selected-icon
+                        | Сбросить фильтр
+
+            //Товары
+            .new-collection
+                .products._col2
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+
+                .new-collection__fashion
+                    .new-collection__swiper.swiper(data-swiper-fashion="1")
+                        .swiper-wrapper
+                            .swiper-slide
+                                +fashion('new-collection-img-2', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-1', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-3', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-1', 855, 1079)
+
+                    a.link._italic._button-mobile.animation-link(href="#")
+                        span._wrap
+                            span._default Смотреть всю коллекцию
+                            span._hover Смотреть всю коллекцию
+
+                .products._col2
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 2)
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 2)
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 2)
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 2)
+
+                .new-collection__fashion
+                    .new-collection__swiper.swiper(data-swiper-fashion="2")
+                        .swiper-wrapper
+                            .swiper-slide
+                                +fashion('new-collection-img-3', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-1', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-2', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-1', 855, 1079)
+
+                    a.link._italic._button-mobile.animation-link(href="#")
+                        span._wrap
+                            span._default Смотреть всю коллекцию
+                            span._hover Смотреть всю коллекцию
+
+            //Пагинация
+            .pagination.section._pb0
+                ul.pagination__list
+                    li.pagination__list-item 
+                        a.pagination__list-arrow._prev._disabled(href="#")
+                    li.pagination__list-item 
+                        a.pagination__list-link._active(href="#") 1
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 2
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 3
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 4
+                    li.pagination__list-item.pagination__list-divider . . .
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 9
+                    li.pagination__list-item 
+                        a.pagination__list-link(href="#") 10
+                    li.pagination__list-item 
+                        a.pagination__list-arrow._next(href="#")
+
+    //Как подобрать кольцо
+    section.section
+        .service
+            .container.service__container._reverse
+                picture.service__picture
+                    source(type="image/webp" srcset="@img/tmp/pickup-ring@2x.webp 2x, @img/tmp/pickup-ring.webp 1x")
+                    img(srcset="@img/tmp/pickup-ring@2x.jpg 2x, @img/tmp/pickup-ring.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+                .service__content
+                    p.section__subtitle.service__section-subtitle Помощь
+                    h2.section__title.service__section-title Как подобрать кольцо
+                    a.service__link.btn._transparent-white-border(href="#") Подробнее
+
+    include pug/layout/_pluses
+
+block modal
+    include pug/layout/_fashion-modal
+

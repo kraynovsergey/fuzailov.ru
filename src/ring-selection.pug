@@ -1,0 +1,195 @@
+extends base
+
+block meta
+    - var seotitle = 'Подбор размера'
+    - var seodescription = 'Описание страницы подбора размера'
+    - var seokeywords = 'Ключевые слова страницы подбора размера'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.section._pt0
+        .container
+            h1.h1.ring-selection__title Подбор размера
+
+            .ring-selection__controls
+                .ring-selection__circle-wrap
+                    .ring-selection__circle(data-range-single-target) 14.5
+
+                .ring-selection__range-wrap
+                    button.ring-selection__range-btn.btn-reset(data-range-minus)
+                        svg(width="40" height="40")
+                            use(xlink:href="@img/icons/icons.svg#minus")
+
+                    .filter__range-init.ring-selection__range(data-range-single data-range-min="12" data-range-max="17" data-range-step="0.5" data-range-min-value="0" data-range-max-value="14.5")
+
+                    button.ring-selection__range-btn.btn-reset(data-range-plus)
+                        svg(width="40" height="40")
+                            use(xlink:href="@img/icons/icons.svg#plus")
+
+            .ring-selection__use
+                h3.ring-selection__use-title Как пользоваться сервисом
+                
+                .ring-selection__use-items
+                    .ring-selection__use-item
+                        picture.ring-selection__use-picture
+                            source(type="image/webp" srcset="@img/ring-selection-use-1@2x.webp 2x, @img/ring-selection-use-1.webp 1x")
+                            img(srcset="@img/ring-selection-use-1@2x.png 2x, @img/ring-selection-use-1.png 1x" alt="" width="220" height="150" loading="lazy")
+                        .ring-selection__use-content 1. Приложите свое кольцо к окружности в центре экрана, так чтобы центр окружности и центр кольца совпадали.
+
+                    .ring-selection__use-item
+                        picture.ring-selection__use-picture
+                            img(src="@img/ring-selection-use-2.svg" alt="" width="547" height="70" loading="lazy")
+                        .ring-selection__use-content 2. Регулируйте диаметр окружности с помощью кнопок «+» и «-» или используйте бегунок пока окружность не совпадет с внутренней линией кольца.
+
+                    .ring-selection__use-item
+                        picture.ring-selection__use-picture
+                            img(src="@img/ring-selection-use-3.svg" alt="" width="338" height="102" loading="lazy")
+                        .ring-selection__use-content 3. Число внутри окружности будет показывать размер кольца (помните, что размеры кольца изменяются с шагом 0.5 мм начиная с 12, по этому колец с размерами на пример: 15.7 или 18.2 и т.п. — не найти в ювелирных магазинах)
+
+    section.section
+        .container
+            h2.h1.ring-selection__title._other Другие способы
+
+            .ring-selection__others
+                .ring-selection__other
+                    .ring-selection__other-content
+                        p.ring-selection__other-medium._mb Чтобы подобрать подходящий размер для вашего следующего кольца, вы можете:
+                        .ring-selection__other-hidden
+                            p Вы можете определить размер изделия самостоятельно, но для более точных измерений рекомендуем посетить один из наших бутиков и провести измерение на профессиональном оборудовании.
+                            p 
+                                a(href="#") cмотреть адреса бутиков
+
+                    .ring-selection__other-boxes
+                        .ring-selection__other-box Воспользоваться инструментом для печати
+                        .ring-selection__other-box Воспользоваться линейкой
+
+                    .ring-selection__other-content._tablet
+                        p Вы можете определить размер изделия самостоятельно, но для более точных измерений рекомендуем посетить один из наших бутиков и провести измерение на профессиональном оборудовании.
+                        p 
+                            a(href="#") cмотреть адреса бутиков
+
+                .ring-selection__other
+                    .ring-selection__other-content
+                        h3.ring-selection__other-title Инструмент для печати размеров
+                        p.ring-selection__other-medium Для определения правильного размера мы создали этот инструмент для печати.
+                        a.ring-selection__other-btn.btn._transparent-gray-border(href="#" target="_blank") Скачайте его здесь и распечатайте
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+
+                    picture.ring-selection__other-picture
+                        source(type="image/webp" srcset="@img/size-ruler@2x.webp 2x, @img/size-ruler.webp 1x")
+                        img(srcset="@img/size-ruler@2x.png 2x, @img/size-ruler.png 1x" alt="" width="855" height="310")
+
+                .ring-selection__other.ring-selection__other-table
+                    .ring-selection__other-content
+                        h3.ring-selection__other-title Воспользуйтесь линейкой
+                        p 1. Положите линейку ровно посередине кольца и измерьте его диаметр в миллиметрах
+                        p 2. Сопоставьте получившийся размер с размером в 3 столбце в таблице
+
+                    .ring-selection__table-responsive.scroll._hidden
+                        table.ring-selection__table
+                            tr
+                                th Диаметр<br>(мм)
+                                th Окружность<br>(мм)
+                                th Россия<br>Германия
+                                th США
+                                th Англия
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+                            tr 
+                                td 14,86
+                                td 46,5
+                                td 15
+                                td 4
+                                td H
+
+    //Записаться на примерку
+    section.section
+        .service
+            .container.service__container 
+                picture.service__picture
+                    source(type="image/webp" srcset="@img/tmp/ring-selection-fitting@2x.webp 2x, @img/tmp/ring-selection-fitting.webp 1x")
+                    img(srcset="@img/tmp/ring-selection-fitting@2x.jpg 2x, @img/tmp/ring-selection-fitting.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+                .service__content
+                    p.section__subtitle.service__section-subtitle Помощь
+                    h2.section__title.service__section-title Но чтобы быть уверенными, запишитесь на примерку
+                    .service__text
+                        p Мы ценим ваше время, поэтому предлагаем эксклюзивные условия для вас. 
+                        p Запишитесь на примерку понравившегося украшения.
+
+                    button.service__link.btn._transparent-white-border(type="button" data-fancybox data-src="#modal-fitting") Подробнее
+
+block modal 
+    include pug/layout/_modal-fitting

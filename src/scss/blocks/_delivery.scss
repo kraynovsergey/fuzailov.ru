@@ -1,0 +1,25 @@
+.delivery {
+    display: grid;
+    gap: 2.5rem;
+
+    @media (max-width: 575px) {
+        gap: 2rem;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 1.37rem;
+        font-weight: 500;
+        color: $color_black;
+        margin-bottom: .8rem;
+
+        @media (max-width: 575px) {
+            font-size: 1.14rem;
+            margin-bottom: 1rem;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.modal(id="modal-feedback")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="@img/icons/icons.svg#modal-close")
+
+    svg.modal__rectangle._left(width="451" height="780")
+        use(xlink:href="@img/icons/icons.svg#modal-rectangle-left")
+
+    svg.modal__rectangle._right(width="413" height="780")
+        use(xlink:href="@img/icons/icons.svg#modal-rectangle-right")
+
+    .fitting__form
+        p.modal__title Связаться с нами
+        p.modal__subtitle Мы свяжемся с вами в течение 15 минут
+
+        form.form.fitting__f
+            fieldset.form__fieldset
+                label.form__label._white(for="feedback-name") Ваше имя
+                input.form__input._white(type="text" name="name" id="feedback-name")
+            fieldset.form__fieldset
+                label.form__label._white(for="feedback-phone") Ваш телефон
+                input.form__input._white._error(type="tel" name="phone" id="feedback-phone" data-tel)
+                span.form__error Текст ошибки
+            button.form__submit.btn._transparent-white-border(type="submit") Отправить
+            .form__checkbox.form__policy._white
+                input.form__checkbox-input(type="checkbox" name="policy" id="feedback-policy" data-policy checked)
+                label.form__checkbox-label(for="feedback-policy")
+                    span.form__checkbox-check
+                        svg(width="14" height="11")
+                            use(xlink:href="@img/icons/icons.svg#checkbox")
+                    span.form__checkbox-title Согласен с условиями конфиденциальности

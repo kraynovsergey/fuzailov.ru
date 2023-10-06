@@ -1,0 +1,210 @@
+extends base
+
+block meta
+    - var seotitle = 'Продажа бриллиантов'
+    - var seodescription = 'Описание страницы продажи бриллиантов'
+    - var seokeywords = 'Ключевые слова страницы бриллиантов'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    //Интро
+    section.section._pt0
+        .container
+            h1.sale-diamonds__h1
+                span Продажа
+                span бриллиантов
+                span от поставщика
+            .sale-diamonds__introtext 
+                p Широкий ассортимент бриллиантов от поставщика с доставкой по всей России
+
+        .swiper.sale-diamonds__swiper(data-sale-diamonds-swiper)
+            .swiper-wrapper
+                .swiper-slide
+                    picture.sale-diamonds__slide-picture
+                        source(type="image/webp" srcset="@img/tmp/sale-diamonds-slide-1@2x.webp 2x, @img/tmp/sale-diamonds-slide-1.webp 1x")
+                        img(srcset="@img/tmp/sale-diamonds-slide-1@2x.jpg 2x, @img/tmp/sale-diamonds-slide-1.jpg 1x" alt="" width="560" height="600" loading="lazy")
+                .swiper-slide
+                    picture.sale-diamonds__slide-picture
+                        source(type="image/webp" srcset="@img/tmp/sale-diamonds-slide-2@2x.webp 2x, @img/tmp/sale-diamonds-slide-2.webp 1x")
+                        img(srcset="@img/tmp/sale-diamonds-slide-2@2x.jpg 2x, @img/tmp/sale-diamonds-slide-2.jpg 1x" alt="" width="560" height="600" loading="lazy")
+                .swiper-slide
+                    picture.sale-diamonds__slide-picture
+                        source(type="image/webp" srcset="@img/tmp/sale-diamonds-slide-3@2x.webp 2x, @img/tmp/sale-diamonds-slide-3.webp 1x")
+                        img(srcset="@img/tmp/sale-diamonds-slide-3@2x.jpg 2x, @img/tmp/sale-diamonds-slide-3.jpg 1x" alt="" width="560" height="600" loading="lazy")
+                .swiper-slide
+                    picture.sale-diamonds__slide-picture
+                        source(type="image/webp" srcset="@img/tmp/sale-diamonds-slide-1@2x.webp 2x, @img/tmp/sale-diamonds-slide-1.webp 1x")
+                        img(srcset="@img/tmp/sale-diamonds-slide-1@2x.jpg 2x, @img/tmp/sale-diamonds-slide-1.jpg 1x" alt="" width="560" height="600" loading="lazy")
+                .swiper-slide
+                    picture.sale-diamonds__slide-picture
+                        source(type="image/webp" srcset="@img/tmp/sale-diamonds-slide-2@2x.webp 2x, @img/tmp/sale-diamonds-slide-2.webp 1x")
+                        img(srcset="@img/tmp/sale-diamonds-slide-2@2x.jpg 2x, @img/tmp/sale-diamonds-slide-2.jpg 1x" alt="" width="560" height="600" loading="lazy")
+                .swiper-slide
+                    picture.sale-diamonds__slide-picture
+                        source(type="image/webp" srcset="@img/tmp/sale-diamonds-slide-3@2x.webp 2x, @img/tmp/sale-diamonds-slide-3.webp 1x")
+                        img(srcset="@img/tmp/sale-diamonds-slide-3@2x.jpg 2x, @img/tmp/sale-diamonds-slide-3.jpg 1x" alt="" width="560" height="600" loading="lazy")
+            
+            button.swiper__navigation._prev._small(type="button" data-swiper-prev)
+                svg(width="40" height="40")
+                    use(xlink:href="@img/icons/icons.svg#swiper-nav-small")
+
+            button.swiper__navigation._next._small(type="button" data-swiper-next)
+                svg(width="40" height="40")
+                    use(xlink:href="@img/icons/icons.svg#swiper-nav-small")
+
+        .container.sale-diamonds__btn-wrap
+            a.sale-diamonds__btn.btn._transparent-gray-border(href="#") В каталог
+
+    //Преимущества
+    section.section.sale-diamonds__pluses
+        .container
+            p.sale-diamonds__pluses-subtitle.section__subtitle Уникальность
+            h2.sale-diamonds__pluses-title.section__title._small Преимущества
+
+            .sale-diamonds__pluses-items(data-sale-diamonds-pluses)
+                .sale-diamonds__pluses-item
+                    button.sale-diamonds__pluses-name.btn-reset._active(data-sale-diamonds-pluses-btn) Безупречная репутация на протяжении 50 лет
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/sale-diamonds-pluses@2x.webp 2x, @img/tmp/sale-diamonds-pluses.webp 1x")
+                            img(srcset="@img/tmp/sale-diamonds-pluses@2x.jpg 2x, @img/tmp/sale-diamonds-pluses.jpg 1x" alt="" width="413" height="470")
+                        .sale-diamonds__pluses-text
+                            p Семья Фузайловых ограняет и продает драгоценные камни уже на протяжении нескольких поколений
+                
+                .sale-diamonds__pluses-item(data-sale-diamonds-pluses-item)
+                    button.sale-diamonds__pluses-name.btn-reset(data-sale-diamonds-pluses-btn) Уникальная огранка
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/sale-diamonds-pluses@2x.webp 2x, @img/tmp/sale-diamonds-pluses.webp 1x")
+                            img(srcset="@img/tmp/sale-diamonds-pluses@2x.jpg 2x, @img/tmp/sale-diamonds-pluses.jpg 1x" alt="" width="413" height="470")
+                        .sale-diamonds__pluses-text
+                            p В нашем ассортименте есть камни с редкой огранкой
+
+                .sale-diamonds__pluses-item(data-sale-diamonds-pluses-item)
+                    button.sale-diamonds__pluses-name.btn-reset(data-sale-diamonds-pluses-btn) Гарантия подлинности 
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/sale-diamonds-pluses@2x.webp 2x, @img/tmp/sale-diamonds-pluses.webp 1x")
+                            img(srcset="@img/tmp/sale-diamonds-pluses@2x.jpg 2x, @img/tmp/sale-diamonds-pluses.jpg 1x" alt="" width="413" height="470")
+                        .sale-diamonds__pluses-text
+                            p Все бриллианты и драгоценные камни имеют сертификаты крупнейших геммологических центров и лабораторий мира и России. GIA, GCI (IGC), IGL, GRS и др.
+
+                .sale-diamonds__pluses-item(data-sale-diamonds-pluses-item)
+                    button.sale-diamonds__pluses-name.btn-reset(data-sale-diamonds-pluses-btn) Отсутствие наценок
+                        span
+                            svg(width="24" height="24")
+                                use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    .sale-diamonds__pluses-content(data-sale-diamonds-pluses-item)
+                        picture.sale-diamonds__pluses-picture
+                            source(type="image/webp" srcset="@img/tmp/sale-diamonds-pluses@2x.webp 2x, @img/tmp/sale-diamonds-pluses.webp 1x")
+                            img(srcset="@img/tmp/sale-diamonds-pluses@2x.jpg 2x, @img/tmp/sale-diamonds-pluses.jpg 1x" alt="" width="413" height="470")
+                        .sale-diamonds__pluses-text
+                            p Мы поставляем лучшие камни из собственных офисов в Нью-Йорке, Гонконге и Тель-авиве
+
+    //Коллекция бриллиантов
+    section.section 
+        .container.collection-diamonds__container
+            .collection-diamonds__carousel
+                .collection-diamonds__swiper.swiper(data-collection-diamonds-swiper)
+                    .swiper-wrapper
+                        .swiper-slide
+                            picture.collection-diamonds__picture
+                                source(type="image/webp" srcset="@img/tmp/collection-diamonds@2x.webp 2x, @img/tmp/collection-diamonds.webp 1x")
+                                img(srcset="@img/tmp/collection-diamonds@2x.jpg 2x, @img/tmp/collection-diamonds.jpg 1x" alt="" width="855" height="830" loading="lazy")
+                        .swiper-slide
+                            picture.collection-diamonds__picture
+                                source(type="image/webp" srcset="@img/tmp/collection-diamonds@2x.webp 2x, @img/tmp/collection-diamonds.webp 1x")
+                                img(srcset="@img/tmp/collection-diamonds@2x.jpg 2x, @img/tmp/collection-diamonds.jpg 1x" alt="" width="855" height="830" loading="lazy")
+                        .swiper-slide
+                            picture.collection-diamonds__picture
+                                source(type="image/webp" srcset="@img/tmp/collection-diamonds@2x.webp 2x, @img/tmp/collection-diamonds.webp 1x")
+                                img(srcset="@img/tmp/collection-diamonds@2x.jpg 2x, @img/tmp/collection-diamonds.jpg 1x" alt="" width="855" height="830" loading="lazy")
+                        .swiper-slide
+                            picture.collection-diamonds__picture
+                                source(type="image/webp" srcset="@img/tmp/collection-diamonds@2x.webp 2x, @img/tmp/collection-diamonds.webp 1x")
+                                img(srcset="@img/tmp/collection-diamonds@2x.jpg 2x, @img/tmp/collection-diamonds.jpg 1x" alt="" width="855" height="830" loading="lazy")
+
+                .collection-diamonds__controls
+                    h3.collection-diamonds__title-carousel.section__title._small Особенности коллекции
+                    .collection-diamonds__texts
+                        .swiper(data-collection-diamonds-texts-swiper)
+                            .swiper-wrapper 
+                                .swiper-slide 
+                                    .collection-diamonds__slide
+                                        p.collection-diamonds__slide-title Изысканная огранка
+                                        p.collection-diamonds__slide-text Чем сложнее и чище огранка, тем дороже будет становиться бриллиант
+                                .swiper-slide 
+                                    .collection-diamonds__slide
+                                        p.collection-diamonds__slide-title Каратность
+                                        p.collection-diamonds__slide-text Камни от 1ct считаются привлекательными для инвестиций
+                                .swiper-slide 
+                                    .collection-diamonds__slide
+                                        p.collection-diamonds__slide-title Фантазийность
+                                        p.collection-diamonds__slide-text Камни желтых, голубых, розовых и зеленых оттенков дорожают со временем. Камни всех этих оттенков есть в нашей коллекции 
+                                .swiper-slide 
+                                    .collection-diamonds__slide
+                                        p.collection-diamonds__slide-title Характеристики
+                                        p.collection-diamonds__slide-text Чем чище бриллиант и чем интенсивней его цвет, тем дороже он будет становиться
+
+                            .collection-diamonds__navigation
+                                button.swiper__navigation._prev(type="button" data-swiper-prev)
+                                    svg(width="70" height="70")
+                                        use(xlink:href="@img/icons/icons.svg#swiper-navigation")
+                                button.swiper__navigation._next(type="button" data-swiper-next)
+                                    svg(width="70" height="70")
+                                        use(xlink:href="@img/icons/icons.svg#swiper-navigation")
+                            
+            .collection-diamonds__content-wrap
+                .collection-diamonds__content
+                    p.collection-diamonds__subtitle.section__subtitle Инвестиции
+                    h2.collection-diamonds__title.section__title._small Коллекция бриллиантов для инвестиций
+                    p.collection-diamonds__text В этой коллекции вы найдете бриллианты, которые обладают всеми критериями, чтобы со временем их стоимость возрастала
+                    a.collection-diamonds__link.btn._transparent-gray-border(href="#") Смотреть всю коллекцию
+
+            a.collection-diamonds__link.btn._transparent-gray-border._mobile(href="#") Смотреть всю коллекцию
+
+    //Форма заявки
+    section.section
+        section.section.feedback-section
+            .container
+                svg.modal__rectangle._left(width="451" height="780")
+                    use(xlink:href="@img/icons/icons.svg#modal-rectangle-left")
+
+                svg.modal__rectangle._right(width="413" height="780")
+                    use(xlink:href="@img/icons/icons.svg#modal-rectangle-right")
+
+                .fitting__form
+                    p.section__subtitle Консультация
+                    p.modal__title Оставьте заявку на подбор бриллианта
+                    p.modal__subtitle Наш менеджер свяжется с вами и обо всем проконсультирует
+
+                    form.form.fitting__f
+                        fieldset.form__fieldset
+                            label.form__label._white(for="feedback-page-name") Ваше имя
+                            input.form__input._white(type="text" name="name" id="feedback-page-name")
+
+                        fieldset.form__fieldset
+                            label.form__label._white(for="feedback-page-phone") Ваш телефон
+                            input.form__input._white._error(type="tel" name="phone" id="feedback-page-phone" data-tel)
+                            span.form__error Текст ошибки
+
+                        button.form__submit.btn._transparent-white-border(type="submit") Отправить
+                    
+                        .form__checkbox.form__policy._white
+                            input.form__checkbox-input(type="checkbox" name="policy" id="feedback-page-policy" data-policy checked)
+                            label.form__checkbox-label(for="feedback-page-policy")
+                                span.form__checkbox-check
+                                    svg(width="14" height="11")
+                                        use(xlink:href="@img/icons/icons.svg#checkbox")
+                                span.form__checkbox-title Согласен с условиями конфиденциальности

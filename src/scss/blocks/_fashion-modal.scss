@@ -1,0 +1,82 @@
+.fashion-modal {
+    margin-left: auto;
+    width: 50%;
+    display: none;
+    padding: 0;
+    background: none;
+
+    @media (max-width: 1280px) {
+        width: 70%;
+    }
+
+    @media (max-width: 991px) {
+        width: 90%;
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    & .is-close-btn {
+        display: none;
+    }
+
+    &__content {
+        display: grid;
+        width: 100%;
+        min-height: calc(100vh + 1px);
+        grid-template-rows: auto 1fr auto;
+        gap: 1.5rem;
+        padding: 3rem;
+        background: $color_white;
+
+        @media (max-width: 1440px) {
+            padding: 1.87rem;
+        }
+
+        @media (max-width: 767px) {
+            padding: 1.5rem 1.25rem;
+        }
+
+        @media (max-width: 575px) {
+            padding: 1.3rem .71rem;
+        }
+    }
+
+    &__header {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color_border;
+    }
+
+    &__title {
+        color: $color_black;
+        font-size: 1.37rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin: 0;
+
+        @media (max-width: 575px) {
+            font-size: 1.14rem;
+        }
+    }
+
+    &__close {
+        padding: 0;
+        margin: 0;
+        border: 0;
+        background: none;
+        color: $color_black;
+        outline: none;
+
+        & svg {
+            @media (max-width: 575px) {
+                width: 2.14rem;
+                height: auto;
+            }
+        }
+    }
+}

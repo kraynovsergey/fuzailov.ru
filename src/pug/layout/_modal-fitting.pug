@@ -1,0 +1,75 @@
+//Модальное окно "Запишитесь на примерку"
+.modal(id="modal-fitting")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="@img/icons/icons.svg#modal-close")
+
+    .fitting
+        .fitting__content
+            p.modal__title.fitting__title Запишитесь на персональную примерку
+            .modal__subtitle.fitting__subtitle
+                p Согласуем время персонально для вас, примерите все украшения без очередей и суеты.
+                p Персональный менеджер покажет все украшения, которые вам понравятся.
+            .fitting__btn-wrap
+                button.modal__btn.btn._transparent-white-border(type="button" data-fancybox-double="#modal-fitting-form") Записаться
+                .fitting__note *это бесплатно
+
+        .fitting__right
+            .fitting__swiper.swiper(data-default-swiper)
+                .swiper-wrapper
+                    .swiper-slide
+                        picture.fitting__picture
+                            source(type="image/webp" srcset="@img/tmp/fitting@2x.webp 2x, @img/tmp/fitting.webp 1x")
+                            img(srcset="@img/tmp/fitting@2x.jpg 2x, @img/tmp/fitting.jpg 1x" alt="" width="800" height="585" loading="lazy")
+                    .swiper-slide
+                        picture.fitting__picture
+                            source(type="image/webp" srcset="@img/tmp/fitting@2x.webp 2x, @img/tmp/fitting.webp 1x")
+                            img(srcset="@img/tmp/fitting@2x.jpg 2x, @img/tmp/fitting.jpg 1x" alt="" width="800" height="585" loading="lazy")
+                    .swiper-slide
+                        picture.fitting__picture
+                            source(type="image/webp" srcset="@img/tmp/fitting@2x.webp 2x, @img/tmp/fitting.webp 1x")
+                            img(srcset="@img/tmp/fitting@2x.jpg 2x, @img/tmp/fitting.jpg 1x" alt="" width="800" height="585" loading="lazy")
+                button.swiper__navigation._prev(type="button" data-swiper-prev)
+                    svg(width="70" height="70")
+                        use(xlink:href="@img/icons/icons.svg#swiper-navigation")
+                button.swiper__navigation._next(type="button" data-swiper-next)
+                    svg(width="70" height="70")
+                        use(xlink:href="@img/icons/icons.svg#swiper-navigation")
+
+            .fitting__address
+                p.fitting__address-title Адрес:
+                p.fitting__address-item._underline Москва, Краснопресненская набережная, д.12, Hotel Plaza Garden
+                p.fitting__address-item Ежедневно: с 10:00 до 21:00
+
+//Модальное окно записи на примерку
+.modal(id="modal-fitting-form")
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="@img/icons/icons.svg#modal-close")
+
+    svg.modal__rectangle._left(width="451" height="780")
+        use(xlink:href="@img/icons/icons.svg#modal-rectangle-left")
+
+    svg.modal__rectangle._right(width="413" height="780")
+        use(xlink:href="@img/icons/icons.svg#modal-rectangle-right")
+
+    .fitting__form
+        p.modal__title Оставьте свои актуальные данные
+        p.modal__subtitle Мы свяжемся с вами в течение 15 минут и согласуем время примерки
+
+        form.form.fitting__f
+            fieldset.form__fieldset
+                label.form__label._white(for="fittin-name") Ваше имя
+                input.form__input._white(type="text" name="name" id="fitting-name")
+            fieldset.form__fieldset
+                label.form__label._white(for="fitting-phone") Ваш телефон
+                input.form__input._white._error(type="tel" name="phone" id="fitting-phone" data-tel)
+                span.form__error Текст ошибки
+            button.form__submit.btn._transparent-white-border(type="submit") Отправить
+            .form__checkbox.form__policy._white
+                input.form__checkbox-input(type="checkbox" name="policy" id="fitting-policy" data-policy checked)
+                label.form__checkbox-label(for="fitting-policy")
+                    span.form__checkbox-check
+                        svg(width="14" height="11")
+                            use(xlink:href="@img/icons/icons.svg#checkbox")
+                    span.form__checkbox-title Согласен с условиями конфиденциальности

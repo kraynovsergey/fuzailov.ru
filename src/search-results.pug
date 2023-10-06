@@ -1,0 +1,17 @@
+extends base
+
+block meta
+    - var seotitle = 'Результаты поиска'
+    - var seodescription = 'Описание страницы результатов поиска'
+    - var seokeywords = 'Ключевые слова страницы результатов поиска'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.section._pt0
+        .container
+            h1.h1._center Результаты поиска
+
+            .products._col4
+                +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)

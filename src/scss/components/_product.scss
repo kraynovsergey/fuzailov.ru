@@ -1,0 +1,129 @@
+.product {
+    display: grid;
+    align-content: start;
+    gap: 1.5rem 2rem;
+    position: relative;
+    font-size: 1.12rem;
+    align-content: stretch;
+    grid-template-rows: auto 1fr auto;
+
+    @media (max-width: 1440px) {
+        gap: 1rem;
+    }
+
+    @media (max-width: 575px) {
+        font-size: 1rem;    
+    }
+
+    &__pictures {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__picture {
+        background: $color_card;
+        opacity: 0;
+        transition: .3s ease-in-out;
+
+        @media (min-width: 1441px) {
+            grid-column: span 2;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+
+        & + .product__picture {
+            position: absolute;
+            width: 100%;
+        }
+
+        &._active {
+            opacity: 1;
+        }
+    }
+
+    &__title {
+        color: $color_black;
+        font-weight: 500;
+        padding: 0;
+        margin: 0;
+        font-size: inherit;
+    }
+
+    &__link {
+        color: inherit !important;
+        text-decoration: none;
+    }
+
+    &__price {
+        color: rgba(51, 51, 51, 0.50);
+        white-space: nowrap;
+    }
+
+    &__favourites {
+        position: absolute;
+        top: 1.25rem;
+        left: 1.25rem;
+        z-index: 2;
+        padding: 0;
+        background: none;
+        border: 0;
+
+        @media (max-width: 767px) {
+            top: 1.3rem;
+            left: 1.3rem;
+        }
+
+        @media (max-width: 575px) {
+            top: 1rem;
+            left: 1rem;
+        }
+
+        & svg {
+            width: 1.62rem;
+            height: 1.62rem;
+            color: transparent;
+            transition: .5s ease;
+
+            @media (max-width: 767px) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+
+            @media (max-width: 575px) {
+                width: 1.29rem;
+                height: 1.29rem;
+            }
+        }
+
+        &._active {
+            & svg {
+                color: $color_black;
+            }
+        }
+    }
+
+    &__label {
+        font-size: 1.37rem;
+        color: rgba(51, 51, 51, 0.50);
+        font-style: italic;
+        position: absolute;
+        z-index: 2;
+        top: 1.12rem;
+        right: 1.75rem;
+        font-family: "New Computer Modern";
+
+        @media (max-width: 767px) {
+            font-size: 1.1rem;
+            right: 1.3rem;
+            top: 1.2rem;
+        }
+
+        @media (max-width: 575px) {
+            right: 1rem;
+        }
+    }
+}

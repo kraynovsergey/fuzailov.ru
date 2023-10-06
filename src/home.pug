@@ -1,0 +1,280 @@
+extends base
+
+block meta
+    - var seotitle = 'Главная страница'
+    - var seodescription = 'Описание главной страницы'
+    - var seokeywords = 'Ключевые слова главной страницы'
+
+block main
+    //Интро
+    section.intro
+        picture.intro__picture
+            source(type="image/webp" srcset="@img/tmp/home-intro@2x.webp 2x, @img/tmp/home-intro.webp 1x")
+            img(srcset="@img/tmp/home-intro@2x.jpg 2x, @img/tmp/home-intro.jpg 1x" alt="" width="1920" height="1021" loading="lazy")
+
+        .intro__overlay
+            .intro__content
+                p.intro__subtitle Summer/Autumn 23’ by Fuzailov
+                svg.intro__star(width="20" height="20")
+                    use(xlink:href="@img/icons/icons.svg#intro-star")
+                a.intro__link.btn._transparent-white-border(href="#") 
+                    span Смотреть коллекцию
+
+    //Большой логотип с текстом
+    section.section
+        .container
+            .home-logo
+                svg.home-logo__logo(width="785" height="120")
+                    use(xlink:href="@img/icons/icons.svg#logo")
+                .home-logo__subtitle Украшения с бриллиантами от семейной мастерской с полувековой историей
+
+    //Новая коллекция
+    section.section
+        .container 
+            p.section__subtitle Новая коллекция
+            h2.section__title Summer/Autumn 23’
+
+            .new-collection
+                .new-collection__fashion
+                    .new-collection__swiper.swiper(data-swiper-fashion="1")
+                        .swiper-wrapper
+                            .swiper-slide
+                                +fashion('new-collection-img-1', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-2', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-3', 855, 1079)
+                            .swiper-slide
+                                +fashion('new-collection-img-1', 855, 1079)
+
+                    a.link._italic._button-mobile.animation-link(href="#")
+                        span._wrap
+                            span._default Смотреть всю коллекцию
+                            span._hover Смотреть всю коллекцию
+
+                .products._col2
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+
+    //Категории
+    section.section.categories
+        .container.categories__container
+            p.section__subtitle.categories__section-subtitle Категории
+
+            .categories__list
+                +categories_item('Кольца', 'categories-1', true)
+                +categories_item('Серьги', 'categories-2', true)
+                +categories_item('Подвески', 'categories-3')
+                +categories_item('Браслеты', 'categories-4', true)
+                +categories_item('Брилианты', 'categories-5')
+                +categories_item('Цветные камни', 'categories-6')
+
+            a.link._italic._button-mobile.animation-link(href="#")
+                span._wrap
+                    span._default Перейти в каталог
+                    span._hover Перейти в каталог
+
+    //О нас
+    section.section.home-about 
+        .container.home-about__container
+            .home-about__left-pictures
+                picture.home-about__left-picture-big
+                    source(type="image/webp" srcset="@img/tmp/home-about-left-1@2x.webp 2x, @img/tmp/home-about-left-1.webp 1x")
+                    img(srcset="@img/tmp/home-about-left-1@2x.jpg 2x, @img/tmp/home-about-left-1.jpg 1x" alt="" width="634" height="358" loading="lazy")
+
+                picture.home-about__left-picture-small(data-picture-parallax="0.1")
+                    source(type="image/webp" srcset="@img/tmp/home-about-left-2@2x.webp 2x, @img/tmp/home-about-left-2.webp 1x")
+                    img(srcset="@img/tmp/home-about-left-2@2x.jpg 2x, @img/tmp/home-about-left-2.jpg 1x" alt="" width="346" height="437" loading="lazy")
+            
+            .home-about__content
+                p.section__subtitle.home-about__section-subtitle О нас
+                h2.section__title.home-about__section-title Семейная ювелирная мастерская <br>с полувековой историей
+                p.home-about__text Создаем украшения, которые эффектно дополняют ваш образ и обращают на себя внимание
+                a.link._italic.animation-link(href="#")
+                    span._wrap
+                        span._default Подробнее
+                        span._hover Подробнее
+
+            .home-about__right-pictures
+                picture.home-about__right-picture-big
+                    source(type="image/webp" srcset="@img/tmp/home-about-right-1@2x.webp 2x, @img/tmp/home-about-right-1.webp 1x")
+                    img(srcset="@img/tmp/home-about-right-1@2x.jpg 2x, @img/tmp/home-about-right-1.jpg 1x" alt="" width="502" height="346" loading="lazy")
+
+                picture.home-about__right-picture-small(data-picture-parallax="0.1")
+                    source(type="image/webp" srcset="@img/tmp/home-about-right-2@2x.webp 2x, @img/tmp/home-about-right-2.webp 1x")
+                    img(srcset="@img/tmp/home-about-right-2@2x.jpg 2x, @img/tmp/home-about-right-2.jpg 1x" alt="" width="258" height="329" loading="lazy")
+
+    //Новинки
+    section.section
+        .container.new-products__container
+            h2.section__title.new-products__section-title Новинки
+
+            .products._col4
+                +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active')
+                +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, 'New', '')
+                +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '')
+                +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, 'New', '_active')
+                +product('Серьги с бриллиантами 1,010ct из белого золота', '360 000 ₽', 'product-5', 413, 475, 'New', '')
+                +product('Серьги с бриллиантами из белого золота', '348 960 ₽', 'product-6', 413, 475, 'New', '_active')
+                +product('Подвеска-крестик с бриллиантами 0.56ct', '134 280 ₽', 'product-7', 413, 475, 'New', '')
+                +product('Браслет с бриллиантами 5.420ct из белого золота', '1 580 760 ₽', 'product-8', 413, 475, 'New', '')
+
+            a.link._italic._button-mobile.animation-link(href="#")
+                span._wrap
+                    span._default Смотреть всю коллекцию
+                    span._hover Смотреть всю коллекцию
+
+    //Услуги
+    section.section.home-services
+        .container
+            p.section__subtitle.home-services__section-subtitle Услуги
+
+            .home-services__items
+                +home_services_item('Изготовление ювелирных украшений на заказ', 'services-1', 'services-mobile-1')
+                +home_services_item('Продажа украшений', 'services-2', 'services-mobile-2')
+                +home_services_item('Продажа бриллиантов', 'services-3', 'services-mobile-3')
+
+    //Сервис
+    section.section
+        .service
+            .container.service__container 
+                picture.service__picture
+                    source(type="image/webp" srcset="@img/tmp/service@2x.webp 2x, @img/tmp/service.webp 1x")
+                    img(srcset="@img/tmp/service@2x.jpg 2x, @img/tmp/service.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+                .service__content
+                    p.section__subtitle.service__section-subtitle Сервис
+                    h2.section__title.service__section-title Запишитесь на примерку
+                    p.service__text Мы ценим ваше время, поэтому предлагаем эксклюзивные условия для вас. Запишитесь на примерку понравившегося украшения. 
+                    button.service__link.btn._transparent-white-border(type="button" data-fancybox data-src="#modal-fitting") Подробнее
+
+    //Сообщество
+    section.section 
+        .container.community__container
+            .community__content
+                p.section__subtitle.community__section-subtitle Сообщество
+                h2.section__title.community__section-title Закрытый клуб <br>для постоянных покупателей
+                p.community__text Мы ценим семейные ценности и стремимся стать для вас большим, чем просто Ювелирной мастерской. Поэтому мы создали закрытый клуб, где проводим мероприятия и знакомим участников друг с другом, а также делимся актуальными трендами ювелирного мира
+                button.community__link.btn._transparent-gray-border(type="button" data-fancybox data-src="#modal-community") Подробнее
+
+            .community__pictures
+                picture.community__picture-big
+                    source(type="image/webp" srcset="@img/tmp/community-big@2x.webp 2x, @img/tmp/community-big.webp 1x")
+                    img(srcset="@img/tmp/community-big@2x.jpg 2x, @img/tmp/community-big.jpg 1x" alt="" width="633" height="833" loading="lazy")
+
+                picture.community__picture-small(data-picture-parallax="0.1")
+                    source(type="image/webp" srcset="@img/tmp/community-small@2x.webp 2x, @img/tmp/community-small.webp 1x")
+                    img(srcset="@img/tmp/community-big@2x.jpg 2x, @img/tmp/community-small.jpg 1x" alt="" width="413" height="544" loading="lazy")
+
+    //Контакты
+    section.section
+        .contacts
+            .contacts__map(id="map")
+            .container.contacts__container
+                .contacts__box
+                    .contacts__content 
+                        p.section__subtitle.contacts__section-subtitle Контакты
+                        h2.section__title.contacts__section-title Бутик Fuzailov
+                        .contacts__rows 
+                            .contacts__row 
+                                address.contacts__item
+                                    p.contacts__item-title Адрес:
+                                    p.contacts__item-value г. Москва, Краснопресненская набережная, д. 12, Plaza Garden Moscow
+
+                            .contacts__row 
+                                address.contacts__item
+                                    p.contacts__item-title Телефон:
+                                    a.contacts__item-value.contacts__item-link(href="tel:+7925042935") +7 (925) 204-29-35
+
+                                address.contacts__item
+                                    p.contacts__item-title Почта:
+                                    a.contacts__item-value.contacts__item-link(href="mailto:info@my-diamonds.ru") info@my-diamonds.ru
+
+                            .contacts__row 
+                                address.contacts__item
+                                    p.contacts__item-title График работы:
+                                    p.contacts__item-value Ежедневно: с 10:00 до 21:00
+
+                                .contacts__socials 
+                                    a.contacts__socials-item(href="https://vk.com/" target="_blank")
+                                        svg(width="30" height="30")
+                                            use(xlink:href="@img/icons/icons.svg#vk")
+                                    a.contacts__socials-item(href="tg://resolve?domain=telegram_nick" target="_blank")
+                                        svg(width="30" height="30")
+                                            use(xlink:href="@img/icons/icons.svg#telegram")
+                                    a.contacts__socials-item(href="https://api.whatsapp.com/send?phone=7925042935" target="_blank")
+                                        svg(width="30" height="30")
+                                            use(xlink:href="@img/icons/icons.svg#whatsapp")
+
+                            a.contacts__video(href="https://www.youtube.com/watch?v=LvQossUx7ss" data-fancybox)
+                                picture.contacts__video-picture
+                                    source(type="image/webp" srcset="@img/tmp/contacts@2x.webp 2x, @img/tmp/contacts.webp 1x")
+                                    img(srcset="@img/tmp/contacts@2x.jpg 2x, @img/tmp/contacts.jpg 1x" alt="" width="620" height="313" loading="lazy")
+                                span.contacts__video-title
+                                    svg.contacts__video-play(width="100" height="100")
+                                        use(xlink:href="@img/icons/icons.svg#play")
+                                    | Посмотрите видео о нашем бутике
+
+block modal
+    //Модальное окно "Вступление в закрытый клуб..."
+    .modal(id="modal-community")
+        button.modal__close(type="button" data-fancybox-close)
+            svg(width="66" height="66")
+                use(xlink:href="@img/icons/icons.svg#modal-close")
+
+        .community__modal
+            p.modal__title Оставьте заявку на вступление в Закрытый клуб для постоянных покупателей 
+            p.modal__subtitle Присоединяйтесь к закрытому клубу для постоянных покупателей и получайте эксклюзивные бонусы и привилегии!
+            button.modal__btn.btn._transparent-white-border(type="button" data-fancybox-double="#modal-community-form") Оставить заявку
+
+    include pug/layout/_modal-fitting
+
+    //Модальное окно записи в закрытый клуб
+    .modal(id="modal-community-form")
+        button.modal__close(type="button" data-fancybox-close)
+            svg(width="66" height="66")
+                use(xlink:href="@img/icons/icons.svg#modal-close")
+
+        svg.modal__rectangle._left(width="451" height="780")
+            use(xlink:href="@img/icons/icons.svg#modal-rectangle-left")
+
+        svg.modal__rectangle._right(width="413" height="780")
+            use(xlink:href="@img/icons/icons.svg#modal-rectangle-right")
+
+        .fitting__form
+            p.modal__title Оставить заявку на вступление в закрытый клуб покупателей
+            p.modal__subtitle Мы свяжемся с вами в течение 15 минут
+
+            form.form.fitting__f
+                fieldset.form__fieldset
+                    label.form__label._white(for="community-name") Ваше имя
+                    input.form__input._white(type="text" name="name" id="community-name")
+                fieldset.form__fieldset
+                    label.form__label._white(for="community-phone") Ваш телефон
+                    input.form__input._white._error(type="tel" name="phone" id="community-phone" data-tel)
+                    span.form__error Текст ошибки
+                button.form__submit.btn._transparent-white-border(type="submit") Отправить
+                .form__checkbox.form__policy._white
+                    input.form__checkbox-input(type="checkbox" name="policy" id="community-policy" data-policy checked)
+                    label.form__checkbox-label(for="community-policy")
+                        span.form__checkbox-check
+                            svg(width="14" height="11")
+                                use(xlink:href="@img/icons/icons.svg#checkbox")
+                        span.form__checkbox-title Согласен с условиями конфиденциальности
+
+    include pug/layout/_fashion-modal
+
+block scripts
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")
+                                
+
+
+
+                
+
+
+    
+                    
+
+

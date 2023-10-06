@@ -1,0 +1,105 @@
+extends base
+
+block meta
+    - var seotitle = 'Изделия на заказ'
+    - var seodescription = 'Описание страницы изделий на заказ'
+    - var seokeywords = 'Ключевые слова страницы изделий на заказ'
+
+block main
+    //Интро
+    section.section._pt0
+        section.intro
+            //Хлебные крошки
+            .intro__breadcrumbs
+                include pug/layout/_breadcrumbs
+
+            picture.intro__picture
+                source(type="image/webp" srcset="@img/tmp/custom-made-intro@2x.webp 2x, @img/tmp/custom-made-intro.webp 1x")
+                img(srcset="@img/tmp/custom-made-intro@2x.jpg 2x, @img/tmp/custom-made-intro.jpg 1x" alt="" width="1920" height="800" loading="lazy")
+
+    //Описание
+    section.section
+        .container
+            p.section__subtitle.custom-made__description-subtitle Можем создать новое украшение вместе с вами
+            h2.section__title.custom-made__description-title Мы готовы воплотить любую вашу задумку
+            p.custom-made__description-text С вами будут работать профессиональный ювелир и модельер, которые помогут разобраться во всех тонкостях создания изделия и смогут создать ваш идеал.
+
+    //Видео
+    section.section 
+        .container 
+            .custom-made__video
+                video(autoplay muted loop playsinline poster="" preload="none")
+                    source(type="video/mp4" src="files/video.mp4")
+
+                button.custom-made__play.btn-reset(type="button" data-fancybox data-src="files/video.mp4")
+                    svg.custom-made__play-icon(width="100" height="100")
+                        use(xlink:href="@img/icons/icons.svg#play")
+
+    //Процесс
+    section.section
+        .container
+            p.section__subtitle Процесс
+            h2.section__title._small Как мы создаём украшения
+
+            .custom-made__process-items
+                article.custom-made__process-item
+                    .custom-made__process-content-wrap
+                        .custom-made__process-content
+                            h3.custom-made__process-title Создание 3D модели
+                            .custom-made__process-text.text
+                                p Работа начинается с построения 3д модели по Вашему дизайну. 
+                                p Визуализация позволяет понять, как будет выглядеть задумка, а также внести эстетические и технические коррективы.
+
+                    picture.custom-made__process-picture 
+                        source(type="image/webp" srcset="@img/tmp/custom-made-1@2x.webp 2x, @img/tmp/custom-made-1.webp 1x")
+                        img(srcset="@img/tmp/custom-made-1@2x.jpg 2x, @img/tmp/custom-made-1.jpg 1x" alt="" width="855" height="900" loading="lazy")
+
+                article.custom-made__process-item
+                    .custom-made__process-content-wrap
+                        .custom-made__process-content
+                            h3.custom-made__process-title Запускаем производство
+                            .custom-made__process-text.text
+                                p Затем изделие запускается в производство, модель выращивается в воске, ещё раз проверяется с технической стороны и отливается в металле. 
+                                p Заготовка отправляется на сборку в руки ювелиру.
+
+                    picture.custom-made__process-picture 
+                        source(type="image/webp" srcset="@img/tmp/custom-made-2@2x.webp 2x, @img/tmp/custom-made-2.webp 1x")
+                        img(srcset="@img/tmp/custom-made-2@2x.jpg 2x, @img/tmp/custom-made-2.jpg 1x" alt="" width="855" height="900" loading="lazy")
+
+                article.custom-made__process-item
+                    .custom-made__process-content-wrap
+                        .custom-made__process-content
+                            h3.custom-made__process-title Проводим проверку
+                            .custom-made__process-text.text
+                                p Согласно закону, каждое ювелирное изделие обязано пройти проверку в органе гос.контроля – Пробирной палате, где на него ставится проба металла.
+
+                    picture.custom-made__process-picture 
+                        source(type="image/webp" srcset="@img/tmp/custom-made-3@2x.webp 2x, @img/tmp/custom-made-3.webp 1x")
+                        img(srcset="@img/tmp/custom-made-3@2x.jpg 2x, @img/tmp/custom-made-3.jpg 1x" alt="" width="855" height="900" loading="lazy")
+
+                article.custom-made__process-item
+                    .custom-made__process-content-wrap
+                        .custom-made__process-content
+                            h3.custom-made__process-title Изделие готово для Вас
+                            .custom-made__process-text.text
+                                p Наконец, ювелир закрепляет камни, полирует и наносит финальные штрихи. 
+                                p Ура! Готовое изделие уже ждёт Вас!
+
+                    picture.custom-made__process-picture 
+                        source(type="image/webp" srcset="@img/tmp/custom-made-4@2x.webp 2x, @img/tmp/custom-made-4.webp 1x")
+                        img(srcset="@img/tmp/custom-made-4@2x.jpg 2x, @img/tmp/custom-made-4.jpg 1x" alt="" width="855" height="900" loading="lazy")
+
+    //Записаться на примерку
+    section.section
+        .service
+            .container.service__container._reverse
+                picture.service__picture
+                    source(type="image/webp" srcset="@img/tmp/custom-made-bottom@2x.webp 2x, @img/tmp/custom-made-bottom.webp 1x")
+                    img(srcset="@img/tmp/custom-made-bottom@2x.jpg 2x, @img/tmp/custom-made-bottom.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+                .service__content
+                    p.section__subtitle.service__section-subtitle Помощь
+                    h2.section__title.service__section-title Воплотите свою мечту вместе с нами
+                    p.service__text Запишитесь на консультацию к нашему ювелиру, чтобы обсудить проект
+
+                    button.service__link.btn._transparent-white-border(type="button" data-fancybox data-src="#modal-feedback") Записаться
+                    p.service__text._bottom *это бесплатно

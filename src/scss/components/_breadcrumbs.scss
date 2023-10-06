@@ -1,0 +1,49 @@
+.breadcrumbs {
+    padding: 1.5rem 0 4rem;
+
+    @media (max-width: 991px) {
+        padding: .5rem 0 2.5rem;
+    }
+
+    @media (max-width: 575px) {
+        padding: .8rem 0 2.8rem;
+    }
+
+    &._intro {
+        padding-top: 3rem;
+
+        @media (max-width: 991px) {
+            padding-top: 2.5rem;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &-item {
+            margin-right: 5px;
+
+            &:not(:last-child) {
+                &::after {
+                    content: '/';
+                    margin-left: 5px;
+                }
+            }
+        }
+
+        &-link {
+            color: $color_light_gray;
+            text-decoration: none;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                color: $color_gray;
+            }
+        }
+    }
+}
