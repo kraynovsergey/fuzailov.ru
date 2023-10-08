@@ -507,33 +507,36 @@ progress {
 
 .btn._transparent-gray-border {
   background: transparent;
-  border: 1px solid #ADADAD;
-  color: #333333;
+  border: 1px solid #206C57;
+  color: #206C57;
 }
 
 .btn._transparent-gray-border:hover {
-  background: #F5F5F5;
-}
-
-.btn._transparent-white-border {
-  background: transparent;
-  border: 1px solid #FDFBFA;
+  border-color: #FA990E;
+  background: #FA990E;
   color: #FDFBFA;
 }
 
+.btn._transparent-white-border {
+  background: #FDFBFA;
+  border: 0;
+  color: #206C57;
+}
+
 .btn._transparent-white-border:hover {
-  background: #F5F5F5;
-  color: #333333;
+  background: #FA990E;
+  color: #FDFBFA;
 }
 
 .btn._white {
   background: #FDFBFA;
-  color: #333333 !important;
+  color: #206C57;
   border: 0;
 }
 
 .btn._white:hover {
-  background-color: #F5F5F5;
+  background: #FA990E;
+  color: #FDFBFA;
 }
 
 .btn._green {
@@ -543,7 +546,7 @@ progress {
 }
 
 .btn._green:hover {
-  background-color: rgba(51, 51, 51, 0.8);
+  background: #FA990E;
 }
 
 .btn-circle {
@@ -726,7 +729,7 @@ progress {
 }
 
 .product__favourites._active svg {
-  color: #333333;
+  color: #206C57;
 }
 
 .product__label {
@@ -3870,7 +3873,7 @@ body.hide-scrollbar .header {
 }
 
 .product-page__favourites._active {
-  color: #333333 !important;
+  color: #206C57 !important;
 }
 
 .product-page__control._fitting {
