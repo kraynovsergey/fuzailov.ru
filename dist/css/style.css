@@ -6244,6 +6244,27 @@ html._product-page .main::before {
     top: 7rem;
   }
 
+  .catalog-filter._light {
+    margin-top: -3rem;
+  }
+
+  .catalog-filter._light .catalog-filter__header-sorting-wrap {
+    margin: -0.8rem 0;
+  }
+
+  .catalog-filter._light .catalog-filter__content {
+    margin-top: 1.4rem;
+    padding-top: 1.6rem;
+  }
+
+  .catalog-filter._light .catalog-filter__colors {
+    margin-bottom: -1.1rem;
+  }
+
+  .catalog-filter._light .catalog-filter__color {
+    margin-bottom: 1.1rem;
+  }
+
   .article__aside {
     position: sticky;
     top: 8rem;
@@ -6302,6 +6323,11 @@ html._product-page .main::before {
 @media (min-width: 1441px) {
   .product__picture {
     grid-column: span 2;
+  }
+
+  .catalog-filter._light .catalog-filter__box {
+    padding-top: 1.7rem;
+    padding-bottom: 1.7rem;
   }
 }
 
@@ -9255,6 +9281,13 @@ html._product-page .main::before {
 @media (max-width: 1199px) and (min-width: 992px) {
   .collection-diamonds__title-carousel {
     font-size: 1.5rem !important;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 992px) {
+  .catalog-filter._light .catalog-filter__box {
+    padding-top: 1.4rem;
+    padding-bottom: 1.4rem;
   }
 }
 

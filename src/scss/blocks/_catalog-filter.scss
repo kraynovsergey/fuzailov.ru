@@ -483,4 +483,47 @@
     &__hidden-input {
         display: none;
     }
+
+    &._light {
+        @media (min-width: 992px) {
+            margin-top: -3rem;
+        }
+
+        & .catalog-filter__box {
+            @media (min-width: 1441px) {
+                padding-top: 1.7rem;
+                padding-bottom: 1.7rem;
+            }
+
+            @media (max-width: 1440px) and (min-width: 992px) {
+                padding-top: 1.4rem;
+                padding-bottom: 1.4rem;
+            }
+        }
+
+        & .catalog-filter__header-sorting-wrap {
+            @media (min-width: 992px) {
+                margin: -.8rem 0;
+            }
+        }
+
+        & .catalog-filter__content {
+            @media (min-width: 992px) {
+                margin-top: 1.4rem;
+                padding-top: 1.6rem;
+            }
+        }
+
+        & .catalog-filter__colors {
+            @media (min-width: 992px) {
+                margin-bottom: -1.1rem;
+            }
+        }
+
+        & .catalog-filter__color {
+            @media (min-width: 992px) {
+                margin-bottom: 1.1rem;
+            }
+        }
+    }
 }
