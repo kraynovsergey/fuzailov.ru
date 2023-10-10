@@ -1861,12 +1861,12 @@ body.hide-scrollbar .header {
 
 .footer__copyright-link {
   color: currentColor;
-  text-decoration: none;
   transition: 0.5s ease-in-out;
 }
 
 .footer__copyright-link:hover {
   color: #333333;
+  text-decoration: none;
 }
 
 .section {

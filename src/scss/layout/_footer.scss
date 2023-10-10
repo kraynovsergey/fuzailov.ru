@@ -206,11 +206,11 @@
 
         &-link {
             color: currentColor;
-            text-decoration: none;
             transition: .5s ease-in-out;
 
             &:hover {
                 color: $color_black;
+                text-decoration: none;
             }
         }
     }
