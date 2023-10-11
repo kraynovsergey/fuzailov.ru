@@ -12,6 +12,8 @@ import Choices from "choices.js";
 
 import stickySidebar from 'sticky-sidebar';
 
+import Lenis from '@studio-freight/lenis';
+
 /* Fancybox */
 Fancybox.bind("[data-fancybox]", {});
 
@@ -19,6 +21,16 @@ Fancybox.bind("[data-fancybox]", {});
 Fancybox.bind("[data-fancybox-no-swipe]", {
     dragToClose: false
 });
+
+/* Плавный скролл */
+const lenis = new Lenis();
+
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+  
+requestAnimationFrame(raf);
 
 /* Стандартный набор */
 import * as flsFunctions from "./modules/functions.js";

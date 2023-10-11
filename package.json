@@ -12,6 +12,7 @@
   "license": "ISC",
   "devDependencies": {
     "@fancyapps/ui": "^5.0.22",
+    "@studio-freight/lenis": "^1.0.26",
     "browser-sync": "^2.29.3",
     "choices.js": "^10.2.0",
     "del": "^7.1.0",
