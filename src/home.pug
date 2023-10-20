@@ -218,7 +218,7 @@ block main
 
 block modal
     //Модальное окно "Вступление в закрытый клуб..."
-    .modal(id="modal-community")
+    .modal(id="modal-community" data-lenis-prevent)
         button.modal__close(type="button" data-fancybox-close)
             svg(width="66" height="66")
                 use(xlink:href="@img/icons/icons.svg#modal-close")
@@ -231,7 +231,7 @@ block modal
     include pug/layout/_modal-fitting
 
     //Модальное окно записи в закрытый клуб
-    .modal(id="modal-community-form")
+    .modal(id="modal-community-form" data-lenis-prevent)
         button.modal__close(type="button" data-fancybox-close)
             svg(width="66" height="66")
                 use(xlink:href="@img/icons/icons.svg#modal-close")

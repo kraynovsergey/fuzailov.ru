@@ -1,5 +1,5 @@
 //Модальное окно "Запишитесь на примерку"
-.modal(id="modal-fitting")
+.modal(id="modal-fitting" data-lenis-prevent)
     button.modal__close(type="button" data-fancybox-close)
         svg(width="66" height="66")
             use(xlink:href="@img/icons/icons.svg#modal-close")
@@ -42,7 +42,7 @@
                 p.fitting__address-item Ежедневно: с 10:00 до 21:00
 
 //Модальное окно записи на примерку
-.modal(id="modal-fitting-form")
+.modal(id="modal-fitting-form" data-lenis-prevent)
     button.modal__close(type="button" data-fancybox-close)
         svg(width="66" height="66")
             use(xlink:href="@img/icons/icons.svg#modal-close")
