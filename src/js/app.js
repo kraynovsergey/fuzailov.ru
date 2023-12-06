@@ -796,6 +796,10 @@ if ( document.querySelector('.product-page__content-wrap') ) {
             });
         });
     }
+
+    window.addEventListener('resize', () => {
+        sticky_sidebar_init.updateSticky();
+    });
 }
 
 /* Синхронизация категорий в фильтре */

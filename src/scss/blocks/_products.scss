@@ -46,6 +46,7 @@
 
     &__more {
         margin-top: 4.5rem;
+        display: flex;
 
         @media (max-width: 991px) {
             margin-top: 2.5rem;

@@ -170,52 +170,47 @@ block main
                     +team_item('team-4')
                     +team_item('team-4')
 
+    mixin blog_item(img, width, height, category, date, title)
+        .swiper-slide.blog__slide
+            article.blog__item
+                picture.blog__picture
+                    source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
+                    img(srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x" alt="" width=width height=height loading="lazy")
+                .blog__controls
+                    .blog__category=category
+                    time.blog__date=date
+                h3.blog__title
+                    a.blog__link.link._full(href="#")=title
+
     //Блог
-    section.section.blog(data-tab-parent)
+    section.section.blog._pb0
         .container
-            h2.blog__title-section.section__title._small Блог, истории клиентов
-            
-            mixin blog_item(img, width, height, category, date, title)
-                .swiper-slide.blog__slide
-                    article.blog__item
-                        picture.blog__picture
-                            source(type="image/webp" srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x")
-                            img(srcset="@img/tmp/"+img+"@2x.webp 2x, @img/tmp/"+img+".webp 1x" alt="" width=width height=height loading="lazy")
-                        .blog__controls
-                            .blog__category=category
-                            time.blog__date=date
-                        h3.blog__title
-                            a.blog__link.link._full(href="#")=title
+            h2.blog__title-section.section__title._small Блог
 
-            .blog__tabs
-                button.blog__tab.btn-reset._active(type="button" data-tab="1") Блог
-                button.blog__tab.btn-reset(type="button" data-tab="2") Истории клиентов
+            .blog__swiper.swiper(data-blog-swiper)
+                .swiper-wrapper.blog__items
+                    +blog_item('blog-1', 758, 510, 'Блог', '21.03.2023', 'История ювелирных украшений: от древности до современности.')
+                    +blog_item('blog-2', 364, 330, 'Блог', '18.02.2023', 'Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.')
+                    +blog_item('blog-3', 562, 420, 'Блог', '18.02.2023', 'Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.')
 
-            .blog__content._active(data-tab-content="1")
-                .blog__swiper.swiper(data-blog-swiper)
-                    .swiper-wrapper.blog__items
-                        +blog_item('blog-1', 758, 510, 'Блог', '21.03.2023', 'История ювелирных украшений: от древности до современности.')
-                        +blog_item('blog-2', 364, 330, 'Блог', '18.02.2023', 'Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.')
-                        +blog_item('blog-3', 562, 420, 'Блог', '18.02.2023', 'Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.')
-                        +blog_item('blog-4', 562, 420, 'Блог', '04.03.2023', 'Истории успеха в мире ювелирного бизнеса: как создать свой бренд и стать успешным ювелиром.')
-                        +blog_item('blog-5', 364, 330, 'Блог', '11.03.2023', 'Как правильно ухаживать за ювелирными изделиями: советы по уходу и хранению.')
-                        +blog_item('blog-6', 758, 510, 'Блог', '04.01.2023', 'Редкие и эксклюзивные драгоценные камни: их особенности и ценность.')
-
+            .products__wrap
                 a.link._italic.animation-link.products__more(href="#")
                     span._wrap
                         span._default Показать еще
                         span._hover Показать еще
 
-            .blog__content(data-tab-content="2")
-                .blog__swiper.swiper(data-blog-swiper)
-                    .swiper-wrapper.blog__items
-                        +blog_item('blog-1', 562, 420, 'История', '04.03.2023', 'Истории успеха в мире ювелирного бизнеса: как создать свой бренд и стать успешным ювелиром.')
-                        +blog_item('blog-2', 364, 330, 'История', '11.03.2023', 'Как правильно ухаживать за ювелирными изделиями: советы по уходу и хранению.')
-                        +blog_item('blog-3', 758, 510, 'История', '04.01.2023', 'Редкие и эксклюзивные драгоценные камни: их особенности и ценность.')
-                        +blog_item('blog-4', 758, 510, 'История', '21.03.2023', 'История ювелирных украшений: от древности до современности.')
-                        +blog_item('blog-5', 364, 330, 'История', '18.02.2023', 'Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.')
-                        +blog_item('blog-6', 562, 420, 'История', '18.02.2023', 'Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.')
+    //Истории клиентов
+    section.section.blog
+        .container
+            h2.blog__title-section.section__title._small Истории клиентов
+            
+            .blog__swiper.swiper(data-blog-swiper)
+                .swiper-wrapper.blog__items._reverse
+                    +blog_item('blog-4', 758, 510, 'История', '21.03.2023', 'История ювелирных украшений: от древности до современности.')
+                    +blog_item('blog-5', 364, 330, 'История', '18.02.2023', 'Как выбрать идеальное кольцо обручальное кольцо: советы профессионалов.')
+                    +blog_item('blog-6', 562, 420, 'История', '18.02.2023', 'Тенденции в мире ювелирных украшений: что будет модно в этом сезоне.')
 
+            .products__wrap
                 a.link._italic.animation-link.products__more(href="#")
                     span._wrap
                         span._default Показать еще
