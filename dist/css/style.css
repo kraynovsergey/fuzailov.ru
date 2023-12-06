@@ -3369,7 +3369,7 @@ body.hide-scrollbar .header {
 
 .about-production__container {
   display: grid;
-  gap: 12rem;
+  gap: 3rem;
 }
 
 .about-production__item {
@@ -7167,10 +7167,6 @@ html._product-page .main::before {
 
   .diamonds-info__text {
     margin-bottom: 1.8rem;
-  }
-
-  .about-production__container {
-    gap: 6rem;
   }
 
   .about-new-collection__small-picture-right {

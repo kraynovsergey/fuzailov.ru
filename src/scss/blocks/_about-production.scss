@@ -1,11 +1,7 @@
 .about-production {
     &__container {
         display: grid;
-        gap: 12rem;
-
-        @media (max-width: 991px) {
-            gap: 6rem;
-        }
+        gap: 3rem;
     }
 
     &__item {
