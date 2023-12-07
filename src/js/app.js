@@ -819,10 +819,14 @@ if (product_pictures.length > 0) {
     product_pictures.forEach(item => {
         let pictures = item.querySelectorAll('picture'); 
         if (pictures.length > 0) {
-            let nav_width = item.offsetWidth / (pictures.length);
+            let mouseModal = item.closest('.fashion-modal');
 
             item.addEventListener('mousemove', (e) => {
-                let mouseX = (e.clientX + 0.01) - item.closest('.product').offsetLeft;
+                let mouseX = (e.clientX + 0.01) - item.closest('.product').offsetLeft,
+                    nav_width = item.offsetWidth / pictures.length;
+                
+                if (mouseModal) mouseX = mouseX - mouseModal.offsetLeft;
+                
                 pictures.forEach(pic => {
                     if ( +pic.getAttribute('data-item') === Math.ceil(mouseX/nav_width) ) pic.classList.add('_active');
                         else pic.classList.remove('_active');
