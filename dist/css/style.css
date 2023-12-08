@@ -2664,7 +2664,7 @@ body.hide-scrollbar .header {
 
 .fitting {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: calc(50% - 0.75rem) calc(50% - 0.75rem);
   gap: 1.5rem;
 }
 
@@ -2697,13 +2697,14 @@ body.hide-scrollbar .header {
 }
 
 .fitting__right {
-  display: grid;
-  grid-template-rows: 1fr auto;
+  display: flex;
+  flex-direction: column;
   margin: -3rem -3rem -3rem 0;
 }
 
 .fitting__swiper {
   width: 100%;
+  flex-grow: 1;
 }
 
 .fitting__picture {
@@ -8370,7 +8371,7 @@ html._product-page .main::before {
   }
 
   .fitting {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     gap: 3rem;
   }
 
