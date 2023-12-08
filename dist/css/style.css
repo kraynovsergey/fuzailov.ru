@@ -5072,6 +5072,10 @@ html._product-page .main::before {
   color: #333333;
 }
 
+.catalog-filter__header .catalog-filter__header-sorting-wrap {
+  margin: 15px 0;
+}
+
 .catalog-filter__header-params {
   flex-grow: 1;
   display: flex;
@@ -7589,7 +7593,7 @@ html._product-page .main::before {
     background: #FDFBFA;
   }
 
-  .catalog-filter__header {
+  .catalog-filter__header-params {
     display: none;
   }
 
@@ -7597,6 +7601,7 @@ html._product-page .main::before {
     padding-left: 0;
     margin: 0;
     border-left: 0;
+    width: 100%;
   }
 
   .catalog-filter__header-sorting-wrap .choices {

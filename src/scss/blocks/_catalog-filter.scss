@@ -52,8 +52,8 @@
         display: flex;
         color: $color_black;
 
-        @media (max-width: 991px) {
-            display: none;
+        & .catalog-filter__header-sorting-wrap {
+            margin: 15px 0;
         }
     }
 
@@ -66,6 +66,10 @@
 
         @media (max-width: 1440px) {
             padding-right: 3%;
+        }
+
+        @media (max-width: 991px) {
+            display: none;
         }
     }
 
@@ -85,6 +89,7 @@
             padding-left: 0;
             margin: 0;
             border-left: 0;
+            width: 100%;
         }
 
         &._no-border {
