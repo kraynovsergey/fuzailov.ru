@@ -177,4 +177,18 @@
             max-width: 100%;
         }
     }
+
+    &._page {
+        & .fitting__right {
+            margin: 0;
+        }
+
+        & :where(.fitting__title, .fitting__subtitle) {
+            color: $color_black;
+        }
+
+        & .fitting__subtitle {
+            margin-bottom: 1rem;
+        }
+    }
 }

@@ -168,53 +168,7 @@ block main
                     img(srcset="@img/tmp/community-big@2x.jpg 2x, @img/tmp/community-small.jpg 1x" alt="" width="413" height="544" loading="lazy")
 
     //Контакты
-    section.section
-        .contacts
-            .contacts__map(id="map")
-            .container.contacts__container
-                .contacts__box
-                    .contacts__content 
-                        p.section__subtitle.contacts__section-subtitle Контакты
-                        h2.section__title.contacts__section-title Бутик Fuzailov
-                        .contacts__rows 
-                            .contacts__row 
-                                address.contacts__item
-                                    p.contacts__item-title Адрес:
-                                    p.contacts__item-value г. Москва, Краснопресненская набережная, д. 12, Plaza Garden Moscow
-
-                            .contacts__row 
-                                address.contacts__item
-                                    p.contacts__item-title Телефон:
-                                    a.contacts__item-value.contacts__item-link(href="tel:+7925042935") +7 (925) 204-29-35
-
-                                address.contacts__item
-                                    p.contacts__item-title Почта:
-                                    a.contacts__item-value.contacts__item-link(href="mailto:info@my-diamonds.ru") info@my-diamonds.ru
-
-                            .contacts__row 
-                                address.contacts__item
-                                    p.contacts__item-title График работы:
-                                    p.contacts__item-value Ежедневно: с 10:00 до 21:00
-
-                                .contacts__socials 
-                                    a.contacts__socials-item(href="https://vk.com/" target="_blank")
-                                        svg(width="30" height="30")
-                                            use(xlink:href="@img/icons/icons.svg#vk")
-                                    a.contacts__socials-item(href="tg://resolve?domain=telegram_nick" target="_blank")
-                                        svg(width="30" height="30")
-                                            use(xlink:href="@img/icons/icons.svg#telegram")
-                                    a.contacts__socials-item(href="https://api.whatsapp.com/send?phone=7925042935" target="_blank")
-                                        svg(width="30" height="30")
-                                            use(xlink:href="@img/icons/icons.svg#whatsapp")
-
-                            a.contacts__video(href="https://www.youtube.com/watch?v=LvQossUx7ss" data-fancybox)
-                                picture.contacts__video-picture
-                                    source(type="image/webp" srcset="@img/tmp/contacts@2x.webp 2x, @img/tmp/contacts.webp 1x")
-                                    img(srcset="@img/tmp/contacts@2x.jpg 2x, @img/tmp/contacts.jpg 1x" alt="" width="620" height="313" loading="lazy")
-                                span.contacts__video-title
-                                    svg.contacts__video-play(width="100" height="100")
-                                        use(xlink:href="@img/icons/icons.svg#play")
-                                    | Посмотрите видео о нашем бутике
+    include pug/layout/_contacts
 
 block modal
     //Модальное окно "Вступление в закрытый клуб..."

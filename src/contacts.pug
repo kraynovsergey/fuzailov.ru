@@ -1,0 +1,51 @@
+extends base
+
+block meta
+    - var seotitle = 'Контакты'
+    - var seodescription = 'Описание страницы контакты'
+    - var seokeywords = 'Ключевые слова страницы контакты'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.section._pt0._pb0
+        .container
+            h1.h1._center._mb0 Контакты
+
+    //Контакты
+    include pug/layout/_contacts
+
+    //Запись на примерку
+    section.section._pt0._pb0
+        .container
+            .fitting._page
+                .fitting__content
+                    p.modal__title.fitting__title Запишитесь на персональную примерку
+                    .modal__subtitle.fitting__subtitle
+                        p Согласуем время персонально для вас, примерите все украшения без очередей и суеты.
+                        p Персональный менеджер покажет все украшения, которые вам понравятся.
+                    
+                    form.form
+                        fieldset.form__fieldset
+                            label.form__label(for="fitting-name") Ваше имя
+                            input.form__input(type="text" name="name" id="fitting-name")
+                        
+                        fieldset.form__fieldset
+                            label.form__label(for="fitting-phone") Ваш телефон
+                            input.form__input(type="tel" name="phone" id="fitting-phone" data-tel)
+                        
+                        button.form__submit._mt0.btn._green(type="submit") Записаться
+                        
+                        .form__checkbox.form__policy
+                            input.form__checkbox-input(type="checkbox" name="policy" id="fitting-policy" data-policy checked)
+                            label.form__checkbox-label(for="fitting-policy")
+                                span.form__checkbox-check
+                                    svg(width="14" height="11")
+                                        use(xlink:href="@img/icons/icons.svg#checkbox")
+                                span.form__checkbox-title Согласен с условиями конфиденциальности
+
+                include pug/layout/_fitting-right
+
+block scripts
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript")

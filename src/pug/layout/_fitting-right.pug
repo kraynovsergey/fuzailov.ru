@@ -1,0 +1,26 @@
+.fitting__right
+    .fitting__swiper.swiper(data-default-swiper)
+        .swiper-wrapper
+            .swiper-slide
+                picture.fitting__picture
+                    source(type="image/webp" srcset="@img/tmp/fitting@2x.webp 2x, @img/tmp/fitting.webp 1x")
+                    img(srcset="@img/tmp/fitting@2x.jpg 2x, @img/tmp/fitting.jpg 1x" alt="" width="800" height="585" loading="lazy")
+            .swiper-slide
+                picture.fitting__picture
+                    source(type="image/webp" srcset="@img/tmp/fitting@2x.webp 2x, @img/tmp/fitting.webp 1x")
+                    img(srcset="@img/tmp/fitting@2x.jpg 2x, @img/tmp/fitting.jpg 1x" alt="" width="800" height="585" loading="lazy")
+            .swiper-slide
+                picture.fitting__picture
+                    source(type="image/webp" srcset="@img/tmp/fitting@2x.webp 2x, @img/tmp/fitting.webp 1x")
+                    img(srcset="@img/tmp/fitting@2x.jpg 2x, @img/tmp/fitting.jpg 1x" alt="" width="800" height="585" loading="lazy")
+        button.swiper__navigation._prev(type="button" data-swiper-prev)
+            svg(width="70" height="70")
+                use(xlink:href="@img/icons/icons.svg#swiper-navigation")
+        button.swiper__navigation._next(type="button" data-swiper-next)
+            svg(width="70" height="70")
+                use(xlink:href="@img/icons/icons.svg#swiper-navigation")
+
+    .fitting__address
+        p.fitting__address-title Адрес:
+        p.fitting__address-item._underline Москва, Краснопресненская набережная, д.12, Hotel Plaza Garden
+        p.fitting__address-item Ежедневно: с 10:00 до 21:00

@@ -1076,6 +1076,10 @@ progress {
   cursor: not-allowed;
 }
 
+.form__submit._mt0 {
+  margin-top: 0;
+}
+
 .form__policy {
   margin-top: 1rem;
 }
@@ -1327,6 +1331,10 @@ progress {
 
 .h1._center {
   text-align: center;
+}
+
+.h1._mb0 {
+  margin-bottom: 0 !important;
 }
 
 /* LAYOUT */
@@ -2767,6 +2775,18 @@ body.hide-scrollbar .header {
 .fitting__f {
   width: 100%;
   max-width: 28rem;
+}
+
+.fitting._page .fitting__right {
+  margin: 0;
+}
+
+.fitting._page :where(.fitting__title, .fitting__subtitle) {
+  color: #333333;
+}
+
+.fitting._page .fitting__subtitle {
+  margin-bottom: 1rem;
 }
 
 .fashion-modal {

@@ -85,6 +85,10 @@
             opacity: .2;
             cursor: not-allowed;
         }
+
+        &._mt0 {
+            margin-top: 0;
+        }
     }
 
     &__policy {
