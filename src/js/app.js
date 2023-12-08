@@ -751,14 +751,14 @@ if (range_single) {
     if (range_single_minus) {
         range_single_minus.addEventListener('click', () => {
             let current_value = +rangeSliderElement.value()[1];
-            if (current_value > 12) rangeSliderElement.value([12, current_value - .5]);
+            if (current_value > range_single.getAttribute('data-range-min')) rangeSliderElement.value([range_single.getAttribute('data-range-min'), current_value - +range_single.getAttribute('data-range-step')]);
         });
     }
 
     if (range_single_plus) {
         range_single_plus.addEventListener('click', () => {
             let current_value = +rangeSliderElement.value()[1];
-            if (current_value < 17) rangeSliderElement.value([12, current_value + .5]);
+            if (current_value < range_single.getAttribute('data-range-max')) rangeSliderElement.value([range_single.getAttribute('data-range-min'), current_value + +range_single.getAttribute('data-range-step')]);
         });
     }
 }
