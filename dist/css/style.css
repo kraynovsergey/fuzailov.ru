@@ -1707,11 +1707,6 @@ body.hide-scrollbar .header {
   padding: 0 1rem;
 }
 
-.nav__megamenu-link:hover {
-  background: rgba(51, 51, 51, 0.8) !important;
-  color: #FDFBFA;
-}
-
 .nav__header {
   display: none;
   align-items: center;
@@ -5033,6 +5028,8 @@ html._product-page .main::before {
 
 .catalog-filter {
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 2;
 }
 
 .catalog-filter__box {
