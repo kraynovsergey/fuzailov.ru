@@ -1,0 +1,94 @@
+extends base
+
+block meta
+    - var seotitle = 'Касты'
+    - var seodescription = 'Описание страницы касты'
+    - var seokeywords = 'Ключевые слова страницы касты'
+
+block main
+    //Хлебные крошки
+    include pug/layout/_breadcrumbs
+
+    section.section._pt0
+        .container
+            //Фильтр
+            .catalog-filter._light
+                p.section__title.catalog-filter__categories-title._small Категории
+                .catalog-filter__categories.scroll._hidden
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Все" id="catalog-category-1" data-filter-category="1")
+                        label.catalog-filter__category-label(for="catalog-category-1") Все
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Кольца" id="catalog-category-2" data-filter-category="2")
+                        label.catalog-filter__category-label(for="catalog-category-2") Кольца
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Серьги" id="catalog-category-3" data-filter-category="3")
+                        label.catalog-filter__category-label(for="catalog-category-3") Серьги
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+                            
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Браслеты" id="catalog-category-4" data-filter-category="4")
+                        label.catalog-filter__category-label(for="catalog-category-4") Браслеты
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Бриллианты" id="catalog-category-5" data-filter-category="5")
+                        label.catalog-filter__category-label(for="catalog-category-5") Бриллианты
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                    .catalog-filter__category
+                        input.catalog-filter__category-input(type="checkbox" name="category" value="Цветные камни" id="catalog-category-6" data-filter-category="6")
+                        label.catalog-filter__category-label(for="catalog-category-6") Цветные камни
+                            svg(width="26" height="26")
+                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+
+                //Подкатегории    
+                section.subcategories
+                    .subcategories__col
+                    
+                    ul.subcategories__list(role="list")
+                        li.subcategories__listitem(role="listitem")
+                            a.subcategories__link._active(href="#" role="link") Серьги
+                        li.subcategories__listitem(role="listitem")
+                            a.subcategories__link(href="#" role="link") Браслеты
+                        li.subcategories__listitem(role="listitem")
+                            a.subcategories__link(href="#" role="link") Кольца
+                        li.subcategories__listitem(role="listitem")
+                            a.subcategories__link(href="#" role="link") Комплекты
+                    
+                    .subcategories__col
+                        .catalog-filter__header-sorting-wrap._no-border
+                            select.catalog-filter__header-select.style-select(name="sorting")
+                                option(value="Дата создания товара" selected) Дата создания товара
+                                option(value="Название товара") Название товара
+                                option(value="Артикул") Артикул
+                                option(value="Цена товара") Цена товара
+
+                            button.catalog-filter__header-sorting.btn-reset._asc(type="button" data-diamonds-sorting)
+                                svg._asc(width="30" height="30")
+                                    use(xlink:href="@img/icons/icons.svg#sorting-asc")
+                                svg._desc(width="30" height="30")
+                                    use(xlink:href="@img/icons/icons.svg#sorting-desc")
+
+            //Товары
+            include pug/layout/_catalog-products
+
+            //Пагинация
+            include pug/layout/_paginate
+
+    //Как подобрать кольцо
+    include pug/layout/_how-choose-ring
+
+    include pug/layout/_pluses
+
+block modal
+    include pug/layout/_fashion-modal

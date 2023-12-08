@@ -233,85 +233,13 @@ block main
                         | Сбросить фильтр
 
             //Товары
-            .new-collection
-                .products._col2
-                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
-                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
-                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
-                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
-
-                .new-collection__fashion
-                    .new-collection__swiper.swiper(data-swiper-fashion="1")
-                        .swiper-wrapper
-                            .swiper-slide
-                                +fashion('new-collection-img-2', 855, 1079)
-                            .swiper-slide
-                                +fashion('new-collection-img-1', 855, 1079)
-                            .swiper-slide
-                                +fashion('new-collection-img-3', 855, 1079)
-                            .swiper-slide
-                                +fashion('new-collection-img-1', 855, 1079)
-
-                    a.link._italic._button-mobile.animation-link(href="#")
-                        span._wrap
-                            span._default Смотреть всю коллекцию
-                            span._hover Смотреть всю коллекцию
-
-                .products._col2
-                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 2)
-                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 2)
-                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 2)
-                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 2)
-
-                .new-collection__fashion
-                    .new-collection__swiper.swiper(data-swiper-fashion="2")
-                        .swiper-wrapper
-                            .swiper-slide
-                                +fashion('new-collection-img-3', 855, 1079)
-                            .swiper-slide
-                                +fashion('new-collection-img-1', 855, 1079)
-                            .swiper-slide
-                                +fashion('new-collection-img-2', 855, 1079)
-                            .swiper-slide
-                                +fashion('new-collection-img-1', 855, 1079)
-
-                    a.link._italic._button-mobile.animation-link(href="#")
-                        span._wrap
-                            span._default Смотреть всю коллекцию
-                            span._hover Смотреть всю коллекцию
+            include pug/layout/_catalog-products
 
             //Пагинация
-            .pagination.section._pb0
-                ul.pagination__list
-                    li.pagination__list-item 
-                        a.pagination__list-arrow._prev._disabled(href="#")
-                    li.pagination__list-item 
-                        a.pagination__list-link._active(href="#") 1
-                    li.pagination__list-item 
-                        a.pagination__list-link(href="#") 2
-                    li.pagination__list-item 
-                        a.pagination__list-link(href="#") 3
-                    li.pagination__list-item 
-                        a.pagination__list-link(href="#") 4
-                    li.pagination__list-item.pagination__list-divider . . .
-                    li.pagination__list-item 
-                        a.pagination__list-link(href="#") 9
-                    li.pagination__list-item 
-                        a.pagination__list-link(href="#") 10
-                    li.pagination__list-item 
-                        a.pagination__list-arrow._next(href="#")
+            include pug/layout/_paginate
 
     //Как подобрать кольцо
-    section.section
-        .service
-            .container.service__container._reverse
-                picture.service__picture
-                    source(type="image/webp" srcset="@img/tmp/pickup-ring@2x.webp 2x, @img/tmp/pickup-ring.webp 1x")
-                    img(srcset="@img/tmp/pickup-ring@2x.jpg 2x, @img/tmp/pickup-ring.jpg 1x" alt="" width="855" height="1000" loading="lazy")
-                .service__content
-                    p.section__subtitle.service__section-subtitle Помощь
-                    h2.section__title.service__section-title Как подобрать кольцо
-                    a.service__link.btn._transparent-white-border(href="#") Подробнее
+    include pug/layout/_how-choose-ring
 
     include pug/layout/_pluses
 

@@ -1,6 +1,6 @@
 .new-collection {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: calc(50% - .99rem) calc(50% - .99rem);
     gap: 1.88rem;
     align-items: start;
 

@@ -2124,7 +2124,7 @@ body.hide-scrollbar .header {
 
 .new-collection {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: calc(50% - 0.99rem) calc(50% - 0.99rem);
   gap: 1.88rem;
   align-items: start;
 }
@@ -5089,6 +5089,10 @@ html._product-page .main::before {
   justify-content: flex-end;
 }
 
+.catalog-filter__header-sorting-wrap._no-border {
+  border-left: 0;
+}
+
 .catalog-filter__header-sorting-wrap .choices {
   margin-bottom: 0;
   width: 13rem;
@@ -5897,6 +5901,61 @@ html._product-page .main::before {
   font-size: 1.12rem;
 }
 
+.subcategories {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.subcategories__col {
+  width: 25%;
+}
+
+.subcategories__list {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subcategories__listitem {
+  display: flex;
+}
+
+.subcategories__link {
+  height: 60px;
+  padding: 0 30px;
+  background: #F5F5F5;
+  color: #333333 !important;
+  text-decoration: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #333333;
+  position: relative;
+  font-size: 1.12rem;
+  width: 100%;
+}
+
+.subcategories__link._active {
+  border-color: #0047AB;
+}
+
+.subcategories__link._active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #0047AB;
+  bottom: 0;
+  position: absolute;
+}
+
 @media (min-width: 768px) {
   .categories__item:hover {
     z-index: 2;
@@ -6632,6 +6691,14 @@ html._product-page .main::before {
     padding: 0 3.75rem;
     margin-left: -3.75rem;
     margin-right: -3.75rem;
+  }
+
+  .subcategories__col:first-child {
+    display: none;
+  }
+
+  .subcategories__list {
+    justify-content: flex-start;
   }
 }
 
@@ -7526,6 +7593,16 @@ html._product-page .main::before {
     display: none;
   }
 
+  .catalog-filter__header-sorting-wrap {
+    padding-left: 0;
+    margin: 0;
+    border-left: 0;
+  }
+
+  .catalog-filter__header-sorting-wrap .choices {
+    width: 100%;
+  }
+
   .catalog-filter__reset {
     display: none !important;
   }
@@ -7824,6 +7901,25 @@ html._product-page .main::before {
   .custom-made__process-content {
     max-width: 100%;
     text-align: center;
+  }
+
+  .subcategories {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 30px;
+  }
+
+  .subcategories__col {
+    width: 100%;
+  }
+
+  .subcategories__col:last-child {
+    order: -1;
+  }
+
+  .subcategories__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
