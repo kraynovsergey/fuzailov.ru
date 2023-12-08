@@ -5216,6 +5216,11 @@ html._product-page .main::before {
   display: none;
 }
 
+.catalog-filter__submit {
+  padding-left: 3%;
+  border-left: 1px solid #dcdbdb;
+}
+
 .catalog-filter__colors {
   display: flex;
   align-items: stretch;
@@ -6375,6 +6380,12 @@ html._product-page .main::before {
   .order__itogo {
     position: sticky;
     top: 7rem;
+  }
+
+  .catalog-filter__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .catalog-filter._light {
@@ -7622,6 +7633,10 @@ html._product-page .main::before {
 
   .catalog-filter__content .filter__title {
     display: flex;
+  }
+
+  .catalog-filter__submit {
+    display: none;
   }
 
   .catalog-filter__colors .form__checkbox .form__checkbox-title svg {

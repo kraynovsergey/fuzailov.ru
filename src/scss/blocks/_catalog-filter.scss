@@ -246,6 +246,12 @@
         display: none;
         flex-direction: column;
 
+        @media (min-width: 992px) {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         @media (max-width: 991px) {
             display: flex !important;
             padding: 1rem 0;
@@ -264,6 +270,15 @@
             @media (max-width: 991px) {
                 display: flex;
             }
+        }
+    }
+
+    &__submit {
+        padding-left: 3%;
+        border-left: 1px solid #dcdbdb;
+
+        @media (max-width: 991px) {
+            display: none;
         }
     }
 
