@@ -430,10 +430,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        overflow-x: auto;
         margin-bottom: 3rem;
+        flex-wrap: wrap;
+        gap: 1rem;
 
         @media (max-width: 1366px) {
+            flex-wrap: nowrap;
+            overflow-x: auto;
             justify-content: start;
             padding: 0 3.75rem;
             margin-left: -3.75rem;
@@ -458,18 +461,11 @@
             margin-left: -.71rem;
             margin-right: -.71rem;
             margin-bottom: 2rem;
+            gap: .7rem;
         }
     }
 
     &__category {
-        &:not(:last-child) {
-            margin-right: 1rem;
-
-            @media (max-width: 575px) {
-                margin-right: .7rem;
-            }
-        }
-
         &-input {
             display: none;
 

@@ -5270,12 +5270,9 @@ html._product-page .main::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-x: auto;
   margin-bottom: 3rem;
-}
-
-.catalog-filter__category:not(:last-child) {
-  margin-right: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .catalog-filter__category-input {
@@ -6702,6 +6699,8 @@ html._product-page .main::before {
   }
 
   .catalog-filter__categories {
+    flex-wrap: nowrap;
+    overflow-x: auto;
     justify-content: start;
     padding: 0 3.75rem;
     margin-left: -3.75rem;
@@ -9312,10 +9311,7 @@ html._product-page .main::before {
     margin-left: -0.71rem;
     margin-right: -0.71rem;
     margin-bottom: 2rem;
-  }
-
-  .catalog-filter__category:not(:last-child) {
-    margin-right: 0.7rem;
+    gap: 0.7rem;
   }
 
   .catalog-filter__category-label {
