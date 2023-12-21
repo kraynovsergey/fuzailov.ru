@@ -431,13 +431,17 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 3rem;
-        flex-wrap: wrap;
+        overflow-x: auto;
         gap: 1rem;
 
-        @media (max-width: 1366px) {
-            flex-wrap: nowrap;
-            overflow-x: auto;
+        @media (max-width: 1800px) {
             justify-content: start;
+            padding: 0 4.68rem;
+            margin-left: -4.68rem;
+            margin-right: -4.68rem;
+        }
+
+        @media (max-width: 1440px) {
             padding: 0 3.75rem;
             margin-left: -3.75rem;
             margin-right: -3.75rem;
