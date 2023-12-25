@@ -428,36 +428,22 @@
 
     &__categories {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         margin-bottom: 3rem;
         overflow-x: auto;
-        gap: 1rem;
+        gap: clamp(8px, .8vw, 16px);
 
-        @media (max-width: 1800px) {
-            justify-content: start;
-            padding: 0 4.68rem;
-            margin-left: -4.68rem;
-            margin-right: -4.68rem;
-        }
-
-        @media (max-width: 1440px) {
-            padding: 0 3.75rem;
-            margin-left: -3.75rem;
-            margin-right: -3.75rem;
-        }
-
-        @media (max-width: 1280px) {
-            padding: 0 1.87rem;
-            margin-left: -1.87rem;
-            margin-right: -1.87rem;
-        }
-
-        @media (max-width: 1024px) {
+        @media (max-width: 1199px) {
             padding: 0 1.25rem;
             margin-left: -1.25rem;
             margin-right: -1.25rem;
             margin-bottom: 2.4rem;
+            overflow-x: auto;
+            justify-content: start;
+            flex-wrap: nowrap;
+            gap: 1rem;
         }
 
         @media (max-width: 575px) {
@@ -493,13 +479,18 @@
             height: 4rem;
             border-radius: 6.25rem;
             border: 1px solid $color_black;
-            font-size: 1.12rem;
+            font-size: clamp(12px, .93vw, 18px);
             font-weight: 500;
-            padding: 0 1.45rem 0 3rem;
+            padding: 0 clamp(8px, 0.8vw, 16px) 0 clamp(15px, 2.3vw, 45px);
             cursor: pointer;
             color: $color_black;
             transition: .5s ease;
             white-space: nowrap;
+
+            @media (width < 1199px) {
+                padding: 0 1.4rem 0 2.8rem;
+                font-size: 1rem;
+            }
 
             @media (max-width: 575px) {
                 height: 3.5rem;

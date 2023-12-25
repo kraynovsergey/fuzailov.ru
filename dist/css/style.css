@@ -5268,11 +5268,12 @@ html._product-page .main::before {
 
 .catalog-filter__categories {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
   overflow-x: auto;
-  gap: 1rem;
+  gap: clamp(8px, 0.8vw, 16px);
 }
 
 .catalog-filter__category-input {
@@ -5296,9 +5297,9 @@ html._product-page .main::before {
   height: 4rem;
   border-radius: 6.25rem;
   border: 1px solid #333333;
-  font-size: 1.12rem;
+  font-size: clamp(12px, 0.93vw, 18px);
   font-weight: 500;
-  padding: 0 1.45rem 0 3rem;
+  padding: 0 clamp(8px, 0.8vw, 16px) 0 clamp(15px, 2.3vw, 45px);
   cursor: pointer;
   color: #333333;
   transition: 0.5s ease;
@@ -6472,15 +6473,6 @@ html._product-page .main::before {
   }
 }
 
-@media (max-width: 1800px) {
-  .catalog-filter__categories {
-    justify-content: start;
-    padding: 0 4.68rem;
-    margin-left: -4.68rem;
-    margin-right: -4.68rem;
-  }
-}
-
 @media (max-width: 1680px) {
   .container {
     padding: 0 4.68rem;
@@ -6666,12 +6658,6 @@ html._product-page .main::before {
     font-size: 1rem;
   }
 
-  .catalog-filter__categories {
-    padding: 0 3.75rem;
-    margin-left: -3.75rem;
-    margin-right: -3.75rem;
-  }
-
   .article__swiper {
     width: calc(100% + 3.75rem);
     margin-right: -3.75rem;
@@ -6752,12 +6738,6 @@ html._product-page .main::before {
     padding-bottom: 0.5rem;
   }
 
-  .catalog-filter__categories {
-    padding: 0 1.87rem;
-    margin-left: -1.87rem;
-    margin-right: -1.87rem;
-  }
-
   .article__swiper {
     width: calc(100% + 1.87rem);
     margin-right: -1.87rem;
@@ -6829,6 +6809,17 @@ html._product-page .main::before {
     font-size: 0.87rem;
   }
 
+  .catalog-filter__categories {
+    padding: 0 1.25rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    margin-bottom: 2.4rem;
+    overflow-x: auto;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 1rem;
+  }
+
   .uniq__picture img {
     width: 85%;
   }
@@ -6854,13 +6845,6 @@ html._product-page .main::before {
 
   .new-collection-products__grid {
     grid-template-columns: 0.6fr 0.4fr;
-  }
-
-  .catalog-filter__categories {
-    padding: 0 1.25rem;
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-    margin-bottom: 2.4rem;
   }
 
   .article__swiper {
@@ -9461,5 +9445,12 @@ html._product-page .main::before {
   .catalog-filter._light .catalog-filter__box {
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
+  }
+}
+
+@media (width < 1199px) {
+  .catalog-filter__category-label {
+    padding: 0 1.4rem 0 2.8rem;
+    font-size: 1rem;
   }
 }
