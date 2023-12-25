@@ -1369,7 +1369,7 @@ body.hide-scrollbar .header {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   align-items: center;
-  height: 5.94rem;
+  height: 3.5rem;
   transition: 0.5s ease-in-out;
 }
 
@@ -1542,7 +1542,7 @@ body.hide-scrollbar .header {
 .nav__container {
   display: flex;
   justify-content: center;
-  height: 5.38rem;
+  height: 3.5rem;
   transition: 0.5s ease-in-out;
 }
 
@@ -1597,7 +1597,7 @@ body.hide-scrollbar .header {
   grid-template-columns: 18rem 1fr;
   gap: 5rem;
   color: #333333;
-  max-height: calc(100vh - 3.12rem - 5.94rem - 5.38rem);
+  max-height: calc(100vh - 7rem - 3.12rem);
   overflow-y: auto;
   opacity: 0;
   display: none;
@@ -1757,7 +1757,7 @@ body.hide-scrollbar .header {
 }
 
 .main {
-  padding-top: 14.44rem;
+  padding-top: 10.12rem;
   padding-bottom: 6.25rem;
 }
 

@@ -18,7 +18,8 @@
     &__container {
         display: flex;
         justify-content: center;
-        height: 5.38rem;
+        //height: 5.38rem;
+        height: 3.5rem;
         transition: .5s ease-in-out;
 
         @media (max-width: 991px) {
@@ -147,7 +148,8 @@
         grid-template-columns: 18rem 1fr;
         gap: 5rem;
         color: $color_black;
-        max-height: calc(100vh - 3.12rem - 5.94rem - 5.38rem);
+        //max-height: calc(100vh - 3.12rem - 5.94rem - 5.38rem);
+        max-height: calc(100vh - 7rem - 3.12rem);
         overflow-y: auto;
         opacity: 0;
         display: none;

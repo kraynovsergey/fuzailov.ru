@@ -38,7 +38,8 @@ body.hide-scrollbar {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
         align-items: center;
-        height: 5.94rem;
+        //height: 5.94rem;
+        height: 3.5rem;
         transition: .5s ease-in-out;
 
         @media (max-width: 991px) {
