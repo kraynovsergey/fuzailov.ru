@@ -81,8 +81,8 @@ header.header(data-header)
                 li.nav__list-item._megamenu(data-nav-parent)
                     a.nav__list-link.animation-link(href="#") 
                         span._wrap
-                            span._default Каталог
-                            span._hover Каталог
+                            span._default Украшения
+                            span._hover Украшения
                     svg.nav__list-item-arrow(width="24" height="24")
                         use(xlink:href="@img/icons/icons.svg#nav-arrow")
                     .nav__megamenu.scroll._hidden(data-nav-parent-target)
@@ -95,11 +95,11 @@ header.header(data-header)
                                     li
                                         a(href="#") Серьги
                                     li
+                                        a(href="#") Подвески
+                                    li
                                         a(href="#") Браслеты
                                     li
-                                        a(href="#") Бриллианты
-                                    li
-                                        a(href="#") Цветные камни
+                                        a(href="#") Касты
 
                             .nav__megamenu-item
                                 p.nav__megamenu-title По коллекции
@@ -121,16 +121,31 @@ header.header(data-header)
                                 p.nav__megamenu-text Созданные опытными мастерами и сверкающие тончайшими бриллиантами, откройте для себя новейшие творения, только что поступившие из ателье
                                 a.nav__megamenu-link.btn._transparent-gray-border(href="#") Смотреть коллекцию
 
+                li.nav__list-item._parent(data-nav-parent)
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default Бриллианты
+                            span._hover Бриллианты
+                    svg.nav__list-item-arrow(width="24" height="24")
+                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    ul.nav__megamenu-list._popup(data-nav-parent-target)
+                        li
+                            a(href="#") Боковые
+                        li
+                            a(href="#") Круглые
+                        li
+                            a(href="#") Фантазийные
+                        li
+                            a(href="#") Цветные
+                        li
+                            a(href="#") Уникальной огранки
+                
                 li.nav__list-item
                     a.nav__list-link.animation-link(href="#")
                         span._wrap
-                            span._default О нас
-                            span._hover О нас
-                li.nav__list-item
-                    a.nav__list-link.animation-link(href="#")
-                        span._wrap
-                            span._default Контакты
-                            span._hover Контакты
+                            span._default Цветные камни
+                            span._hover Цветные камни
+
                 li.nav__list-item._parent(data-nav-parent)
                     a.nav__list-link.animation-link(href="#")
                         span._wrap
@@ -140,31 +155,34 @@ header.header(data-header)
                         use(xlink:href="@img/icons/icons.svg#nav-arrow")
                     ul.nav__megamenu-list._popup(data-nav-parent-target)
                         li
-                            a(href="#") Изготовление ювелирных украшений на заказ
+                            a(href="#") Изготовление украшений
                         li
-                            a(href="#") Продажа украшений
+                            a(href="#") Продажа драгоценных камней
+                
+                li.nav__list-item._parent(data-nav-parent)
+                    a.nav__list-link.animation-link(href="#")
+                        span._wrap
+                            span._default О нас
+                            span._hover О нас
+                    svg.nav__list-item-arrow(width="24" height="24")
+                        use(xlink:href="@img/icons/icons.svg#nav-arrow")
+                    ul.nav__megamenu-list._popup(data-nav-parent-target)
                         li
-                            a(href="#") Продажа бриллиантов
+                            a(href="#") О производстве
                         li
-                            a(href="#") Кольца для особых случаев
-                        li
-                            a(href="#") Серьги для особых случаев
+                            a(href="#") Блог
 
                 li.nav__list-item
                     a.nav__list-link.animation-link(href="#")
                         span._wrap
-                            span._default О нашей продукции
-                            span._hover О нашей продукции
+                            span._default Контакты
+                            span._hover Контакты
+
                 li.nav__list-item
                     a.nav__list-link.animation-link(href="#")
                         span._wrap
                             span._default Доставка и оплата
                             span._hover Доставка и оплата
-                li.nav__list-item
-                    a.nav__list-link.animation-link(href="#")
-                        span._wrap
-                            span._default Гарантия и возврат
-                            span._hover Гарантия и возврат
 
             .nav__bottom
                 a.nav__shops(href="#")

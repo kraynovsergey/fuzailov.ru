@@ -7,49 +7,28 @@ block meta
 
 block main
     //Хлебные крошки
-    include pug/layout/_breadcrumbs
+    section.breadcrumbs._pb1
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__list-item
+                    a.breadcrumbs__list-link(href="#") Главная
+                li.breadcrumbs__list-item
+                    a.breadcrumbs__list-link(href="#") Украшения
+                li.breadcrumbs__list-item Касты
 
     section.section._pt0
         .container
-            //Фильтр
-            .catalog-filter._light
-                p.section__title.catalog-filter__categories-title._small Категории
+            h1.section__title.catalog-filter__categories-title._small Касты
+
+            .catalog-filter
+                //Категории
                 .catalog-filter__categories.scroll._hidden
-                    .catalog-filter__category
-                        input.catalog-filter__category-input(type="checkbox" name="category" value="Все" id="catalog-category-1" data-filter-category="1")
-                        label.catalog-filter__category-label(for="catalog-category-1") Все
-                            svg(width="26" height="26")
-                                use(xlink:href="@img/icons/icons.svg#fashion-close")
-
-                    .catalog-filter__category
-                        input.catalog-filter__category-input(type="checkbox" name="category" value="Кольца" id="catalog-category-2" data-filter-category="2")
-                        label.catalog-filter__category-label(for="catalog-category-2") Кольца
-                            svg(width="26" height="26")
-                                use(xlink:href="@img/icons/icons.svg#fashion-close")
-
-                    .catalog-filter__category
-                        input.catalog-filter__category-input(type="checkbox" name="category" value="Серьги" id="catalog-category-3" data-filter-category="3")
-                        label.catalog-filter__category-label(for="catalog-category-3") Серьги
-                            svg(width="26" height="26")
-                                use(xlink:href="@img/icons/icons.svg#fashion-close")
-                            
-                    .catalog-filter__category
-                        input.catalog-filter__category-input(type="checkbox" name="category" value="Браслеты" id="catalog-category-4" data-filter-category="4")
-                        label.catalog-filter__category-label(for="catalog-category-4") Браслеты
-                            svg(width="26" height="26")
-                                use(xlink:href="@img/icons/icons.svg#fashion-close")
-
-                    .catalog-filter__category
-                        input.catalog-filter__category-input(type="checkbox" name="category" value="Бриллианты" id="catalog-category-5" data-filter-category="5")
-                        label.catalog-filter__category-label(for="catalog-category-5") Бриллианты
-                            svg(width="26" height="26")
-                                use(xlink:href="@img/icons/icons.svg#fashion-close")
-
-                    .catalog-filter__category
-                        input.catalog-filter__category-input(type="checkbox" name="category" value="Цветные камни" id="catalog-category-6" data-filter-category="6")
-                        label.catalog-filter__category-label(for="catalog-category-6") Цветные камни
-                            svg(width="26" height="26")
-                                use(xlink:href="@img/icons/icons.svg#fashion-close")
+                    a.catalog-filter__category-label.catalog-filter__category-link(href="#") Все
+                    a.catalog-filter__category-label.catalog-filter__category-link(href="#") Кольца
+                    a.catalog-filter__category-label.catalog-filter__category-link(href="#") Серьги
+                    a.catalog-filter__category-label.catalog-filter__category-link(href="#") Браслеты
+                    a.catalog-filter__category-label.catalog-filter__category-link._active(href="#") Касты
+                    a.catalog-filter__category-label.catalog-filter__category-link(href="#") Подвески
 
                 //Подкатегории    
                 section.subcategories
@@ -57,6 +36,7 @@ block main
                     
                     ul.subcategories__list(role="list")
                         li.subcategories__listitem(role="listitem")
+                            //Класс _active у текущей категории
                             a.subcategories__link._active(href="#" role="link") Серьги
                         li.subcategories__listitem(role="listitem")
                             a.subcategories__link(href="#" role="link") Браслеты

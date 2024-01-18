@@ -505,6 +505,25 @@
                 opacity: 0;
             }
         }
+
+        &-link {
+            text-decoration: none;
+            padding: 0 clamp(15px, 2.3vw, 45px);
+
+            @media (width < 1199px) {
+                padding: 0 2.8rem;
+            }
+
+            &:hover {
+                color: $color_black;
+            }
+
+            &._active {
+                background: $color_green;
+                border-color: $color_green;
+                color: $color_white;
+            }
+        }
     }
 
     &__hidden-input {

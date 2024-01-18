@@ -1158,6 +1158,10 @@ progress {
   padding-top: 3rem;
 }
 
+.breadcrumbs._pb1 {
+  padding-bottom: 1rem;
+}
+
 .breadcrumbs__list {
   margin: 0;
   padding: 0;
@@ -2851,6 +2855,7 @@ body.hide-scrollbar .header {
   padding: 1.88rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .filter__item {
@@ -2868,6 +2873,10 @@ body.hide-scrollbar .header {
 
 .filter__item._small._no-border {
   border-right: 0;
+}
+
+.filter__item._single {
+  border-left: 1px solid #DCDBDB;
 }
 
 .filter__item._full {
@@ -2906,18 +2915,17 @@ body.hide-scrollbar .header {
 }
 
 .filter__cuts {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 0 -1.88rem 0;
   max-width: 30rem;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
 }
 
 .filter__cut {
-  padding: 0 1.25rem;
-  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter__cut-input {
@@ -2947,26 +2955,41 @@ body.hide-scrollbar .header {
 }
 
 .filter__checkboxes {
-  display: flex;
-  flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
+  display: grid;
 }
 
 .filter__checkboxes._color {
+  grid-template-columns: repeat(5, 1fr);
   max-width: 20rem;
-}
-
-.filter__checkboxes._color .filter__checkbox-label {
-  min-width: 4rem;
 }
 
 .filter__checkboxes._clean {
   max-width: 22.4rem;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.filter__checkboxes._clean .filter__checkbox-label {
-  min-width: 5.6rem;
+.filter__custom-colors {
+  grid-column: span 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-top: 30px;
+}
+
+.filter__custom-colors._single {
+  margin-top: 0;
+}
+
+.filter__custom-colors-color {
+  display: flex;
+  min-width: 30px;
+  max-width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #DCDBDB;
+  margin-right: 10px;
 }
 
 .filter__checkbox._hidden {
@@ -3013,7 +3036,7 @@ body.hide-scrollbar .header {
 .filter__btns {
   display: flex;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 1.8rem;
   width: 100%;
 }
 
@@ -3034,30 +3057,36 @@ body.hide-scrollbar .header {
   align-items: center;
   color: #333333;
   font-size: 1.12rem;
+  width: 100%;
 }
 
 .filter__range-inputs {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: 20px 1fr 20px 1fr;
+  gap: 1rem;
+  align-items: center;
+  max-width: 410px;
+  width: 100%;
 }
 
-.filter__range-title {
-  margin-right: 1.4rem;
+.filter__range-inputs._custom {
+  grid-template-columns: 80px 20px 1fr 20px 1fr;
+  max-width: 100%;
+}
+
+.filter__range-inputs._custom:last-child {
+  margin-bottom: 0;
 }
 
 .filter__range-fake-input {
   height: 3.12rem;
   border: 1px solid #DCDBDB;
-  padding: 0.87rem 1.25rem;
-  width: 9rem;
   display: flex;
   align-items: center;
-}
-
-.filter__range-fake-input:not(:last-child) {
-  margin-right: 1.4rem;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 .filter__range-input {
@@ -3069,6 +3098,7 @@ body.hide-scrollbar .header {
   background: transparent;
   height: 0.63rem;
   border-radius: 0;
+  width: 100%;
 }
 
 .filter__range-init .range-slider__range {
@@ -3226,6 +3256,64 @@ body.hide-scrollbar .header {
 
 .filter__header-close span::before {
   transform: rotate(-45deg);
+}
+
+.filter__line {
+  width: 100%;
+  height: 1px;
+  background: #DCDBDB;
+  margin-bottom: 1.88rem;
+}
+
+.filter__line._mb0 {
+  margin-bottom: 0;
+}
+
+.filter__sorting {
+  justify-content: flex-start !important;
+  margin: 0 0 3rem !important;
+  border-left: 0 !important;
+  padding-left: 0 !important;
+  z-index: 10;
+  position: relative;
+}
+
+.filter__stones {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.filter__stone {
+  display: flex;
+}
+
+.filter__stone input {
+  display: none;
+}
+
+.filter__stone input:checked + label {
+  color: #0047AB;
+}
+
+.filter__stone label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.filter__stone picture {
+  display: flex;
+}
+
+.filter__stone picture img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .diamonds {
@@ -5314,6 +5402,21 @@ html._product-page .main::before {
   opacity: 0;
 }
 
+.catalog-filter__category-link {
+  text-decoration: none;
+  padding: 0 clamp(15px, 2.3vw, 45px);
+}
+
+.catalog-filter__category-link:hover {
+  color: #333333;
+}
+
+.catalog-filter__category-link._active {
+  background: #0047AB;
+  border-color: #0047AB;
+  color: #FDFBFA;
+}
+
 .catalog-filter__hidden-input {
   display: none;
 }
@@ -6098,9 +6201,9 @@ html._product-page .main::before {
 }
 
 @media (min-width: 960px) {
-  .new-collection__fashion:last-child {
+  .new-collection__fashion:nth-child(5) {
     grid-column: 1;
-    grid-row: 2;
+    grid-row: 3;
   }
 }
 
@@ -6159,6 +6262,22 @@ html._product-page .main::before {
 
   .intro__breadcrumbs .breadcrumbs__list-link {
     color: rgba(253, 251, 250, 0.7);
+  }
+
+  .filter__item:not(._show) .filter__cut:nth-child(n+13) {
+    display: none;
+  }
+
+  .filter__item:not(._show) .filter__custom-colors:not(._single) {
+    display: none;
+  }
+
+  .filter__item:not(._show) .filter__custom-colors:is(._single) .form__checkbox:nth-child(n+5) {
+    display: none;
+  }
+
+  .filter__range-init {
+    max-width: 367px;
   }
 
   .product-page__gallery .swiper-wrapper {
@@ -6462,6 +6581,12 @@ html._product-page .main::before {
   }
 }
 
+@media (min-width: 1366px) {
+  .filter__item:not(._show) .filter__stone:nth-child(n+6) {
+    display: none;
+  }
+}
+
 @media (min-width: 1441px) {
   .product__picture {
     grid-column: span 2;
@@ -6691,6 +6816,14 @@ html._product-page .main::before {
     margin-right: 1rem;
   }
 
+  .filter__custom-colors {
+    grid-template-columns: 1fr;
+  }
+
+  .filter__stones {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .diamonds {
     font-size: 1.12rem;
   }
@@ -6723,6 +6856,15 @@ html._product-page .main::before {
 
   .fashion-modal {
     width: 70%;
+  }
+
+  .filter__cuts {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+  }
+
+  .filter__range {
+    font-size: 1rem;
   }
 
   .blog__title {
@@ -6778,6 +6920,10 @@ html._product-page .main::before {
 
   .service__text {
     max-width: 100%;
+  }
+
+  .filter__range {
+    font-size: 0.8rem;
   }
 
   .collection-diamonds__content {
@@ -7034,6 +7180,18 @@ html._product-page .main::before {
     padding-top: 7.81rem;
   }
 
+  .footer__copyright {
+    padding-top: 2rem;
+    border-top: 1px solid #DCDBDB;
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+
+  .footer__copyright-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
   .top-line__socials-item:not(:last-child) {
     margin-right: 1.56rem;
   }
@@ -7113,6 +7271,7 @@ html._product-page .main::before {
     width: 100% !important;
     border-bottom: 1px solid #DCDBDB;
     border-right: 0 !important;
+    border-left: 0 !important;
     border-top: 0 !important;
     margin-bottom: 0 !important;
     padding: 1.2rem 0 !important;
@@ -7136,18 +7295,6 @@ html._product-page .main::before {
     display: flex;
   }
 
-  .filter__cuts {
-    margin: 0;
-    max-width: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-  }
-
-  .filter__cut {
-    padding: 0;
-    margin: 0;
-  }
-
   .filter__cut-label {
     width: 100%;
     height: 4.7rem;
@@ -7156,31 +7303,16 @@ html._product-page .main::before {
 
   .filter__checkboxes {
     max-width: 100% !important;
-  }
-
-  .filter__checkboxes._color {
-    margin-bottom: -1.25rem;
-  }
-
-  .filter__checkboxes._color .filter__checkbox-label {
-    min-width: 5rem;
-  }
-
-  .filter__checkboxes._color .filter__checkbox {
-    margin: 0 1.25rem 1.25rem 0;
-  }
-
-  .filter__checkboxes._clean {
-    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
   }
 
-  .filter__checkboxes._clean .filter__checkbox-label {
-    min-width: unset;
+  .filter__custom-colors {
+    margin-top: 0;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   .filter__checkbox._hidden {
-    display: flex;
+    display: grid;
     opacity: 1;
   }
 
@@ -7210,6 +7342,7 @@ html._product-page .main::before {
   .filter__range {
     width: 100%;
     padding-bottom: 1.8rem;
+    font-size: 1.12rem;
   }
 
   .filter__mobile-btn {
@@ -7237,6 +7370,10 @@ html._product-page .main::before {
 
   .filter__header {
     display: flex;
+  }
+
+  .filter__stones {
+    gap: 2rem;
   }
 
   .diamonds-info__container {
@@ -7963,10 +8100,6 @@ html._product-page .main::before {
     gap: 2.5rem;
   }
 
-  .new-collection__fashion:first-child {
-    grid-row: 2;
-  }
-
   .new-collection__swiper {
     margin-left: -1.25rem;
     margin-right: -1.25rem;
@@ -8095,18 +8228,6 @@ html._product-page .main::before {
 
   .footer__socials {
     margin-top: 2rem;
-  }
-
-  .footer__copyright {
-    padding-top: 2rem;
-    border-top: 1px solid #DCDBDB;
-    margin-top: 2rem;
-    flex-direction: column;
-  }
-
-  .footer__copyright-item:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 1rem;
   }
 
   .section {
@@ -9030,7 +9151,20 @@ html._product-page .main::before {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .filter__checkboxes._color {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .filter__checkboxes._clean {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filter__custom-colors {
+    grid-column: span 4;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .filter__stones {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -9435,6 +9569,24 @@ html._product-page .main::before {
   }
 }
 
+@media (max-width: 1366px) and (min-width: 992px) {
+  .filter__item:not(._show) .filter__stone:nth-child(n+9) {
+    display: none;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 992px) {
+  .filter__checkbox-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1600px) and (min-width: 992px) {
+  .filter__stone label {
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 1199px) and (min-width: 992px) {
   .collection-diamonds__title-carousel {
     font-size: 1.5rem !important;
@@ -9448,9 +9600,25 @@ html._product-page .main::before {
   }
 }
 
+@media (width > 960px) {
+  .new-collection__row {
+    grid-column: span 2;
+  }
+}
+
+@media (width <= 991px) {
+  .filter__line {
+    display: none;
+  }
+}
+
 @media (width < 1199px) {
   .catalog-filter__category-label {
     padding: 0 1.4rem 0 2.8rem;
     font-size: 1rem;
+  }
+
+  .catalog-filter__category-link {
+    padding: 0 2.8rem;
   }
 }

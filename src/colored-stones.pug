@@ -1,0 +1,212 @@
+extends diamonds-fantasy
+
+block meta
+    - var seotitle = 'Цветные камни'
+    - var seodescription = 'Описание страницы цветных камней'
+    - var seokeywords = 'Ключевые слова страницы цветных камней'
+
+block breadcrumbs
+    //Хлебные крошки
+    section.breadcrumbs._pb1
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__list-item
+                    a.breadcrumbs__list-link(href="#") Главная
+                li.breadcrumbs__list-item Цветные камни
+
+block h1
+    h1.section__title.catalog-filter__categories-title._small Цветные камни
+
+block categories
+
+block filter
+    //Фильтр
+    .filter__form-wrap(id="modal-filter" data-lenis-prevent)
+        .filter__header
+            .filter__header-title Фильтр
+            button.filter__header-close.btn-reset(type="button" data-fancybox-close) Закрыть
+                span 
+
+        mixin filter_checkbox(title, name, id, classnames)
+            .filter__checkbox(class=classnames)
+                input.filter__checkbox-input(type="checkbox" name=name id=id)
+                label.filter__checkbox-label(for=id)=title
+
+        form.filter__form(action="#" method="get")
+            fieldset.filter__item._small(data-filter-more-parent data-filter-item)
+                p.filter__title(data-filter-title) Огранка
+                    span.filter__title-icon
+                        svg(width="13" height="16")
+                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                .filter__cuts.filter__content(data-filter-content)
+                    mixin filter_cut(icon)
+                        .filter__cut
+                            input.filter__cut-input(type="checkbox" name="cut" id=icon)
+                            label.filter__cut-label(for=icon)
+                                svg.filter__cut-icon(width="35" height="35")
+                                    use(xlink:href="@img/icons/icons.svg#"+icon)
+                    +filter_cut('cut-1')
+                    +filter_cut('cut-2')
+                    +filter_cut('cut-3')
+                    +filter_cut('cut-4')
+                    +filter_cut('cut-5')
+                    +filter_cut('cut-6')
+                    +filter_cut('cut-7')
+                    +filter_cut('cut-8')
+                    +filter_cut('cut-9')
+                    +filter_cut('cut-10')
+                    +filter_cut('cut-11')
+                    +filter_cut('cut-12')
+                    +filter_cut('cut-1')
+                    +filter_cut('cut-2')
+                    +filter_cut('cut-3')
+                    +filter_cut('cut-4')
+                    +filter_cut('cut-5')
+                    +filter_cut('cut-6')
+
+                button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more data-filter-more-default="Еще огранки")
+                    span._wrap
+                        span._default Еще огранки
+                        span._hover Еще огранки
+
+            fieldset.filter__item._small(data-filter-more-parent data-filter-item)
+                p.filter__title(data-filter-title) Цветные камни
+                    span.filter__title-icon
+                        svg(width="13" height="16")
+                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                .filter__content.filter__stones(data-filter-content="grid")
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Сапфир" id="stone-1")
+                        label(for="stone-1")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-1@2x.webp 2x, @img/tmp/colored-stones-1.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-1@2x.png 2x, @img/tmp/colored-stones-1.png 1x" src="@img/tmp/colored-stones-1.png" alt="" width="55" height="55")
+                            | Сапфир
+                    
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Рубин" id="stone-2")
+                        label(for="stone-2")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-2@2x.webp 2x, @img/tmp/colored-stones-2.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-2@2x.png 2x, @img/tmp/colored-stones-2.png 1x" src="@img/tmp/colored-stones-2.png" alt="" width="55" height="55")
+                            | Рубин
+
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Рубин" id="stone-3")
+                        label(for="stone-3")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-3@2x.webp 2x, @img/tmp/colored-stones-3.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-3@2x.png 2x, @img/tmp/colored-stones-3.png 1x" src="@img/tmp/colored-stones-3.png" alt="" width="55" height="55")
+                            | Рубин
+
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Изумруд" id="stone-4")
+                        label(for="stone-4")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-4@2x.webp 2x, @img/tmp/colored-stones-4.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-4@2x.png 2x, @img/tmp/colored-stones-4.png 1x" src="@img/tmp/colored-stones-4.png" alt="" width="55" height="55")
+                            | Изумруд
+
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Сапфир" id="stone-5")
+                        label(for="stone-5")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-1@2x.webp 2x, @img/tmp/colored-stones-1.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-1@2x.png 2x, @img/tmp/colored-stones-1.png 1x" src="@img/tmp/colored-stones-1.png" alt="" width="55" height="55")
+                            | Сапфир
+
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Сапфир" id="stone-6")
+                        label(for="stone-6")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-1@2x.webp 2x, @img/tmp/colored-stones-1.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-1@2x.png 2x, @img/tmp/colored-stones-1.png 1x" src="@img/tmp/colored-stones-1.png" alt="" width="55" height="55")
+                            | Сапфир
+                    
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Рубин" id="stone-7")
+                        label(for="stone-7")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-2@2x.webp 2x, @img/tmp/colored-stones-2.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-2@2x.png 2x, @img/tmp/colored-stones-2.png 1x" src="@img/tmp/colored-stones-2.png" alt="" width="55" height="55")
+                            | Рубин
+
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Рубин" id="stone-8")
+                        label(for="stone-8")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-3@2x.webp 2x, @img/tmp/colored-stones-3.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-3@2x.png 2x, @img/tmp/colored-stones-3.png 1x" src="@img/tmp/colored-stones-3.png" alt="" width="55" height="55")
+                            | Рубин
+
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Изумруд" id="stone-9")
+                        label(for="stone-9")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-4@2x.webp 2x, @img/tmp/colored-stones-4.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-4@2x.png 2x, @img/tmp/colored-stones-4.png 1x" src="@img/tmp/colored-stones-4.png" alt="" width="55" height="55")
+                            | Изумруд
+
+                    .filter__stone
+                        input(type="checkbox" name="stone" value="Сапфир" id="stone-10")
+                        label(for="stone-10")
+                            picture
+                                source(type="image/webp" srcset="@img/tmp/colored-stones-1@2x.webp 2x, @img/tmp/colored-stones-1.webp 1x")
+                                img(srcset="@img/tmp/colored-stones-1@2x.png 2x, @img/tmp/colored-stones-1.png 1x" src="@img/tmp/colored-stones-1.png" alt="" width="55" height="55")
+                            | Сапфир
+
+                button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more data-filter-more-default="Еще камни")
+                    span._wrap
+                        span._default Еще камни
+                        span._hover Еще камни
+
+                    
+
+            fieldset.filter__item._small(data-filter-item)
+                p.filter__title(data-filter-title) Вес камня
+                    span.filter__title-icon
+                        svg(width="13" height="16")
+                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                .filter__range.filter__content(data-range-wrap data-filter-content)
+                    input(type="hidden" name="weight_from" value="0.5" data-range-input-from)
+                    input(type="hidden" name="weight_to" value="2" data-range-input-to)
+
+                    .filter__range-inputs
+                        .filter__range-title от
+                        .filter__range-fake-input
+                            .filter__range-input(data-range-from) 0.5
+                            | Карат
+                        .filter__range-title до
+                        .filter__range-fake-input
+                            .filter__range-input(data-range-to) 2
+                            | Карат
+                    .filter__range-init(data-range data-range-min="0" data-range-max="2.4" data-range-step="0.01" data-range-min-value="0.5" data-range-max-value="2")
+
+            .filter__line
+
+            fieldset.filter__item._small._single(data-filter-item)
+                p.filter__title(data-filter-title) Стоимость
+                    span.filter__title-icon
+                        svg(width="13" height="16")
+                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
+                .filter__range.filter__content(data-range-wrap data-filter-content)
+                    input(type="hidden" name="price_from" value="30000" data-range-input-from)
+                    input(type="hidden" name="price_to" value="80000" data-range-input-to)
+
+                    .filter__range-inputs
+                        .filter__range-title от
+                        .filter__range-fake-input
+                            .filter__range-input(data-range-from) 30000
+                            | ₽
+                        .filter__range-title до
+                        .filter__range-fake-input
+                            .filter__range-input(data-range-to) 80000
+                            | ₽
+                    .filter__range-init(data-range data-range-min="0" data-range-max="100000" data-range-step="1000" data-range-min-value="30000" data-range-max-value="80000")
+
+            .filter__line._mb0
+
+            .filter__form-bottom
+                .filter__btns
+                    button.filter__submit.btn(type="submit") Применить
+                    button.filter__reset.btn._transparent-gray-border(type="reset") Очистить

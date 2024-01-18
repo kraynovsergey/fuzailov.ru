@@ -96,7 +96,7 @@
             <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
           </form>
           <ul class="nav__list">
-            <li class="nav__list-item _megamenu" data-nav-parent><a class="nav__list-link animation-link" href="#"> <span class="_wrap"><span class="_default">Каталог</span><span class="_hover">Каталог</span></span></a>
+            <li class="nav__list-item _megamenu" data-nav-parent><a class="nav__list-link animation-link" href="#"> <span class="_wrap"><span class="_default">Украшения</span><span class="_hover">Украшения</span></span></a>
               <svg class="nav__list-item-arrow" width="24" height="24">
                 <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
               </svg>
@@ -107,9 +107,9 @@
                     <ul class="nav__megamenu-list">
                       <li><a href="#">Кольца</a></li>
                       <li><a href="#">Серьги</a></li>
+                      <li><a href="#">Подвески</a></li>
                       <li><a href="#">Браслеты</a></li>
-                      <li><a href="#">Бриллианты</a></li>
-                      <li><a href="#">Цветные камни</a></li>
+                      <li><a href="#">Касты</a></li>
                     </ul>
                   </div>
                   <div class="nav__megamenu-item">
@@ -133,23 +133,39 @@
                 </div>
               </div>
             </li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нас</span><span class="_hover">О нас</span></span></a></li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Контакты</span><span class="_hover">Контакты</span></span></a></li>
+            <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Бриллианты</span><span class="_hover">Бриллианты</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <ul class="nav__megamenu-list _popup" data-nav-parent-target>
+                <li><a href="#">Боковые</a></li>
+                <li><a href="#">Круглые</a></li>
+                <li><a href="#">Фантазийные</a></li>
+                <li><a href="#">Цветные</a></li>
+                <li><a href="#">Уникальной огранки</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Цветные камни</span><span class="_hover">Цветные камни</span></span></a></li>
             <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Услуги</span><span class="_hover">Услуги</span></span></a>
               <svg class="nav__list-item-arrow" width="24" height="24">
                 <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
               </svg>
               <ul class="nav__megamenu-list _popup" data-nav-parent-target>
-                <li><a href="#">Изготовление ювелирных украшений на заказ</a></li>
-                <li><a href="#">Продажа украшений</a></li>
-                <li><a href="#">Продажа бриллиантов</a></li>
-                <li><a href="#">Кольца для особых случаев</a></li>
-                <li><a href="#">Серьги для особых случаев</a></li>
+                <li><a href="#">Изготовление украшений</a></li>
+                <li><a href="#">Продажа драгоценных камней</a></li>
               </ul>
             </li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нашей продукции</span><span class="_hover">О нашей продукции</span></span></a></li>
+            <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нас</span><span class="_hover">О нас</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <ul class="nav__megamenu-list _popup" data-nav-parent-target>
+                <li><a href="#">О производстве</a></li>
+                <li><a href="#">Блог</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Контакты</span><span class="_hover">Контакты</span></span></a></li>
             <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Доставка и оплата</span><span class="_hover">Доставка и оплата</span></span></a></li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Гарантия и возврат</span><span class="_hover">Гарантия и возврат</span></span></a></li>
           </ul>
           <div class="nav__bottom"><a class="nav__shops" href="#">
               <svg width="22" height="25">
@@ -161,74 +177,28 @@
     <!--Контентная часть-->
     <main class="main">
       <!--Хлебные крошки-->
-      <section class="breadcrumbs">
+      <section class="breadcrumbs _pb1">
         <div class="container">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="#">Главная</a></li>
-            <li class="breadcrumbs__list-item">Бриллианты</li>
+            <li class="breadcrumbs__list-item"><a class="breadcrumbs__list-link" href="#">Украшения</a></li>
+            <li class="breadcrumbs__list-item">Касты</li>
           </ul>
         </div>
       </section>
       <section class="section _pt0">
         <div class="container">
-          <!--Фильтр-->
-          <div class="catalog-filter _light">
-            <p class="section__title catalog-filter__categories-title _small">Категории</p>
-            <div class="catalog-filter__categories scroll _hidden">
-              <div class="catalog-filter__category">
-                <input class="catalog-filter__category-input" type="checkbox" name="category" value="Все" id="catalog-category-1" data-filter-category="1">
-                <label class="catalog-filter__category-label" for="catalog-category-1">Все
-                  <svg width="26" height="26">
-                    <use xlink:href="img/icons/icons.svg#fashion-close"></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="catalog-filter__category">
-                <input class="catalog-filter__category-input" type="checkbox" name="category" value="Кольца" id="catalog-category-2" data-filter-category="2">
-                <label class="catalog-filter__category-label" for="catalog-category-2">Кольца
-                  <svg width="26" height="26">
-                    <use xlink:href="img/icons/icons.svg#fashion-close"></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="catalog-filter__category">
-                <input class="catalog-filter__category-input" type="checkbox" name="category" value="Серьги" id="catalog-category-3" data-filter-category="3">
-                <label class="catalog-filter__category-label" for="catalog-category-3">Серьги
-                  <svg width="26" height="26">
-                    <use xlink:href="img/icons/icons.svg#fashion-close"></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="catalog-filter__category">
-                <input class="catalog-filter__category-input" type="checkbox" name="category" value="Браслеты" id="catalog-category-4" data-filter-category="4">
-                <label class="catalog-filter__category-label" for="catalog-category-4">Браслеты
-                  <svg width="26" height="26">
-                    <use xlink:href="img/icons/icons.svg#fashion-close"></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="catalog-filter__category">
-                <input class="catalog-filter__category-input" type="checkbox" name="category" value="Бриллианты" id="catalog-category-5" data-filter-category="5">
-                <label class="catalog-filter__category-label" for="catalog-category-5">Бриллианты
-                  <svg width="26" height="26">
-                    <use xlink:href="img/icons/icons.svg#fashion-close"></use>
-                  </svg>
-                </label>
-              </div>
-              <div class="catalog-filter__category">
-                <input class="catalog-filter__category-input" type="checkbox" name="category" value="Цветные камни" id="catalog-category-6" data-filter-category="6">
-                <label class="catalog-filter__category-label" for="catalog-category-6">Цветные камни
-                  <svg width="26" height="26">
-                    <use xlink:href="img/icons/icons.svg#fashion-close"></use>
-                  </svg>
-                </label>
-              </div>
-            </div>
+          <h1 class="section__title catalog-filter__categories-title _small">Касты</h1>
+          <div class="catalog-filter">
+            <!--Категории-->
+            <div class="catalog-filter__categories scroll _hidden"><a class="catalog-filter__category-label catalog-filter__category-link" href="#">Все</a><a class="catalog-filter__category-label catalog-filter__category-link" href="#">Кольца</a><a class="catalog-filter__category-label catalog-filter__category-link" href="#">Серьги</a><a class="catalog-filter__category-label catalog-filter__category-link" href="#">Браслеты</a><a class="catalog-filter__category-label catalog-filter__category-link _active" href="#">Касты</a><a class="catalog-filter__category-label catalog-filter__category-link" href="#">Подвески</a></div>
             <!--Подкатегории    -->
             <section class="subcategories">
               <div class="subcategories__col"></div>
               <ul class="subcategories__list" role="list">
-                <li class="subcategories__listitem" role="listitem"><a class="subcategories__link _active" href="#" role="link">Серьги</a></li>
+                <li class="subcategories__listitem" role="listitem">
+                  <!--Класс _active у текущей категории--><a class="subcategories__link _active" href="#" role="link">Серьги</a>
+                </li>
                 <li class="subcategories__listitem" role="listitem"><a class="subcategories__link" href="#" role="link">Браслеты</a></li>
                 <li class="subcategories__listitem" role="listitem"><a class="subcategories__link" href="#" role="link">Кольца</a></li>
                 <li class="subcategories__listitem" role="listitem"><a class="subcategories__link" href="#" role="link">Комплекты</a></li>
@@ -256,7 +226,7 @@
           <!--Товары-->
           <div class="new-collection">
             <div class="products _col2">
-                  <article class="product" data-swiper-fashion-slide="0" data-swiper-fashion-swiper="1">
+                  <article class="product">
                     <button class="product__favourites _active" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -278,7 +248,7 @@
                     <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантами 0.55ct из белого золота</a></h3>
                     <div class="product__price">321 960 ₽</div>
                   </article>
-                  <article class="product" data-swiper-fashion-slide="1" data-swiper-fashion-swiper="1">
+                  <article class="product">
                     <button class="product__favourites" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -300,7 +270,7 @@
                     <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0.18ct из белого золота</a></h3>
                     <div class="product__price">151 200 ₽</div>
                   </article>
-                  <article class="product" data-swiper-fashion-slide="2" data-swiper-fashion-swiper="1">
+                  <article class="product">
                     <button class="product__favourites" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -322,7 +292,7 @@
                     <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0,510ct из белого золота</a></h3>
                     <div class="product__price">244 920 ₽</div>
                   </article>
-                  <article class="product" data-swiper-fashion-slide="3" data-swiper-fashion-swiper="1">
+                  <article class="product">
                     <button class="product__favourites _active" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -346,61 +316,111 @@
                   </article>
             </div>
             <div class="new-collection__fashion">
-              <div class="new-collection__swiper swiper" data-swiper-fashion="1">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-2@2x.webp 2x, img/tmp/new-collection-img-2.webp 1x"><img srcset="img/tmp/new-collection-img-2@2x.jpg 2x, img/tmp/new-collection-img-2.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-1@2x.webp 2x, img/tmp/new-collection-img-1.webp 1x"><img srcset="img/tmp/new-collection-img-1@2x.jpg 2x, img/tmp/new-collection-img-1.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-3@2x.webp 2x, img/tmp/new-collection-img-3.webp 1x"><img srcset="img/tmp/new-collection-img-3@2x.jpg 2x, img/tmp/new-collection-img-3.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-1@2x.webp 2x, img/tmp/new-collection-img-1.webp 1x"><img srcset="img/tmp/new-collection-img-1@2x.jpg 2x, img/tmp/new-collection-img-1.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                </div>
-              </div><a class="link _italic _button-mobile animation-link" href="#"><span class="_wrap"><span class="_default">Смотреть всю коллекцию</span><span class="_hover">Смотреть всю коллекцию</span></span></a>
+              <div class="new-collection__swiper">
+                    <div class="fashion">
+                      <picture class="fashion__picture"> 
+                        <source type="image/webp" srcset="img/tmp/new-collection-img-2@2x.webp 2x, img/tmp/new-collection-img-2.webp 1x"><img srcset="img/tmp/new-collection-img-2@2x.jpg 2x, img/tmp/new-collection-img-2.jpg 1x" alt="" width="855" height="1079" loading="lazy">
+                      </picture>
+                      <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
+                        <svg class="fashion__btn-icon">
+                          <use xlink:href="img/icons/icons.svg#cart"></use>
+                        </svg>Посмотреть образ
+                      </button>
+                    </div>
+              </div>
+            </div>
+            <div class="products _col4-line new-collection__row">
+                  <article class="product">
+                    <button class="product__favourites _active" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label">New</div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-1@2x.webp 2x, img/tmp/product-1.webp 1x"><img srcset="img/tmp/product-1@2x.jpg 2x, img/tmp/product-1.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантами 0.55ct из белого золота</a></h3>
+                    <div class="product__price">321 960 ₽</div>
+                  </article>
+                  <article class="product">
+                    <button class="product__favourites" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label"></div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-2@2x.webp 2x, img/tmp/product-2.webp 1x"><img srcset="img/tmp/product-2@2x.jpg 2x, img/tmp/product-2.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0.18ct из белого золота</a></h3>
+                    <div class="product__price">151 200 ₽</div>
+                  </article>
+                  <article class="product">
+                    <button class="product__favourites" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label">New</div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-3@2x.webp 2x, img/tmp/product-3.webp 1x"><img srcset="img/tmp/product-3@2x.jpg 2x, img/tmp/product-3.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0,510ct из белого золота</a></h3>
+                    <div class="product__price">244 920 ₽</div>
+                  </article>
+                  <article class="product">
+                    <button class="product__favourites _active" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label"></div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-4@2x.webp 2x, img/tmp/product-4.webp 1x"><img srcset="img/tmp/product-4@2x.jpg 2x, img/tmp/product-4.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0,600ct из белого золота</a></h3>
+                    <div class="product__price">423 960 ₽</div>
+                  </article>
             </div>
             <div class="products _col2">
-                  <article class="product" data-swiper-fashion-slide="0" data-swiper-fashion-swiper="2">
+                  <article class="product">
                     <button class="product__favourites _active" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -422,7 +442,7 @@
                     <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантами 0.55ct из белого золота</a></h3>
                     <div class="product__price">321 960 ₽</div>
                   </article>
-                  <article class="product" data-swiper-fashion-slide="1" data-swiper-fashion-swiper="2">
+                  <article class="product">
                     <button class="product__favourites" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -444,7 +464,7 @@
                     <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0.18ct из белого золота</a></h3>
                     <div class="product__price">151 200 ₽</div>
                   </article>
-                  <article class="product" data-swiper-fashion-slide="2" data-swiper-fashion-swiper="2">
+                  <article class="product">
                     <button class="product__favourites" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -466,7 +486,7 @@
                     <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0,510ct из белого золота</a></h3>
                     <div class="product__price">244 920 ₽</div>
                   </article>
-                  <article class="product" data-swiper-fashion-slide="3" data-swiper-fashion-swiper="2">
+                  <article class="product">
                     <button class="product__favourites _active" type="button">
                       <svg width="26" height="26">
                         <use xlink:href="img/icons/icons.svg#favourites"></use>
@@ -490,58 +510,108 @@
                   </article>
             </div>
             <div class="new-collection__fashion">
-              <div class="new-collection__swiper swiper" data-swiper-fashion="2">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-3@2x.webp 2x, img/tmp/new-collection-img-3.webp 1x"><img srcset="img/tmp/new-collection-img-3@2x.jpg 2x, img/tmp/new-collection-img-3.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-1@2x.webp 2x, img/tmp/new-collection-img-1.webp 1x"><img srcset="img/tmp/new-collection-img-1@2x.jpg 2x, img/tmp/new-collection-img-1.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-2@2x.webp 2x, img/tmp/new-collection-img-2.webp 1x"><img srcset="img/tmp/new-collection-img-2@2x.jpg 2x, img/tmp/new-collection-img-2.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                  <div class="swiper-slide">
-                        <div class="fashion">
-                          <picture class="fashion__picture"> 
-                            <source type="image/webp" srcset="img/tmp/new-collection-img-1@2x.webp 2x, img/tmp/new-collection-img-1.webp 1x"><img srcset="img/tmp/new-collection-img-1@2x.jpg 2x, img/tmp/new-collection-img-1.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                          </picture>
-                          <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
-                            <svg class="fashion__btn-icon">
-                              <use xlink:href="img/icons/icons.svg#cart"></use>
-                            </svg>Посмотреть образ
-                          </button>
-                        </div>
-                  </div>
-                </div>
-              </div><a class="link _italic _button-mobile animation-link" href="#"><span class="_wrap"><span class="_default">Смотреть всю коллекцию</span><span class="_hover">Смотреть всю коллекцию</span></span></a>
+              <div class="new-collection__swiper">
+                    <div class="fashion">
+                      <picture class="fashion__picture"> 
+                        <source type="image/webp" srcset="img/tmp/new-collection-img-3@2x.webp 2x, img/tmp/new-collection-img-3.webp 1x"><img srcset="img/tmp/new-collection-img-3@2x.jpg 2x, img/tmp/new-collection-img-3.jpg 1x" alt="" width="855" height="1079" loading="lazy">
+                      </picture>
+                      <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
+                        <svg class="fashion__btn-icon">
+                          <use xlink:href="img/icons/icons.svg#cart"></use>
+                        </svg>Посмотреть образ
+                      </button>
+                    </div>
+              </div>
+            </div>
+            <div class="products _col4-line new-collection__row">
+                  <article class="product">
+                    <button class="product__favourites _active" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label">New</div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-1@2x.webp 2x, img/tmp/product-1.webp 1x"><img srcset="img/tmp/product-1@2x.jpg 2x, img/tmp/product-1.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантами 0.55ct из белого золота</a></h3>
+                    <div class="product__price">321 960 ₽</div>
+                  </article>
+                  <article class="product">
+                    <button class="product__favourites" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label"></div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-2@2x.webp 2x, img/tmp/product-2.webp 1x"><img srcset="img/tmp/product-2@2x.jpg 2x, img/tmp/product-2.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0.18ct из белого золота</a></h3>
+                    <div class="product__price">151 200 ₽</div>
+                  </article>
+                  <article class="product">
+                    <button class="product__favourites" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label">New</div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-3@2x.webp 2x, img/tmp/product-3.webp 1x"><img srcset="img/tmp/product-3@2x.jpg 2x, img/tmp/product-3.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0,510ct из белого золота</a></h3>
+                    <div class="product__price">244 920 ₽</div>
+                  </article>
+                  <article class="product">
+                    <button class="product__favourites _active" type="button">
+                      <svg width="26" height="26">
+                        <use xlink:href="img/icons/icons.svg#favourites"></use>
+                      </svg>
+                    </button>
+                    <div class="product__label"></div><a class="product__pictures" href="#" data-product-pictures>
+                      <picture class="product__picture _active" data-item="1">
+                        <source type="image/webp" srcset="img/tmp/product-4@2x.webp 2x, img/tmp/product-4.webp 1x"><img srcset="img/tmp/product-4@2x.jpg 2x, img/tmp/product-4.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="2">
+                        <source type="image/webp" srcset="img/tmp/product-8@2x.webp 2x, img/tmp/product-8.webp 1x"><img srcset="img/tmp/product-8@2x.jpg 2x, img/tmp/product-8.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="3">
+                        <source type="image/webp" srcset="img/tmp/product-7@2x.webp 2x, img/tmp/product-7.webp 1x"><img srcset="img/tmp/product-7@2x.jpg 2x, img/tmp/product-7.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture>
+                      <picture class="product__picture" data-item="4">
+                        <source type="image/webp" srcset="img/tmp/product-6@2x.webp 2x, img/tmp/product-6.webp 1x"><img srcset="img/tmp/product-6@2x.jpg 2x, img/tmp/product-6.jpg 1x" alt="" width="413" height="475" loading="lazy">
+                      </picture></a>
+                    <h3 class="product__title"><a class="product__link link" href="#">Кольцо с бриллиантом 0,600ct из белого золота</a></h3>
+                    <div class="product__price">423 960 ₽</div>
+                  </article>
             </div>
           </div>
           <!--Пагинация-->
@@ -672,12 +742,14 @@
               <li><a href="#">Серьги</a></li>
               <li><a href="#">Подвески</a></li>
               <li><a href="#">Браслеты</a></li>
+              <li><a href="#">Касты</a></li>
             </ul>
           </nav>
           <nav class="footer__nav">
             <p class="footer__title">Покупателям</p>
             <ul class="footer__list">
               <li><a href="#">О компании</a></li>
+              <li><a href="#">Блог</a></li>
               <li><a href="#">Контакты</a></li>
               <li><a href="#">Доставка и оплата</a></li>
               <li><a href="#">Гарантия</a></li>
@@ -685,7 +757,7 @@
             </ul>
           </nav>
           <address class="footer__contacts">
-            <p class="footer__title">Контакты</p>
+            <p class="footer__title">Связаться с нами</p>
             <ul class="footer__list">
               <li> <a href="tel:+79175331452">+7 (917) 533-14-52</a></li>
               <li> <a href="mailto:info@my-diamonds.ru">info@my-diamonds.ru</a></li>
@@ -715,7 +787,7 @@
               </svg></a></div>
         </div>
         <div class="footer__copyright">
-          <div class="footer__copyright-item">© 2023, Fuzailov</div><a class="footer__copyright-item footer__copyright-link" href="#">Политика приватности</a><a class="footer__copyright-item footer__copyright-link" href="https://bfd.su/" target="_blank" rel="nofollow">Разработка сайта - BFD</a>
+          <div class="footer__copyright-item">© 2024, Fuzailov</div><a class="footer__copyright-item footer__copyright-link" href="#">Политика приватности</a><a class="footer__copyright-item footer__copyright-link" href="#" target="_blank">Правила пользования сайтом</a><a class="footer__copyright-item footer__copyright-link" href="https://bfd.su/" target="_blank" rel="nofollow">Разработка сайта - BFD</a>
         </div>
       </div>
     </footer>

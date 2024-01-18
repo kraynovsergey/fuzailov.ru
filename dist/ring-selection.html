@@ -96,7 +96,7 @@
             <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
           </form>
           <ul class="nav__list">
-            <li class="nav__list-item _megamenu" data-nav-parent><a class="nav__list-link animation-link" href="#"> <span class="_wrap"><span class="_default">Каталог</span><span class="_hover">Каталог</span></span></a>
+            <li class="nav__list-item _megamenu" data-nav-parent><a class="nav__list-link animation-link" href="#"> <span class="_wrap"><span class="_default">Украшения</span><span class="_hover">Украшения</span></span></a>
               <svg class="nav__list-item-arrow" width="24" height="24">
                 <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
               </svg>
@@ -107,9 +107,9 @@
                     <ul class="nav__megamenu-list">
                       <li><a href="#">Кольца</a></li>
                       <li><a href="#">Серьги</a></li>
+                      <li><a href="#">Подвески</a></li>
                       <li><a href="#">Браслеты</a></li>
-                      <li><a href="#">Бриллианты</a></li>
-                      <li><a href="#">Цветные камни</a></li>
+                      <li><a href="#">Касты</a></li>
                     </ul>
                   </div>
                   <div class="nav__megamenu-item">
@@ -133,23 +133,39 @@
                 </div>
               </div>
             </li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нас</span><span class="_hover">О нас</span></span></a></li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Контакты</span><span class="_hover">Контакты</span></span></a></li>
+            <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Бриллианты</span><span class="_hover">Бриллианты</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <ul class="nav__megamenu-list _popup" data-nav-parent-target>
+                <li><a href="#">Боковые</a></li>
+                <li><a href="#">Круглые</a></li>
+                <li><a href="#">Фантазийные</a></li>
+                <li><a href="#">Цветные</a></li>
+                <li><a href="#">Уникальной огранки</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Цветные камни</span><span class="_hover">Цветные камни</span></span></a></li>
             <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Услуги</span><span class="_hover">Услуги</span></span></a>
               <svg class="nav__list-item-arrow" width="24" height="24">
                 <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
               </svg>
               <ul class="nav__megamenu-list _popup" data-nav-parent-target>
-                <li><a href="#">Изготовление ювелирных украшений на заказ</a></li>
-                <li><a href="#">Продажа украшений</a></li>
-                <li><a href="#">Продажа бриллиантов</a></li>
-                <li><a href="#">Кольца для особых случаев</a></li>
-                <li><a href="#">Серьги для особых случаев</a></li>
+                <li><a href="#">Изготовление украшений</a></li>
+                <li><a href="#">Продажа драгоценных камней</a></li>
               </ul>
             </li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нашей продукции</span><span class="_hover">О нашей продукции</span></span></a></li>
+            <li class="nav__list-item _parent" data-nav-parent><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">О нас</span><span class="_hover">О нас</span></span></a>
+              <svg class="nav__list-item-arrow" width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
+              </svg>
+              <ul class="nav__megamenu-list _popup" data-nav-parent-target>
+                <li><a href="#">О производстве</a></li>
+                <li><a href="#">Блог</a></li>
+              </ul>
+            </li>
+            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Контакты</span><span class="_hover">Контакты</span></span></a></li>
             <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Доставка и оплата</span><span class="_hover">Доставка и оплата</span></span></a></li>
-            <li class="nav__list-item"><a class="nav__list-link animation-link" href="#"><span class="_wrap"><span class="_default">Гарантия и возврат</span><span class="_hover">Гарантия и возврат</span></span></a></li>
           </ul>
           <div class="nav__bottom"><a class="nav__shops" href="#">
               <svg width="22" height="25">
@@ -415,12 +431,14 @@
               <li><a href="#">Серьги</a></li>
               <li><a href="#">Подвески</a></li>
               <li><a href="#">Браслеты</a></li>
+              <li><a href="#">Касты</a></li>
             </ul>
           </nav>
           <nav class="footer__nav">
             <p class="footer__title">Покупателям</p>
             <ul class="footer__list">
               <li><a href="#">О компании</a></li>
+              <li><a href="#">Блог</a></li>
               <li><a href="#">Контакты</a></li>
               <li><a href="#">Доставка и оплата</a></li>
               <li><a href="#">Гарантия</a></li>
@@ -428,7 +446,7 @@
             </ul>
           </nav>
           <address class="footer__contacts">
-            <p class="footer__title">Контакты</p>
+            <p class="footer__title">Связаться с нами</p>
             <ul class="footer__list">
               <li> <a href="tel:+79175331452">+7 (917) 533-14-52</a></li>
               <li> <a href="mailto:info@my-diamonds.ru">info@my-diamonds.ru</a></li>
@@ -458,7 +476,7 @@
               </svg></a></div>
         </div>
         <div class="footer__copyright">
-          <div class="footer__copyright-item">© 2023, Fuzailov</div><a class="footer__copyright-item footer__copyright-link" href="#">Политика приватности</a><a class="footer__copyright-item footer__copyright-link" href="https://bfd.su/" target="_blank" rel="nofollow">Разработка сайта - BFD</a>
+          <div class="footer__copyright-item">© 2024, Fuzailov</div><a class="footer__copyright-item footer__copyright-link" href="#">Политика приватности</a><a class="footer__copyright-item footer__copyright-link" href="#" target="_blank">Правила пользования сайтом</a><a class="footer__copyright-item footer__copyright-link" href="https://bfd.su/" target="_blank" rel="nofollow">Разработка сайта - BFD</a>
         </div>
       </div>
     </footer>

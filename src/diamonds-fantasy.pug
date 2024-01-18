@@ -1,0 +1,55 @@
+extends diamonds
+
+block meta
+    - var seotitle = 'Фантазийные бриллианты'
+    - var seodescription = 'Описание страницы фантазийных бриллиантов'
+    - var seokeywords = 'Ключевые слова страницы фантазийных бриллиантов'
+
+block breadcrumbs
+    //Хлебные крошки
+    section.breadcrumbs._pb1
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__list-item
+                    a.breadcrumbs__list-link(href="#") Главная
+                li.breadcrumbs__list-item
+                    a.breadcrumbs__list-link(href="#") Бриллианты
+                li.breadcrumbs__list-item Фантазийные
+
+block h1
+    h1.section__title.catalog-filter__categories-title._small Фантазийные бриллианты
+
+block categories
+    //Категории
+    .catalog-filter__categories.scroll._hidden
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Все
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Боковые
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Круглые
+        a.catalog-filter__category-label.catalog-filter__category-link._active(href="#") Фантазийные
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Цветные
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Уникальные огранки
+
+block products
+    .catalog-filter__header-sorting-wrap.filter__sorting
+        select.catalog-filter__header-select.style-select(name="sorting")
+            option(value="Новинки" selected) Новинки
+            option(value="Популярные") Популярные
+            option(value="По возрастанию цены") По возрастанию цены
+            option(value="По убыванию цены") По убыванию цены
+
+        button.catalog-filter__header-sorting.btn-reset._asc(type="button" data-diamonds-sorting)
+            svg._asc(width="30" height="30")
+                use(xlink:href="@img/icons/icons.svg#sorting-asc")
+            svg._desc(width="30" height="30")
+                use(xlink:href="@img/icons/icons.svg#sorting-desc")
+
+    .products._col4-line
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+        +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'diamond', 413, 475, '', '', '0', 1)
+
