@@ -42,7 +42,7 @@ block filter
                     mixin filter_cut(icon)
                         .filter__cut
                             input.filter__cut-input(type="checkbox" name="cut" id=icon)
-                            label.filter__cut-label(for=icon)
+                            label.filter__cut-label(for=icon data-tooltip="Название огранки")
                                 svg.filter__cut-icon(width="35" height="35")
                                     use(xlink:href="@img/icons/icons.svg#"+icon)
                     +filter_cut('cut-1')
@@ -64,7 +64,7 @@ block filter
                     +filter_cut('cut-5')
                     +filter_cut('cut-6')
 
-                button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more data-filter-more-default="Еще огранки")
+                button.filter__more.btn-reset.link.animation-link(type="button" data-filter-more data-filter-more-default="Еще огранки")
                     span._wrap
                         span._default Еще огранки
                         span._hover Еще огранки
@@ -155,7 +155,7 @@ block filter
                                 img(srcset="@img/tmp/colored-stones-1@2x.png 2x, @img/tmp/colored-stones-1.png 1x" src="@img/tmp/colored-stones-1.png" alt="" width="55" height="55")
                             | Сапфир
 
-                button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more data-filter-more-default="Еще камни")
+                button.filter__more.btn-reset.link.animation-link(type="button" data-filter-more data-filter-more-default="Еще камни")
                     span._wrap
                         span._default Еще камни
                         span._hover Еще камни

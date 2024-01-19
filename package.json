@@ -44,6 +44,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "sticky-sidebar": "^3.3.1"
+    "sticky-sidebar": "^3.3.1",
+    "tooltip-plugin": "^1.0.16"
   }
 }

@@ -52,7 +52,7 @@ block filter
                     mixin filter_cut(icon)
                         .filter__cut
                             input.filter__cut-input(type="checkbox" name="cut" id=icon)
-                            label.filter__cut-label(for=icon)
+                            label.filter__cut-label(for=icon data-tooltip="Название огранки")
                                 svg.filter__cut-icon(width="35" height="35")
                                     use(xlink:href="@img/icons/icons.svg#"+icon)
                     +filter_cut('cut-1')
@@ -74,7 +74,7 @@ block filter
                     +filter_cut('cut-5')
                     +filter_cut('cut-6')
 
-                button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more data-filter-more-default="Еще огранки")
+                button.filter__more.btn-reset.link.animation-link(type="button" data-filter-more data-filter-more-default="Еще огранки")
                     span._wrap
                         span._default Еще огранки
                         span._hover Еще огранки
@@ -96,14 +96,15 @@ block filter
                                     span.filter__custom-colors-color(style="background: "+color+";")
                                     =title
 
-                        +color(11, '#F2C0D4', 'Розовый')
-                        +color(12, '#B3C7DD', 'Голубой')
-                        +color(13, '#FFF48A', 'Желтый')
-                        +color(14, '#F8C2A6', 'Коричневый')
-                        +color(15, '#668057', 'Зеленый')
-                        +color(16, '#9F010C', 'Красный')
+                        +color(1, '#F2C0D4', 'Розовый')
+                        +color(2, '#B3C7DD', 'Голубой')
+                        +color(3, '#FFF48A', 'Желтый')
+                        +color(4, '#F8C2A6', 'Коричневый')
+                        +color(5, '#668057', 'Зеленый')
+                        +color(6, '#9F010C', 'Красный')
+                        +color(7, '#000', 'Черный')
 
-                button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more data-filter-more-default="Еще цвета")
+                button.filter__more.btn-reset.link.animation-link(type="button" data-filter-more data-filter-more-default="Еще цвета")
                     span._wrap
                         span._default Еще цвета 
                         span._hover Еще цвета
@@ -114,13 +115,16 @@ block filter
                         svg(width="13" height="16")
                             use(xlink:href="@img/icons/icons.svg#filter-arrow")
                 .filter__checkboxes.filter__content._clean(data-filter-content)
-                    +filter_checkbox('VVS 1', 'clean', 'clean-1', '')
-                    +filter_checkbox('VVS 2', 'clean', 'clean-2', '')
-                    +filter_checkbox('VS 1', 'clean', 'clean-3', '')
-                    +filter_checkbox('VS 2', 'clean', 'clean-4', '')
-                    +filter_checkbox('SI 1', 'clean', 'clean-5', '')
-                    +filter_checkbox('I 1', 'clean', 'clean-6', '')
-                    +filter_checkbox('IF', 'clean', 'clean-7', '')
+                    +filter_checkbox('IF', 'clean', 'clean-1', '')
+                    +filter_checkbox('VVS1', 'clean', 'clean-2', '')
+                    +filter_checkbox('VVS2', 'clean', 'clean-3', '')
+                    +filter_checkbox('VS1', 'clean', 'clean-4', '')
+                    +filter_checkbox('VS2', 'clean', 'clean-5', '')
+                    +filter_checkbox('SI1', 'clean', 'clean-6', '')
+                    +filter_checkbox('SI2', 'clean', 'clean-7', '')
+                    +filter_checkbox('I1', 'clean', 'clean-8', '')
+                    +filter_checkbox('I2', 'clean', 'clean-9', '')
+                    +filter_checkbox('I3', 'clean', 'clean-10', '')
 
             .filter__line
 

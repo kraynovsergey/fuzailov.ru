@@ -13,9 +13,10 @@
     &._italic {
         color: $color_green;
         text-decoration: none;
-        font-size: 1.37rem;
-        font-family: "New Computer Modern";
-        font-style: italic;
+        font-size: 1rem;
+        //font-size: 1.37rem;
+        //font-family: "New Computer Modern";
+        //font-style: italic;
 
         &:hover {
             color: $color_orange;

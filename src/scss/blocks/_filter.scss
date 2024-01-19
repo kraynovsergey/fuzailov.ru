@@ -83,6 +83,16 @@
                 }
             }
 
+            & .filter__content._color {
+                & .filter__checkbox {
+                    &:nth-child(n + 11) {
+                        @media (min-width: 992px) {
+                            display: none;   
+                        }
+                    }
+                }
+            }
+
             & .filter__custom-colors {
                 &:not(._single) {
                     @media (min-width: 992px) {
@@ -119,16 +129,16 @@
 
     &__title {
         font-family: 'Forum';
-        font-size: 2rem;
+        font-size: 1.2rem;
         line-height: 110%;
         color: $color_black;
-        margin-bottom: 2.2rem;
+        margin-bottom: 1.5rem;
         text-transform: uppercase;
         text-align: center;
 
         @media (max-width: 991px) {
             font-family: 'Montserrat';
-            font-size: 1.37rem;
+            //font-size: 1.37rem;
             font-weight: 500;
             text-transform: none;
             width: 100%;
@@ -315,7 +325,7 @@
             align-items: center;
             justify-content: center;
             font-family: 'Forum';
-            font-size: 1.87rem;
+            font-size: 1.2rem;
             padding: .5rem 5px;
             cursor: pointer;
             margin: -1px 0 0 -1px;
@@ -373,6 +383,7 @@
         background: $color_green;
         border: 0;
         color: $color_white;
+        font-size: 1rem;
 
         @media (max-width: 991px) {
             margin-right: 0;
@@ -383,12 +394,16 @@
         }
     }
 
+    &__reset {
+        font-size: 1rem;
+    }
+
     &__range {
         display: flex;
         flex-direction: column;
         align-items: center;
         color: $color_black;
-        font-size: 1.12rem;
+        font-size: 1rem;
         width: 100%;
 
         @media (max-width: 1280px) {

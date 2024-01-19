@@ -8,6 +8,8 @@
 
 @import "../../node_modules/choices.js/public/assets/styles/choices.css";
 
+@import "../../node_modules/tooltip-plugin/dist/tooltip.min.css";
+
 /* CORE */
 
 @font-face {
@@ -611,9 +613,7 @@ progress {
 .link._italic {
   color: #0047AB;
   text-decoration: none;
-  font-size: 1.37rem;
-  font-family: "New Computer Modern";
-  font-style: italic;
+  font-size: 1rem;
 }
 
 .link._italic:hover {
@@ -758,14 +758,12 @@ progress {
 }
 
 .product__label {
-  font-size: 1.37rem;
+  font-size: 1rem;
   color: rgba(51, 51, 51, 0.5);
-  font-style: italic;
   position: absolute;
   z-index: 2;
   top: 1.12rem;
   right: 1.75rem;
-  font-family: "New Computer Modern";
 }
 
 .fashion {
@@ -2139,6 +2137,10 @@ body.hide-scrollbar .header {
   align-items: start;
 }
 
+.new-collection__fashion .link {
+  margin-top: 1rem;
+}
+
 .new-collection__swiper {
   width: 100%;
   margin-bottom: 1.8rem;
@@ -2888,10 +2890,10 @@ body.hide-scrollbar .header {
 
 .filter__title {
   font-family: "Forum";
-  font-size: 2rem;
+  font-size: 1.2rem;
   line-height: 110%;
   color: #333333;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.5rem;
   text-transform: uppercase;
   text-align: center;
 }
@@ -3013,7 +3015,7 @@ body.hide-scrollbar .header {
   align-items: center;
   justify-content: center;
   font-family: "Forum";
-  font-size: 1.87rem;
+  font-size: 1.2rem;
   padding: 0.5rem 5px;
   cursor: pointer;
   margin: -1px 0 0 -1px;
@@ -3045,10 +3047,15 @@ body.hide-scrollbar .header {
   background: #0047AB;
   border: 0;
   color: #FDFBFA;
+  font-size: 1rem;
 }
 
 .filter__submit:hover {
   background: rgba(51, 51, 51, 0.8);
+}
+
+.filter__reset {
+  font-size: 1rem;
 }
 
 .filter__range {
@@ -3056,7 +3063,7 @@ body.hide-scrollbar .header {
   flex-direction: column;
   align-items: center;
   color: #333333;
-  font-size: 1.12rem;
+  font-size: 1rem;
   width: 100%;
 }
 
@@ -3321,7 +3328,7 @@ body.hide-scrollbar .header {
   flex-direction: column;
   overflow-x: auto;
   padding: 1px 0 0 1px;
-  font-size: 1.37rem;
+  font-size: 1rem;
   color: #333333;
 }
 
@@ -6268,6 +6275,10 @@ html._product-page .main::before {
     display: none;
   }
 
+  .filter__item:not(._show) .filter__content._color .filter__checkbox:nth-child(n+11) {
+    display: none;
+  }
+
   .filter__item:not(._show) .filter__custom-colors:not(._single) {
     display: none;
   }
@@ -7280,7 +7291,6 @@ html._product-page .main::before {
 
   .filter__title {
     font-family: "Montserrat";
-    font-size: 1.37rem;
     font-weight: 500;
     text-transform: none;
     width: 100%;

@@ -107,14 +107,15 @@
     }
 
     &__label {
-        font-size: 1.37rem;
+        //font-size: 1.37rem;
+        font-size: 1rem;
         color: rgba(51, 51, 51, 0.50);
-        font-style: italic;
+        //font-style: italic;
         position: absolute;
         z-index: 2;
         top: 1.12rem;
         right: 1.75rem;
-        font-family: "New Computer Modern";
+        //font-family: "New Computer Modern";
 
         @media (max-width: 767px) {
             font-size: 1.1rem;

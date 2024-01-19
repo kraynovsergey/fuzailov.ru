@@ -205,25 +205,24 @@
             </div>
             <form class="filter__form" action="#" method="get">
               <fieldset class="filter__item _small" data-filter-item>
-                <p class="filter__title" data-filter-title>Линейные размеры (мм)<span class="filter__title-icon">
+                <p class="filter__title" data-filter-title>Диаметр<span class="filter__title-icon">
                     <svg width="13" height="16">
                       <use xlink:href="img/icons/icons.svg#filter-arrow"></use>
                     </svg></span></p>
                 <div class="filter__range filter__content" data-range-wrap data-filter-content>
-                  <div class="filter__range-inputs _custom">
-                    <div class="filter__range-title">Длина</div>
+                  <input type="hidden" name="diameter_from" value="4" data-range-input-from>
+                  <input type="hidden" name="diameterprice_to" value="10" data-range-input-to>
+                  <div class="filter__range-inputs">
                     <div class="filter__range-title">от</div>
-                    <input class="filter__range-fake-input" type="text" name="length_from" placeholder="0" data-input-int>
+                    <div class="filter__range-fake-input">
+                      <div class="filter__range-input" data-range-from>4</div>мм
+                    </div>
                     <div class="filter__range-title">до</div>
-                    <input class="filter__range-fake-input" type="text" name="length_to" placeholder="0" data-input-int>
+                    <div class="filter__range-fake-input">
+                      <div class="filter__range-input" data-range-to>10</div>мм
+                    </div>
                   </div>
-                  <div class="filter__range-inputs _custom">
-                    <div class="filter__range-title">Ширина</div>
-                    <div class="filter__range-title">от</div>
-                    <input class="filter__range-fake-input" type="text" name="width_from" placeholder="0" data-input-int>
-                    <div class="filter__range-title">до</div>
-                    <input class="filter__range-fake-input" type="text" name="width_to" placeholder="0" data-input-int>
-                  </div>
+                  <div class="filter__range-init" data-range data-range-min="0" data-range-max="20" data-range-step="1" data-range-min-value="4" data-range-max-value="10"></div>
                 </div>
               </fieldset>
               <fieldset class="filter__item _small" data-filter-more-parent data-filter-item>
@@ -262,68 +261,128 @@
                               </div>
                               <div class="filter__checkbox">
                                 <input class="filter__checkbox-input" type="checkbox" name="color" id="color-8">
-                                <label class="filter__checkbox-label" for="color-8">L</label>
+                                <label class="filter__checkbox-label" for="color-8">K</label>
                               </div>
                               <div class="filter__checkbox">
                                 <input class="filter__checkbox-input" type="checkbox" name="color" id="color-9">
-                                <label class="filter__checkbox-label" for="color-9">N</label>
+                                <label class="filter__checkbox-label" for="color-9">L</label>
                               </div>
                               <div class="filter__checkbox">
                                 <input class="filter__checkbox-input" type="checkbox" name="color" id="color-10">
-                                <label class="filter__checkbox-label" for="color-10">W-X</label>
+                                <label class="filter__checkbox-label" for="color-10">M</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-11">
+                                <label class="filter__checkbox-label" for="color-11">N</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-12">
+                                <label class="filter__checkbox-label" for="color-12">O</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-13">
+                                <label class="filter__checkbox-label" for="color-13">P</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-14">
+                                <label class="filter__checkbox-label" for="color-14">Q</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-15">
+                                <label class="filter__checkbox-label" for="color-15">R</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-16">
+                                <label class="filter__checkbox-label" for="color-16">S</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-17">
+                                <label class="filter__checkbox-label" for="color-17">T</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-18">
+                                <label class="filter__checkbox-label" for="color-18">U</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-19">
+                                <label class="filter__checkbox-label" for="color-19">V</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-20">
+                                <label class="filter__checkbox-label" for="color-20">W</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-21">
+                                <label class="filter__checkbox-label" for="color-21">X</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-22">
+                                <label class="filter__checkbox-label" for="color-22">Y</label>
+                              </div>
+                              <div class="filter__checkbox">
+                                <input class="filter__checkbox-input" type="checkbox" name="color" id="color-23">
+                                <label class="filter__checkbox-label" for="color-23">Z</label>
                               </div>
                   <div class="filter__custom-colors">
                                         <div class="form__checkbox">
-                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-11">
-                                          <label class="form__checkbox-label" for="color-11"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-24">
+                                          <label class="form__checkbox-label" for="color-24"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="filter__custom-colors-color" style="background: #F2C0D4;"></span>Розовый
                                           </label>
                                         </div>
                                         <div class="form__checkbox">
-                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-12">
-                                          <label class="form__checkbox-label" for="color-12"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-25">
+                                          <label class="form__checkbox-label" for="color-25"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="filter__custom-colors-color" style="background: #B3C7DD;"></span>Голубой
                                           </label>
                                         </div>
                                         <div class="form__checkbox">
-                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-13">
-                                          <label class="form__checkbox-label" for="color-13"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-26">
+                                          <label class="form__checkbox-label" for="color-26"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="filter__custom-colors-color" style="background: #FFF48A;"></span>Желтый
                                           </label>
                                         </div>
                                         <div class="form__checkbox">
-                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-14">
-                                          <label class="form__checkbox-label" for="color-14"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-27">
+                                          <label class="form__checkbox-label" for="color-27"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="filter__custom-colors-color" style="background: #F8C2A6;"></span>Коричневый
                                           </label>
                                         </div>
                                         <div class="form__checkbox">
-                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-15">
-                                          <label class="form__checkbox-label" for="color-15"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-28">
+                                          <label class="form__checkbox-label" for="color-28"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="filter__custom-colors-color" style="background: #668057;"></span>Зеленый
                                           </label>
                                         </div>
                                         <div class="form__checkbox">
-                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-16">
-                                          <label class="form__checkbox-label" for="color-16"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-29">
+                                          <label class="form__checkbox-label" for="color-29"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="filter__custom-colors-color" style="background: #9F010C;"></span>Красный
                                           </label>
                                         </div>
+                                        <div class="form__checkbox">
+                                          <input class="form__checkbox-input" type="checkbox" name="color" id="color-30">
+                                          <label class="form__checkbox-label" for="color-30"><span class="form__checkbox-check">
+                                              <svg width="14" height="11">
+                                                <use xlink:href="img/icons/icons.svg#checkbox"></use>
+                                              </svg></span><span class="filter__custom-colors-color" style="background: #000;"></span>Черный
+                                          </label>
+                                        </div>
                   </div>
                 </div>
-                <button class="filter__more btn-reset link animation-link _italic" type="button" data-filter-more data-filter-more-default="Еще цвета"><span class="_wrap"><span class="_default">Еще цвета </span><span class="_hover">Еще цвета</span></span></button>
+                <button class="filter__more btn-reset link animation-link" type="button" data-filter-more data-filter-more-default="Еще цвета"><span class="_wrap"><span class="_default">Еще цвета </span><span class="_hover">Еще цвета</span></span></button>
               </fieldset>
               <fieldset class="filter__item _small _no-border" data-filter-item>
                 <p class="filter__title" data-filter-title>Стоимость<span class="filter__title-icon">
@@ -431,7 +490,7 @@
           </div>
           <!--Пагинация-->
           <div class="pagination section _pb0">
-            <button class="pagination__more btn-reset link _italic animation-link _button-mobile" type="button"><span class="_wrap"><span class="_default">Показать еще</span><span class="_hover">Показать еще</span></span></button>
+            <button class="pagination__more btn-reset link animation-link _button-mobile" type="button"><span class="_wrap"><span class="_default">Показать еще</span><span class="_hover">Показать еще</span></span></button>
             <ul class="pagination__list">
               <li class="pagination__list-item"> <a class="pagination__list-arrow _prev _disabled" href="#"></a></li>
               <li class="pagination__list-item"> <a class="pagination__list-link _active" href="#">1</a></li>

@@ -14,6 +14,8 @@ import stickySidebar from 'sticky-sidebar';
 
 import Lenis from '@studio-freight/lenis';
 
+import '../../node_modules/tooltip-plugin/dist/tooltip.min.js';
+
 /* Fancybox */
 Fancybox.bind("[data-fancybox]", {});
 

@@ -76,9 +76,22 @@ block filter
                     +filter_checkbox('H', 'color', 'color-5', '')
                     +filter_checkbox('I', 'color', 'color-6', '')
                     +filter_checkbox('J', 'color', 'color-7', '')
-                    +filter_checkbox('L', 'color', 'color-8', '')
-                    +filter_checkbox('N', 'color', 'color-9', '')
-                    +filter_checkbox('W-X', 'color', 'color-10', '')
+                    +filter_checkbox('K', 'color', 'color-8', '')
+                    +filter_checkbox('L', 'color', 'color-9', '')
+                    +filter_checkbox('M', 'color', 'color-10', '')
+                    +filter_checkbox('N', 'color', 'color-11', '')
+                    +filter_checkbox('O', 'color', 'color-12', '')
+                    +filter_checkbox('P', 'color', 'color-13', '')
+                    +filter_checkbox('Q', 'color', 'color-14', '')
+                    +filter_checkbox('R', 'color', 'color-15', '')
+                    +filter_checkbox('S', 'color', 'color-16', '')
+                    +filter_checkbox('T', 'color', 'color-17', '')
+                    +filter_checkbox('U', 'color', 'color-18', '')
+                    +filter_checkbox('V', 'color', 'color-19', '')
+                    +filter_checkbox('W', 'color', 'color-20', '')
+                    +filter_checkbox('X', 'color', 'color-21', '')
+                    +filter_checkbox('Y', 'color', 'color-22', '')
+                    +filter_checkbox('Z', 'color', 'color-23', '')
 
                     .filter__custom-colors
                         mixin color(i, color, title)
@@ -91,14 +104,15 @@ block filter
                                     span.filter__custom-colors-color(style="background: "+color+";")
                                     =title
 
-                        +color(11, '#F2C0D4', 'Розовый')
-                        +color(12, '#B3C7DD', 'Голубой')
-                        +color(13, '#FFF48A', 'Желтый')
-                        +color(14, '#F8C2A6', 'Коричневый')
-                        +color(15, '#668057', 'Зеленый')
-                        +color(16, '#9F010C', 'Красный')
+                        +color(24, '#F2C0D4', 'Розовый')
+                        +color(25, '#B3C7DD', 'Голубой')
+                        +color(26, '#FFF48A', 'Желтый')
+                        +color(27, '#F8C2A6', 'Коричневый')
+                        +color(28, '#668057', 'Зеленый')
+                        +color(29, '#9F010C', 'Красный')
+                        +color(30, '#000', 'Черный')
 
-                button.filter__more.btn-reset.link.animation-link._italic(type="button" data-filter-more data-filter-more-default="Еще цвета")
+                button.filter__more.btn-reset.link.animation-link(type="button" data-filter-more data-filter-more-default="Еще цвета")
                     span._wrap
                         span._default Еще цвета 
                         span._hover Еще цвета
@@ -109,13 +123,16 @@ block filter
                         svg(width="13" height="16")
                             use(xlink:href="@img/icons/icons.svg#filter-arrow")
                 .filter__checkboxes.filter__content._clean(data-filter-content)
-                    +filter_checkbox('VVS 1', 'clean', 'clean-1', '')
-                    +filter_checkbox('VVS 2', 'clean', 'clean-2', '')
-                    +filter_checkbox('VS 1', 'clean', 'clean-3', '')
-                    +filter_checkbox('VS 2', 'clean', 'clean-4', '')
-                    +filter_checkbox('SI 1', 'clean', 'clean-5', '')
-                    +filter_checkbox('I 1', 'clean', 'clean-6', '')
-                    +filter_checkbox('IF', 'clean', 'clean-7', '')
+                    +filter_checkbox('IF', 'clean', 'clean-1', '')
+                    +filter_checkbox('VVS1', 'clean', 'clean-2', '')
+                    +filter_checkbox('VVS2', 'clean', 'clean-3', '')
+                    +filter_checkbox('VS1', 'clean', 'clean-4', '')
+                    +filter_checkbox('VS2', 'clean', 'clean-5', '')
+                    +filter_checkbox('SI1', 'clean', 'clean-6', '')
+                    +filter_checkbox('SI2', 'clean', 'clean-7', '')
+                    +filter_checkbox('I1', 'clean', 'clean-8', '')
+                    +filter_checkbox('I2', 'clean', 'clean-9', '')
+                    +filter_checkbox('I3', 'clean', 'clean-10', '')
 
             .filter__line
 
