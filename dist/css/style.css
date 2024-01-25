@@ -7046,7 +7046,7 @@ html._product-page .main::before {
   }
 
   .catalog-filter__categories {
-    padding: 0 1.25rem;
+    padding: 0 1.25rem 2px;
     margin-left: -1.25rem;
     margin-right: -1.25rem;
     margin-bottom: 2.4rem;
@@ -9514,7 +9514,7 @@ html._product-page .main::before {
   }
 
   .catalog-filter__categories {
-    padding: 0 0.71rem;
+    padding: 0 0.71rem 2px;
     margin-left: -0.71rem;
     margin-right: -0.71rem;
     margin-bottom: 2rem;

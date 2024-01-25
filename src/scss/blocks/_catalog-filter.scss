@@ -436,7 +436,7 @@
         gap: clamp(8px, .8vw, 16px);
 
         @media (max-width: 1199px) {
-            padding: 0 1.25rem;
+            padding: 0 1.25rem 2px;
             margin-left: -1.25rem;
             margin-right: -1.25rem;
             margin-bottom: 2.4rem;
@@ -447,7 +447,7 @@
         }
 
         @media (max-width: 575px) {
-            padding: 0 .71rem;
+            padding: 0 .71rem 2px;
             margin-left: -.71rem;
             margin-right: -.71rem;
             margin-bottom: 2rem;

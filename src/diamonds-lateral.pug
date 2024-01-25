@@ -1,0 +1,33 @@
+extends diamonds
+
+block meta
+    - var seotitle = 'Боковые бриллианты'
+    - var seodescription = 'Описание страницы боковых бриллиантов'
+    - var seokeywords = 'Ключевые слова страницы боковых бриллиантов'
+
+block breadcrumbs
+    //Хлебные крошки
+    section.breadcrumbs._pb1
+        .container
+            ul.breadcrumbs__list
+                li.breadcrumbs__list-item
+                    a.breadcrumbs__list-link(href="#") Главная
+                li.breadcrumbs__list-item
+                    a.breadcrumbs__list-link(href="#") Бриллианты
+                li.breadcrumbs__list-item Боковые
+
+block h1
+    h1.section__title.catalog-filter__categories-title._small Боковые бриллианты
+
+block categories
+    //Категории
+    .catalog-filter__categories.scroll._hidden
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Все
+        a.catalog-filter__category-label.catalog-filter__category-link._active(href="#") Боковые
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Круглые
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Фантазийные
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Цветные
+        a.catalog-filter__category-label.catalog-filter__category-link(href="#") Уникальные огранки
+
+
+
