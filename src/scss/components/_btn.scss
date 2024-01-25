@@ -37,8 +37,8 @@
 
         &:hover {
             //background: $color_card;
-            border-color: $color_orange;
-            background: $color_orange;
+            border-color: $color_green;
+            background: $color_green;
             color: $color_white;
         }
     }
@@ -48,13 +48,13 @@
         //border: 1px solid $color_white;
         //color: $color_white;
         background: $color_white;
-        border: 0;
+        border: 1px solid $color_white;
         color: $color_green;
 
         &:hover {
             //background: $color_card;
             //color: $color_black;
-            background: $color_orange;
+            background: $color_green;
             color: $color_white;
         }
     }
@@ -73,11 +73,12 @@
 
     &._green {
         background: $color_green;
-        color: $color_white !important;
-        border: 0;
+        color: $color_white;
+        border: 1px solid $color_green;
 
         &:hover {
-            background: $color_orange;
+            background: transparent;
+            color: $color_green;
         }
     }
 }

@@ -57,3 +57,123 @@ mixin home_services_item(title, img, img_mobile)
         a.home-services__item-link.link._italic(href="#") Перейти
         svg.home-services__item-star(width="30" height="30")
             use(xlink:href="@img/icons/icons.svg#intro-star")
+
+mixin filter_item_cut(title)
+    fieldset.filter__item._small(data-filter-item)
+        p.filter__title(data-filter-title)=title
+            span.filter__title-icon
+                svg(width="13" height="16")
+                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+        .filter__cuts.filter__content(data-filter-content)
+            +filter_cut('Круг', 'cut-1')
+            +filter_cut('Эмеральд', 'cut-2')
+            +filter_cut('Овал', 'cut-3')
+            +filter_cut('Багет', 'cut-4')
+            +filter_cut('Груша', 'cut-5')
+            +filter_cut('Маркиз', 'cut-6')
+            +filter_cut('Ашер', 'cut-7')
+            +filter_cut('Принцесса', 'cut-8')
+            +filter_cut('Сердце', 'cut-9')
+            +filter_cut('Радиант', 'cut-10')
+            +filter_cut('Кушон', 'cut-11')
+            +filter_cut('Триллион', 'cut-12')
+
+mixin filter_cut(title, icon)
+    .filter__cut
+        input.filter__cut-input(type="checkbox" name="cut" id=icon)
+        label.filter__cut-label(for=icon data-tooltip=title)
+            svg.filter__cut-icon(width="35" height="35")
+                use(xlink:href="@img/icons/icons.svg#"+icon)
+
+mixin filter_item_clean(title)
+    fieldset.filter__item._small(data-filter-item)
+        p.filter__title(data-filter-title)=title
+            span.filter__title-icon
+                svg(width="13" height="16")
+                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+        .filter__checkboxes.filter__content._clean(data-filter-content)
+            +filter_checkbox('IF', 'clean', 'clean-1', '')
+            +filter_checkbox('VVS1', 'clean', 'clean-2', '')
+            +filter_checkbox('VVS2', 'clean', 'clean-3', '')
+            +filter_checkbox('VS1', 'clean', 'clean-4', '')
+            +filter_checkbox('VS2', 'clean', 'clean-5', '')
+            +filter_checkbox('SI1', 'clean', 'clean-6', '')
+            +filter_checkbox('SI2', 'clean', 'clean-7', '')
+            +filter_checkbox('I1', 'clean', 'clean-8', '')
+            +filter_checkbox('I2', 'clean', 'clean-9', '')
+            +filter_checkbox('I3', 'clean', 'clean-10', '')
+
+mixin filter_item_price(title, classname)
+    fieldset.filter__item(data-filter-item class=classname)
+        p.filter__title(data-filter-title)=title
+            span.filter__title-icon
+                svg(width="13" height="16")
+                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+        .filter__range.filter__content(data-range-wrap data-filter-content)
+            input(type="hidden" name="price_from" value="30000" data-range-input-from)
+            input(type="hidden" name="price_to" value="80000" data-range-input-to)
+
+            .filter__range-inputs
+                .filter__range-title от
+                .filter__range-fake-input
+                    .filter__range-input(data-range-from) 30000
+                    | ₽
+                .filter__range-title до
+                .filter__range-fake-input
+                    .filter__range-input(data-range-to) 80000
+                    | ₽
+            .filter__range-init(data-range data-range-min="0" data-range-max="100000" data-range-step="1000" data-range-min-value="30000" data-range-max-value="80000")
+
+mixin filter_item_weight(title, classname)
+    fieldset.filter__item(data-filter-item class=classname)
+        p.filter__title(data-filter-title)=title
+            span.filter__title-icon
+                svg(width="13" height="16")
+                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+        .filter__range.filter__content(data-range-wrap data-filter-content)
+            input(type="hidden" name="weight_from" value="0.5" data-range-input-from)
+            input(type="hidden" name="weight_to" value="2" data-range-input-to)
+
+            .filter__range-inputs
+                .filter__range-title от
+                .filter__range-fake-input
+                    .filter__range-input(data-range-from) 0.5
+                    | Карат
+                .filter__range-title до
+                .filter__range-fake-input
+                    .filter__range-input(data-range-to) 2
+                    | Карат
+            .filter__range-init(data-range data-range-min="0" data-range-max="2.4" data-range-step="0.01" data-range-min-value="0.5" data-range-max-value="2")
+
+mixin filter_item_sizes(title, classname)
+    fieldset.filter__item(data-filter-item class=classname)
+        p.filter__title(data-filter-title)=title
+            span.filter__title-icon
+                svg(width="13" height="16")
+                    use(xlink:href="@img/icons/icons.svg#filter-arrow")
+
+        .filter__range.filter__content(data-range-wrap data-filter-content)
+            .filter__range-inputs._custom
+                .filter__range-title Длина
+                .filter__range-title от
+                input.filter__range-fake-input(type="text" name="length_from" placeholder="0" data-input-int)
+                .filter__range-title до
+                input.filter__range-fake-input(type="text" name="length_to" placeholder="0" data-input-int)
+
+            .filter__range-inputs._custom
+                .filter__range-title Ширина
+                .filter__range-title от
+                input.filter__range-fake-input(type="text" name="width_from" placeholder="0" data-input-int)
+                .filter__range-title до
+                input.filter__range-fake-input(type="text" name="width_to" placeholder="0" data-input-int)
+
+mixin filter_bottom_controls
+    .filter__form-bottom.filter__spoiler-wrap
+        button.btn-reset.filter__spoiler(type="button" data-filter-spoiler) 
+            span Еще фильтры
+            span Скрыть
+
+    .filter__form-bottom
+        .filter__btns
+            button.filter__submit.btn._green(type="submit") Применить
+            button.filter__reset.btn._transparent-gray-border(type="reset") Очистить

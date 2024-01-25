@@ -884,3 +884,12 @@ if (input_int.length > 0) {
         });
     });
 }
+
+/* Спойлер фильтров */
+const filter_spoiler = document.querySelector('[data-filter-spoiler]');
+if (filter_spoiler) {
+    filter_spoiler.addEventListener('click', () => {
+        let form = filter_spoiler.closest('[data-filter]');
+        if (form) form.classList.toggle('_active');
+    });
+}

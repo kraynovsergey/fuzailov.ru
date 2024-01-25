@@ -42,42 +42,8 @@ block filter
                 input.filter__checkbox-input(type="checkbox" name=name id=id)
                 label.filter__checkbox-label(for=id)=title
 
-        form.filter__form(action="#" method="get")
-            fieldset.filter__item._small(data-filter-more-parent data-filter-item)
-                p.filter__title(data-filter-title) Огранка бриллианта
-                    span.filter__title-icon
-                        svg(width="13" height="16")
-                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
-                .filter__cuts.filter__content(data-filter-content)
-                    mixin filter_cut(icon)
-                        .filter__cut
-                            input.filter__cut-input(type="checkbox" name="cut" id=icon)
-                            label.filter__cut-label(for=icon data-tooltip="Название огранки")
-                                svg.filter__cut-icon(width="35" height="35")
-                                    use(xlink:href="@img/icons/icons.svg#"+icon)
-                    +filter_cut('cut-1')
-                    +filter_cut('cut-2')
-                    +filter_cut('cut-3')
-                    +filter_cut('cut-4')
-                    +filter_cut('cut-5')
-                    +filter_cut('cut-6')
-                    +filter_cut('cut-7')
-                    +filter_cut('cut-8')
-                    +filter_cut('cut-9')
-                    +filter_cut('cut-10')
-                    +filter_cut('cut-11')
-                    +filter_cut('cut-12')
-                    +filter_cut('cut-1')
-                    +filter_cut('cut-2')
-                    +filter_cut('cut-3')
-                    +filter_cut('cut-4')
-                    +filter_cut('cut-5')
-                    +filter_cut('cut-6')
-
-                button.filter__more.btn-reset.link.animation-link(type="button" data-filter-more data-filter-more-default="Еще огранки")
-                    span._wrap
-                        span._default Еще огранки
-                        span._hover Еще огранки
+        form.filter__form(action="#" method="get" data-filter)
+            +filter_item_cut('Огранка бриллианта')
 
             fieldset.filter__item._small(data-filter-more-parent data-filter-item)
                 p.filter__title(data-filter-title) Цвет бриллианта
@@ -109,89 +75,12 @@ block filter
                         span._default Еще цвета 
                         span._hover Еще цвета
 
-            fieldset.filter__item._small._no-border(data-filter-item)
-                p.filter__title(data-filter-title) Чистота бриллианта
-                    span.filter__title-icon
-                        svg(width="13" height="16")
-                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
-                .filter__checkboxes.filter__content._clean(data-filter-content)
-                    +filter_checkbox('IF', 'clean', 'clean-1', '')
-                    +filter_checkbox('VVS1', 'clean', 'clean-2', '')
-                    +filter_checkbox('VVS2', 'clean', 'clean-3', '')
-                    +filter_checkbox('VS1', 'clean', 'clean-4', '')
-                    +filter_checkbox('VS2', 'clean', 'clean-5', '')
-                    +filter_checkbox('SI1', 'clean', 'clean-6', '')
-                    +filter_checkbox('SI2', 'clean', 'clean-7', '')
-                    +filter_checkbox('I1', 'clean', 'clean-8', '')
-                    +filter_checkbox('I2', 'clean', 'clean-9', '')
-                    +filter_checkbox('I3', 'clean', 'clean-10', '')
+            +filter_item_clean('Чистота бриллианта')
 
-            .filter__line
+            +filter_item_sizes('Линейные размеры (мм)', '_small')
 
-            fieldset.filter__item._small(data-filter-item)
-                p.filter__title(data-filter-title) Линейные размеры (мм)
-                    span.filter__title-icon
-                        svg(width="13" height="16")
-                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
+            +filter_item_weight('Вес бриллианта', '_small')
 
-                .filter__range.filter__content(data-range-wrap data-filter-content)
-                    .filter__range-inputs._custom
-                        .filter__range-title Длина
-                        .filter__range-title от
-                        input.filter__range-fake-input(type="text" name="length_from" placeholder="0" data-input-int)
-                        .filter__range-title до
-                        input.filter__range-fake-input(type="text" name="length_to" placeholder="0" data-input-int)
+            +filter_item_price('Стоимость', '_small')
 
-                    .filter__range-inputs._custom
-                        .filter__range-title Ширина
-                        .filter__range-title от
-                        input.filter__range-fake-input(type="text" name="width_from" placeholder="0" data-input-int)
-                        .filter__range-title до
-                        input.filter__range-fake-input(type="text" name="width_to" placeholder="0" data-input-int)
-
-            fieldset.filter__item._small(data-filter-item)
-                p.filter__title(data-filter-title) Вес бриллианта
-                    span.filter__title-icon
-                        svg(width="13" height="16")
-                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
-                .filter__range.filter__content(data-range-wrap data-filter-content)
-                    input(type="hidden" name="weight_from" value="0.5" data-range-input-from)
-                    input(type="hidden" name="weight_to" value="2" data-range-input-to)
-
-                    .filter__range-inputs
-                        .filter__range-title от
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-from) 0.5
-                            | Карат
-                        .filter__range-title до
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-to) 2
-                            | Карат
-                    .filter__range-init(data-range data-range-min="0" data-range-max="2.4" data-range-step="0.01" data-range-min-value="0.5" data-range-max-value="2")
-
-            fieldset.filter__item._small._no-border(data-filter-item)
-                p.filter__title(data-filter-title) Стоимость
-                    span.filter__title-icon
-                        svg(width="13" height="16")
-                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
-                .filter__range.filter__content(data-range-wrap data-filter-content)
-                    input(type="hidden" name="price_from" value="30000" data-range-input-from)
-                    input(type="hidden" name="price_to" value="80000" data-range-input-to)
-
-                    .filter__range-inputs
-                        .filter__range-title от
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-from) 30000
-                            | ₽
-                        .filter__range-title до
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-to) 80000
-                            | ₽
-                    .filter__range-init(data-range data-range-min="0" data-range-max="100000" data-range-step="1000" data-range-min-value="30000" data-range-max-value="80000")
-
-            .filter__line._mb0
-
-            .filter__form-bottom
-                .filter__btns
-                    button.filter__submit.btn(type="submit") Применить
-                    button.filter__reset.btn._transparent-gray-border(type="reset") Очистить
+            +filter_bottom_controls

@@ -42,7 +42,7 @@ block filter
                 input.filter__checkbox-input(type="checkbox" name=name id=id)
                 label.filter__checkbox-label(for=id)=title
 
-        form.filter__form(action="#" method="get")
+        form.filter__form(action="#" method="get" data-filter)
             fieldset.filter__item._small(data-filter-item)
                 p.filter__title(data-filter-title) Диаметр
                     span.filter__title-icon
@@ -117,51 +117,8 @@ block filter
                         span._default Еще цвета 
                         span._hover Еще цвета
 
-            fieldset.filter__item._small._no-border(data-filter-item)
-                p.filter__title(data-filter-title) Стоимость
-                    span.filter__title-icon
-                        svg(width="13" height="16")
-                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
-                .filter__range.filter__content(data-range-wrap data-filter-content)
-                    input(type="hidden" name="price_from" value="30000" data-range-input-from)
-                    input(type="hidden" name="price_to" value="80000" data-range-input-to)
+            +filter_item_price('Стоимость', '_small')
 
-                    .filter__range-inputs
-                        .filter__range-title от
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-from) 30000
-                            | ₽
-                        .filter__range-title до
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-to) 80000
-                            | ₽
-                    .filter__range-init(data-range data-range-min="0" data-range-max="100000" data-range-step="1000" data-range-min-value="30000" data-range-max-value="80000")
+            +filter_item_weight('Вес бриллианта', '_small _single')
 
-            .filter__line
-
-            fieldset.filter__item._small._single(data-filter-item)
-                p.filter__title(data-filter-title) Вес бриллианта
-                    span.filter__title-icon
-                        svg(width="13" height="16")
-                            use(xlink:href="@img/icons/icons.svg#filter-arrow")
-                .filter__range.filter__content(data-range-wrap data-filter-content)
-                    input(type="hidden" name="weight_from" value="0.5" data-range-input-from)
-                    input(type="hidden" name="weight_to" value="2" data-range-input-to)
-
-                    .filter__range-inputs
-                        .filter__range-title от
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-from) 0.5
-                            | Карат
-                        .filter__range-title до
-                        .filter__range-fake-input
-                            .filter__range-input(data-range-to) 2
-                            | Карат
-                    .filter__range-init(data-range data-range-min="0" data-range-max="2.4" data-range-step="0.01" data-range-min-value="0.5" data-range-max-value="2")
-
-            .filter__line._mb0
-
-            .filter__form-bottom
-                .filter__btns
-                    button.filter__submit.btn(type="submit") Применить
-                    button.filter__reset.btn._transparent-gray-border(type="reset") Очистить
+            +filter_bottom_controls
