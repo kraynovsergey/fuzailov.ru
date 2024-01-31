@@ -3395,7 +3395,6 @@ body.hide-scrollbar .header {
 .filter__spoiler {
   color: #0047AB;
   text-transform: uppercase;
-  font-weight: 600;
 }
 
 .filter__spoiler span:last-child {
