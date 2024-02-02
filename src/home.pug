@@ -60,7 +60,8 @@ block main
                 +categories_item('Подвески', 'categories-3')
                 +categories_item('Браслеты', 'categories-4', true)
                 +categories_item('Брилианты', 'categories-5')
-                +categories_item('Цветные камни', 'categories-6')
+                +categories_item('Цветные камни', 'categories-6', true)
+                +categories_item('Касты', 'categories-7')
 
             a.link._italic._button-mobile.animation-link(href="#")
                 span._wrap
@@ -97,10 +98,10 @@ block main
                     source(type="image/webp" srcset="@img/tmp/home-about-right-2@2x.webp 2x, @img/tmp/home-about-right-2.webp 1x")
                     img(srcset="@img/tmp/home-about-right-2@2x.jpg 2x, @img/tmp/home-about-right-2.jpg 1x" alt="" width="258" height="329" loading="lazy")
 
-    //Новинки
+    //Камни
     section.section
         .container.new-products__container
-            h2.section__title.new-products__section-title Новинки
+            h2.section__title.new-products__section-title Камни
 
             .products._col4
                 +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active')
@@ -141,7 +142,7 @@ block main
                     button.service__link.btn._transparent-white-border(type="button" data-fancybox data-src="#modal-fitting") Подробнее
 
     //Сообщество
-    section.section 
+    //section.section 
         .container.community__container
             .community__content
                 p.section__subtitle.community__section-subtitle Сообщество
@@ -163,7 +164,7 @@ block main
 
 block modal
     //Модальное окно "Вступление в закрытый клуб..."
-    .modal(id="modal-community" data-lenis-prevent)
+    //.modal(id="modal-community" data-lenis-prevent)
         button.modal__close(type="button" data-fancybox-close)
             svg(width="66" height="66")
                 use(xlink:href="@img/icons/icons.svg#modal-close")
@@ -176,7 +177,7 @@ block modal
     include pug/layout/_modal-fitting
 
     //Модальное окно записи в закрытый клуб
-    .modal(id="modal-community-form" data-lenis-prevent)
+    //.modal(id="modal-community-form" data-lenis-prevent)
         button.modal__close(type="button" data-fancybox-close)
             svg(width="66" height="66")
                 use(xlink:href="@img/icons/icons.svg#modal-close")
@@ -196,6 +197,9 @@ block modal
                     label.form__label._white(for="community-name") Ваше имя
                     input.form__input._white(type="text" name="name" id="community-name")
                 fieldset.form__fieldset
+                    label.form__label._white(for="community-email") Email
+                    input.form__input._white(type="email" name="email" id="community-email")
+                fieldset.form__fieldset
                     label.form__label._white(for="community-phone") Ваш телефон
                     input.form__input._white._error(type="tel" name="phone" id="community-phone" data-tel)
                     span.form__error Текст ошибки
@@ -206,7 +210,7 @@ block modal
                         span.form__checkbox-check
                             svg(width="14" height="11")
                                 use(xlink:href="@img/icons/icons.svg#checkbox")
-                        span.form__checkbox-title Согласен с условиями конфиденциальности
+                        span.form__checkbox-title Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a>
 
     include pug/layout/_fashion-modal
 

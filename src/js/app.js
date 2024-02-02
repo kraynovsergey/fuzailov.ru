@@ -382,7 +382,7 @@ if (filter_title.length > 0) {
 }
 
 /* Сортировка бриллиантов */
-const diamonds_sorting = document.querySelectorAll('[data-diamonds-sorting]');
+/*const diamonds_sorting = document.querySelectorAll('[data-diamonds-sorting]');
 if (diamonds_sorting.length > 0) {
     diamonds_sorting.forEach(item => {
         item.addEventListener('click', () => {
@@ -395,7 +395,7 @@ if (diamonds_sorting.length > 0) {
             }
         });
     });
-}
+}*/
 
 /* Слайдер на странице товара */
 const product_swiper = document.querySelector('[data-product-swiper]');
@@ -449,6 +449,32 @@ if (spoiler.length > 0) {
             else spoiler_animation.reverse();
         });
     });
+}
+
+/* Аккордион при наведении */
+const accordion = document.querySelectorAll('[data-accordion]');
+if (accordion.length > 0) {
+    accordion.forEach(item => {
+        if (document.documentElement.clientWidth < 1024) {
+            item.addEventListener('click', () => {
+                accordion_func(item);
+            });
+        } else {
+            item.addEventListener('mouseenter', () => {
+                accordion_func(item);
+            });
+        }
+    });
+
+    function accordion_func(item) {
+        let other = document.querySelectorAll('[data-accordion]._active');
+        if (other.length > 0) {
+            other.forEach(row => {
+                row.classList.remove('_active');
+            });
+        }
+        item.classList.add('_active');
+    }
 }
 
 /* Слайдер в продаже бриллиантов */
@@ -891,5 +917,33 @@ if (filter_spoiler) {
     filter_spoiler.addEventListener('click', () => {
         let form = filter_spoiler.closest('[data-filter]');
         if (form) form.classList.toggle('_active');
+    });
+}
+
+/* Аккордион в фильтрах */
+const filter_tabs = document.querySelectorAll('[data-tab-filter]');
+if (filter_tabs.length > 0) {
+    filter_tabs.forEach(item => {
+        item.addEventListener('click', () => {
+            let i = item.getAttribute('data-tab-filter'),
+                content = item.closest('[data-tab-filter-parent]').querySelectorAll('[data-tab-filter-content]');
+
+            if (item.classList.contains('_active')) {
+                item.classList.remove('_active');
+                document.querySelector('[data-tab-filter-content="'+i+'"]').classList.remove('_active');
+            } else {
+                filter_tabs.forEach(row => {
+                    if (row.getAttribute('data-tab-filter') === i) row.classList.add('_active');
+                    else row.classList.remove('_active');
+                });
+    
+                if (content.length > 0) {
+                    content.forEach(row => {
+                        if (row.getAttribute('data-tab-filter-content') === i) row.classList.add('_active');
+                        else row.classList.remove('_active');
+                    });
+                }
+            }
+        });
     });
 }

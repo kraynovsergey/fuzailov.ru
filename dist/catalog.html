@@ -29,7 +29,24 @@
         </div>
       </section>
       <div class="container header__container">
-        <div class="header__left">
+        <div class="header__left"><a class="top-line__phone" href="tel:+79175331452"> 
+            <svg class="top-line__phone-icon" width="28" height="28">
+              <use xlink:href="img/icons/icons.svg#phone"></use>
+            </svg>+7 (917) 533-14-52</a>
+          <div class="top-line__socials"><a class="top-line__socials-item" href="tg://resolve?domain=telegram_nick" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a><a class="top-line__socials-item" href="https://api.whatsapp.com/send?phone=7925042935" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg></a></div>
+          <!--button.header__feedback.btn-reset(type="button" data-fancybox data-src="#modal-feedback") Связаться с нами-->
+        </div>
+        <div class="header__logo"><a class="header__logo-link" href="#">
+            <svg width="143" height="23">
+              <use xlink:href="img/icons/icons.svg#logo"></use>
+            </svg></a></div>
+        <div class="header__controls">
           <div class="header__search">
             <button class="header__search-btn btn-reset" type="button" data-search-show>
               <svg width="24" height="24">
@@ -46,7 +63,7 @@
                 </button>
               </div>
               <form class="header__search-form form-line" action="#" method="get">
-                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д">
+                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поисковой запрос">
                 <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
               </form>
               <div class="header__search-actual">
@@ -57,14 +74,7 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <button class="header__feedback btn-reset" type="button" data-fancybox data-src="#modal-feedback">Связаться с нами</button>
-        </div>
-        <div class="header__logo"><a class="header__logo-link" href="#">
-            <svg width="143" height="23">
-              <use xlink:href="img/icons/icons.svg#logo"></use>
-            </svg></a></div>
-        <div class="header__controls"><a class="header__control" href="#">
+          </div><a class="header__control" href="#">
             <svg class="header__control-icon _transparent" width="26" height="26">
               <use xlink:href="img/icons/icons.svg#favourites"></use>
             </svg><span class="header__control-count">4</span></a><a class="header__control" href="#">
@@ -205,7 +215,7 @@
                 <div class="filter__header-title">Фильтр</div>
                 <button class="filter__header-close btn-reset" type="button" data-fancybox-close>Закрыть<span></span></button>
               </div>
-              <form class="catalog-filter__box" action="#" method="post" id="filter-form" data-tab-parent>
+              <form class="catalog-filter__box" action="#" method="post" id="filter-form" data-tab-filter-parent>
                 <div class="catalog-filter__header">
                   <div class="catalog-filter__header-params">
                     <div class="catalog-filter__header-title">
@@ -213,22 +223,22 @@
                         <use xlink:href="img/icons/icons.svg#filter"></use>
                       </svg>Фильтры:
                     </div>
-                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab="1">Цвет
+                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab-filter="1">Цвет
                       <svg width="24" height="24">
                         <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
                       </svg>
                     </button>
-                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab="2">Форма
+                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab-filter="2">Форма
                       <svg width="24" height="24">
                         <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
                       </svg>
                     </button>
-                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab="3">Драгоценный камень
+                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab-filter="3">Драгоценный камень
                       <svg width="24" height="24">
                         <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
                       </svg>
                     </button>
-                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab="4">Коллекция
+                    <button class="catalog-filter__header-param btn-reset" type="button" data-tab-filter="4">Коллекция
                       <svg width="24" height="24">
                         <use xlink:href="img/icons/icons.svg#nav-arrow"></use>
                       </svg>
@@ -236,12 +246,12 @@
                   </div>
                   <div class="catalog-filter__header-sorting-wrap">
                     <select class="catalog-filter__header-select style-select" name="sorting">
-                      <option value="Дата создания товара" selected>Дата создания товара</option>
-                      <option value="Название товара">Название товара</option>
-                      <option value="Артикул">Артикул</option>
-                      <option value="Цена товара">Цена товара</option>
+                      <option value="По умолчанию" selected>По умолчанию</option>
+                      <option value="По возрастанию цены">По возрастанию цены</option>
+                      <option value="По убыванию цены">По убыванию цены</option>
+                      <option value="По популярности">По популярности</option>
                     </select>
-                    <button class="catalog-filter__header-sorting btn-reset _asc" type="button" data-diamonds-sorting>
+                    <button class="catalog-filter__header-sorting btn-reset _asc" type="button">
                       <svg class="_asc" width="30" height="30">
                         <use xlink:href="img/icons/icons.svg#sorting-asc"></use>
                       </svg>
@@ -251,7 +261,7 @@
                     </button>
                   </div>
                 </div>
-                <div class="catalog-filter__content" data-tab-content="1" data-filter-item>
+                <div class="catalog-filter__content" data-tab-filter-content="1" data-filter-item>
                   <p class="filter__title" data-filter-title>Цвет<span class="filter__title-icon">
                       <svg width="13" height="16">
                         <use xlink:href="img/icons/icons.svg#filter-arrow"></use>
@@ -312,15 +322,15 @@
                     <button class="btn _green" type="submit">Применить</button>
                   </div>
                 </div>
-                <div class="catalog-filter__content" data-tab-content="2" data-filter-item>
+                <div class="catalog-filter__content" data-tab-filter-content="2" data-filter-item>
                   <p class="filter__title" data-filter-title>Форма<span class="filter__title-icon">
                       <svg width="13" height="16">
                         <use xlink:href="img/icons/icons.svg#filter-arrow"></use>
                       </svg></span></p>
                   <div class="catalog-filter__cuts" data-filter-content>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-1">
-                                          <label class="form__checkbox-label" for="cut-1"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-1">
+                                          <label class="form__checkbox-label" for="cut-cut-1" data-tooltip="Круг"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -329,8 +339,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-2">
-                                          <label class="form__checkbox-label" for="cut-2"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-2">
+                                          <label class="form__checkbox-label" for="cut-cut-2" data-tooltip="Эмеральд"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -339,8 +349,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-3">
-                                          <label class="form__checkbox-label" for="cut-3"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-3">
+                                          <label class="form__checkbox-label" for="cut-cut-3" data-tooltip="Овал"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -349,8 +359,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-4">
-                                          <label class="form__checkbox-label" for="cut-4"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-4">
+                                          <label class="form__checkbox-label" for="cut-cut-4" data-tooltip="Багет"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -359,8 +369,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-5">
-                                          <label class="form__checkbox-label" for="cut-5"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-5">
+                                          <label class="form__checkbox-label" for="cut-cut-5" data-tooltip="Груша"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -369,8 +379,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-6">
-                                          <label class="form__checkbox-label" for="cut-6"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-6">
+                                          <label class="form__checkbox-label" for="cut-cut-6" data-tooltip="Маркиз"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -379,8 +389,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-7">
-                                          <label class="form__checkbox-label" for="cut-7"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-7">
+                                          <label class="form__checkbox-label" for="cut-cut-7" data-tooltip="Ашер"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -389,8 +399,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-8">
-                                          <label class="form__checkbox-label" for="cut-8"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-8">
+                                          <label class="form__checkbox-label" for="cut-cut-8" data-tooltip="Принцесса"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -399,8 +409,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-9">
-                                          <label class="form__checkbox-label" for="cut-9"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-9">
+                                          <label class="form__checkbox-label" for="cut-cut-9" data-tooltip="Сердце"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -409,8 +419,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-10">
-                                          <label class="form__checkbox-label" for="cut-10"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-10">
+                                          <label class="form__checkbox-label" for="cut-cut-10" data-tooltip="Радиант"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -419,8 +429,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-11">
-                                          <label class="form__checkbox-label" for="cut-11"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-11">
+                                          <label class="form__checkbox-label" for="cut-cut-11" data-tooltip="Кушон"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -429,8 +439,8 @@
                                               </svg></span></label>
                                         </div>
                                         <div class="form__checkbox catalog-filter__cut">
-                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-12">
-                                          <label class="form__checkbox-label" for="cut-12"><span class="form__checkbox-check">
+                                          <input class="form__checkbox-input" type="checkbox" name="cut" id="cut-cut-12">
+                                          <label class="form__checkbox-label" for="cut-cut-12" data-tooltip="Триллион"><span class="form__checkbox-check">
                                               <svg width="14" height="11">
                                                 <use xlink:href="img/icons/icons.svg#checkbox"></use>
                                               </svg></span><span class="form__checkbox-title"> 
@@ -443,7 +453,7 @@
                     <button class="btn _green" type="submit">Применить</button>
                   </div>
                 </div>
-                <div class="catalog-filter__content" data-tab-content="3" data-filter-item>
+                <div class="catalog-filter__content" data-tab-filter-content="3" data-filter-item>
                   <p class="filter__title" data-filter-title>Драгоценный камень<span class="filter__title-icon">
                       <svg width="13" height="16">
                         <use xlink:href="img/icons/icons.svg#filter-arrow"></use>
@@ -496,7 +506,7 @@
                     <button class="btn _green" type="submit">Применить</button>
                   </div>
                 </div>
-                <div class="catalog-filter__content" data-tab-content="4" data-filter-item>
+                <div class="catalog-filter__content" data-tab-filter-content="4" data-filter-item>
                   <p class="filter__title" data-filter-title>Коллекция<span class="filter__title-icon">
                       <svg width="13" height="16">
                         <use xlink:href="img/icons/icons.svg#filter-arrow"></use>
@@ -534,7 +544,7 @@
                     <button class="filter__selected btn-reset" type="button" data-filter-selected><span class="filter__selected-icon"></span>Название формы</button>
                   </div>
                   <div class="filter__btns">
-                    <button class="filter__submit btn" type="submit">Применить</button>
+                    <button class="filter__submit btn _green" type="submit">Применить</button>
                     <button class="filter__reset btn _transparent-gray-border" type="reset">Очистить</button>
                   </div>
                 </div>
@@ -1134,6 +1144,10 @@
             <input class="form__input _white" type="text" name="name" id="feedback-name">
           </fieldset>
           <fieldset class="form__fieldset">
+            <label class="form__label _white" for="feedback-email">Email</label>
+            <input class="form__input _white" type="email" name="email" id="feedback-email">
+          </fieldset>
+          <fieldset class="form__fieldset">
             <label class="form__label _white" for="feedback-phone">Ваш телефон</label>
             <input class="form__input _white _error" type="tel" name="phone" id="feedback-phone" data-tel><span class="form__error">Текст ошибки</span>
           </fieldset>
@@ -1143,7 +1157,7 @@
             <label class="form__checkbox-label" for="feedback-policy"><span class="form__checkbox-check">
                 <svg width="14" height="11">
                   <use xlink:href="img/icons/icons.svg#checkbox"></use>
-                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
+                </svg></span><span class="form__checkbox-title">Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a></span></label>
           </div>
         </form>
       </div>

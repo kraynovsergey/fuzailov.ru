@@ -56,6 +56,7 @@ body.hide-scrollbar {
         display: flex;
         align-items: center;
         height: 100%;
+        gap: 1.5rem;
 
         @media (max-width: 991px) {
             display: none;
@@ -67,7 +68,11 @@ body.hide-scrollbar {
         height: 100%;
         display: flex;
         align-items: center;
-        margin-right: 3rem;
+        //margin-right: 3rem;
+
+        @media (width <= 991px) {
+            display: none;
+        }
 
         &-btn {
             display: flex;
@@ -78,7 +83,7 @@ body.hide-scrollbar {
         &-box {
             position: absolute;
             top: 100%;
-            left: 0;
+            right: 0;
             background: $color_white;
             border: 1px solid $color_border;
             width: 45vw;
@@ -110,6 +115,10 @@ body.hide-scrollbar {
 
         &-submit {
             text-transform: uppercase;
+        }
+
+        &-input {
+            padding-right: 5rem;
         }
 
         &-actual {

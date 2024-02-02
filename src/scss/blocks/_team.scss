@@ -33,63 +33,13 @@
             width: unset !important;
 
             &:nth-child(1),
-            &:nth-child(2n + 10),
-            &:nth-child(4),
-            &:nth-child(2n + 13) {
-                grid-column: span 3;
-                grid-template-columns: repeat(3, 1fr);
-
-                & .team__item {
-                    grid-column: 3;
-                }
-            }
-
-            &:nth-child(5),
-            &:nth-child(9),
-            &:nth-child(2n + 20) {
+            &:nth-child(6n),
+            &:nth-child(7n) {
                 grid-column: span 2;
                 grid-template-columns: repeat(2, 1fr);
 
                 & .team__item {
                     grid-column: 2;
-                }
-            }
-
-            &:nth-child(6),
-            &:nth-child(2n + 17),
-            &:nth-child(2n + 15) {
-                grid-column: span 2;
-                grid-template-columns: repeat(2, 1fr);
-
-                & .team__item {
-                    grid-column: 1;
-                }
-            }
-
-            &:nth-child(2n + 12) {
-                grid-column: span 1;
-                grid-template-columns: 1fr;
-
-                & .team__item {
-                    grid-column: 1;
-                }
-            }
-
-            &:nth-child(2n + 14) {
-                grid-column: span 2;
-                grid-template-columns: 1fr 1fr;
-
-                & .team__item {
-                    grid-column: 2;
-                }
-            }
-
-            &:nth-child(2n + 16) {
-                grid-column: span 1;
-                grid-template-columns: 1fr;
-
-                & .team__item {
-                    grid-column: 1;
                 }
             }
         }

@@ -1,12 +1,15 @@
 .section {
-    padding: 6.25rem 0;
+    //padding: 6.25rem 0;
+    padding: 3.12rem 0;
 
     @media (max-width: 767px) {
-        padding: 4.35rem 0;
+        //padding: 4.35rem 0;
+        padding: 2.17rem 0;
     }
 
     @media (max-width: 575px) {
-        padding: 3.5rem 0;
+        //padding: 3.5rem 0;
+        padding: 1.75rem 0;
     }
 
     &._pt0 {
@@ -53,11 +56,12 @@
         }
 
         &._small {
-            font-size: 2.5rem;
+            //font-size: 2.5rem;
+            font-size: 2rem;
 
-            @media (max-width: 575px) {
+            /*@media (max-width: 575px) {
                 font-size: 2.3rem;
-            }
+            }*/
         }
     }
 }

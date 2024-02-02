@@ -3,6 +3,10 @@
     color: $color_black;
     transition: .5s ease;
 
+    @media (width > 991px) {
+        display: none;
+    }
+
     &__container {
         display: grid;
         grid-template-columns: auto auto;
@@ -56,7 +60,7 @@
             }
 
             &:not(:last-child) {
-                margin-right: 2rem;
+                margin-right: 1rem;
 
                 @media (max-width: 991px) {
                     margin-right: 1.56rem;

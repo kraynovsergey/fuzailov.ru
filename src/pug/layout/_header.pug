@@ -18,6 +18,27 @@ header.header(data-header)
 
     .container.header__container
         .header__left
+            a.top-line__phone(href="tel:+79175331452") 
+                svg.top-line__phone-icon(width="28" height="28")
+                    use(xlink:href="@img/icons/icons.svg#phone")
+                | +7 (917) 533-14-52
+
+            .top-line__socials
+                a.top-line__socials-item(href="tg://resolve?domain=telegram_nick" target="_blank")
+                    svg(width="28" height="28")
+                        use(xlink:href="@img/icons/icons.svg#telegram")
+                a.top-line__socials-item(href="https://api.whatsapp.com/send?phone=7925042935" target="_blank")
+                    svg(width="28" height="28")
+                        use(xlink:href="@img/icons/icons.svg#whatsapp")
+
+            //button.header__feedback.btn-reset(type="button" data-fancybox data-src="#modal-feedback") Связаться с нами
+
+        .header__logo
+            a.header__logo-link(href="#")
+                svg(width="143" height="23")
+                    use(xlink:href="@img/icons/icons.svg#logo")
+
+        .header__controls
             .header__search
                 button.header__search-btn.btn-reset(type="button" data-search-show)
                     svg(width="24" height="24")
@@ -30,7 +51,7 @@ header.header(data-header)
                             svg(width="40" height="40")
                                 use(xlink:href="@img/icons/icons.svg#close")
                     form.header__search-form.form-line(action="#" method="get")
-                        input.header__search-input.form-line__input(type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д")
+                        input.header__search-input.form-line__input(type="text" name="search" placeholder="Поисковой запрос")
                         button.header__search-submit.btn-reset.form-line__submit(type="submit") Поиск
                     .header__search-actual
                         p.header__search-actual-title Актуальные запросы
@@ -39,15 +60,7 @@ header.header(data-header)
                                 a(href="#") Кольцо Зелёный взгяд
                             li
                                 a(href="#") Кольцо Солнечный луч
-
-            button.header__feedback.btn-reset(type="button" data-fancybox data-src="#modal-feedback") Связаться с нами
-
-        .header__logo
-            a.header__logo-link(href="#")
-                svg(width="143" height="23")
-                    use(xlink:href="@img/icons/icons.svg#logo")
-
-        .header__controls
+                                
             a.header__control(href="#")
                 svg.header__control-icon._transparent(width="26" height="26")
                     use(xlink:href="@img/icons/icons.svg#favourites")

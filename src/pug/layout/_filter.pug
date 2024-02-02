@@ -9,7 +9,7 @@ button.filter__mobile-btn.btn._transparent-gray-border(type="button" data-fancyb
         button.filter__header-close.btn-reset(type="button" data-fancybox-close) Закрыть
             span
 
-    form.catalog-filter__box(action="#" method="post" id="filter-form" data-tab-parent)
+    form.catalog-filter__box(action="#" method="post" id="filter-form" data-tab-filter-parent)
         .catalog-filter__header
             .catalog-filter__header-params
                 .catalog-filter__header-title
@@ -17,36 +17,36 @@ button.filter__mobile-btn.btn._transparent-gray-border(type="button" data-fancyb
                         use(xlink:href="@img/icons/icons.svg#filter")
                     | Фильтры:
 
-                button.catalog-filter__header-param.btn-reset(type="button" data-tab="1") Цвет
+                button.catalog-filter__header-param.btn-reset(type="button" data-tab-filter="1") Цвет
                     svg(width="24" height="24")
                         use(xlink:href="@img/icons/icons.svg#nav-arrow")
 
-                button.catalog-filter__header-param.btn-reset(type="button" data-tab="2") Форма
+                button.catalog-filter__header-param.btn-reset(type="button" data-tab-filter="2") Форма
                     svg(width="24" height="24")
                         use(xlink:href="@img/icons/icons.svg#nav-arrow")
 
-                button.catalog-filter__header-param.btn-reset(type="button" data-tab="3") Драгоценный камень
+                button.catalog-filter__header-param.btn-reset(type="button" data-tab-filter="3") Драгоценный камень
                     svg(width="24" height="24")
                         use(xlink:href="@img/icons/icons.svg#nav-arrow")
 
-                button.catalog-filter__header-param.btn-reset(type="button" data-tab="4") Коллекция
+                button.catalog-filter__header-param.btn-reset(type="button" data-tab-filter="4") Коллекция
                     svg(width="24" height="24")
                         use(xlink:href="@img/icons/icons.svg#nav-arrow")
 
             .catalog-filter__header-sorting-wrap
                 select.catalog-filter__header-select.style-select(name="sorting")
-                    option(value="Дата создания товара" selected) Дата создания товара
-                    option(value="Название товара") Название товара
-                    option(value="Артикул") Артикул
-                    option(value="Цена товара") Цена товара
+                    option(value="По умолчанию" selected) По умолчанию
+                    option(value="По возрастанию цены") По возрастанию цены
+                    option(value="По убыванию цены") По убыванию цены
+                    option(value="По популярности") По популярности
 
-                button.catalog-filter__header-sorting.btn-reset._asc(type="button" data-diamonds-sorting)
+                button.catalog-filter__header-sorting.btn-reset._asc(type="button")
                     svg._asc(width="30" height="30")
                         use(xlink:href="@img/icons/icons.svg#sorting-asc")
                     svg._desc(width="30" height="30")
                         use(xlink:href="@img/icons/icons.svg#sorting-desc")
 
-        .catalog-filter__content(data-tab-content="1" data-filter-item)
+        .catalog-filter__content(data-tab-filter-content="1" data-filter-item)
             p.filter__title(data-filter-title) Цвет
                 span.filter__title-icon
                     svg(width="13" height="16")
@@ -74,41 +74,41 @@ button.filter__mobile-btn.btn._transparent-gray-border(type="button" data-fancyb
             .catalog-filter__submit
                 button.btn._green(type="submit") Применить
 
-        .catalog-filter__content(data-tab-content="2" data-filter-item)
+        .catalog-filter__content(data-tab-filter-content="2" data-filter-item)
             p.filter__title(data-filter-title) Форма
                 span.filter__title-icon
                     svg(width="13" height="16")
                         use(xlink:href="@img/icons/icons.svg#filter-arrow")
 
             .catalog-filter__cuts(data-filter-content)
-                mixin cut(i)
+                mixin cut(title, i)
                     .form__checkbox.catalog-filter__cut
                         input.form__checkbox-input(type="checkbox" name="cut" id="cut-"+i)
-                        label.form__checkbox-label(for="cut-"+i)
+                        label.form__checkbox-label(for="cut-"+i data-tooltip=title)
                             span.form__checkbox-check
                                 svg(width="14" height="11")
                                     use(xlink:href="@img/icons/icons.svg#checkbox")
                             span.form__checkbox-title 
                                 svg(width="30" height="30")
-                                    use(xlink:href="@img/icons/icons.svg#cut-"+i)
+                                    use(xlink:href="@img/icons/icons.svg#"+i)
 
-                +cut(1)
-                +cut(2)
-                +cut(3)
-                +cut(4)
-                +cut(5)
-                +cut(6)
-                +cut(7)
-                +cut(8)
-                +cut(9)
-                +cut(10)
-                +cut(11)
-                +cut(12)
+                +cut('Круг', 'cut-1')
+                +cut('Эмеральд', 'cut-2')
+                +cut('Овал', 'cut-3')
+                +cut('Багет', 'cut-4')
+                +cut('Груша', 'cut-5')
+                +cut('Маркиз', 'cut-6')
+                +cut('Ашер', 'cut-7')
+                +cut('Принцесса', 'cut-8')
+                +cut('Сердце', 'cut-9')
+                +cut('Радиант', 'cut-10')
+                +cut('Кушон', 'cut-11')
+                +cut('Триллион', 'cut-12')
 
             .catalog-filter__submit
                 button.btn._green(type="submit") Применить
 
-        .catalog-filter__content(data-tab-content="3" data-filter-item)
+        .catalog-filter__content(data-tab-filter-content="3" data-filter-item)
             p.filter__title(data-filter-title) Драгоценный камень
                 span.filter__title-icon
                     svg(width="13" height="16")
@@ -134,7 +134,7 @@ button.filter__mobile-btn.btn._transparent-gray-border(type="button" data-fancyb
             .catalog-filter__submit
                 button.btn._green(type="submit") Применить
 
-        .catalog-filter__content(data-tab-content="4" data-filter-item)
+        .catalog-filter__content(data-tab-filter-content="4" data-filter-item)
             p.filter__title(data-filter-title) Коллекция
                 span.filter__title-icon
                     svg(width="13" height="16")
@@ -166,7 +166,7 @@ button.filter__mobile-btn.btn._transparent-gray-border(type="button" data-fancyb
                     span.filter__selected-icon
                     | Название формы
             .filter__btns
-                button.filter__submit.btn(type="submit") Применить
+                button.filter__submit.btn._green(type="submit") Применить
                 button.filter__reset.btn._transparent-gray-border(type="reset") Очистить
                         
 .catalog-filter__footer

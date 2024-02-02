@@ -68,6 +68,11 @@
                     }
                 }
             }
+
+            & .about-pluses__content {
+                display: grid;
+                opacity: 1;
+            }
         }
 
         &:first-child {

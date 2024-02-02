@@ -9,16 +9,12 @@
 
     &__box {
         border: 1px solid $color_border;
-        padding: 2.5rem 3rem;
+        padding: 1.5rem;
         display: flex;
         flex-direction: column;
 
-        @media (max-width: 1440px) {
-            padding: 1.88rem;
-        }
-
         @media (max-width: 991px) {
-            padding: 0 1.25rem;
+            padding: 1.25rem;
             border: 0;
             background: $color_white;
             padding-bottom: 2.75rem;
@@ -53,7 +49,7 @@
         color: $color_black;
 
         & .catalog-filter__header-sorting-wrap {
-            margin: 15px 0;
+            //margin: 15px 0;
         }
     }
 
@@ -241,8 +237,8 @@
 
     &__content {
         border-top: 1px solid $color_border;
-        padding-top: 2.5rem;
-        margin-top: 2rem;
+        padding-top: 1.5rem;
+        margin-top: 1.5rem;
         display: none;
         flex-direction: column;
 

@@ -29,7 +29,24 @@
         </div>
       </section>
       <div class="container header__container">
-        <div class="header__left">
+        <div class="header__left"><a class="top-line__phone" href="tel:+79175331452"> 
+            <svg class="top-line__phone-icon" width="28" height="28">
+              <use xlink:href="img/icons/icons.svg#phone"></use>
+            </svg>+7 (917) 533-14-52</a>
+          <div class="top-line__socials"><a class="top-line__socials-item" href="tg://resolve?domain=telegram_nick" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a><a class="top-line__socials-item" href="https://api.whatsapp.com/send?phone=7925042935" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg></a></div>
+          <!--button.header__feedback.btn-reset(type="button" data-fancybox data-src="#modal-feedback") Связаться с нами-->
+        </div>
+        <div class="header__logo"><a class="header__logo-link" href="#">
+            <svg width="143" height="23">
+              <use xlink:href="img/icons/icons.svg#logo"></use>
+            </svg></a></div>
+        <div class="header__controls">
           <div class="header__search">
             <button class="header__search-btn btn-reset" type="button" data-search-show>
               <svg width="24" height="24">
@@ -46,7 +63,7 @@
                 </button>
               </div>
               <form class="header__search-form form-line" action="#" method="get">
-                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д">
+                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поисковой запрос">
                 <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
               </form>
               <div class="header__search-actual">
@@ -57,14 +74,7 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <button class="header__feedback btn-reset" type="button" data-fancybox data-src="#modal-feedback">Связаться с нами</button>
-        </div>
-        <div class="header__logo"><a class="header__logo-link" href="#">
-            <svg width="143" height="23">
-              <use xlink:href="img/icons/icons.svg#logo"></use>
-            </svg></a></div>
-        <div class="header__controls"><a class="header__control" href="#">
+          </div><a class="header__control" href="#">
             <svg class="header__control-icon _transparent" width="26" height="26">
               <use xlink:href="img/icons/icons.svg#favourites"></use>
             </svg><span class="header__control-count">4</span></a><a class="header__control" href="#">
@@ -376,6 +386,17 @@
                   <picture class="categories__item-picture" data-categories-item-picture>
                     <source type="image/webp" srcset="img/tmp/categories-6@2x.webp 2x, img/tmp/categories-6.webp 1x"><img srcset="img/tmp/categories-6@2x.jpg 2x, img/tmp/categories-6.jpg 1x" alt="" width="278" height="258" loading="lazy">
                   </picture>
+                  <svg class="categories__item-star" width="30" height="30">
+                    <use xlink:href="img/icons/icons.svg#intro-star"></use>
+                  </svg>
+                </article>
+                <article class="categories__item" role="article" data-categories-item>
+                  <div class="categories__item-content">
+                    <h3 class="categories__item-title" data-categories-item-target><a href="#">Касты</a></h3><a class="categories__item-link link _italic" href="#">Перейти</a>
+                  </div>
+                  <picture class="categories__item-picture" data-categories-item-picture>
+                    <source type="image/webp" srcset="img/tmp/categories-7@2x.webp 2x, img/tmp/categories-7.webp 1x"><img srcset="img/tmp/categories-7@2x.jpg 2x, img/tmp/categories-7.jpg 1x" alt="" width="278" height="258" loading="lazy">
+                  </picture>
                 </article>
           </div><a class="link _italic _button-mobile animation-link" href="#"><span class="_wrap"><span class="_default">Перейти в каталог</span><span class="_hover">Перейти в каталог</span></span></a>
         </div>
@@ -406,10 +427,10 @@
           </div>
         </div>
       </section>
-      <!--Новинки-->
+      <!--Камни-->
       <section class="section">
         <div class="container new-products__container">
-          <h2 class="section__title new-products__section-title">Новинки</h2>
+          <h2 class="section__title new-products__section-title">Камни</h2>
           <div class="products _col4">
                 <article class="product">
                   <button class="product__favourites _active" type="button">
@@ -651,24 +672,24 @@
         </div>
       </section>
       <!--Сообщество-->
-      <section class="section"> 
-        <div class="container community__container">
-          <div class="community__content">
-            <p class="section__subtitle community__section-subtitle">Сообщество</p>
-            <h2 class="section__title community__section-title">Закрытый клуб <br>для постоянных покупателей</h2>
-            <p class="community__text">Мы ценим семейные ценности и стремимся стать для вас большим, чем просто Ювелирной мастерской. Поэтому мы создали закрытый клуб, где проводим мероприятия и знакомим участников друг с другом, а также делимся актуальными трендами ювелирного мира</p>
-            <button class="community__link btn _transparent-gray-border" type="button" data-fancybox data-src="#modal-community">Подробнее</button>
-          </div>
-          <div class="community__pictures">
-            <picture class="community__picture-big">
-              <source type="image/webp" srcset="img/tmp/community-big@2x.webp 2x, img/tmp/community-big.webp 1x"><img srcset="img/tmp/community-big@2x.jpg 2x, img/tmp/community-big.jpg 1x" alt="" width="633" height="833" loading="lazy">
-            </picture>
-            <picture class="community__picture-small" data-picture-parallax="0.1">
-              <source type="image/webp" srcset="img/tmp/community-small@2x.webp 2x, img/tmp/community-small.webp 1x"><img srcset="img/tmp/community-big@2x.jpg 2x, img/tmp/community-small.jpg 1x" alt="" width="413" height="544" loading="lazy">
-            </picture>
-          </div>
-        </div>
-      </section>
+      <!--section.section 
+      .container.community__container
+          .community__content
+              p.section__subtitle.community__section-subtitle Сообщество
+              h2.section__title.community__section-title Закрытый клуб <br>для постоянных покупателей
+              p.community__text Мы ценим семейные ценности и стремимся стать для вас большим, чем просто Ювелирной мастерской. Поэтому мы создали закрытый клуб, где проводим мероприятия и знакомим участников друг с другом, а также делимся актуальными трендами ювелирного мира
+              button.community__link.btn._transparent-gray-border(type="button" data-fancybox data-src="#modal-community") Подробнее
+      
+          .community__pictures
+              picture.community__picture-big
+                  source(type="image/webp" srcset="img/tmp/community-big@2x.webp 2x, img/tmp/community-big.webp 1x")
+                  img(srcset="img/tmp/community-big@2x.jpg 2x, img/tmp/community-big.jpg 1x" alt="" width="633" height="833" loading="lazy")
+      
+              picture.community__picture-small(data-picture-parallax="0.1")
+                  source(type="image/webp" srcset="img/tmp/community-small@2x.webp 2x, img/tmp/community-small.webp 1x")
+                  img(srcset="img/tmp/community-big@2x.jpg 2x, img/tmp/community-small.jpg 1x" alt="" width="413" height="544" loading="lazy")
+      
+      -->
       <!--Контакты-->
       <section class="section">
         <div class="contacts">
@@ -832,6 +853,10 @@
             <input class="form__input _white" type="text" name="name" id="feedback-name">
           </fieldset>
           <fieldset class="form__fieldset">
+            <label class="form__label _white" for="feedback-email">Email</label>
+            <input class="form__input _white" type="email" name="email" id="feedback-email">
+          </fieldset>
+          <fieldset class="form__fieldset">
             <label class="form__label _white" for="feedback-phone">Ваш телефон</label>
             <input class="form__input _white _error" type="tel" name="phone" id="feedback-phone" data-tel><span class="form__error">Текст ошибки</span>
           </fieldset>
@@ -841,24 +866,23 @@
             <label class="form__checkbox-label" for="feedback-policy"><span class="form__checkbox-check">
                 <svg width="14" height="11">
                   <use xlink:href="img/icons/icons.svg#checkbox"></use>
-                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
+                </svg></span><span class="form__checkbox-title">Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a></span></label>
           </div>
         </form>
       </div>
     </div>
     <!--Модальное окно "Вступление в закрытый клуб..."-->
-    <div class="modal" id="modal-community" data-lenis-prevent>
-      <button class="modal__close" type="button" data-fancybox-close>
-        <svg width="66" height="66">
-          <use xlink:href="img/icons/icons.svg#modal-close"></use>
-        </svg>
-      </button>
-      <div class="community__modal">
-        <p class="modal__title">Оставьте заявку на вступление в Закрытый клуб для постоянных покупателей </p>
-        <p class="modal__subtitle">Присоединяйтесь к закрытому клубу для постоянных покупателей и получайте эксклюзивные бонусы и привилегии!</p>
-        <button class="modal__btn btn _transparent-white-border" type="button" data-fancybox-double="#modal-community-form">Оставить заявку</button>
-      </div>
-    </div>
+    <!--.modal(id="modal-community" data-lenis-prevent)
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="img/icons/icons.svg#modal-close")
+    
+    .community__modal
+        p.modal__title Оставьте заявку на вступление в Закрытый клуб для постоянных покупателей 
+        p.modal__subtitle Присоединяйтесь к закрытому клубу для постоянных покупателей и получайте эксклюзивные бонусы и привилегии!
+        button.modal__btn.btn._transparent-white-border(type="button" data-fancybox-double="#modal-community-form") Оставить заявку
+    
+    -->
     <!--Модальное окно "Запишитесь на примерку"-->
     <div class="modal" id="modal-fitting" data-lenis-prevent>
       <button class="modal__close" type="button" data-fancybox-close>
@@ -938,6 +962,10 @@
             <input class="form__input _white" type="text" name="name" id="fitting-name">
           </fieldset>
           <fieldset class="form__fieldset">
+            <label class="form__label _white" for="fittin-email">Email</label>
+            <input class="form__input _white" type="email" name="email" id="fitting-email">
+          </fieldset>
+          <fieldset class="form__fieldset">
             <label class="form__label _white" for="fitting-phone">Ваш телефон</label>
             <input class="form__input _white _error" type="tel" name="phone" id="fitting-phone" data-tel><span class="form__error">Текст ошибки</span>
           </fieldset>
@@ -947,47 +975,48 @@
             <label class="form__checkbox-label" for="fitting-policy"><span class="form__checkbox-check">
                 <svg width="14" height="11">
                   <use xlink:href="img/icons/icons.svg#checkbox"></use>
-                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
+                </svg></span><span class="form__checkbox-title">Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a></span></label>
           </div>
         </form>
       </div>
     </div>
     <!--Модальное окно записи в закрытый клуб-->
-    <div class="modal" id="modal-community-form" data-lenis-prevent>
-      <button class="modal__close" type="button" data-fancybox-close>
-        <svg width="66" height="66">
-          <use xlink:href="img/icons/icons.svg#modal-close"></use>
-        </svg>
-      </button>
-      <svg class="modal__rectangle _left" width="451" height="780">
-        <use xlink:href="img/icons/icons.svg#modal-rectangle-left"></use>
-      </svg>
-      <svg class="modal__rectangle _right" width="413" height="780">
-        <use xlink:href="img/icons/icons.svg#modal-rectangle-right"></use>
-      </svg>
-      <div class="fitting__form">
-        <p class="modal__title">Оставить заявку на вступление в закрытый клуб покупателей</p>
-        <p class="modal__subtitle">Мы свяжемся с вами в течение 15 минут</p>
-        <form class="form fitting__f">
-          <fieldset class="form__fieldset">
-            <label class="form__label _white" for="community-name">Ваше имя</label>
-            <input class="form__input _white" type="text" name="name" id="community-name">
-          </fieldset>
-          <fieldset class="form__fieldset">
-            <label class="form__label _white" for="community-phone">Ваш телефон</label>
-            <input class="form__input _white _error" type="tel" name="phone" id="community-phone" data-tel><span class="form__error">Текст ошибки</span>
-          </fieldset>
-          <button class="form__submit btn _transparent-white-border" type="submit">Отправить</button>
-          <div class="form__checkbox form__policy _white">
-            <input class="form__checkbox-input" type="checkbox" name="policy" id="community-policy" data-policy checked>
-            <label class="form__checkbox-label" for="community-policy"><span class="form__checkbox-check">
-                <svg width="14" height="11">
-                  <use xlink:href="img/icons/icons.svg#checkbox"></use>
-                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
-          </div>
-        </form>
-      </div>
-    </div>
+    <!--.modal(id="modal-community-form" data-lenis-prevent)
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="img/icons/icons.svg#modal-close")
+    
+    svg.modal__rectangle._left(width="451" height="780")
+        use(xlink:href="img/icons/icons.svg#modal-rectangle-left")
+    
+    svg.modal__rectangle._right(width="413" height="780")
+        use(xlink:href="img/icons/icons.svg#modal-rectangle-right")
+    
+    .fitting__form
+        p.modal__title Оставить заявку на вступление в закрытый клуб покупателей
+        p.modal__subtitle Мы свяжемся с вами в течение 15 минут
+    
+        form.form.fitting__f
+            fieldset.form__fieldset
+                label.form__label._white(for="community-name") Ваше имя
+                input.form__input._white(type="text" name="name" id="community-name")
+            fieldset.form__fieldset
+                label.form__label._white(for="community-email") Email
+                input.form__input._white(type="email" name="email" id="community-email")
+            fieldset.form__fieldset
+                label.form__label._white(for="community-phone") Ваш телефон
+                input.form__input._white._error(type="tel" name="phone" id="community-phone" data-tel)
+                span.form__error Текст ошибки
+            button.form__submit.btn._transparent-white-border(type="submit") Отправить
+            .form__checkbox.form__policy._white
+                input.form__checkbox-input(type="checkbox" name="policy" id="community-policy" data-policy checked)
+                label.form__checkbox-label(for="community-policy")
+                    span.form__checkbox-check
+                        svg(width="14" height="11")
+                            use(xlink:href="img/icons/icons.svg#checkbox")
+                    span.form__checkbox-title Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a>
+    
+    -->
     <!--Украшения из образа-->
     <div class="fashion-modal" id="modal-fashion" data-lenis-prevent>
       <div class="fashion-modal__content">

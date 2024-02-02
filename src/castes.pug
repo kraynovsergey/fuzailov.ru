@@ -48,19 +48,36 @@ block main
                     .subcategories__col
                         .catalog-filter__header-sorting-wrap._no-border
                             select.catalog-filter__header-select.style-select(name="sorting")
-                                option(value="Дата создания товара" selected) Дата создания товара
-                                option(value="Название товара") Название товара
-                                option(value="Артикул") Артикул
-                                option(value="Цена товара") Цена товара
+                                option(value="По умолчанию" selected) По умолчанию
+                                option(value="По возрастанию цены") По возрастанию цены
+                                option(value="По убыванию цены") По убыванию цены
+                                option(value="По популярности") По популярности
 
-                            button.catalog-filter__header-sorting.btn-reset._asc(type="button" data-diamonds-sorting)
+                            button.catalog-filter__header-sorting.btn-reset._asc(type="button")
                                 svg._asc(width="30" height="30")
                                     use(xlink:href="@img/icons/icons.svg#sorting-asc")
                                 svg._desc(width="30" height="30")
                                     use(xlink:href="@img/icons/icons.svg#sorting-desc")
 
             //Товары
-            include pug/layout/_catalog-products
+            .new-collection
+                .products._col4-line.new-collection__row
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
+                    +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)
+                    +product('Кольцо с бриллиантом 0.18ct из белого золота', '151 200 ₽', 'product-2', 413, 475, '', '', '1', 1)
+                    +product('Кольцо с бриллиантом 0,510ct из белого золота', '244 920 ₽', 'product-3', 413, 475, 'New', '', '2', 1)
+                    +product('Кольцо с бриллиантом 0,600ct из белого золота', '423 960 ₽', 'product-4', 413, 475, '', '_active', '3', 1)
 
             //Пагинация
             include pug/layout/_paginate

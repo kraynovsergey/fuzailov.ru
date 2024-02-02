@@ -29,7 +29,24 @@
         </div>
       </section>
       <div class="container header__container">
-        <div class="header__left">
+        <div class="header__left"><a class="top-line__phone" href="tel:+79175331452"> 
+            <svg class="top-line__phone-icon" width="28" height="28">
+              <use xlink:href="img/icons/icons.svg#phone"></use>
+            </svg>+7 (917) 533-14-52</a>
+          <div class="top-line__socials"><a class="top-line__socials-item" href="tg://resolve?domain=telegram_nick" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg></a><a class="top-line__socials-item" href="https://api.whatsapp.com/send?phone=7925042935" target="_blank">
+              <svg width="28" height="28">
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg></a></div>
+          <!--button.header__feedback.btn-reset(type="button" data-fancybox data-src="#modal-feedback") Связаться с нами-->
+        </div>
+        <div class="header__logo"><a class="header__logo-link" href="#">
+            <svg width="143" height="23">
+              <use xlink:href="img/icons/icons.svg#logo"></use>
+            </svg></a></div>
+        <div class="header__controls">
           <div class="header__search">
             <button class="header__search-btn btn-reset" type="button" data-search-show>
               <svg width="24" height="24">
@@ -46,7 +63,7 @@
                 </button>
               </div>
               <form class="header__search-form form-line" action="#" method="get">
-                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поиск по ключевому слову, стилю и т.д">
+                <input class="header__search-input form-line__input" type="text" name="search" placeholder="Поисковой запрос">
                 <button class="header__search-submit btn-reset form-line__submit" type="submit">Поиск</button>
               </form>
               <div class="header__search-actual">
@@ -57,14 +74,7 @@
                 </ul>
               </div>
             </div>
-          </div>
-          <button class="header__feedback btn-reset" type="button" data-fancybox data-src="#modal-feedback">Связаться с нами</button>
-        </div>
-        <div class="header__logo"><a class="header__logo-link" href="#">
-            <svg width="143" height="23">
-              <use xlink:href="img/icons/icons.svg#logo"></use>
-            </svg></a></div>
-        <div class="header__controls"><a class="header__control" href="#">
+          </div><a class="header__control" href="#">
             <svg class="header__control-icon _transparent" width="26" height="26">
               <use xlink:href="img/icons/icons.svg#favourites"></use>
             </svg><span class="header__control-count">4</span></a><a class="header__control" href="#">
@@ -368,11 +378,10 @@
               <source type="image/webp" srcset="img/tmp/choose-size@2x.webp 2x, img/tmp/choose-size.webp 1x"><img srcset="img/tmp/choose-size@2x.jpg 2x, img/tmp/choose-size.jpg 1x" alt="" width="855" height="1000" loading="lazy">
             </picture>
             <div class="service__content">
-              <p class="section__subtitle service__section-subtitle">Помощь</p>
-              <h2 class="section__title service__section-title">Как выбрать размер</h2>
+              <p class="section__subtitle service__section-subtitle">Новая коллекция</p>
+              <h2 class="section__title service__section-title">Название коллекции</h2>
               <div class="service__text">
-                <p>Измерительная лента или линейка - это простой и доступный инструмент, который можно использовать для измерения диаметра внутренней части кольца. </p>
-                <p>Это позволит определить размер кольца по таблице размеров, которую можно найти в интернете.</p>
+                <p>Текст описания новой коллекции</p>
               </div><a class="service__link btn _transparent-white-border" href="#">Подробнее</a>
             </div>
           </div>
@@ -639,6 +648,10 @@
             <input class="form__input _white" type="text" name="name" id="feedback-name">
           </fieldset>
           <fieldset class="form__fieldset">
+            <label class="form__label _white" for="feedback-email">Email</label>
+            <input class="form__input _white" type="email" name="email" id="feedback-email">
+          </fieldset>
+          <fieldset class="form__fieldset">
             <label class="form__label _white" for="feedback-phone">Ваш телефон</label>
             <input class="form__input _white _error" type="tel" name="phone" id="feedback-phone" data-tel><span class="form__error">Текст ошибки</span>
           </fieldset>
@@ -648,7 +661,7 @@
             <label class="form__checkbox-label" for="feedback-policy"><span class="form__checkbox-check">
                 <svg width="14" height="11">
                   <use xlink:href="img/icons/icons.svg#checkbox"></use>
-                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
+                </svg></span><span class="form__checkbox-title">Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a></span></label>
           </div>
         </form>
       </div>
@@ -732,6 +745,10 @@
             <input class="form__input _white" type="text" name="name" id="fitting-name">
           </fieldset>
           <fieldset class="form__fieldset">
+            <label class="form__label _white" for="fittin-email">Email</label>
+            <input class="form__input _white" type="email" name="email" id="fitting-email">
+          </fieldset>
+          <fieldset class="form__fieldset">
             <label class="form__label _white" for="fitting-phone">Ваш телефон</label>
             <input class="form__input _white _error" type="tel" name="phone" id="fitting-phone" data-tel><span class="form__error">Текст ошибки</span>
           </fieldset>
@@ -741,7 +758,7 @@
             <label class="form__checkbox-label" for="fitting-policy"><span class="form__checkbox-check">
                 <svg width="14" height="11">
                   <use xlink:href="img/icons/icons.svg#checkbox"></use>
-                </svg></span><span class="form__checkbox-title">Согласен с условиями конфиденциальности</span></label>
+                </svg></span><span class="form__checkbox-title">Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a></span></label>
           </div>
         </form>
       </div>

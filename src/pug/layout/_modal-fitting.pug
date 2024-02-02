@@ -37,6 +37,9 @@
                 label.form__label._white(for="fittin-name") Ваше имя
                 input.form__input._white(type="text" name="name" id="fitting-name")
             fieldset.form__fieldset
+                label.form__label._white(for="fittin-email") Email
+                input.form__input._white(type="email" name="email" id="fitting-email")
+            fieldset.form__fieldset
                 label.form__label._white(for="fitting-phone") Ваш телефон
                 input.form__input._white._error(type="tel" name="phone" id="fitting-phone" data-tel)
                 span.form__error Текст ошибки
@@ -47,4 +50,4 @@
                     span.form__checkbox-check
                         svg(width="14" height="11")
                             use(xlink:href="@img/icons/icons.svg#checkbox")
-                    span.form__checkbox-title Согласен с условиями конфиденциальности
+                    span.form__checkbox-title Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a>

@@ -133,12 +133,12 @@ block main
             .catalog-filter__header-sorting-wrap.filter__sorting-wrap
                 .filter__sorting
                     select.catalog-filter__header-select.style-select(name="sorting")
-                        option(value="Новинки" selected) Новинки
-                        option(value="Популярные") Популярные
+                        option(value="По умолчанию" selected) По умолчанию
                         option(value="По возрастанию цены") По возрастанию цены
                         option(value="По убыванию цены") По убыванию цены
+                        option(value="По популярности") По популярности
 
-                    button.catalog-filter__header-sorting.btn-reset._asc(type="button" data-diamonds-sorting)
+                    button.catalog-filter__header-sorting.btn-reset._asc(type="button")
                         svg._asc(width="30" height="30")
                             use(xlink:href="@img/icons/icons.svg#sorting-asc")
                         svg._desc(width="30" height="30")

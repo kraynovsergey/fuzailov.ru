@@ -13,5 +13,9 @@ block main
         .container
             h1.h1._center Результаты поиска
 
+            form.header__search-form.form-line(action="#" method="get")
+                input.header__search-input.form-line__input(type="text" name="search" placeholder="Поисковой запрос")
+                button.header__search-submit.btn-reset.form-line__submit(type="submit") Поиск
+
             .products._col4
                 +product('Кольцо с бриллиантами 0.55ct из белого золота', '321 960 ₽', 'product-1', 413, 475, 'New', '_active', '0', 1)

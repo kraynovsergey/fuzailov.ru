@@ -25,10 +25,20 @@ block main
                             input.form__input._gray(type="text" name="receiver" id="order-receiver")
 
                         fieldset.form__fieldset
+                            label.form__label(for="order-email") Email
+                                span.form__required *
+                            input.form__input._gray(type="email" name="email" id="order-email")
+
+                        fieldset.form__fieldset
                             label.form__label(for="order-phone") Телефон
                                 span.form__required *
                             input.form__input._gray._error(type="tel" name="phone" id="order-phone" data-tel)
                             span.form__error Текст ошибки
+
+                        fieldset.form__fieldset
+                            label.form__label(for="order-message") Комментарий
+                                span.form__required
+                            textarea.form__textarea._gray(name="message" id="order-message")
 
                     .order__section
                         p.order__section-title Адрес доставки
@@ -58,13 +68,32 @@ block main
                                 label.form__label(for="order-room") Квартира
                                 input.form__input._gray(type="text" name="room" id="order-room")
 
-                        .form__checkbox._gray
-                            input.form__checkbox-input(type="checkbox" name="dont_call" id="order-dont-call")
-                            label.form__checkbox-label(for="order-dont-call")
-                                span.form__checkbox-check
-                                    svg(width="14" height="11")
-                                        use(xlink:href="@img/icons/icons.svg#checkbox")
-                                span.form__checkbox-title Не звонить в дверь, спит ребёнок
+                        fieldset.form__fieldset
+                            .form__checkbox._gray
+                                input.form__checkbox-input(type="checkbox" name="dont_call" id="order-dont-call")
+                                label.form__checkbox-label(for="order-dont-call")
+                                    span.form__checkbox-check
+                                        svg(width="14" height="11")
+                                            use(xlink:href="@img/icons/icons.svg#checkbox")
+                                    span.form__checkbox-title Не звонить в дверь, спит ребёнок
+
+                        fieldset.form__fieldset
+                            .form__checkbox._gray
+                                input.form__checkbox-input(type="checkbox" name="subscribe" id="order-subscribe")
+                                label.form__checkbox-label(for="order-subscribe")
+                                    span.form__checkbox-check
+                                        svg(width="14" height="11")
+                                            use(xlink:href="@img/icons/icons.svg#checkbox")
+                                    span.form__checkbox-title Подписаться на рассылку новостей и акций
+
+                        fieldset.form__fieldset._mb0
+                            .form__checkbox._gray
+                                input.form__checkbox-input(type="checkbox" name="present" id="order-present")
+                                label.form__checkbox-label(for="order-present")
+                                    span.form__checkbox-check
+                                        svg(width="14" height="11")
+                                            use(xlink:href="@img/icons/icons.svg#checkbox")
+                                    span.form__checkbox-title Покупаю в подарок
 
                 .order__itogo
                     .order__table
@@ -98,6 +127,6 @@ block main
                             span.form__checkbox-check
                                 svg(width="14" height="11")
                                     use(xlink:href="@img/icons/icons.svg#checkbox")
-                            span.form__checkbox-title Согласен с условиями конфиденциальности
+                            span.form__checkbox-title Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a>
 
 block footer
