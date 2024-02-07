@@ -16,6 +16,8 @@ import Lenis from '@studio-freight/lenis';
 
 import '../../node_modules/tooltip-plugin/dist/tooltip.min.js';
 
+import Accordion from 'accordion-js';
+
 /* Fancybox */
 Fancybox.bind("[data-fancybox]", {});
 
@@ -451,29 +453,25 @@ if (spoiler.length > 0) {
     });
 }
 
-/* Аккордион при наведении */
-const accordion = document.querySelectorAll('[data-accordion]');
-if (accordion.length > 0) {
-    accordion.forEach(item => {
-        if (document.documentElement.clientWidth < 1024) {
-            item.addEventListener('click', () => {
-                accordion_func(item);
-            });
-        } else {
-            item.addEventListener('mouseenter', () => {
-                accordion_func(item);
-            });
-        }
-    });
+/* Аккордион */
+const ac = new Accordion('.accordion-container', {
+    duration: 400
+});
 
-    function accordion_func(item) {
-        let other = document.querySelectorAll('[data-accordion]._active');
-        if (other.length > 0) {
-            other.forEach(row => {
-                row.classList.remove('_active');
+const accordion = document.querySelectorAll('.ac');
+if (accordion.length > 0) {
+    if (document.documentElement.clientWidth > 1024) {
+        accordion.forEach(item => {
+            item.addEventListener('mouseenter', (e) => {
+                let idx = e.target.id.substr(3);
+                ac.open(idx);
             });
-        }
-        item.classList.add('_active');
+
+            item.addEventListener('mouseleave', (e) => {
+                let idx = e.target.id.substr(3);
+                ac.close(idx);
+            });
+        });        
     }
 }
 

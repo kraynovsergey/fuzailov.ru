@@ -24,31 +24,7 @@
             transition: 1s ease-in-out;
         }
 
-        &:hover {
-            @media (min-width: 992px) {
-                z-index: 2;
-
-                &::after {
-                    width: 100%;
-                }
-    
-                & .about-pluses__btn {
-                    border-color: transparent !important;
-                    color: $color_white;
-    
-                    &-arrow {
-                        background: $color_white;
-                        color: $color_green;
-                        
-                        & svg {
-                            transform: rotate(180deg);
-                        }
-                    }
-                }
-            }            
-        }
-
-        &._active {
+        &.is-active {
             z-index: 2;
 
             &::after {
@@ -67,11 +43,6 @@
                         transform: rotate(180deg);
                     }
                 }
-            }
-
-            & .about-pluses__content {
-                display: grid;
-                opacity: 1;
             }
         }
 
@@ -143,8 +114,7 @@
     }
 
     &__content {
-        display: none;
-        opacity: 0;
+        display: grid;
         grid-template-columns: .51fr .49fr 3rem;
         align-items: start;
         gap: 1.88rem;

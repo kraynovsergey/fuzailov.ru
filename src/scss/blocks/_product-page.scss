@@ -117,15 +117,38 @@
         color: $color_black;
     }
 
-    &__text {
+    &__params {
         font-size: 1.12rem;
         width: 100%;
-        max-width: 32rem;
+        display: grid;
+        gap: 15px;
+        margin: 0;
 
-        & p {
-            &:last-child {
-                margin-bottom: 0;
+        @media (width > 991px) {
+            max-width: 370px;
+        }
+    }
+
+    &__param {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 15px;
+        align-items: flex-start;
+        justify-content: space-between;
+        border-bottom: 1px dashed rgba(51, 51, 51, 0.2);
+        padding-bottom: 5px;
+
+        & dt {
+            font-weight: bold;
+
+            &::after {
+                content: ':';
             }
+        }
+
+        & dd {
+            margin: 0;
+            text-align: right;
         }
     }
 

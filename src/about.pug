@@ -44,9 +44,9 @@ block main
                 p.section__subtitle О нас
                 h2.section__title._small Уникальность нашей мастерской
 
-            .about-pluses__items
-                article.about-pluses__item(data-accordion)
-                    .container.about-pluses__container
+            .about-pluses__items.accordion-container
+                article.about-pluses__item.ac
+                    .container.about-pluses__container.ac-trigger
                         button.about-pluses__btn.btn-reset
                             span.about-pluses__btn-i I
                             span.about-pluses__btn-title Искусство вне времени
@@ -54,15 +54,16 @@ block main
                                 svg(width="21" height="24")
                                     use(xlink:href="@img/icons/icons.svg#arrow-down")
 
-                        .about-pluses__content(data-accordion-content)
-                            picture.about-pluses__picture
-                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
-                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
-                            .about-pluses__text.text
-                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+                        .ac-panel
+                            .about-pluses__content
+                                picture.about-pluses__picture
+                                    source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                    img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                                .about-pluses__text.text
+                                    p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
 
-                article.about-pluses__item(data-accordion)
-                    .container.about-pluses__container
+                article.about-pluses__item.ac
+                    .container.about-pluses__container.ac-trigger
                         button.about-pluses__btn.btn-reset
                             span.about-pluses__btn-i II
                             span.about-pluses__btn-title Уникальная огранка
@@ -70,15 +71,16 @@ block main
                                 svg(width="21" height="24")
                                     use(xlink:href="@img/icons/icons.svg#arrow-down")
 
-                        .about-pluses__content(data-accordion-content)
-                            picture.about-pluses__picture
-                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
-                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
-                            .about-pluses__text.text
-                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+                        .ac-panel
+                            .about-pluses__content
+                                picture.about-pluses__picture
+                                    source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                    img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                                .about-pluses__text.text
+                                    p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
 
-                article.about-pluses__item(data-accordion)
-                    .container.about-pluses__container
+                article.about-pluses__item.ac
+                    .container.about-pluses__container.ac-trigger
                         button.about-pluses__btn.btn-reset
                             span.about-pluses__btn-i III
                             span.about-pluses__btn-title Неповторимость каждого изделия
@@ -86,15 +88,16 @@ block main
                                 svg(width="21" height="24")
                                     use(xlink:href="@img/icons/icons.svg#arrow-down")
 
-                        .about-pluses__content(data-accordion-content)
-                            picture.about-pluses__picture
-                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
-                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
-                            .about-pluses__text.text
-                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+                        .ac-panel
+                            .about-pluses__content
+                                picture.about-pluses__picture
+                                    source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                    img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                                .about-pluses__text.text
+                                    p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
 
-                article.about-pluses__item(data-accordion)
-                    .container.about-pluses__container
+                article.about-pluses__item.ac
+                    .container.about-pluses__container.ac-trigger
                         button.about-pluses__btn.btn-reset
                             span.about-pluses__btn-i IV
                             span.about-pluses__btn-title Безупречное качество 
@@ -102,15 +105,16 @@ block main
                                 svg(width="21" height="24")
                                     use(xlink:href="@img/icons/icons.svg#arrow-down")
 
-                        .about-pluses__content(data-accordion-content)
-                            picture.about-pluses__picture
-                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
-                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
-                            .about-pluses__text.text
-                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+                        .ac-panel
+                            .about-pluses__content
+                                picture.about-pluses__picture
+                                    source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                    img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                                .about-pluses__text.text
+                                    p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
 
-                article.about-pluses__item(data-accordion)
-                    .container.about-pluses__container
+                article.about-pluses__item.ac
+                    .container.about-pluses__container.ac-trigger
                         button.about-pluses__btn.btn-reset
                             span.about-pluses__btn-i V
                             span.about-pluses__btn-title Ваша лучшая инвестиция
@@ -118,15 +122,16 @@ block main
                                 svg(width="21" height="24")
                                     use(xlink:href="@img/icons/icons.svg#arrow-down")
 
-                        .about-pluses__content(data-accordion-content)
-                            picture.about-pluses__picture
-                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
-                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
-                            .about-pluses__text.text
-                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+                        .ac-panel
+                            .about-pluses__content
+                                picture.about-pluses__picture
+                                    source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                    img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                                .about-pluses__text.text
+                                    p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
 
-                article.about-pluses__item(data-accordion)
-                    .container.about-pluses__container
+                article.about-pluses__item.ac
+                    .container.about-pluses__container.ac-trigger
                         button.about-pluses__btn.btn-reset
                             span.about-pluses__btn-i VI
                             span.about-pluses__btn-title Бессрочная гарантия
@@ -134,12 +139,13 @@ block main
                                 svg(width="21" height="24")
                                     use(xlink:href="@img/icons/icons.svg#arrow-down")
 
-                        .about-pluses__content(data-accordion-content)
-                            picture.about-pluses__picture
-                                source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
-                                img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
-                            .about-pluses__text.text
-                                p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
+                        .ac-panel
+                            .about-pluses__content
+                                picture.about-pluses__picture
+                                    source(type="image/webp" srcset="@img/tmp/about-pluses@2x.webp 2x, @img/tmp/about-pluses.webp 1x")
+                                    img(srcset="@img/tmp/about-pluses@2x.png 2x, @img/tmp/about-pluses.png 1x" alt="" width="827" height="460" loading="lazy")
+                                .about-pluses__text.text
+                                    p Наши мастера создают изделия из бриллиантов с уникальной огранкой виде зверей и птиц. Это уникальные украшения на Российском рынке. 
 
     //Команда
     section.section.team
