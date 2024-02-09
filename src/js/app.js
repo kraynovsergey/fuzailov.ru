@@ -454,24 +454,26 @@ if (spoiler.length > 0) {
 }
 
 /* Аккордион */
-const ac = new Accordion('.accordion-container', {
-    duration: 400
-});
-
-const accordion = document.querySelectorAll('.ac');
-if (accordion.length > 0) {
-    if (document.documentElement.clientWidth > 1024) {
-        accordion.forEach(item => {
-            item.addEventListener('mouseenter', (e) => {
-                let idx = e.target.id.substr(3);
-                ac.open(idx);
-            });
-
-            item.addEventListener('mouseleave', (e) => {
-                let idx = e.target.id.substr(3);
-                ac.close(idx);
-            });
-        });        
+if ( document.querySelector('.accordion-container') ) {
+    const ac = new Accordion('.accordion-container', {
+        duration: 400
+    });
+    
+    const accordion = document.querySelectorAll('.ac');
+    if (accordion.length > 0) {
+        if (document.documentElement.clientWidth > 1024) {
+            accordion.forEach(item => {
+                item.addEventListener('mouseenter', (e) => {
+                    let idx = e.target.id.substr(3);
+                    ac.open(idx);
+                });
+    
+                item.addEventListener('mouseleave', (e) => {
+                    let idx = e.target.id.substr(3);
+                    ac.close(idx);
+                });
+            });        
+        }
     }
 }
 
