@@ -4814,7 +4814,7 @@ html._product-page .main::before {
   align-items: center;
   color: #333333;
   gap: 1.88rem;
-  transition: 1s ease-in-out;
+  transition: color 1s ease-in-out;
 }
 
 .about-pluses__btn-i {
