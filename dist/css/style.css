@@ -4090,7 +4090,7 @@ body.hide-scrollbar .header {
 }
 
 .product-page__param dt {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .product-page__param dt::after {
