@@ -59,7 +59,7 @@ mixin home_services_item(title, img, img_mobile)
             use(xlink:href="@img/icons/icons.svg#intro-star")
 
 mixin filter_item_cut(title)
-    fieldset.filter__item._small(data-filter-item)
+    fieldset.filter__item._small(data-filter-item data-filter-more-parent)
         p.filter__title(data-filter-title)=title
             span.filter__title-icon
                 svg(width="13" height="16")
@@ -77,6 +77,20 @@ mixin filter_item_cut(title)
             +filter_cut('Радиант', 'cut-10')
             +filter_cut('Кушон', 'cut-11')
             +filter_cut('Триллион', 'cut-12')
+            +filter_cut('Без названия', 'cut-13')
+            +filter_cut('Без названия', 'cut-14')
+            +filter_cut('Без названия', 'cut-15')
+            +filter_cut('Без названия', 'cut-16')
+            +filter_cut('Без названия', 'cut-17')
+            +filter_cut('Без названия', 'cut-18')
+            +filter_cut('Без названия', 'cut-19')
+            +filter_cut('Без названия', 'cut-20')
+            +filter_cut('Без названия', 'cut-21')
+
+        button.filter__more.btn-reset.link.animation-link(type="button" data-filter-more data-filter-more-default="Еще огранки")
+            span._wrap
+                span._default Еще огранки 
+                span._hover Еще огранки
 
 mixin filter_cut(title, icon)
     .filter__cut
