@@ -278,17 +278,32 @@
         }
     }
 
-    &__colors {
-        display: flex;
-        align-items: stretch;
-        flex-wrap: wrap;
-        margin: 0 -4rem -1.9rem 0;
+    &__colors,
+    &__cuts,
+    &__diamonds,
+    &__collections {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 2rem;
         width: 100%;
-        max-width: 45rem;
+        //max-width: 45rem;
+
+        @media (max-width: 1680px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: 1366px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__color {
-        margin: 0 4rem 1.9rem 0;
+        //margin: 0 4rem 1.9rem 0;
 
         & .form__checkbox-title {
             display: flex;
@@ -394,24 +409,6 @@
         @media (max-width: 767px) {
             grid-template-columns: repeat(2, 1fr);
         }
-    }
-
-    &__cuts,
-    &__diamonds,
-    &__collections {
-        display: grid;
-        gap: 1.6rem;
-        justify-content: start;
-        align-items: stretch;
-    }
-
-    &__cuts {
-        grid-template-columns: repeat(6, auto);
-    }
-
-    &__diamonds,
-    &__collections {
-        grid-template-columns: repeat(3, auto);
     }
 
     &__categories-title {

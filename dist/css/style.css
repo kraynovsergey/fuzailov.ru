@@ -5459,17 +5459,15 @@ html._product-page .main::before {
   border-left: 1px solid #dcdbdb;
 }
 
-.catalog-filter__colors {
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin: 0 -4rem -1.9rem 0;
+.catalog-filter__colors,
+.catalog-filter__cuts,
+.catalog-filter__diamonds,
+.catalog-filter__collections {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
   width: 100%;
-  max-width: 45rem;
-}
-
-.catalog-filter__color {
-  margin: 0 4rem 1.9rem 0;
 }
 
 .catalog-filter__color .form__checkbox-title {
@@ -5479,24 +5477,6 @@ html._product-page .main::before {
 
 .catalog-filter__color .form__checkbox-title svg {
   margin-right: 10px;
-}
-
-.catalog-filter__cuts,
-.catalog-filter__diamonds,
-.catalog-filter__collections {
-  display: grid;
-  gap: 1.6rem;
-  justify-content: start;
-  align-items: stretch;
-}
-
-.catalog-filter__cuts {
-  grid-template-columns: repeat(6, auto);
-}
-
-.catalog-filter__diamonds,
-.catalog-filter__collections {
-  grid-template-columns: repeat(3, auto);
 }
 
 .catalog-filter__categories-title {
@@ -6691,6 +6671,13 @@ html._product-page .main::before {
     width: 70%;
   }
 
+  .catalog-filter__colors,
+  .catalog-filter__cuts,
+  .catalog-filter__diamonds,
+  .catalog-filter__collections {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
   .article__swiper {
     width: calc(100% + 4.68rem);
     margin-right: -4.68rem;
@@ -6904,6 +6891,13 @@ html._product-page .main::before {
     padding: 1rem 1.88rem;
   }
 
+  .catalog-filter__colors,
+  .catalog-filter__cuts,
+  .catalog-filter__diamonds,
+  .catalog-filter__collections {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .subcategories__col:first-child {
     display: none;
   }
@@ -7063,6 +7057,13 @@ html._product-page .main::before {
 
   .new-collection-products__grid {
     grid-template-columns: 0.6fr 0.4fr;
+  }
+
+  .catalog-filter__colors,
+  .catalog-filter__cuts,
+  .catalog-filter__diamonds,
+  .catalog-filter__collections {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .article__swiper {
