@@ -1,25 +1,42 @@
 <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_400_2)">
-<path d="M11.1989 35C10.0699 35 9.03495 34.9059 8 34.7177V0.282258C9.03495 0.0940858 10.164 0 11.1989 0C21.078 0 28.9812 7.80914 28.9812 17.5C28.9812 27.1909 21.078 35 11.1989 35Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M28.9811 17.5005L24.8413 11.3849L27.3816 10.2559" stroke="currentColor" stroke-width="0.7"/>
-<path d="M22.4893 17.499L24.9355 11.3834L20.7017 9.03125L22.4893 17.499Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M13.3627 17.5011V6.96348L11.1987 4.61133L13.3627 17.5011Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M8 17.5006L11.1989 4.61082L8 0.376953" stroke="currentColor" stroke-width="0.7"/>
-<path d="M24.2767 5.45682L24.9353 11.3842L20.7014 9.03209L19.196 4.42188L24.2767 5.45682Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M13.3628 6.8667L17.1262 5.36133L20.7015 9.03068L13.3628 6.8667Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M11.1987 4.61022L17.1261 5.3629L19.196 4.42204L12.9864 0L11.1987 4.61022Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M19.196 4.51527L19.3842 1.88086" stroke="currentColor" stroke-width="0.7"/>
-<path d="M28.9811 17.5L24.8413 23.6156L27.3816 24.7446" stroke="currentColor" stroke-width="0.7"/>
-<path d="M22.4893 17.5L24.9355 23.6156L20.7017 25.9677L22.4893 17.5Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M13.3627 17.5V28.0376L11.1987 30.3898L13.3627 17.5Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M8 17.5L11.1989 30.3898L8 34.6237" stroke="currentColor" stroke-width="0.7"/>
-<path d="M24.2767 29.5427L24.9353 23.6152L20.7014 25.9674L19.196 30.5776L24.2767 29.5427Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M13.3628 28.1308L17.1262 29.6362L20.7015 25.9668L13.3628 28.1308Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M11.1987 30.3894L17.1261 29.6367L19.196 30.5776L12.9864 34.9996L11.1987 30.3894Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M19.196 30.4844L19.3842 33.1188" stroke="currentColor" stroke-width="0.7"/>
+<g clip-path="url(#clip0_2303_215)">
+<path d="M13.3907 4.32227C14.2409 4.32227 15.0202 4.39312 15.7996 4.53482V30.466C15.0202 30.6077 14.17 30.6785 13.3907 30.6785C5.95142 30.6785 0 24.798 0 17.5004C0 10.2028 5.95142 4.32227 13.3907 4.32227Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M0 17.5L3.11741 22.1053L1.20445 22.9555" stroke="currentColor" stroke-width="0.7"/>
+<path d="M4.88874 17.5L3.04663 22.1053L6.23489 23.8765L4.88874 17.5Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M11.7612 17.5V25.4352L13.3908 27.2065L11.7612 17.5Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M15.7995 17.5L13.3906 27.2065L15.7995 30.3947" stroke="currentColor" stroke-width="0.7"/>
+<path d="M3.54258 26.569L3.04663 22.1055L6.23489 23.8767L7.36849 27.3484L3.54258 26.569Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M11.7612 25.5065L8.92717 26.6401L6.23486 23.877L11.7612 25.5065Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M13.3907 27.2074L8.92711 26.6406L7.36841 27.3491L12.0445 30.6791L13.3907 27.2074Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M7.36851 27.2773L7.22681 29.2611" stroke="currentColor" stroke-width="0.7"/>
+<path d="M0 17.5004L3.11741 12.8951L1.20445 12.0449" stroke="currentColor" stroke-width="0.7"/>
+<path d="M4.88874 17.4996L3.04663 12.8943L6.23489 11.123L4.88874 17.4996Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M11.7612 17.5014V9.56618L13.3908 7.79492L11.7612 17.5014Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M15.7995 17.5002L13.3906 7.79373L15.7995 4.60547" stroke="currentColor" stroke-width="0.7"/>
+<path d="M3.54258 8.4317L3.04663 12.8953L6.23489 11.124L7.36849 7.65234L3.54258 8.4317Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M11.7612 9.49298L8.92717 8.35938L6.23486 11.1225L11.7612 9.49298Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M13.3907 7.79393L8.92711 8.36073L7.36841 7.65223L12.0445 4.32227L13.3907 7.79393Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M7.36851 7.72404L7.22681 5.74023" stroke="currentColor" stroke-width="0.7"/>
+<path d="M21.6093 30.6785C20.7591 30.6785 19.9798 30.6077 19.2004 30.466V4.53482C19.9798 4.39312 20.83 4.32227 21.6093 4.32227C29.0486 4.32227 35 10.2028 35 17.5004C35 24.798 29.0486 30.6785 21.6093 30.6785Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M35 17.5004L31.8826 12.8951L33.7955 12.0449" stroke="currentColor" stroke-width="0.7"/>
+<path d="M30.1113 17.4996L31.9534 12.8943L28.7651 11.123L30.1113 17.4996Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M23.2389 17.5014V9.56618L21.6094 7.79492L23.2389 17.5014Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M19.2004 17.5002L21.6093 7.79373L19.2004 4.60547" stroke="currentColor" stroke-width="0.7"/>
+<path d="M31.4575 8.4317L31.9535 12.8953L28.7652 11.124L27.6316 7.65234L31.4575 8.4317Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M23.239 9.49298L26.073 8.35938L28.7653 11.1225L23.239 9.49298Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M21.6094 7.79393L26.0729 8.36073L27.6316 7.65223L22.9555 4.32227L21.6094 7.79393Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M27.6316 7.72404L27.7733 5.74023" stroke="currentColor" stroke-width="0.7"/>
+<path d="M35 17.5L31.8826 22.1053L33.7955 22.9555" stroke="currentColor" stroke-width="0.7"/>
+<path d="M30.1113 17.5L31.9534 22.1053L28.7651 23.8765L30.1113 17.5Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M23.2389 17.5V25.4352L21.6094 27.2065L23.2389 17.5Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M19.2004 17.5L21.6093 27.2065L19.2004 30.3947" stroke="currentColor" stroke-width="0.7"/>
+<path d="M31.4575 26.569L31.9535 22.1055L28.7652 23.8767L27.6316 27.3484L31.4575 26.569Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M23.239 25.5065L26.073 26.6401L28.7653 23.877L23.239 25.5065Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M21.6094 27.2074L26.0729 26.6406L27.6316 27.3491L22.9555 30.6791L21.6094 27.2074Z" stroke="currentColor" stroke-width="0.7"/>
+<path d="M27.6316 27.2773L27.7733 29.2611" stroke="currentColor" stroke-width="0.7"/>
 </g>
 <defs>
-<clipPath id="clip0_400_2">
+<clipPath id="clip0_2303_215">
 <rect width="35" height="35" fill="white"/>
 </clipPath>
 </defs>

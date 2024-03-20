@@ -1,16 +1,16 @@
 <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_400_3)">
-<path d="M17.9423 0L6 17.6378L17.9423 35L29.9764 17.5459L17.9423 0Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M8.66406 17.6367L17.9423 4.22461L27.3124 17.5448L17.9423 30.7732L8.66406 17.6367Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M11.1445 17.4541L17.9424 8.08398L24.8322 17.6378L17.9424 27.3753L11.1445 17.4541Z" stroke="currentColor" stroke-width="0.7"/>
-<path d="M24.832 17.6368L29.9764 17.5449" stroke="currentColor" stroke-width="0.7"/>
-<path d="M17.9421 35.0016V27.377" stroke="currentColor" stroke-width="0.7"/>
-<path d="M17.9421 0V8.08399" stroke="currentColor" stroke-width="0.7"/>
-<path d="M6 17.6369L11.1444 17.4531" stroke="currentColor" stroke-width="0.7"/>
-</g>
-<defs>
-<clipPath id="clip0_400_3">
-<rect width="35" height="35" fill="white"/>
-</clipPath>
-</defs>
+<path d="M7.98247 5.80273L0 17.5922L7.98247 29.1975L16.0263 17.5308L7.98247 5.80273Z" stroke="currentColor" stroke-width="0.6"/>
+<path d="M1.78076 17.5919L7.98253 8.62695L14.2457 17.5305L7.98253 26.3726L1.78076 17.5919Z" stroke="currentColor" stroke-width="0.6"/>
+<path d="M3.43872 17.4702L7.98259 11.207L12.5879 17.593L7.98259 24.1018L3.43872 17.4702Z" stroke="currentColor" stroke-width="0.6"/>
+<path d="M12.5876 17.5927L16.0263 17.5312" stroke="currentColor" stroke-width="0.6"/>
+<path d="M7.98242 29.1981V24.1016" stroke="currentColor" stroke-width="0.6"/>
+<path d="M7.98242 5.80273V11.2063" stroke="currentColor" stroke-width="0.6"/>
+<path d="M0 17.5916L3.4386 17.4688" stroke="currentColor" stroke-width="0.6"/>
+<path d="M26.9561 5.80273L18.9736 17.5922L26.9561 29.1975L35 17.5308L26.9561 5.80273Z" stroke="currentColor" stroke-width="0.6"/>
+<path d="M20.7544 17.5919L26.9562 8.62695L33.2193 17.5305L26.9562 26.3726L20.7544 17.5919Z" stroke="currentColor" stroke-width="0.6"/>
+<path d="M22.4124 17.4702L26.9562 11.207L31.5615 17.593L26.9562 24.1018L22.4124 17.4702Z" stroke="currentColor" stroke-width="0.6"/>
+<path d="M31.5613 17.5927L34.9999 17.5312" stroke="currentColor" stroke-width="0.6"/>
+<path d="M26.9561 29.1981V24.1016" stroke="currentColor" stroke-width="0.6"/>
+<path d="M26.9561 5.80273V11.2063" stroke="currentColor" stroke-width="0.6"/>
+<path d="M18.9736 17.5916L22.4122 17.4688" stroke="currentColor" stroke-width="0.6"/>
 </svg>
