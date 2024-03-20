@@ -194,9 +194,11 @@
     <main class="main">
       <!--Интро-->
       <section class="intro">
-        <picture class="intro__picture">
-          <source type="image/webp" srcset="img/tmp/home-intro@2x.webp 2x, img/tmp/home-intro.webp 1x"><img srcset="img/tmp/home-intro@2x.jpg 2x, img/tmp/home-intro.jpg 1x" alt="" width="1920" height="1021" loading="lazy">
-        </picture>
+        <div class="intro__video-wrap">
+          <video class="intro__video" autoplay muted loop playsinline poster="img/tmp/home-intro.jpg" preload="none" loading="lazy">
+            <source type="video/mp4" src="files/video.mp4">
+          </video>
+        </div>
         <div class="intro__overlay">
           <div class="intro__content">
             <p class="intro__subtitle">Summer/Autumn 23’ by Fuzailov</p>
@@ -225,9 +227,9 @@
           <div class="new-collection">
             <div class="new-collection__fashion">
                   <div class="fashion">
-                    <picture class="fashion__picture"> 
-                      <source type="image/webp" srcset="img/tmp/new-collection-img-1@2x.webp 2x, img/tmp/new-collection-img-1.webp 1x"><img srcset="img/tmp/new-collection-img-1@2x.jpg 2x, img/tmp/new-collection-img-1.jpg 1x" alt="" width="855" height="1079" loading="lazy">
-                    </picture>
+                    <video class="fashion__video" autoplay muted loop playsinline poster="img/tmp/new-collection-img-1" preload="none" loading="lazy">
+                      <source type="video/mp4" src="files/video.mp4">
+                    </video>
                     <button class="fashion__btn btn-circle" type="button" data-fancybox data-src="#modal-fashion">
                       <svg class="fashion__btn-icon">
                         <use xlink:href="img/icons/icons.svg#cart"></use>
@@ -686,9 +688,9 @@
       <section class="section">
         <div class="service">
           <div class="container service__container">
-            <picture class="service__picture">
-              <source type="image/webp" srcset="img/tmp/service@2x.webp 2x, img/tmp/service.webp 1x"><img srcset="img/tmp/service@2x.jpg 2x, img/tmp/service.jpg 1x" alt="" width="855" height="1000" loading="lazy">
-            </picture>
+            <video class="service__video" autoplay muted loop playsinline poster="img/tmp/service.jpg" preload="none" loading="lazy">
+              <source type="video/mp4" src="files/video.mp4">
+            </video>
             <div class="service__content">
               <p class="section__subtitle service__section-subtitle">Сервис</p>
               <h2 class="section__title service__section-title">Запишитесь на примерку</h2>

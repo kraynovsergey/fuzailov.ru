@@ -8,6 +8,15 @@ mixin fashion(img, width, height)
                 use(xlink:href="@img/icons/icons.svg#cart")
             | Посмотреть образ
 
+mixin fashion_video(img, video)
+    .fashion
+        video.fashion__video(autoplay muted loop playsinline poster="@img/tmp/"+img preload="none" loading="lazy")
+            source(type="video/mp4" src="files/"+video)
+        button.fashion__btn.btn-circle(type="button" data-fancybox data-src="#modal-fashion")
+            svg.fashion__btn-icon
+                use(xlink:href="@img/icons/icons.svg#cart")
+            | Посмотреть образ
+
 mixin product(title, price, img, width, height, label, favourites, item, swiper)
     article.product
         button.product__favourites(class=favourites type="button")

@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: calc(50% - .99rem) calc(50% - .99rem);
     gap: 1.88rem;
-    align-items: start;
+    //align-items: start;
 
     @media (max-width: 960px) {
         grid-template-columns: 100%;
@@ -12,7 +12,7 @@
     &__fashion {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: start; 
 
         &:nth-child(5) {
             @media (min-width: 960px) {
@@ -26,11 +26,10 @@
         }
     }
 
-    
-
     &__swiper {
         width: 100%;
-        margin-bottom: 1.8rem;
+        height: 100%;
+        //margin-bottom: 1.8rem;
 
         @media (max-width: 960px) {
             margin-left: -1.25rem;

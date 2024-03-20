@@ -8,9 +8,10 @@ block meta
 block main
     //Интро
     section.intro
-        picture.intro__picture
-            source(type="image/webp" srcset="@img/tmp/home-intro@2x.webp 2x, @img/tmp/home-intro.webp 1x")
-            img(srcset="@img/tmp/home-intro@2x.jpg 2x, @img/tmp/home-intro.jpg 1x" alt="" width="1920" height="1021" loading="lazy")
+        block intro_video 
+            picture.intro__picture
+                source(type="image/webp" srcset="@img/tmp/home-intro@2x.webp 2x, @img/tmp/home-intro.webp 1x")
+                img(srcset="@img/tmp/home-intro@2x.jpg 2x, @img/tmp/home-intro.jpg 1x" alt="" width="1920" height="1021" loading="lazy")
 
         .intro__overlay
             .intro__content
@@ -34,9 +35,11 @@ block main
             p.section__subtitle Новая коллекция
             h2.section__title Summer/Autumn 23’
 
+            
             .new-collection
                 .new-collection__fashion
-                    +fashion('new-collection-img-1', 855, 1079)
+                    block fashion_video
+                        +fashion('new-collection-img-1', 855, 1079)
 
                     a.link._italic._button-mobile.animation-link(href="#")
                         span._wrap
@@ -131,10 +134,11 @@ block main
     //Сервис
     section.section
         .service
-            .container.service__container 
-                picture.service__picture
-                    source(type="image/webp" srcset="@img/tmp/service@2x.webp 2x, @img/tmp/service.webp 1x")
-                    img(srcset="@img/tmp/service@2x.jpg 2x, @img/tmp/service.jpg 1x" alt="" width="855" height="1000" loading="lazy")
+            .container.service__container
+                block service_video
+                    picture.service__picture
+                        source(type="image/webp" srcset="@img/tmp/service@2x.webp 2x, @img/tmp/service.webp 1x")
+                        img(srcset="@img/tmp/service@2x.jpg 2x, @img/tmp/service.jpg 1x" alt="" width="855" height="1000" loading="lazy")
                 .service__content
                     p.section__subtitle.service__section-subtitle Сервис
                     h2.section__title.service__section-title Запишитесь на примерку
