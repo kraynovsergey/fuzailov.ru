@@ -2472,9 +2472,19 @@ body.hide-scrollbar .header {
   align-items: center;
 }
 
+.service__picture {
+  aspect-ratio: 855/1000;
+}
+
 .service__picture img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  /*@media (max-width: 767px) {
+      height: 23rem;
+      object-fit: cover;
+  }*/
 }
 
 .service__video {
@@ -8176,6 +8186,10 @@ html._product-page .main::before {
     height: 58rem;
   }
 
+  .fashion__video {
+    height: 58rem;
+  }
+
   .fashion__btn {
     right: unset;
   }
@@ -8509,10 +8523,10 @@ html._product-page .main::before {
     margin-right: -1.25rem;
   }
 
-  .service__picture img {
-    height: 23rem;
-    -o-object-fit: cover;
-       object-fit: cover;
+  .service__video {
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    width: calc(100% + 2.5rem);
   }
 
   .service__link {
@@ -8882,6 +8896,10 @@ html._product-page .main::before {
     height: 45rem;
   }
 
+  .fashion__video {
+    height: 45rem;
+  }
+
   .fashion__btn {
     bottom: 1.4rem;
   }
@@ -9108,6 +9126,12 @@ html._product-page .main::before {
   .service__picture {
     margin-left: -0.71rem;
     margin-right: -0.71rem;
+  }
+
+  .service__video {
+    margin-left: -0.71rem;
+    margin-right: -0.71rem;
+    width: calc(100% + 1.42rem);
   }
 
   .service__section-title {

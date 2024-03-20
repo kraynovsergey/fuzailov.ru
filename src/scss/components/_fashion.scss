@@ -27,6 +27,14 @@
 
     &__video {
         object-fit: cover;
+
+        @media (max-width: 960px) {
+            height: 58rem;
+        }
+
+        @media (max-width: 575px) {
+            height: 45rem;
+        }
     }
 
     &__btn {

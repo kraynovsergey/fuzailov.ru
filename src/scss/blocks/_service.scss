@@ -36,6 +36,8 @@
     }
 
     &__picture {
+        aspect-ratio: 855/1000;
+
         @media (max-width: 767px) {
             margin-left: -1.25rem;
             margin-right: -1.25rem;
@@ -48,12 +50,13 @@
 
         & img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
 
-            @media (max-width: 767px) {
+            /*@media (max-width: 767px) {
                 height: 23rem;
                 object-fit: cover;
-            }
+            }*/
         }
     }
 
@@ -62,6 +65,18 @@
         height: auto;
         object-fit: cover;
         aspect-ratio: 855/1000;
+
+        @media (max-width: 767px) {
+            margin-left: -1.25rem;
+            margin-right: -1.25rem;
+            width: calc(100% + 2.5rem);
+        }
+
+        @media (max-width: 575px) {
+            margin-left: -.71rem;
+            margin-right: -.71rem;
+            width: calc(100% + 1.42rem);
+        }
     }
 
     &__content {
