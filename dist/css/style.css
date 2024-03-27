@@ -1408,7 +1408,7 @@ body.hide-scrollbar .header {
   position: fixed;
   top: 0;
   background: #FDFBFA;
-  z-index: 10;
+  z-index: 20;
   color: #333333;
   width: 100%;
 }
