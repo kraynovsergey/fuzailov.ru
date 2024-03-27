@@ -345,7 +345,7 @@
             align-items: center;
             justify-content: center;
             font-family: 'Forum';
-            font-size: 1.2rem;
+            font-size: 1rem;
             padding: .5rem 5px;
             cursor: pointer;
             margin: -1px 0 0 -1px;
@@ -353,7 +353,7 @@
             line-height: 110%;
 
             @media (max-width: 1280px) and (min-width: 992px) {
-                font-size: 1rem;
+                //font-size: 1rem;
             }
 
             @media (max-width: 991px) {
