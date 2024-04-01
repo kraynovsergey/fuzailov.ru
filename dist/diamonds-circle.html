@@ -708,7 +708,7 @@
             <label class="form__label _white" for="feedback-phone">Ваш телефон</label>
             <input class="form__input _white _error" type="tel" name="phone" id="feedback-phone" data-tel><span class="form__error">Текст ошибки</span>
           </fieldset>
-          <button class="form__submit btn _transparent-white-border" type="submit">Отправить</button>
+          <button class="form__submit btn _transparent-white-border" type="submit" data-open-thankyou>Отправить</button>
           <div class="form__checkbox form__policy _white">
             <input class="form__checkbox-input" type="checkbox" name="policy" id="feedback-policy" data-policy checked>
             <label class="form__checkbox-label" for="feedback-policy"><span class="form__checkbox-check">
@@ -717,6 +717,23 @@
                 </svg></span><span class="form__checkbox-title">Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a></span></label>
           </div>
         </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-thankyou" data-lenis-prevent>
+      <button class="modal__close" type="button" data-fancybox-close>
+        <svg width="66" height="66">
+          <use xlink:href="img/icons/icons.svg#modal-close"></use>
+        </svg>
+      </button>
+      <svg class="modal__rectangle _left" width="451" height="780">
+        <use xlink:href="img/icons/icons.svg#modal-rectangle-left"></use>
+      </svg>
+      <svg class="modal__rectangle _right" width="413" height="780">
+        <use xlink:href="img/icons/icons.svg#modal-rectangle-right"></use>
+      </svg>
+      <div class="fitting__form">
+        <p class="modal__title">Спасибо!</p>
+        <p class="modal__subtitle" style="margin-bottom: 0;">Ваша заявка была успешно отравлена. В ближайшее время мы с Вами свяжемся</p>
       </div>
     </div>
     <!--Скрипты-->

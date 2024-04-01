@@ -947,3 +947,26 @@ if (filter_tabs.length > 0) {
         });
     });
 }
+
+/* 
+    Временный скрипт - открытие модального окна после отправки формы 
+    Удалить атрибут data-open-thankyou у кнопок отправки формы и повесить это все на событие отправки формы на бэке
+*/
+const fancybox_thankyou = document.querySelectorAll('[data-open-thankyou]');
+if (fancybox_thankyou.length > 0) {
+    fancybox_thankyou.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            Fancybox.close();
+            Fancybox.show(
+                [
+                    {
+                        src: '#modal-thankyou',
+                        type: "inline"
+                    }
+                ]
+            )
+        });
+    });
+}

@@ -4183,7 +4183,11 @@ body.hide-scrollbar .header {
 }
 
 .product-page__favourites._active {
-  color: #206C57 !important;
+  color: #0047AB !important;
+}
+
+.product-page__favourites:hover {
+  background: unset !important;
 }
 
 .product-page__control._fitting {

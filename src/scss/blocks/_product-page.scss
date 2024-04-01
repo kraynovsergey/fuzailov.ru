@@ -228,7 +228,11 @@
         color: transparent !important;
 
         &._active {
-            color: #206C57 !important;
+            color: $color_green !important;
+        }
+
+        &:hover {
+            background: unset !important;
         }
     }
 

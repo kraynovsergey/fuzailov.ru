@@ -24,7 +24,7 @@
                 label.form__label._white(for="feedback-phone") Ваш телефон
                 input.form__input._white._error(type="tel" name="phone" id="feedback-phone" data-tel)
                 span.form__error Текст ошибки
-            button.form__submit.btn._transparent-white-border(type="submit") Отправить
+            button.form__submit.btn._transparent-white-border(type="submit" data-open-thankyou) Отправить
             .form__checkbox.form__policy._white
                 input.form__checkbox-input(type="checkbox" name="policy" id="feedback-policy" data-policy checked)
                 label.form__checkbox-label(for="feedback-policy")
@@ -32,3 +32,18 @@
                         svg(width="14" height="11")
                             use(xlink:href="@img/icons/icons.svg#checkbox")
                     span.form__checkbox-title Я ознакомлен с <a href="#" target="_blank">политикой конфиденциальности</a> и согласен на <a href="#" target="_blank">обработку персональных данных</a>
+
+.modal(id="modal-thankyou" data-lenis-prevent)
+    button.modal__close(type="button" data-fancybox-close)
+        svg(width="66" height="66")
+            use(xlink:href="@img/icons/icons.svg#modal-close")
+
+    svg.modal__rectangle._left(width="451" height="780")
+        use(xlink:href="@img/icons/icons.svg#modal-rectangle-left")
+
+    svg.modal__rectangle._right(width="413" height="780")
+        use(xlink:href="@img/icons/icons.svg#modal-rectangle-right")
+
+    .fitting__form
+        p.modal__title Спасибо!
+        p.modal__subtitle(style="margin-bottom: 0;") Ваша заявка была успешно отравлена. В ближайшее время мы с Вами свяжемся
