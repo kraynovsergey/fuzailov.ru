@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 import Swiper from 'swiper';
 import { Navigation } from "swiper/modules";
 import { Autoplay } from 'swiper/modules';
@@ -167,7 +169,7 @@ if (map) {
 
         let myGeoObject = new ymaps.Placemark([55.754203068972714, 37.556388], {}, {
             iconLayout: 'default#image',
-            iconImageHref: 'img/map-marker@2x.png',
+            iconImageHref: map.getAttribute('data-marker'),
             iconImageSize: [161, 107],
             iconImageOffset: [-81, -107]
         });
@@ -970,3 +972,61 @@ if (fancybox_thankyou.length > 0) {
         });
     });
 }
+
+/* Событие после успешной отправки формы */
+function handleFormSubmission(currentForm) {
+    // Получаем данные из формы
+    let formData = {
+        name: currentForm.find('input[name="name"]').val(),
+        phone: currentForm.find('input[name="phone"]').val(),
+        email: currentForm.find('input[name="email"]').val(),
+        iblock_id: currentForm.find('input[name="iblock_id"]').val(),
+    };
+
+    // Отправляем AJAX-запрос
+    $.ajax({
+        type: 'POST',
+        url: '/ajax/fitting-form-handler.php',
+        data: formData,
+        dataType: 'json',
+        success: function (response) {
+            console.log(response);
+            if (response.success !== false) {
+                Fancybox.close();
+                Fancybox.show(
+                    [
+                        {
+                            src: '#modal-thankyou',
+                            type: "inline"
+                        }
+                    ]
+                )
+                currentForm[0].reset();
+            } else {
+                if (response.is_empty_name) {
+                    currentForm.find('input[name="name"]').addClass('_error');
+                    currentForm.find('input[name="name"]').after('<span class="form__error">Это поле обязательно для заполненения</span>');
+                }
+                if (response.is_empty_phone) {
+                    currentForm.find('input[name="phone"]').addClass('_error');
+                    currentForm.find('input[name="phone"]').after('<span class="form__error">Это поле обязательно для заполненения</span>');
+                }
+            }
+        },
+        error: function (error) {
+            console.error('Error:', error);
+        }
+    });
+}
+
+$('.fitting__f').submit(function (e) {
+    e.preventDefault();
+    let currentForm = $(this);
+    handleFormSubmission(currentForm);
+});
+
+$('.fitting__contacts').submit(function (e) {
+    e.preventDefault();
+    let currentForm = $(this);
+    handleFormSubmission(currentForm);
+});
