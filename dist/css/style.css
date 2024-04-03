@@ -2604,11 +2604,11 @@ body.hide-scrollbar .header {
 }
 
 .contacts__map [class=ymaps-2-1-79-ground-pane] {
-  filter: grayscale(1);
+  /*filter: grayscale(1);
   -ms-filter: grayscale(1);
   -webkit-filter: grayscale(1);
   -moz-filter: grayscale(1);
-  -o-filter: grayscale(1);
+  -o-filter: grayscale(1);*/
 }
 
 .contacts__box {

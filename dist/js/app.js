@@ -33708,16 +33708,16 @@ if (map) {
         });
 
         let myGeoObject = new ymaps.Placemark([55.754203068972714, 37.556388], {}, {
-            iconLayout: 'default#image',
+            /*iconLayout: 'default#image',
             iconImageHref: map.getAttribute('data-marker'),
             iconImageSize: [161, 107],
-            iconImageOffset: [-81, -107]
+            iconImageOffset: [-81, -107]*/
         });
 
         myMap.geoObjects.add(myGeoObject);
 
-        myMap.behaviors.disable('scrollZoom');
-        myMap.controls.remove('default');
+        //myMap.behaviors.disable('scrollZoom');
+        //myMap.controls.remove('default');
     }
 }
 
