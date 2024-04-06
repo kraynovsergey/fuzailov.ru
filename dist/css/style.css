@@ -7094,6 +7094,7 @@ html._product-page .main::before {
   .catalog-filter__diamonds,
   .catalog-filter__collections {
     grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
   }
 
   .article__swiper {

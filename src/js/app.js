@@ -342,8 +342,8 @@ if (range.length > 0) {
                 step: item.getAttribute('data-range-step'),
                 value: [+item.getAttribute('data-range-min-value'), +item.getAttribute('data-range-max-value')],
                 onInput: function (value, userInteraction) {
-                    if (range_from) range_from.innerHTML = value[0];
-                    if (range_to) range_to.innerHTML = value[1];
+                    if (range_from) range_from.innerHTML = value[0].toLocaleString();
+                    if (range_to) range_to.innerHTML = value[1].toLocaleString();
                     if (range_from_input) range_from_input.value = value[0];
                     if (range_to_input) range_to_input.value = value[1];
                 }
