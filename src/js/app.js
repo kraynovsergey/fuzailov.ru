@@ -1031,18 +1031,19 @@ $('.fitting__contacts').submit(function (e) {
     handleFormSubmission(currentForm);
 });
 
-$("#subscribe-form").submit(function () {
+$("#subscribe-form").submit(function (event) {
+    event.preventDefault();
     let formID = $(this).attr('id');
-    let formNm = $('#' + formID);
+    let formNm = $('#' + formID); 
     
     $.ajax({
-        method: 'post',
+        method: 'post', 
         dataType: 'json',
         url: '/ajax/subscribe.php',
-        data: formNm.serialize(),
+        data: formNm.serialize(), 
         success: function (data) {
-            if(data.success ==='Y')
-            {
+            if (data.success === 'Y') {
+                $('#emailError').hide();
                 Fancybox.close();
                 Fancybox.show(
                     [
@@ -1053,6 +1054,11 @@ $("#subscribe-form").submit(function () {
                     ]
                 )
             }
+            else {
+                const error = data.error.replace(/<[^>]*>/g, ''); 
+                $('#emailError').show();
+                $('#emailError').text(error);
+            }
         },
     });
-});
+}); 

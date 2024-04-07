@@ -34571,18 +34571,19 @@ jquery('.fitting__contacts').submit(function (e) {
     handleFormSubmission(currentForm);
 });
 
-jquery("#subscribe-form").submit(function () {
+jquery("#subscribe-form").submit(function (event) {
+    event.preventDefault();
     let formID = jquery(this).attr('id');
-    let formNm = jquery('#' + formID);
+    let formNm = jquery('#' + formID); 
     
     jquery.ajax({
-        method: 'post',
+        method: 'post', 
         dataType: 'json',
         url: '/ajax/subscribe.php',
-        data: formNm.serialize(),
+        data: formNm.serialize(), 
         success: function (data) {
-            if(data.success ==='Y')
-            {
+            if (data.success === 'Y') {
+                jquery('#emailError').hide();
                 _t.close();
                 _t.show(
                     [
@@ -34593,9 +34594,14 @@ jquery("#subscribe-form").submit(function () {
                     ]
                 )
             }
+            else {
+                const error = data.error.replace(/<[^>]*>/g, ''); 
+                jquery('#emailError').show();
+                jquery('#emailError').text(error);
+            }
         },
     });
-});
+}); 
 })();
 
 /******/ })()
