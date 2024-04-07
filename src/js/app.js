@@ -1030,3 +1030,29 @@ $('.fitting__contacts').submit(function (e) {
     let currentForm = $(this);
     handleFormSubmission(currentForm);
 });
+
+$("#subscribe-form").submit(function () {
+    let formID = $(this).attr('id');
+    let formNm = $('#' + formID);
+    
+    $.ajax({
+        method: 'post',
+        dataType: 'json',
+        url: '/ajax/subscribe.php',
+        data: formNm.serialize(),
+        success: function (data) {
+            if(data.success ==='Y')
+            {
+                Fancybox.close();
+                Fancybox.show(
+                    [
+                        {
+                            src: '#modal-thankyou-subscribe',
+                            type: "inline"
+                        }
+                    ]
+                )
+            }
+        },
+    });
+});

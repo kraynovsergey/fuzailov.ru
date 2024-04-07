@@ -34570,6 +34570,32 @@ jquery('.fitting__contacts').submit(function (e) {
     let currentForm = jquery(this);
     handleFormSubmission(currentForm);
 });
+
+jquery("#subscribe-form").submit(function () {
+    let formID = jquery(this).attr('id');
+    let formNm = jquery('#' + formID);
+    
+    jquery.ajax({
+        method: 'post',
+        dataType: 'json',
+        url: '/ajax/subscribe.php',
+        data: formNm.serialize(),
+        success: function (data) {
+            if(data.success ==='Y')
+            {
+                _t.close();
+                _t.show(
+                    [
+                        {
+                            src: '#modal-thankyou-subscribe',
+                            type: "inline"
+                        }
+                    ]
+                )
+            }
+        },
+    });
+});
 })();
 
 /******/ })()
