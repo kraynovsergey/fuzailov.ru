@@ -8300,10 +8300,6 @@ html._product-page .main::before {
     margin-bottom: 0;
   }
 
-  .pagination__list {
-    display: none;
-  }
-
   .main {
     padding-bottom: 4.35rem;
   }
