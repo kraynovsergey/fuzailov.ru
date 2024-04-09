@@ -67,10 +67,8 @@
         border: 1.88rem solid $color_card;
         padding: 1.25rem;
         background: $color_white;
-        position: sticky;
-        top: 0;
 
-        @media (min-width: 992px) {
+        @media (min-width: 1200px) {
             position: sticky;
             top: 7rem;
         }
