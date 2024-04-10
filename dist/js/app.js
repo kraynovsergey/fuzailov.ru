@@ -34362,8 +34362,8 @@ if (style_select.length > 0) {
 }
 
 /* Стики сайдбар на странице товара */
-if ( document.querySelector('.product-page__content-wrap') ) {
-    const sticky_sidebar_init = new sticky_sidebar('.product-page__content-wrap', {
+if ( document.querySelector('.product-page__content-wrap:not(._no-sticky)') ) {
+    const sticky_sidebar_init = new sticky_sidebar('.product-page__content-wrap:not(._no-sticky)', {
         topSpacing: 120,
         bottomSpacing: 0,
         minWidth: 991,
