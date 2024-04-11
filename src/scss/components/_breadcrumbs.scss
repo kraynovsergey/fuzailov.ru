@@ -46,7 +46,9 @@
             transition: .5s ease-in-out;
 
             &:hover {
-                color: $color_gray;
+                @media (width > 1024px) {
+                    color: $color_gray;
+                }
             }
         }
     }

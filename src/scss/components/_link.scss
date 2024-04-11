@@ -19,7 +19,9 @@
         //font-style: italic;
 
         &:hover {
-            color: $color_black;
+            @media (width > 1024px) {
+                color: $color_black;
+            }
         }
 
         &._button-mobile {

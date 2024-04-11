@@ -44,8 +44,10 @@
         color: $color_green;
 
         &:hover {
-            background: $color_green;
-            color: $color_white;
+            @media (width > 1024px) {
+                background: $color_green;
+                color: $color_white;
+            }
         }
 
         @media (max-width: 1440px) {

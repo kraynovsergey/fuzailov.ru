@@ -36,10 +36,11 @@
         color: $color_green;
 
         &:hover {
-            //background: $color_card;
-            border-color: $color_green;
-            background: $color_green;
-            color: $color_white;
+            @media (width > 1024px) {
+                border-color: $color_green;
+                background: $color_green;
+                color: $color_white;
+            }
         }
     }
 
@@ -52,10 +53,10 @@
         color: $color_green;
 
         &:hover {
-            //background: $color_card;
-            //color: $color_black;
-            background: $color_green;
-            color: $color_white;
+            @media (width > 1024px) {
+                background: $color_green;
+                color: $color_white;
+            }
         }
     }
 
@@ -66,8 +67,10 @@
         border: 0;
 
         &:hover {
-            background: $color_orange;
-            color: $color_white;
+            @media (width > 1024px) {
+                background: $color_orange;
+                color: $color_white;
+            }
         }
     }
 
@@ -77,8 +80,10 @@
         border: 1px solid $color_green;
 
         &:hover {
-            background: transparent;
-            color: $color_green;
+            @media (width > 1024px) {
+                background: transparent;
+                color: $color_green;
+            }
         }
     }
 }
@@ -105,7 +110,9 @@
     }
 
     &:hover {
-        background: $color_card;
+        @media (width > 1024px) {
+            background: $color_card;
+        }
     }
 
     & svg {
